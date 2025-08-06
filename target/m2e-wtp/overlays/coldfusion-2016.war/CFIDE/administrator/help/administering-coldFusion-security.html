@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<!-- saved from url=(0133)https://chl-author-preview.corp.adobe.com/content/help/en/coldfusion/configuring-administering/administering-coldfusion-security.html -->
+<html class="no-js wf-adobeclean-i4-active wf-adobeclean-n3-active wf-adobeclean-n4-active wf-adobeclean-n7-active wf-active" lang="en" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+<!-- * First part of ClickTail. UserZoom only in the body. * -->
+
+
+
+
+	
+		
+		
+			<script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/event"></script><script type="text/javascript" async="" src="./ColdFusion Help _ Administering ColdFusion Security_files/saved_resource"></script><script type="text/javascript" async="" src="./ColdFusion Help _ Administering ColdFusion Security_files/saved_resource"></script><script src="./ColdFusion Help _ Administering ColdFusion Security_files/satelliteLib-46e65db5bb0c375f8f64619be31cc9b29acf4867.js">
+			</script><script src="./ColdFusion Help _ Administering ColdFusion Security_files/mbox-contents-f3808f72f280c66c15bd81363d6f55f0659a684d.js"></script><script src="./ColdFusion Help _ Administering ColdFusion Security_files/dil-contents-fe044508f2e9fdd5937011e33188cb0afb585dac.js"></script><style>.mboxDefault { visibility:hidden; }</style><script src="./ColdFusion Help _ Administering ColdFusion Security_files/target.js"></script><script src="./ColdFusion Help _ Administering ColdFusion Security_files/ajax"></script>
+		
+	
+	
+
+
+
+
+    
+    <!-- /* Initialize custom Beans for Learn-support model */ -->
+
+
+
+
+
+<!--PUBLISH STAMP
+<properties>
+	<property>
+		<name>ServedBy</name>
+		<value>LOC PUBLISHER</value>
+	</property>
+	<property>
+		<name>ServedAt</name>
+		<value>Thu Jan 07 06:55:09 GMT 2016</value>
+	</property>
+</properties>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>ColdFusion Help | Administering ColdFusion Security</title>
+
+
+
+    
+    
+<script>
+    if (typeof (AdobeLearn) === "undefined") AdobeLearn = {};
+    if (typeof (AdobeLearn.Locale) === "undefined") AdobeLearn.Locale = {};
+    if (typeof (AdobeLearn.Config) === "undefined") AdobeLearn.Config = {};
+    
+    AdobeLearn.Locale["pageLocale"] = 'en_US';
+    AdobeLearn.Locale["pageLanguage"] = 'en';
+    AdobeLearn.Locale["pageCountry"] = 'US';
+    AdobeLearn.Locale["nonEmptyUrlLocale"] = 'en';
+    AdobeLearn.Locale["urlLocale"] = '';
+    AdobeLearn.Locale["folderLocale"] = 'en';
+    AdobeLearn.Locale["contentUrl"] = '\/content\/help\/\/';
+    AdobeLearn.Locale["contentFolder"] = '\/content\/help\/en\/';
+    AdobeLearn.Locale["datetimeLocale"] = 'en';
+    AdobeLearn.Locale["datetimeFormat"] = 'MMM. dd, yyyy';
+    AdobeLearn.Locale["parentLocale"] = '';
+    AdobeLearn.Locale["fiveLetterLocale"] = 'en_US';
+    AdobeLearn.Locale["globalNavLocale"] = 'en_us';
+    AdobeLearn.Config["tier"] = 'PROD';
+    AdobeLearn.Config["serverType"] = 'Not a publishing server';
+    AdobeLearn.Config["loadBalancer"] = 'https:\/\/helpx.adobe.com';
+    AdobeLearn.Config["author"] = 'true';
+    AdobeLearn.Config["author-preview"] = 'true';
+    AdobeLearn.Config["authorPrefix"] = '/content/help/en';
+</script>
+
+
+    
+    
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=9,10">
+
+<meta http-equiv="Content-Locale" content="en_US">
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="Cache-Control" content="public">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noodp">
+
+
+<!-- SEO title / Title -->
+<meta name="title" content="Administering ColdFusion Security">
+<!-- SEO description / Description -->
+<meta name="description" content="Adobe Learn &amp; Support">
+<!-- Experience Level % -->
+<meta name="targetAudience">
+<!-- Learning Approach (content-type)  -->
+<meta name="learningApproach">
+<!-- Search phrases / keywords  -->
+<meta name="keywords" content="Reference,Configuring and Administering,ColdFusion">
+<!-- Geo  -->
+<meta name="Content-Locale" content="en_US">
+<!-- Language  -->
+<meta name="Content-Language" content="en">
+<!-- Last published date  -->
+<meta name="publishDate" content="2015-10-06T10:29:05.644Z">
+<!-- Published URL  -->
+<meta name="publishExternalUrl" content="https://helpx.adobe.com/coldfusion/configuring-administering/administering-coldfusion-security.html">
+<!-- Landing Page -->
+<meta name="sling:resourceType" content="help/components/helppage">
+<!-- Salesforce Id  -->
+<meta name="sfdcId" content="localhost/coldfusion/configuring-administering/administering-coldfusion-security.html">
+<!-- Salesforce Article Group -->
+<meta name="articleGroup" content="coldfusion/configuring-administering/administering-coldfusion-security.html">
+<!-- Creative field -->
+<meta name="creativeField">
+<!-- Topic -->
+<meta name="topicTags">
+<!-- Priority  -->
+<meta name="contentStrategy">
+
+    
+    
+
+<!-- Brand / Primary product  -->
+<meta name="primaryProduct" content="coldfusion">
+<!-- HelpPage usedApps -->
+<meta name="product" content="coldfusion">
+
+
+
+<meta name="content-type" content="reference">
+<meta name="creationDate" content="2016-01-06 @ 10:04:43">
+<meta name="lastModifiedDate" content="2016-01-06 @ 10:04:43">
+
+
+	
+		<meta name="content-type" content="reference">
+	
+
+
+
+
+
+
+
+
+    
+    <!--  Override for any specific Clientlibs -->
+
+<!-- favicon -->
+
+<link rel="icon" href="https://chl-author-preview.corp.adobe.com/include/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://chl-author-preview.corp.adobe.com/include/img/favicon.ico" type="image/x-icon">
+
+
+	<script src="./ColdFusion Help _ Administering ColdFusion Security_files/jquery-1.9.1.min.js"></script>
+    <script src="./ColdFusion Help _ Administering ColdFusion Security_files/jquery-ui-1.9.1.custom.js"></script>
+
+<script src="./ColdFusion Help _ Administering ColdFusion Security_files/jquery.cookie.js"></script>
+
+<!-- /* Initialize custom Beans for Learn-support model */ -->
+
+
+<link rel="canonical" href="https://helpx.adobe.com/coldfusion/configuring-administering/administering-coldfusion-security.html">
+
+
+
+<!--  Check if Drawer is checked -->
+
+
+
+
+<!--  Load IMS -->
+<script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/chlims.js"></script>
+
+
+
+
+<script>
+	$(document).ready(function($) {
+		$("#maincontent").attr("style", "visibility:visible");
+	});
+</script>
+
+
+
+
+
+
+
+<!--  Moved all meta tags to meta.html -->
+
+
+<!--  All the JS should got to bodybottomscripts.html -->
+<!-- product variables -->
+<script type="text/javascript">
+	var array = ("coldfusion,ColdFusion,coldfusion,http:\/\/helpx.adobe.com\/coldfusion.html,coldfusion_product_adobelr").split(',');
+    var product       = array[0];
+    var productTitle  = array[1];
+    var productSearch = array[2];    
+    var ionLabel      = array[3];                  
+    var productHub    = array[4];            
+
+</script>
+
+
+<!--  Include JIVE forums Code -->
+<script>
+    var jiveTitle = document.title;
+    var pos = jiveTitle.indexOf("*");    
+    if( (pos != -1) && (pos+1 != jiveTitle.length) ) {
+        jiveTitle = jiveTitle.substr(pos+1,jiveTitle.length);
+    }
+    var jiveHref = window.location.toString().replace(/[\?,#](.*)/, "").replace(/content\/help\/en\//, "").replace(/content\/help\//, "");
+    // using javascript variable
+    var jiveDescription = "" + jiveHref; 
+    var forumId =  "Not Set"; 
+    // using meta tags
+    //document.write('<meta name="jiveDescription" content="<fmt:message key="strJiveDescription"/>' + jiveHref  + '"/>');   
+    document.write('<meta name="jiveTitle" content="' + jiveTitle  + '"/>');
+</script><meta name="jiveTitle" content="ColdFusion Help | Administering ColdFusion Security">
+
+
+<script>
+    var globalNavLocale = "en_US";
+</script>
+
+<!-- Client Libraries  -->
+
+    
+    
+<link rel="stylesheet" href="./ColdFusion Help _ Administering ColdFusion Security_files/helppage.min.css" type="text/css">
+<script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/helppage.min.js"></script>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+<!-- changes for picking the correct locale-specific.css for different locale -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" type="text/css" href="./ColdFusion Help _ Administering ColdFusion Security_files/locale-specific.css">
+
+<!-- TODO: Check if this is still valid/needed -->
+<style>
+.step a[name*=step_par_text] {
+	display: none;
+}
+</style>
+
+
+<!-- videojs lib for flash video component -->
+<link href="./ColdFusion Help _ Administering ColdFusion Security_files/video-js.min.css" rel="stylesheet">
+<script src="./ColdFusion Help _ Administering ColdFusion Security_files/video.js"></script>
+<script>
+    videojs.options.flash.swf = "/etc/designs/help/helppage/videojs/video-js.swf"
+</script>
+
+<!-- swfobject lib for flash generic component -->
+<script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/swfobject.js"></script>
+
+
+<!--[if lt IE 10]>
+<link rel="stylesheet" media="screen" href="/include/style/modes/MirrorIE.css" />
+<![endif]-->
+
+
+
+  <script src="./ColdFusion Help _ Administering ColdFusion Security_files/yoe7ink.js"></script>
+
+
+<style type="text/css">.Text{font-family:"adobe-clean",sans-serif;}</style><link rel="stylesheet" href="./ColdFusion Help _ Administering ColdFusion Security_files/yoe7ink-d.css" media="all"><script>try{Typekit.load();}catch(e){}</script>
+
+   
+
+<link rel="stylesheet" type="text/css" href="./ColdFusion Help _ Administering ColdFusion Security_files/globalnav.css"><style type="text/css"></style><style></style><script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/globalnav.js"></script><style type="text/css">{visibility: hidden;}</style><style type="text/css">{visibility: hidden;}</style><script src="./ColdFusion Help _ Administering ColdFusion Security_files/s-code-contents-3b95e2b0c76585648d8427f1f8677142c979bf88.js"></script><script type="text/javascript" src="./ColdFusion Help _ Administering ColdFusion Security_files/l.js"></script><link rel="prefetch" href="https://ims-na1.adobelogin.com/favicon.ico?cache_bust=039fd107"><style type="text/css">{visibility: hidden;}</style><script src="./ColdFusion Help _ Administering ColdFusion Security_files/satellite-534da2e96b8ae7c6840004b9.js"></script><style type="text/css">{visibility: hidden;}</style><script src="./ColdFusion Help _ Administering ColdFusion Security_files/satellite-5359ac4ecd812179a60007a7.js"></script><style type="text/css">{visibility: hidden;}</style><script src="./ColdFusion Help _ Administering ColdFusion Security_files/satellite-54133e4209c7a707dc0001c5.js"></script></head>
+
+
+    <body class="Text TextMedium Link globalnav__external__no-touch"><div class="mboxDefault" id="mbox-adobe-global-mbox-1452149712330-996382" style="visibility: visible; display: block;"></div>
+
+    
+    
+
+	<!-- /* Content Body */ -->
+	
+
+
+
+<!-- /* Initialize custom Beans for Learn-support model */ -->
+
+
+<div class="LayoutGrid LayoutCenter LayoutP">
+
+
+
+	
+	 
+	 
+	 	  
+
+
+
+<!-- /* Initialize custom Beans for Learn-support model */ -->
+
+
+
+<div class="Link LayoutCellSides LayoutBreakAfter">
+    <div class="LayoutSmallRow TextH1 LayoutGrid-1-4">
+        
+    	<br/>
+		    	
+			
+		<div class="title pagetitle">
+
+    
+    	<h1>Administering ColdFusion Security</h1>
+        
+    
+    
+</div>	
+    </div>
+</div>
+	 	  <!-- /* Initialize custom Beans for Learn-support model */ -->
+
+
+
+<!-- hide inline comments in external and qa servers -->
+
+
+
+
+
+
+
+
+<!-- style for uicontrol in authoring mode -->
+
+
+                    
+<div class="LayoutRow Link">
+    <div class="LayoutBreakAfter">
+    	
+     	
+
+             
+                
+                    <div class="LayoutGrid-2-4" id="maincontent" style="visibility:visible">
+                 
+                 
+            
+          		  
+
+            <div class="Column mnemonic coldfusion-color">
+
+                <!-- MAIN: Main Content -->
+                <div id="main" class="Semantic">
+                    <div><div class="parbase section text">
+
+    <a name="main-pars_text"></a>
+    
+        
+            <div class="text" style="background-color:"><p>You can secure many Adobe ColdFusion resources using password authentication and configure sandbox security.</p>
+<h2>About ColdFusion security</h2>
+<p>Security is especially important in web-based applications, such as those you develop in ColdFusion. ColdFusion developers and administrators must fully understand the security risks that could affect their development and runtime environments so they can enable and restrict access appropriately.<br>
+Whether you have an e-commerce site where customers enter credit card information or a global collaboration site where users share confidential data, you should understand the security risks that could threaten your web applications.</p>
+<ul>
+<li><strong>Snooping and eavesdropping:</strong>&nbsp;Someone can monitor data sent over the public connections of the web.</li>
+<li><strong>User impersonation:</strong>&nbsp;Someone can impersonate a trusted user to gain access to information that only the trusted user should see or download.</li>
+<li><strong>Unauthorized access:</strong>&nbsp;Unauthorized users can gain access to sensitive information. This security risk is the most complex because the Internet links every computer to one large network. Completely allowing or disallowing access to a given system or data source is relatively straight-forward, but allowing the partial access required for an application to be useful remains risky. For example, a bank can easily publish a public, freely accessible site with general banking information. Creating an account maintenance site where users have exclusive access to their own personal account information is more difficult.<br>
+ColdFusion provides a highly secure environment for web application development and deployment. It helps you reduce security risks in the following ways:</li>
+<li><strong>Encryption:</strong>&nbsp;Use of the Secure Sockets Layer (SSL) protocol prevents snooping, eavesdropping, and message tampering as information passes between clients and servers. SSL, which is supported by most web servers, encrypts Internet protocols (such as HTTP) with public key cryptography. A private key resides on the server to decrypt inbound data and encrypt outbound data.After the key is installed, the web server automatically handles encryption and decryption.</li>
+<li><strong>Authentication:</strong>&nbsp;Authentication checks whether someone is a valid system user. It prompts a user for a unique login or user name, and a password or personal identification number (PIN).</li>
+<li><strong>Access Control:</strong>&nbsp;Authenticated users have access to particular features or components based on security clearance, group affiliation, or other criteria specified by the developer.<br>
+You can implement&nbsp;<em>development security</em>&nbsp;by requiring a password to use the ColdFusion Administrator and a password for Remote Development Services (RDS), which allows developers to develop CFML pages remotely. You implement&nbsp;<em>runtime security</em>&nbsp;in your CFML pages and in the ColdFusion Administrator. ColdFusion has the following runtime security categories:</li>
+<li><strong>User security</strong>&nbsp;Programmatically determine the logged-in user and allow or disallow restricted functionality based on the roles assigned to that user. For more information about user security, see ColdFusion security features in Securing Applications in the&nbsp;<em>Developing ColdFusion Applications</em>.</li>
+<li><p><strong>Sandbox security&nbsp;</strong>Using the ColdFusion Administrator, define the actions and resources that the ColdFusion pages in and below a specified directory can use.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> In ColdFusion 11, you can configure multiple security sandboxes irrespective of the edition that you are using. However, for the previous versions (ColdFusion 10 or older), you can configure multiple security sandboxes only when you are using the Enterprise Edition.</p>
+</td>
+</tr></tbody></table>
+<p>The Security area in the Administrator lets you do the following tasks:</p>
+<br>
+<ul>
+<li>Configure password protection for the ColdFusion Administrator. For more information, see Using password protection.</li>
+<li>Configure password protection for RDS access. For more information, see RDS password protection.</li>
+<li>Enable, disable, and customize ColdFusion security, on the Security &gt; Sandbox Security page (called Resource Security page in the Standard edition). For more information, see Using sandbox security.<strong><em><br>
+</em></strong></li>
+</ul>
+</li>
+</ul>
+<h2>Using password protection</h2>
+<p>Password protection restricts access to the ColdFusion Administrator and to a ColdFusion server when you attempt access through RDS security.</p>
+<h3>ColdFusion Administrator password protection</h3>
+<p>Secure access to the ColdFusion Administrator is enabled by default. The password that you enter during installation is saved as the default. You are prompted to enter this password whenever you open the Administrator.<br>
+Password protection for accessing the Administrator helps guard against unauthorized modifications of ColdFusion, and Adobe recommends using passwords. You can disable or change the Administrator password on the Security &gt; CF Admin Password page.</p>
+<h3>Configurable seed for password encryption</h3>
+<p>You can specify a new seed value to encrypt data source passwords.<br>
+To modify the default seed value assigned by ColdFusion or to change the value you specified,</p>
+<ol>
+<li>In the ColdFusion Administrator, got to Security &gt; Administrator and then in the Password Seed section, specify the new seed value between 8-500 characters.</li>
+<li><p>Click Submit Changes.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> When you modify the seed value, all data source connections are reset. Therefore, Adobe recommends that you perform this task when the server is idle or at the initial phase (after installation).</p>
+</td>
+</tr></tbody></table>
+</li>
+</ol>
+<h3>RDS password protection</h3>
+<p>If you configured password protection for RDS access when you installed ColdFusion, you are prompted for the password when you attempt to access ColdFusion from Dreamweaver MX 2004, HomeSite+, or the ColdFusion Report Builder.<br>
+You can disable RDS or change the RDS password on the Security &gt; RDS Password page.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> Disabling RDS also disables the applet that the ColdFusion Administrator uses in file-related dialog boxes.</p>
+</td>
+</tr></tbody></table>
+<p>If you use RDS security, you rely on web server and operating system security settings to set permissions for ColdFusion application and document directories.</p>
+<h2>Enhancing ColdFusion Security on Windows</h2>
+<p>To enhance security for the ColdFusion server on Windows, restrict access to the following files to selected ColdFusion users:</p>
+<ul>
+<li>/cfusion/lib/seed.properties</li>
+<li>/cfusion/lib/password.properties</li>
+<li>/cfusion/lib/license.properties</li>
+<li>/cfusion/bin/passwordreset.bat</li>
+<li>/cfusion/bin/cf-passwordreset.jar<strong><em><br>
+</em></strong></li>
+</ul>
+<h2>Exposing services to users</h2>
+<p>ColdFusion exposes many existing enterprise services as web services. You can access these services using SOAP and AMF/Flash remoting.<br>
+The following are the exposed services:</p>
+<ul>
+<li>cfpdf</li>
+<li>cfImage</li>
+<li>cfdocument</li>
+<li>cfmail</li>
+<li>cfpop</li>
+<li>cfchart</li>
+<li>upload service<br>
+You can secure the exposed services to prevent access by unknown applications or users. This can be done by configuring the client IP address range to which services are accessible. Also, you can set up user access control for the services.<br>
+On the Security &gt; User Manager page, you can select the services available to a user from the Exposed Services section.&nbsp;<br>
+By default, all the services are listed in the Prohibited Services drop-down list. Press CTRL and select the services that you want the user to avail and click the &lt;&lt; button.&nbsp;<br>
+Now, click Edit User to implement the changes to the user settings.<strong><em><br>
+</em></strong></li>
+</ul>
+<h2>Configure IP address to access exposed services</h2>
+<p>To configure IP addresses to access exposed services:</p>
+<ol>
+<li>Go to Security &gt; Allowed IP Addresses</li>
+<li>To add an IP address, specify the IP address in the IP addresses field and click Add.</li>
+<li>To remove an IP address, select the IP address from the View/Remove Selected IP Addresses for Exposed Services list.</li>
+<li>Click Remove Selected to remove the IP addresses.<strong><em><br>
+</em></strong></li>
+</ol>
+<h2>Restricting access to ColdFusion Administrator</h2>
+<p>You can restrict access to ColdFusion Administrator.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> By default, localhost and all IP addresses can access ColdFusion server.</p>
+</td>
+</tr></tbody></table>
+<p>To add IP addresses that must be allowed access:</p>
+<ol>
+<li>Go to Security &gt; Allowed IP Addresses &gt; Add/Remove IP Addresses which will have Administrator access.</li>
+<li>In the IP Address text box, specify the IP addresses.</li>
+<li>Click Add.</li>
+<li>Repeat the procedures to add more IP addresses.<br>
+Regular expressions are supported. That is, if you specify&nbsp;10.<strong>.</strong>.*, all IP addresses starting with&nbsp;10.&nbsp;are allowed access.<strong><em><br>
+</em></strong></li>
+</ol>
+<h2><a name="securityprofile"></a>Enabling Secure Profile for ColdFusion Administrator</h2>
+<p>ColdFusion allows you to secure ColdFusion server furthermore by enabling or disabling selected settings on the ColdFusion Administrator. When installing ColdFusion, you can enable Secure Profile by selecting the option when prompted on the Secure Profile screen. Further, you could provide a comma separate list of IP addresses that may be allowed to access the ColdFusion Administrator.</p>
+<h3>Administrator settings affected by enabling Secure Profile</h3>
+<table>
+<tbody><tr><th><p>&nbsp;</p>
+</th>
+<th><p>Administrator Settings</p>
+</th>
+<th><p>Path</p>
+</th>
+<th><p>Default Admin Profile</p>
+</th>
+<th><p>Secure Profile</p>
+</th>
+<th><p>Changes to the setting post migration to ColdFusion 10</p>
+</th>
+</tr><tr><td><p>1</p>
+</td>
+<td><p>Use UUID for cftoken</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>2</p>
+</td>
+<td><p>Disable access to internal ColdFusion Java components</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>3</p>
+</td>
+<td><p>Enable Global Script Protection</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>4</p>
+</td>
+<td><p>Maximum size of post data</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>20MB</p>
+</td>
+<td><p>20MB</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>5</p>
+</td>
+<td><p>Missing Template Handler</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>No Value</p>
+</td>
+<td><p>Custom missing error template</p>
+</td>
+<td><p>Retained if specified</p>
+</td>
+</tr><tr><td><p>6</p>
+</td>
+<td><p>Site-wide Error Handler</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Settings</strong></p>
+</td>
+<td><p>No Value</p>
+</td>
+<td><p>Custom site-wide error template</p>
+</td>
+<td><p>Retained if specified</p>
+</td>
+</tr><tr><td><p>7</p>
+</td>
+<td><p>Request Queue Timeout Page</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Request Tuning</strong></p>
+</td>
+<td><p>No value</p>
+</td>
+<td><p>Custom error template</p>
+</td>
+<td><p>Retained if specified</p>
+</td>
+</tr><tr><td><p>8</p>
+</td>
+<td><p>Cookie Timeout</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Memory Variables</strong></p>
+</td>
+<td><p>15767000 minutes</p>
+</td>
+<td><p>1440 minutes</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>9</p>
+</td>
+<td><p>Disabling updating of ColdFusion internal cookies using ColdFusion tags/functions</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>Memory Variables</strong></p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>10</p>
+</td>
+<td><p>Enable WebSocket Server</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>WebSocket</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>11</p>
+</td>
+<td><p>Start Flash Policy Server</p>
+</td>
+<td><p><strong>Server Settings</strong> &gt; <strong>WebSocket</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>12</p>
+</td>
+<td><p>Allowed SQL (all settings)</p>
+</td>
+<td><p><strong>Data &amp; Services</strong> &gt; <strong>Data Sources</strong> &gt; <strong>database</strong> &gt; <strong>Advanced Settings</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Create, Drop, Alter, Grant, Revoke, Stored Procedures are disabled</p>
+</td>
+<td><p>Retained if specified</p>
+</td>
+</tr><tr><td><p>13</p>
+</td>
+<td><p>Enable Robust Exception Information</p>
+</td>
+<td><p><strong>Debugging &amp; Logging</strong> &gt; <strong>Debug Output Settings</strong></p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>14</p>
+</td>
+<td><p>Enable CFSTAT</p>
+</td>
+<td><p><strong>Debugging &amp; Logging</strong> &gt; <strong>Debug Output Settings</strong></p>
+</td>
+<td><p>Enabled</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>15</p>
+</td>
+<td><p>Select the type of Administrator authentication</p>
+</td>
+<td><p><strong>Security</strong> &gt; <strong>Administrator</strong></p>
+</td>
+<td><p>Use a single password only</p>
+</td>
+<td><p>Separate user name and password authentication (allows multiple users)</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>16</p>
+</td>
+<td><p>Enable RDS Service</p>
+</td>
+<td><p><strong>Security</strong> &gt; <strong>RDS</strong></p>
+</td>
+<td><p>Configurable at install time</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>17</p>
+</td>
+<td><p>Select the type of RDS authentication</p>
+</td>
+<td><p><strong>Security</strong> &gt; <strong>RDS</strong></p>
+</td>
+<td><p>Use a single password only</p>
+</td>
+<td><p>Separate user name and password authentication (allows multiple users)</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr><tr><td><p>18</p>
+</td>
+<td><p>Enable ColdFusion Sandbox Security</p>
+</td>
+<td><p><strong>Security</strong> &gt; <strong>Sandbox Security</strong></p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Disabled</p>
+</td>
+<td><p>Overwritten</p>
+</td>
+</tr><tr><td><p>19</p>
+</td>
+<td><p>Allowed IP addresses for ColdFusion Administrator access</p>
+</td>
+<td><p><strong>Security</strong> &gt; <strong>Allowed IP Addresses</strong></p>
+</td>
+<td><p>Not available at install time</p>
+</td>
+<td><p>Available at install time</p>
+</td>
+<td><p>N/A</p>
+</td>
+</tr></tbody></table>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> Secure Profile disables Directory Browsing for a stand alone ColdFusion installation with built-in web server.</p>
+</td>
+</tr></tbody></table>
+<p><strong>COMMUNITY CONTRIBUTED HELP</strong></p>
+<p>The page above explains that if the "secure profile" option is taken during installation, ColdFusion will set the 3 error handlers to a value that is shown above merely as "Custom missing error template".</p>
+<p>More specifically, and particularly if anyone may remove them from the CF Admin and need to add them back, the three templates can be found in this directory in your installation: C:\ColdFusion10\cfusion\wwwroot\CFIDE\administrator\templates, and are named (in the order listed above):&nbsp;</p>
+<ul>
+<li>secure_profile_error.cfm</li>
+<li>missing_template_error.cfm</li>
+<li>request_timeout_error.cfm</li>
+</ul>
+<p>So for instance, to put the "default" "secure" sitewide error handler back in place, provide this value for the CF Admin&gt;Settings&gt;Site-wide Error Handler:</p>
+<ul>
+<li>/CFIDE/administrator/templates/secure_profile_error.cfm</li>
+</ul>
+<h2>Changes in Secure Profile (ColdFusion 11)</h2>
+<p>When installing ColdFusion Server, you can enable Secure Profile by selecting the option when prompted on the Secure Profile screen. Further, you could provide a comma separate list of IP addresses that may be allowed to access the ColdFusion Administrator. This feature has been available from ColdFusion 10. In ColdFusion 11, Secure Profile has been enhanced to handle access to other internal components too. For instance, you can set restrictions for following URLs:</p>
+<ul>
+<li><em>CFIDE/main/*</em></li>
+<li><em>CFIDE/adminapi/*</em></li>
+<li><em>CFIDE/administrator/*</em></li>
+<li><em>CFIDE/componentutils/*</em></li>
+<li><em>CFIDE/wizards/*</em></li>
+<li><em>CFIDE/servermanager/*</em></li>
+</ul>
+<p>To allow IP addresses to access the internal ColdFusion components, perform the following tasks:</p>
+<ol>
+<li>Login to ColdFusion Administrator</li>
+<li>Click Security &gt; Allow IP Addresses</li>
+<li>Go to&nbsp;<strong>Allow IP Addresses for&nbsp;accessing&nbsp;ColdFusion Administrator and ColdFusion Internal Directories</strong>&nbsp;section and add grant access to&nbsp; individual IP address to access the internal components as shown in the following figure:</li>
+</ol>
+</div>
+        
+    
+    
+
+</div>
+<div class="image parbase section">
+
+    
+        <div style="display: block">
+            
+        </div>
+        <img src="./ColdFusion Help _ Administering ColdFusion Security_files/image2014-4-24 12-5-16.png" width="576" alt="" title="" class="cq-dd-image">
+            
+        
+        <div>
+            
+        </div>
+        <small>
+                 
+        </small>
+    
+
+</div>
+<div class="parbase section text">
+
+    <a name="main-pars_text_0"></a>
+    
+        
+            <div class="text" style="background-color:"><p>If you have configured an external web server, you can also restrict access to the ColdFusion Administrator and ColdFusion Internal Directories at the connector-level by modifying the iprestriction.properties file available under the connector folder. For instance,&nbsp;<em>&lt;cf_root&gt;</em>/config/wsconfig//iprestriction.properties.</p>
+<table>
+<tbody><tr><td><em><strong>Note</strong> :</em> You will need to restart the external web server after modifying the iprestriction.properties file.&nbsp;</td>
+</tr></tbody></table>
+<h2>Using sandbox security</h2>
+<p>Sandbox security (called Resource security in the Standard Edition) uses the location of your ColdFusion pages to control access to ColdFusion resources. A&nbsp;<em>sandbox</em>&nbsp;is a designated directory of your site to which you apply security restrictions. Sandbox security lets you specify which tags, functions, and resources (for example, files, directories, and data sources) can be used by ColdFusion pages located in and under the designated directory.<br>
+To use sandbox security in the J2EE editions, the application server must be running a security manager (java.lang.SecurityManager) and you define the following JVM arguments (for Tomcat, this is the java.args line in the&nbsp;<em>cf_root</em>/cfusion/bin/jvm.config file):</p>
+<table>
+<tbody><tr><td><p><span class="code">-Djava.security.manager "-Djava.security.policy=cf_root/WEB-INF/cfusion/lib/coldfusion.policy" "-Djava.security.auth.policy=cf_root/WEB-INF/cfusion/lib/neo_jaas.policy"</span></p>
+</td>
+</tr></tbody></table>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> Sandbox security is not enabled by default. You enable it on the Security &gt; Sandbox Security page before ColdFusion enforces the settings.</p>
+</td>
+</tr></tbody></table>
+<h3>Using multiple sandboxes (Enterprise Edition only)</h3>
+<p>By default, a subdirectory of a sandbox inherits the settings of the directory one level above it. However, if you define a sandbox for a subdirectory, the subdirectory no longer inherits settings from the parent, completely overriding the parent directory's sandbox settings. For example, consider the following directories:</p>
+<table>
+<tbody><tr><td><p>C:\Inetpub\wwwroot<br>
+C:\Inetpub\wwwroot\sales<br>
+C:\Inetpub\wwwroot\rnd<br>
+C:\Inetpub\wwwroot\rnd\dev<br>
+C:\Inetpub\wwwroot\rnd\'a</p>
+</td>
+</tr></tbody></table>
+<p>If you define a sandbox for the wwwroot directory, the settings also apply to the sales and rnd directories. If you also define a sandbox for the rnd directory, the rnd sandbox settings also apply to the dev and qa directories. The wwwroot and sales directories maintain their original settings, and the rnd settings override the wwwroot directory settings for the rnd directory and subdirectories.<br>
+This hierarchical arrangement of security permits the configuration of personalized sandboxes for users with different security levels. For example, if you are a web hosting administrator who hosts several clients on a ColdFusion shared server, you can configure a sandbox for each customer. This prevents one customer from accessing the data sources or files of another customer.</p>
+<h3>Resources that you can restrict</h3>
+<p>You can restrict the following resources:</p>
+<ul>
+<li><strong>Data Sources</strong>&nbsp;Restrict the use of ColdFusion data sources.</li>
+<li><strong>CF Tags</strong>&nbsp;Restrict the use of ColdFusion tags that manipulate resources on the server (or on an external server), such as files, the registry, Lightweight Directory Access Protocol (LDAP), mail, and the log.</li>
+<li><strong>CF Functions</strong>&nbsp;Restrict the use of ColdFusion functions that access the file system.</li>
+<li><p><strong>Files/Dirs</strong>Enable tags and functions in the sandbox to access files and directories outside the sandbox.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> To use the Administrator API when sandbox security is enabled, allow access to the cf_web_root/CFIDE/adminapi directory.</p>
+</td>
+</tr></tbody></table>
+</li>
+<li><p><strong>Server/Ports</strong>Specify the servers, ports, and port ranges that the ColdFusion tags that call third-party resources can use.For more information, see the Administrator online Help.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> When you run ColdFusion in the J2EE configuration on IBM WebSphere, the Files/Dirs and Server/Ports tabs are not enabled.</p>
+</td>
+</tr></tbody></table>
+</li>
+</ul>
+<h3>About directories and permissions</h3>
+<p>When you enable access to files outside the sandbox, you specify the filename. When you enable access to directories outside the sandbox, you specify&nbsp;<em>directoryname</em>_indicator_, where&nbsp;<em>indicator</em>&nbsp;is a dash or asterisk, as follows:</p>
+<ul>
+<li>A backslash followed by a dash (-) lets tags and functions access all files in the specified directory, and recursively allows access to all files in subdirectories.</li>
+<li>A backslash followed by an asterisk (*) lets tags and functions access all files in the specified directory and also lets tags and functions access a list of subdirectories. However, this option denies access to files in any subdirectories.<br>
+You can also specify the actions that ColdFusion tags and functions can perform on files and directories outside the sandbox. The following table shows the relationship between the permissions of a file and a directory:</li>
+</ul>
+<table>
+<tbody><tr><th><p>Permission</p>
+</th>
+<th><p>Effect on files</p>
+</th>
+<th><p>Effect on directories</p>
+</th>
+</tr><tr><td><p>Read</p>
+</td>
+<td><p>View the file</p>
+</td>
+<td><p>List all files in the directory</p>
+</td>
+</tr><tr><td><p>Write</p>
+</td>
+<td><p>Write to the file</p>
+</td>
+<td><p>Not applicable</p>
+</td>
+</tr><tr><td><p>Execute</p>
+</td>
+<td><p>Execute the file</p>
+</td>
+<td><p>Not applicable</p>
+</td>
+</tr><tr><td><p>Delete</p>
+</td>
+<td><p>Delete the file</p>
+</td>
+<td><p>Delete the directory</p>
+</td>
+</tr></tbody></table>
+<h3>Add a sandbox (Enterprise Edition only)</h3>
+<p>ColdFusion Enterprise Edition lets you define multiple security sandboxes.</p>
+<ol>
+<li>Open the Security &gt; Sandbox Security page in the ColdFusion Administrator. The Sandbox Security Permissions page appears.</li>
+<li>In the Add Security Sandbox box, enter the name of the new sandbox. This name must be either a ColdFusion mapping (defined in the Administrator) or an absolute path.</li>
+<li>Select New Sandbox from the drop-down list to create a sandbox based on the default sandbox, or select an existing sandbox to copy its settings to your new sandbox.</li>
+<li>Click Add. The new sandbox appears in the list of Defined Directory Permissions.</li>
+</ol>
+<h3>Configure a sandbox</h3>
+<p>Before you begin security sandbox configuration, analyze your application and its usage to determine the tags, functions, and resources that it requires. You can then configure the sandbox to enable access to the required resources and disable use of the appropriate tags and functions. For example, if the applications in the sandbox do not use the&nbsp;cfregistry&nbsp;tag, you can safely disable it.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> In the Standard Edition, the Root Security Context is the only sandbox without any initial list of defined directory permissions.</p>
+</td>
+</tr></tbody></table>
+<ol>
+<li>Open the Security &gt; Sandbox Security page (Security &gt; Resource Security page in the Standard Edition) in the ColdFusion Administrator.</li>
+<li>(Enterprise Edition only) In the list of Defined Directory Permissions, click the name or Edit icon for the directory.A page with several tabs appears. This is the initial page in the Standard Edition. The remaining steps describe the use of each tab.</li>
+<li><p>To disable a data source, in the left column of the Datasources tab, highlight the data source, and click the right arrow.By default, ColdFusion pages in this sandbox can access all data sources.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> If &lt;&lt;ALL DATASOURCES&gt;&gt; is in the Enabled Datasources column, any data source that you add is enabled. If you move &lt;&lt;ALL DATASOURCES&gt;&gt; to the Disabled Datasources column, any new data source is disabled.</p>
+</td>
+</tr></tbody></table>
+</li>
+<li>Click the CFTags tab.</li>
+<li>To disable tags, in the left column of the CFTags tab, highlight the tags, and click the right arrow.By default, ColdFusion pages in this sandbox can access all listed tags.</li>
+<li>Click the CFFunctions tab.</li>
+<li>To disable functions, in the left column of the CFFunctions tab, highlight the functions, and click the right arrow.By default, ColdFusion pages in this sandbox can access all listed functions.</li>
+<li>Click the Files/Dirs tab.</li>
+<li>To enable files or directories, in the File Path box, enter or browse to the files or directories; for example, C:\pix. A file path that consists of the special token &lt;&lt;ALL FILES&gt;&gt; matches any file. For information on using the backslash-hyphen (-) and backslash-asterisk (*) wildcard characters, see About directories and permissions.</li>
+<li>Select the permissions.For example, select the Read check box to let ColdFusion pages in the mytestapps sandbox read files in the C:\pix directory.</li>
+<li>Click Add Files/Paths. When you edit an existing sandbox, this button reads Edit Files/Paths. The file path and its permissions appear in the Secured Files and Directories list.</li>
+<li><p>In the Secured Files and Directories list, verify that the file path is correct. The character after the backslash is important. For information, see About directories and permissions.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> The Files/Dirs tab works together with the file-based permissions of the operating system. To restrict a user from browsing another user's directory, use file-based permissions.</p>
+</td>
+</tr></tbody></table>
+</li>
+<li>Click the Server/Ports tab.</li>
+<li><p>To turn off default behavior (global access to all servers and ports), enter the IP addresses and port numbers that pages in this sandbox can connect to by using tags that access external resources (for example,&nbsp;cfmail,&nbsp;cfpop,&nbsp;cfldap,&nbsp;cfhttp, and so on). You can specify an IP address, a server name (such as&nbsp;<a href="http://www.someservername.com/">www.someservername.com</a>), or a domain name (such as someservername.com). You can optionally specify a port restriction.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> This behavior differs from other tabs, such as CFTags, where you select items to disable. If you set any values in this tab, external-resource tags executed in this sandbox can access only the specified servers and ports.</p>
+</td>
+</tr></tbody></table>
+<p>For example, to allow this sandbox access to 207.88.220.3 on ports 80 and lower, perform the following steps:</p>
+<br>
+<ol>
+<li>In the IP Address field, enter 207.88.220.3.</li>
+<li><p>In the Port field, enter 80, and click This Port and Lower.</p>
+<table>
+<tbody><tr><td><p><strong><em>Note:</em></strong> To deny access by these ColdFusion tags to an entire site, enable access for a local resource, such as your local mail server, FTP server, and so on.</p>
+</td>
+</tr></tbody></table>
+</li>
+</ol>
+</li>
+<li>Click Finish to save changes to the sandbox.</li>
+</ol>
+<h3>Sandbox Considerations</h3>
+<h4>Using OpenOffice within Sandbox</h4>
+<p>Grant permissions in sandbox for the following filepaths:</p>
+<ul>
+<li>D:\ColdFusion10\cfusion\runtime\servers\lib Read</li>
+<li>D:\ColdFusion10\cfusion\runtime\servers\lib- Read</li>
+<li>D:\ColdFusion10\cfusion\runtime\lib- Read</li>
+<li>D:\ColdFusion10\cfusion\runtime\lib Read</li>
+<li>C:\Program Files\OpenOffice.org 3\ Read, Execute</li>
+<li>C:\Program Files\OpenOffice.org 3- Read<br>
+, Execute</li>
+</ul>
+<h4>Using Caching within Sandbox</h4>
+<p>For disk-based caching to work inside a sandbox, the sandbox must provide read/write permission to the disk cache directory. This can be the default directory (java.io.tmpdir) or a user-configured directory as identified by the&nbsp;diskStore&nbsp;property. The&nbsp;diskStore&nbsp;property in&nbsp;<em>cf_root</em>\lib\ehcache.xml is used to specify the directory for disk cache (&lt;diskStore path="java.io.tmpdir"/&gt;).Use the following code to identify the temp directory:</p>
+<table>
+<tbody><tr><td><p><span class="code">&lt;cfscript&gt;<br>
+ writeoutput("Temp Dir : " &amp; createobject("java","java.lang.System").getProperty("java.io.tmpdir") );<br>
+ &lt;/cfscript&gt;</span></p>
+</td>
+</tr></tbody></table>
+<p>Also, read permission must be granted to cf_root\lib\ehcache.xml for certain functions that read from/write to ehCache.xml to work. For example,&nbsp;cacheGetProperties&nbsp;and&nbsp;cacheSetProperties.</p>
+<h4>Using Service CFCs within Sandbox</h4>
+<p>Grant the following permissions:</p>
+<ul>
+<li>execute permission to&nbsp;<em>cf_root</em>\CustomTags\com\adobe\coldfusion</li>
+<li>read permission to&nbsp;<em>cf_root</em>\WEB-INF\cftags\META_INF\taglib.tld</li>
+</ul>
+</div>
+        
+    
+    
+
+</div>
+
+</div>
+                </div>
+                <!-- MAIN: Keywords/Search terms -->
+                
+               
+            </div>
+         		  
+          	  
+       </div>
+        <!-- END MAIN COLUMN -->
+          		  
+        <!-- RIGHT COLUMN -->
+        
+        <!-- END RIGHT COLUMN -->   
+ 
+
+    </div>
+    <!-- END INNER PAGE -->    
+</div>
+<!-- END OUTTER PAGE -->   
+          		  
+          		  
+          		  
+	 
+	 
+</div>
+   
+<div id="MenuControl"></div>
+ 	
+
+        
+
+
+
+
+
+
+
+	<!-- /* Footer Code*/ -->
+	
+
+	<!-- /* Java Scripts on Bottom of page*/ -->
+	<!--
+<div data-sly-test="">
+    <script type="text/javascript" src="" async="true" charset="utf-8"> </script>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+<img src="./ColdFusion Help _ Administering ColdFusion Security_files/p.gif" height="1" width="1" class="SiteFooterEvidonPixel"><img src="./ColdFusion Help _ Administering ColdFusion Security_files/p(1).gif" height="1" width="1" class="SiteFooterEvidonPixel"><div style="visibility: visible; display: block;"></div><script src="./ColdFusion Help _ Administering ColdFusion Security_files/standard"></script><iframe id="destination_publishing_iframe_adobe_0" src="./ColdFusion Help _ Administering ColdFusion Security_files/dest4.html" style="display: none; width: 0px; height: 0px;"></iframe></body></html>

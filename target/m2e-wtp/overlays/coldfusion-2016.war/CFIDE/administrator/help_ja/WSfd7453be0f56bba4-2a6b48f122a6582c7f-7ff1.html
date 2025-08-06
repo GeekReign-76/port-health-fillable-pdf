@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 複数のサーバーの監視</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff1.html";
+    document.cookie = "topicId=" + "WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff1.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>複数のサーバーの監視</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff0"><span class="topictitle1">Server Manager でのインスタントサーバーアラート</span>
+</a></p></li></ul></div></div></div></div><div><p>Server Manager には、アプリケーションに登録されたサーバーを監視するためのさまざまなビューが用意されています。これらのビューを切り替えるには、右上隅にあるビューアイコンをクリックします。</p>
+<p>Server Manager で使用できるビューには次のものがあります。</p>
+<ul><li><p>クイックビュー : サーバーのオンライン時間、アラート、警告、およびログイン状態のクイックスナップショットを表示します。</p>
+</li>
+<li><p>詳細ビュー : アラートの種類、リクエスト時間、レスポンス時間などの詳細を含む精密なサーバーステータスを表示します。サーバーの詳細を表示するには、サーバーの行の右隅にある緑色の矢印をクリックして、行を展開します。</p>
+</li>
+<li><p>エラービュー : サーバーインスタンスの実行中に発生したエラーに関する詳細を表示します。これには、エラーの時刻、失敗コード、失敗文字列、失敗の詳細などが含まれます。</p>
+</li>
+</ul>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff0" class="nochunk"><a name="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff0"><!-- --></a><h2 class="topictitle2">Server Manager でのインスタントサーバーアラート</h2><div><p>ColdFusion サーバーインスタンスに関連して発生した JVM メモリ、低速サーバー、無応答サーバー、タイムアウトなどのアラートは Server Manager に送信され、Server Manager の右下隅にポップアップメニューとして表示されます。これらのアラートは、アプリケーションが実行中の場合にのみ表示できます。</p>
+<p>これらのアラートを表示するには、サーバーアラートが発生するたびにクライアントに通知するオプションを有効にします。ColdFusion Administrator でこのオプションを有効にするには : </p>
+<ol><li><p>[ColdFusion サーバーの監視]-[サーバーモニタ]-[サーバーモニタの起動] をクリックします。</p>
+</li>
+<li><p>[アラート]-[アラートの設定] をクリックします。</p>
+</li>
+<li><p>Server Manager で表示するアラートに関連するすべてのタブで、[クライアントに通知] チェックボックスを選択します。 </p>
+</li>
+</ol>
+<div class="note"><span class="notetitle">注意：  </span>Server Manager でこれらのアラートを表示できるようにするには、サーバーサイドでアラートを設定する必要があります。アラートの設定について詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ffb.html">アラート</a>を参照してください。</div>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

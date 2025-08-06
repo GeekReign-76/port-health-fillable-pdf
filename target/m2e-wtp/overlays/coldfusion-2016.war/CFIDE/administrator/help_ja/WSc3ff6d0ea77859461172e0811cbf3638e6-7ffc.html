@@ -1,0 +1,1600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe ColdFusion 10 * 「サーバーの設定」セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="Configuring and Administering ColdFusion 10" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content=""  /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="Configuring and Administering ColdFusion 10"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7ffc.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7ffc.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/en_US/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>「サーバーの設定」セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7ffb"><span class="topictitle1">設定ページ</span>
+</a></p></li><li><p><a href="#WSe61e35da8d31851846486a35134e639f369-8000"><span class="topictitle1">リクエストの調整</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d31851846486a35134e639f369-7fff"><span class="topictitle2">同時リクエストの調整の概要</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7ffa"><span class="topictitle2">リクエストの調整ページ</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7ff9"><span class="topictitle1">キャッシュ機能ページ</span>
+</a></p></li><li><p><a href="#WSE012D66A-E6D8-4dab-BAEC-35856D8EB780"><span class="topictitle1">クライアント変数ページ</span>
+</a></p><ul><li><p><a href="#WSAA4E629D-51C9-4158-B7E6-BC8D52E383BB"><span class="topictitle2">クライアント変数データの移行</span>
+</a></p></li><li><p><a href="#WSACCE08E8-DBE4-4bad-BF06-5DB0B50F80D0"><span class="topictitle2">クライアント変数テーブルの作成</span>
+</a></p></li><li><p><a href="#WS17024CCB-F81E-44ff-BB72-CB9F94FFBB4B"><span class="topictitle2">サンプルテーブル作成ページ</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7ff4"><span class="topictitle1">メモリ変数ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7ff9"><span class="topictitle1">マッピングページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7ff7"><span class="topictitle1">メールページ</span>
+</a></p><ul><li><p><a href="#WS10A61F2E-A4C4-4f55-A468-EAF3CDCCF294"><span class="topictitle2">「メールサーバーの設定」領域</span>
+</a></p></li><li><p><a href="#WSC47C646B-7ECD-4acd-9F23-31892A258A82"><span class="topictitle2">「メールスプールの設定」領域</span>
+</a></p></li><li><p><a href="#WS635B7577-9C32-4ef7-8381-2026E4EF7D19"><span class="topictitle2">「メールロギングの設定」領域</span>
+</a></p></li><li><p><a href="#WSE9CB2E1A-9819-4547-89E5-376B2DDB828E"><span class="topictitle2">「メール文字セット設定」領域</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fd8"><span class="topictitle1">スケジュールされたタスク</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d31851828f427c7134d088f996-8000"><span class="topictitle2">スケジュールされたタスクページ</span>
+</a></p></li><li><p><a href="#WSe61e35da8d31851828f427c7134d088f996-7fff"><span class="topictitle2">スケジュールされたタスクの追加 / 編集ページ</span>
+</a></p></li></ul></li><li><p><a href="#WSe61e35da8d3185186dac731f134c2e64c97-8000"><span class="topictitle1">WebSocket ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fed"><span class="topictitle1">チャートページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fec"><span class="topictitle1">フォント管理ページ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518156c4be7134ccf066c8-8000"><span class="topictitle2">フォント管理について</span>
+</a></p></li></ul></li><li><p><a href="#WSA5D55EAA-F5B0-46bc-86B1-ADB51B638AB8"><span class="topictitle1">ドキュメントページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7feb"><span class="topictitle1">Java と JVM ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fea"><span class="topictitle1">設定要約ページ</span>
+</a></p></li></ul></div></div></div></div><div><p>「サーバーの設定」セクションでは、クライアント変数、メモリ変数、マッピング、チャートおよびアーカイブを管理できます。また、電子メールと Java の設定も行えます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffb" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffb"><!-- --></a><h2 class="topictitle2">設定ページ</h2><div><p>ColdFusion Administrator の設定ページにはいくつかの設定オプションがあり、このオプションを設定したり有効にすることによって、ColdFusion を管理できます。これらのオプションは、サーバーのパフォーマンスに著しい影響を及ぼす可能性があります。次の表にオプションを示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1190"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1193"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1190 "><p>[リクエストタイムアウト (秒)]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>通常より時間のかかるリクエストがサーバーリソースを占領するのを防ぎます。リクエスト強制終了までの ColdFusion の待ち時間の制限を入力します。タイムアウト時間よりも時間がかかるリクエストは終了します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>アプリケーションごとの設定の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>開発者がプログラムを記述して、アプリケーションごとのマッピングとデバッグなどの ColdFusion 設定を定義できるようにします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>cftoken 用の UUID の使用</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>cftoken に対して乱数ではなく UUID（Universally Unique Identifier）を使用するかどうかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>HTTP ステータスコードの有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>このオプションを有効にすると、未処理のエラーに対してステータスコード「500 Internal Server Error」が設定されます。このオプションを無効にすると、未処理のエラーを含むすべてに対して、ステータスコード「200 OK」が設定されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>空白抑制の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>連続するスペース、タブ、および復帰／改行が圧縮されます。空白を圧縮すると、ColdFusion ページの出力がはるかに小さくなります。</p>
+<p>このオプションはデフォルトで有効になります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>CFC 型チェックの無効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>CFC を引数としてメソッドを呼び出す場合の CFC タイプの検証を無効にします。正しいインターフェイスを実装するオブジェクトの検証も無効になります。 </p>
+<p>このオプションを有効にするとアプリケーションのパフォーマンスを向上させることができますが、本番サーバーでのみ有効にしてください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>ColdFusion Java 内部コンポーネントへのアクセスの無効化 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>CFML コードによって ColdFusion 内部の実装の一部である Java オブジェクトにアクセスしたり Java オブジェクトを作成できないようにします。これにより、認証されていない CFML テンプレートを使用して、このサーバーの管理情報と設定情報を読み込んだり修正することができないようになります。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>シリアル化 JSON への接頭辞付加</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>シリアル化 JSON 文字列にカスタムの接頭辞を付加することで、JSON データを返す Web サービスをクロスサイトスクリプティング攻撃から保護します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>メモリ内ファイルシステムの有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>メモリ内仮想ファイルシステムのサポートを有効にします。このオプションはデフォルトで有効になっています。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>メモリ内仮想ファイルシステムのメモリ制限</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>メモリ内仮想ファイルシステムのメモリ制限をメガバイト（MB）単位で指定できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>設定ファイルの変更の監視 (確認間隔 : <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">n</i> 秒) </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>設定ファイルを監視し、変更された場合は自動的にリロードします。WebSphere ND の垂直クラスターに ColdFusion をデプロイする場合は、複数のインスタンスの ColdFusion が同じ設定ファイルを共有するので、この設定が必要になります。ほとんどの環境ではこの機能を有効にしないことをお勧めします。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>グローバルなスクリプト保護の有効化 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>Form、URL、CGI、Cookie の各スコープ変数をクロスサイトスクリプティング攻撃から保護します。このような保護ロジックがアプリケーションに備わっていない場合は、このオプションを選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>AttributeCollection での追加属性の許可</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>ColdFusion タグを使用して attributecollection 構造体に非標準の属性を渡せるかどうかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>CFaaS の間に作成された一時ファイルをクリアする期間 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>CFaaS（CF as a Service）操作中に作成された一時ファイルを削除するまでの時間を分単位で指定します。デフォルト値は 30 分です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>ORM 検索インデックスディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>サーバーレベルまたはアプリケーションレベルで、インデックスディレクトリ（インデックス作成できるアプリケーションデータのすべての永続エンティティが保存されているディレクトリ）を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>デフォルト ScriptSrc ディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>cfform.js ファイルが含まれているディレクトリへのデフォルトのパス（Web ルートからの相対パス）を指定します。このファイルは <samp class="codeph">cfform</samp> タグの ScriptSrc 属性で参照されています。</p>
+<p>ホスティング環境では、CFIDE 以外のディレクトリに cfform.js ファイルを移動することが必要な場合があります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>Google Map API キー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>Google Map へのアクセスに必要な Google Map API ライセンスキーを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>onServerStart( ) メソッドを含むコンポーネント</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>onServerStart() メソッドを持つ CFC への絶対パスを指定するか、Web ルートより下の CFC パスをドット区切りで指定します（例：&quot;a.b.server&quot;）。デフォルトでは、Web ルートより下から server.cfc が検索されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>Application.cfc および Application.cfm の検索順序</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>現在のプロジェクトフォルダーで見つからない場合に、Application.cfm または Application.cfc を検索する順序を選択します。ColdFusion では次のように検索方法を設定できます。</p>
+<div class="para"><ul><li><p>デフォルトの検索順序：Application.cfc または Application.cfm ファイルを、現在のフォルダーからシステムルートディレクトリまで検索します。例えば、Windows では C:&yen;、UNIX では /opt などがルートディレクトリになります。</p>
+</li>
+<li><p>Web ルートまで：Application.cfc または Application.cfm ファイルを、現在のフォルダーから Web ルートまで検索します。</p>
+</li>
+<li><p>Web ルート内：Application.cfc または Application.cfm ファイルを、現在のフォルダー内または Web ルート内で検索します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>見つからないテンプレートハンドラー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>リクエストされたページを ColdFusion が見つけられない場合に実行するページを指定します。これは Web ルートからの相対パスで指定します。</p>
+<p>注意：ユーザーが Microsoft Internet Explorer で「HTTP エラー メッセージを簡易表示する」をオンにしている場合、このページは 512 バイトを超えるデータを含んでいる場合にのみ表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>サイト全体のエラーハンドラー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>リクエストの処理中に ColdFusion でエラーが発生した場合に実行するページを指定します。これは Web ルートからの相対パスで指定します。サイト全体のエラーハンドラーまたは見つからないテンプレートハンドラーを定義した場合、ページが見つからないエラーおよび例外は ColdFusion によってログに記録されません。</p>
+<p>注意：ユーザーが Internet Explorer で「HTTP エラー メッセージを簡易表示する」をオンにしている場合、このページは 512 バイトを超えるデータを含んでいる場合にのみ表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>送信データの最大サイズ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>1 回のリクエストでサーバーに送信できるデータのサイズを制限します。ColdFusion は、指定された制限を超える単一のリクエストを拒否します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>リクエストのスロットルしきい値</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>指定された制限よりも小さいリクエストは、キューに入れられず、合計メモリの一部としてカウントされません。指定された制限を超えるリクエストは合計メモリの一部としてカウントされ、リクエストのスロットルメモリサイズを超えている場合はキューに入れられます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1190 "><p>リクエストのスロットルメモリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1193 "><p>スロットルの合計メモリサイズを制限します。使用可能な合計メモリが十分でない場合、リクエストは十分なメモリの空き容量ができるまでキューに入れられます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSe61e35da8d31851846486a35134e639f369-8000" class="nochunk"><a name="WSe61e35da8d31851846486a35134e639f369-8000"><!-- --></a><h2 class="topictitle2">リクエストの調整</h2><div><ul class="navlinklist"></ul>
+</div><div id="WSe61e35da8d31851846486a35134e639f369-7fff" class="nochunk"><a name="WSe61e35da8d31851846486a35134e639f369-7fff"><!-- --></a><h3 class="topictitle3">同時リクエストの調整の概要</h3><div><p>次の各タイプのリクエストに対して処理できる同時リクエスト数を指定できます。</p>
+<div class="para"><ul><li><p>CFM ページリクエスト</p>
+</li>
+<li><p>CFC メソッド呼び出し（HTTP GET 経由）</p>
+</li>
+<li><p>Flash Remoting リクエスト</p>
+</li>
+<li><p>Web サービスリクエスト</p>
+</li>
+</ul>
+</div>
+<p>設定は完全に ColdFusion コード内に含まれており、すべての J2EE アプリケーションサーバーにわたって機能します。設定変更を有効にするために ColdFusion サーバーを再起動する必要はありません。JSP 処理はこれらの変更の影響を受けません。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>Flash Remoting リクエストの制御設定は、ActionScript 2.0 および ActionScript 3.0 を使用する Remoting に、タイプごとに独立に適用されます。例えば、5 に設定すると、最大 5 個の ActionScript 2.0 Flash Remoting および 5 個の ActionScript 3.0 Flash Remoting リクエストが同時に許可されます。</div>
+</div>
+<div class="section"><h4 class="sectiontitle">版ごとの機能</h4><div class="para"><ul><li><p>エンタープライズ版またはデベロッパー版のライセンスがある場合は、複数のインスタンスおよびクラスターを作成できます。</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div><div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffa" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffa"><!-- --></a><h3 class="topictitle3">リクエストの調整ページ</h3><div><p>Administrator のリクエストの調整ページにはいくつかの設定オプションがあり、このオプションを使用することによって、ColdFusion が同時に処理できる異なるタイプのリクエストとスレッドの数を指定できます。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1450"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1453"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1450 "><p>同時テンプレートリクエストの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>同時に処理可能な CFML ページリクエスト数です。この設定を使用して、高負荷のアプリケーションの全体的なシステムパフォーマンスを向上させます。指定された制限を超えるリクエストはキューに入れられます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>同時 Flash Remoting リクエストの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>同時処理可能な Adobe Flash&reg; Remoting リクエスト数です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>同時 Web サービスリクエストの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>同時に処理可能な Web サービスリクエスト数です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>同時 CFC 関数リクエストの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>HTTP 経由で同時に処理可能な ColdFusion コンポーネントのメソッド数です。このオプションは、CFML からの CFC メソッドの起動には影響しません。HTTP リクエスト経由でリクエストされたメソッドのみが対象になります。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>同時レポートスレッドの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>同時に処理可能な ColdFusion レポートの最大数です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>CFTHREAD に使用できるスレッドの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>同時に実行される CFTHREAD です。指定された制限を超えて CFTHREAD によって作成されたスレッドはキューに入れられます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>キューで実行待ちのリクエストのタイムアウト（<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">n</i> 秒） </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>キューで実行待ちのリクエストは、指定された最大値を過ぎるとタイムアウトします。この値は、「リクエストのタイムアウト」設定（現在は 60 秒）以上の値にする必要があります。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1450 "><p>リクエストキューのタイムアウトページ </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1453 "><p>テンプレートのリクエストが実行されずにタイムアウトしたときにクライアントに送信する HTML ページへの相対パスを指定します。例えば、&quot;/CFIDE/timeout.html&quot; と指定します。このページに CFML を含めることはできません。ここでページが指定されていない場合、リクエストを実行できなかったときは、クライアントに「500 Request Timeout」というエラーが返されます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7ff9" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7ff9"><!-- --></a><h2 class="topictitle2">キャッシュ機能ページ</h2><div><p>Administrator のキャッシュ機能ページにはいくつかの設定オプションがあり、このオプションを設定したり有効にすることによって、テンプレート、クエリーおよびデータソースをキャッシュに格納できます。これらのオプションは、サーバーのパフォーマンスに著しい影響を及ぼす可能性があります。次の表は、設定項目を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1533"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1536"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1533 "><p>[キャッシュされるテンプレートの最大数]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>値を入力して ColdFusion でキャッシュされるテンプレートの数を指定します。最高のアプリケーションパフォーマンスを得るには、アクセス頻度が高い ColdFusion ページを格納できるだけの大きさを持ち、なおかつリロードが必要以上に発生しない程度の値に設定してください。開発サーバー上で、様々な値を指定して実験することをお勧めします。最初は Java 仮想マシン（JVM）サイズの 1 MB あたり 1 ページ程度の値から試してみるのが適切と考えられます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>信頼できるキャッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>キャッシュされたテンプレートを、変更されたかどうかを確認せずに使用します。頻繁に更新されないサイトの場合は、このオプションによって、ファイルシステムのオーバーヘッドを最小限に抑えることができます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>要求にテンプレートをキャッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>これをオンにすると、要求されたファイルが更新されているかどうかが 1 回の要求の間に一度だけ検査されます。これをオフにすると、要求されたファイルが変更されているかどうかが 1 回の要求の間でもアクセスされるたびに確認されます。1 回の要求の間にテンプレートやコンポーネントに更新が反映される可能性がないアプリケーションの場合は、こうすることによりファイルシステムのオーバーヘッドを最小限に抑えることができます。この設定を変更しても、サーバーを再起動する必要はありません。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>コンポーネントキャッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>これをオンにすると、コンポーネントパスを解決した結果がキャッシュされて再び解決されることがなくなります。この設定を変更しても、サーバーを再起動する必要はありません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>クラスファイルの保存</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>ColdFusion バイトコードコンパイラーにより生成されるクラスファイルをディスクに保存します。開発段階では、このオプションを無効にするほうが通常は高速になります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>&rlm;Web サーバーパスのキャッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>単一サーバーに対する ColdFusion ページパスをキャッシュします。複数の Web サイトまたは複数の仮想 Web サイトを持つ Web サーバーに ColdFusion を接続する場合は、このオプションの選択をオフにします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>キャッシュされるクエリーの最大数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>値を入力して、サーバーが保守するキャッシュクエリーの最大数を制限します。キャッシュクエリーでは、データベーストランザクションからではなくメモリから結果セットを取得することができます。クエリーはメモリ内に存在しており、クエリー結果セットのサイズは異なるので、キャッシュされるクエリーの数を制限する必要があります。キャッシュクエリーを有効にするには <samp class="codeph">cfquery</samp> タグの <samp class="codeph">cachedwithin</samp> 属性または <samp class="codeph">cachedafter</samp> 属性を使用します。キャッシュされるクエリーの最大数に達すると、最も古いクエリーがキャッシュから削除され、指定したクエリーで置き換えられます。キャッシュされるクエリーの最大数を 0 に設定すると、クエリーのキャッシングは無制限になります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>内部キャッシュを使用してクエリーを保存する </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>このオプションを選択した場合は、サーバーレベルで、キャッシュクエリーが内部キャッシュを使用して保存されます。デフォルトでは、キャッシュクエリーは Ehcache によってサポートされる QUERY 領域に保存されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>[テンプレートキャッシュを直ちにクリア]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>テンプレートキャッシュを空にします。その後にテンプレートがリクエストされたとき、ColdFusion はテンプレートをメモリにリロードし、修正されていれば再コンパイルを実行します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>特定のフォルダーのテンプレートキャッシュをクリア</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>以前のリリースでは、信頼できるキャッシュをクリアするオプションしかなく、システム全体のキャッシュがクリアされていました。このオプションを使用すれば、フォルダーレベルにクリアを限定できるようになりました。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>[コンポーネントキャッシュを直ちにクリア]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>コンポーネントキャッシュを空にします。既に解決されたコンポーネントへのパスが無視されて、再び解決が試みられます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1533 "><p>クエリキャッシュを今すぐクリア</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1536 "><p>サーバーのクエリキャッシュを削除します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSE012D66A-E6D8-4dab-BAEC-35856D8EB780" class="nochunk"><a name="WSE012D66A-E6D8-4dab-BAEC-35856D8EB780"><!-- --></a><h2 class="topictitle2">[クライアント変数]ページ</h2><div><p>クライアント変数には、ユーザー情報およびセッション間の環境設定を保管することができます。クライアント変数からの情報を使用すると、個々のユーザーのページコンテンツを最適化できます。</p>
+<p>ColdFusion Administrator のクライアント変数ページでは、クライアント変数のデフォルト値を設定できます。ColdFusion では、次の方法でクライアント変数を保管できます。</p>
+<ul><li><p>データベーステーブルに保管</p>
+<div class="note"><span class="notetitle">注意：</span>ColdFusion 10 にバンドルされた JDBC ドライバーをデータソースで使用する場合、ColdFusion では必要なテーブルを自動的に作成できます。ご使用のデータソースが ODBC ソケットまたはサードパーティの JDBC ドライバーを使用している場合は、必要な CDATA および CGLOBAL データベーステーブルを手動で作成してください。</div>
+</li>
+<li><p>Web ブラウザに Cookie として保管</p>
+</li>
+<li><p>オペレーティングシステムレジストリに保管</p>
+<div class="important"><span class="importanttitle">重要：</span>サーバーのパフォーマンスを大幅に低下させる可能性があるので、クライアント変数をレジストリに保管することはお勧めできません。クライアント変数の保管にレジストリを使用する場合は、十分なメモリとディスク容量を割り当ててください。</div>
+</li>
+</ul>
+<p>クライアント変数ページで指定した設定をオーバーライドするには、Application.cfc ファイルまたは <samp class="codeph">cfapplication</samp> タグを使用します。詳細については、『ColdFusion アプリケーションの開発<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>』を参照してください。</p>
+<div class="section"><h4 class="sectiontitle">データソースへのクライアント変数の保存</h4><ol><li><p>クライアント変数ページの「クライアントストアとして追加するためのデータソースの選択」テーブルで、ドロップダウンからデータソースを選択します。</p>
+</li>
+<li><p>「追加」をクリックします。データソースのクライアントストアを追加 / 編集ページが表示されます。</p>
+</li>
+<li><p>次の表に示されているとおり、データソースのオプションを選択します（変更を保存せずに、このページを終了するには、左向き矢印アイコンをクリックします）。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1686"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1689"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1686 "><p>説明</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1689 "><p>クライアントデータストアおよびその設定の説明です。レジストリには表示されません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1686 "><p>クライアントデータベーステーブルの作成</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1689 "><p>使用するデータベースでデータベーステーブルの SQL 作成がサポートされていることを ColdFusion で特定できる場合は、このオプションが表示され、クライアント変数テーブルを使用する前にテーブルを作成する必要がなくなります。この場合、「クライアントデータベーステーブルの作成」オプションがクライアントストアを追加 / 編集ページに表示されます。このオプションを選択すると、必要なテーブルがデータベースに作成されます。</p>
+<p>SQL テーブルの作成がデータベースでサポートされていない場合に、必要なテーブルがデータベースに既にある場合、またはレジストリを使用している場合には、このオプションは表示されません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1686 "><p>アクセスされなかったクライアントのデータを破棄 [n] 日</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1689 "><p>通常、クライアントデータは期間限定で保存されます。指定した日数アクセスされていないクライアントデータを削除（破棄）するには、このオプションを選択して、日数の値を入力します。 </p>
+<p>ColdFusion サーバーのクラスターがこのデータソースを使用する場合は、クライアントデータを破棄するように設定されているサーバーが 1 台のみであることを確認してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1686 "><p>グローバルクライアント変数更新の無効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1689 "><p>デフォルトでは、すべてのページリクエストに対して、クライアント変数が更新されます。変数が更新されないようにするには、このオプションを選択します。</p>
+<p>更新を無効にすると、グローバルクライアント変数が最初に作成されたときおよび更新されたときのみに変数が更新されます。このようにすると、アプリケーションのパフォーマンス向上に役立ちます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li><p>「変更の送信」をクリックします。 クライアント変数ページが表示され、リストにデータソースが表示されます。</p>
+</li>
+<li><p>「クライアントセッション用のデフォルトのストレージメカニズムを選択」テーブルでデータソースを選択します。</p>
+</li>
+<li><p>「適用」をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">Cookie またはシステムレジストリへのクライアント変数の保存</h4><ol><li><p>クライアント変数ページで、「Cookie」または「レジストリ」を選択します。</p>
+</li>
+<li><p>「適用」をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">クライアント変数ストレージオプション</h4>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1756"><p>保管タイプ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1759"><p>利点</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1762"><p>欠点</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1756 "><p>データソース</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1759 "><div class="para"><ul><li><p>既存のデータソースを使用できます。</p>
+</li>
+<li><p>移植が可能です。ホストシステムやオペレーティングシステムの種類を問いません。</p>
+</li>
+</ul>
+</div>
+</td>
+<td valign="top" width="NaN%" headers="d16e1762 "><div class="para"><ul><li><p>変数の読み取りや書き込みを行うには、データベーストランザクションが必要です。</p>
+</li>
+<li><p>実装がより複雑です。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1756 "><p>ブラウザの Cookie</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1759 "><div class="para"><ul><li><p>簡単に実装できます。</p>
+</li>
+<li><p>高いパフォーマンスが期待できます。</p>
+</li>
+<li><p>自動的にタイムアウトとなるように設定できます。</p>
+</li>
+<li><p>クライアントサイドで制御できます。</p>
+</li>
+</ul>
+</div>
+</td>
+<td valign="top" width="NaN%" headers="d16e1762 "><div class="para"><ul><li><p>ブラウザーが Cookie を使用するかどうかをユーザーが変更できるため、設定を統一させることが困難な場合があります。</p>
+</li>
+<li><p>Cookie データには 4 KB のサイズ制限があります。</p>
+</li>
+<li><p>Netscape Navigator では、1 つのホストからの Cookie が 20 個までしか許可されません。ColdFusion は、読み取り専用データの保管に 3 個の Cookie を使用するので、追加できる Cookie は 17 個までです。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1756 "><p>システムレジストリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1759 "><div class="para"><ul><li><p>簡単に実装できます。</p>
+</li>
+<li><p>高いパフォーマンスが期待できます。</p>
+</li>
+<li><p>レジストリは、他のシステムに簡単にエクスポートできます。</p>
+</li>
+<li><p>サーバー側で制御できます。</p>
+</li>
+</ul>
+</div>
+</td>
+<td valign="top" width="NaN%" headers="d16e1762 "><div class="para"><ul><li><p>「システム」コントロールパネルで、レジストリの最大サイズ制限を確認しておく必要があります（Windows）。</p>
+</li>
+<li><p>ホストシステムと統合されています。ただし、クラスター構成のサーバーでは実用的ではありません。 </p>
+</li>
+<li><p>UNIX では使用できません。</p>
+</li>
+<li><p>Windows のみに適用できます。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div><div id="WSAA4E629D-51C9-4158-B7E6-BC8D52E383BB" class="nochunk"><a name="WSAA4E629D-51C9-4158-B7E6-BC8D52E383BB"><!-- --></a><h3 class="topictitle3">クライアント変数データの移行</h3><div><p>クライアント変数データを別のデータソースに移行するには、この情報を保管するデータベーステーブルの構造を把握する必要があります。外部に保管されるクライアント変数には、次の表に示すような 2 つの単純なデータベーステーブルが使用されます。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th colspan="2" valign="top" id="d16e1867"><p>CDATA</p>
+</th>
+</tr>
+<tr><th valign="top" width="NaN%" id="d16e1871"><p>列</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1874"><p>データ型</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1867 d16e1871 "><p>cfid</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1867 d16e1874 "><p>CHAR(64)、TEXT、VARCHAR、またはこれと同等のデータ型</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1867 d16e1871 "><p>app</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1867 d16e1874 "><p>CHAR(64)、TEXT、VARCHAR、またはこれと同等のデータ型</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1867 d16e1871 "><p>data</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1867 d16e1874 "><p>MEMO、LONGTEXT、LONG VARCHAR、またはこれと同等のデータ型</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th colspan="2" valign="top" id="d16e1905"><p>CGLOBAL</p>
+</th>
+</tr>
+<tr><th valign="top" width="NaN%" id="d16e1909"><p>列</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1912"><p>データ型</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1905 d16e1909 "><p>cfid</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1905 d16e1912 "><p>CHAR(64)、TEXT、VARCHAR、またはこれと同等のデータ型</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1905 d16e1909 "><p>data</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1905 d16e1912 "><p>MEMO、LONGTEXT、LONG VARCHAR、またはこれと同等のデータ型</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1905 d16e1909 "><p>lvisit</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1905 d16e1912 "><p>TIMESTAMP、DATETIME、DATE、またはこれと同等のデータ型</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><div id="WSACCE08E8-DBE4-4bad-BF06-5DB0B50F80D0" class="nochunk"><a name="WSACCE08E8-DBE4-4bad-BF06-5DB0B50F80D0"><!-- --></a><h3 class="topictitle3">クライアント変数テーブルの作成</h3><div><p>次の ColdFusion ページのサンプルを、独自のデータベース内でのクライアント変数データベーステーブル作成のモデルとして使用することができます。ただし、すべてのデータベースで同じ列のデータ型名がサポートされているわけではありませんので注意してください。正しいデータ型については、データベースのドキュメントを参照してください。 </p>
+<div class="note"><span class="notetitle">注意：</span>バンドルされた JDBC ドライバーのいずれかをデータソースで使用する場合は、ColdFusion Administrator でクライアント変数テーブルを作成できます。詳細については、オンラインヘルプを参照してください。</div>
+</div></div><div id="WS17024CCB-F81E-44ff-BB72-CB9F94FFBB4B" class="nochunk"><a name="WS17024CCB-F81E-44ff-BB72-CB9F94FFBB4B"><!-- --></a><h3 class="topictitle3">サンプルテーブル作成ページ</h3><div><pre>&lt;!---- Create the Client variable storage tables in a datasource.  
+This example applies to Microsoft Access databases. ---&gt; 
+ 
+&lt;cfquery name=&quot;data1&quot; datasource=&quot;#DSN#&quot;&gt; 
+CREATE TABLE CDATA 
+( 
+cfid char(20), 
+app char(64), 
+data memo 
+) 
+&lt;/cfquery&gt; 
+ 
+&lt;cfquery name=&quot;data2&quot; datasource=&quot;#DSN#&quot;&gt;  
+    CREATE UNIQUE INDEX id1  
+    ON CDATA (cfid,app) 
+&lt;/cfquery&gt; 
+     
+&lt;cfquery name=&quot;global1&quot; datasource=&quot;#DSN#&quot;&gt; 
+CREATE TABLE CGLOBAL 
+( 
+cfid char(20), 
+data memo, 
+    lvisit date 
+) 
+&lt;/cfquery&gt; 
+ 
+&lt;cfquery name=&quot;global2&quot; datasource=&quot;#DSN#&quot;&gt;  
+    CREATE INDEX id2  
+    ON CGLOBAL (cfid) 
+&lt;/cfquery&gt; 
+ 
+&lt;cfquery name=&quot;global2&quot; datasource=&quot;#DSN#&quot;&gt;  
+    CREATE INDEX id3  
+    ON CGLOBAL (lvisit) 
+&lt;/cfquery&gt;</pre>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7ff4" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7ff4"><!-- --></a><h2 class="topictitle2">メモリ変数ページ</h2><div><p>ColdFusion Administrator のメモリ変数ページを使用して、サーバー全体のアプリケーション変数およびセッション変数を有効にできます。デフォルトでは、ColdFusion のインストール時に、アプリケーション変数およびセッション変数が有効になります。メモリ変数ページでいずれかのタイプの変数を無効にした場合は、ColdFusion アプリケーション内でその変数を使用できません。 </p>
+<p>アプリケーション変数およびセッション変数のタイムアウトの最大値とデフォルト値を指定できます。Application.cfc ファイルまたは Application.cfm ファイルでタイムアウト値を定義しないかぎり、アプリケーション変数は 2 日でタイムアウトとなります。セッション変数は、ユーザーセッションの終了時にタイムアウトとなります。これらの動作を変更する場合は、Administrator のメモリ変数ページでタイムアウトの新規デフォルト値および最大値を入力してください。 </p>
+<div class="note"><span class="notetitle">注意：</span>アプリケーション変数のために指定する最大タイムアウト値は、Application.cfc ファイルまたは Application.cfm ファイルで設定したタイムアウト値よりも優先されます。</div>
+<p>J2EE セッション変数を使用するかどうかを指定することもできます。J2EE セッション変数を有効にした場合、ColdFusion により、各セッションの識別子が作成され、CFToken や CFID Cookie 値は使用されません。詳しくは、『ColdFusion アプリケーションの開発<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>』を参照してください。</p>
+<div class="note"><span class="notetitle">注意：</span>J2EE セッションを使用する場合、WEB‑INF/web.xml の <samp class="codeph">session-timeout</samp> 要素で指定するセッションタイムアウトは、必ず ColdFusion Administrator でのタイムアウトの指定より長くしてください。また、<samp class="codeph">cfapplication</samp> タグで指定したいずれの <samp class="codeph">sessiontimeout</samp> 属性よりも長くなるようにしてください。</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7ff9" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7ff9"><!-- --></a><h2 class="topictitle2">マッピングページ</h2><div><p>サーバー上のディレクトリへのパスに対する論理エイリアスの追加、更新および削除を行うには、ColdFusion Administrator のマッピングページを使用します。ColdFusion マッピングは、<samp class="codeph">cfinclude</samp> タグおよび <samp class="codeph">cfmodule</samp> タグを使用して ColdFusion によって処理されるページのみに適用されます。<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">web_root</i> ディレクトリ（または &quot;/&quot; にマップされるディレクトリ）以外に CFML ページを保存する場合は、サーバー上でそれらのファイルを保存する場所へのマッピングを追加してください。 </p>
+<p>例えば、ご使用のサーバー上で &quot;/&quot; マッピングは C:&yen;coldfusion9&yen;wwwroot を指しているのに、すべての ColdFusion ヘッダーページは C:&yen;2002&yen;newpages&yen;headers に存在するとします。ColdFusion がこれらのヘッダーページを見つけられるようにするには、ColdFusion Administrator で C:&yen;2002&yen;newpages&yen;headers を指すマッピングを追加します。例えば、/headers を C:&yen;2002&yen;newpages&yen;headers に対応させるマッピングを追加します。C:&yen;coldfusion9&yen;wwwroot に存在する ColdFusion ページでは、これらのヘッダーページを参照する場合、<samp class="codeph">cfinclude</samp> および <samp class="codeph">cfmodule</samp> タグ内で /headers を使用します。 </p>
+<div class="note"><span class="notetitle">注意：</span>ColdFusion のマッピングは、Web サーバーの仮想ディレクトリとは異なります。Web ブラウザーで URL を使用して特定のディレクトリにアクセスするための仮想ディレクトリを作成する方法については、ご使用の Web サーバーのドキュメントを参照してください。</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7ff7" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7ff7"><!-- --></a><h2 class="topictitle2">メールページ</h2><div><p>ColdFusion Administrator のメールページでは、自動電子メールメッセージを送信するメールサーバーを指定できます。ColdFusion では、電子メールメッセージの送信に SMTP（Simple Mail Transfer Protocol）が使用され、メールサーバーからの電子メールメッセージの取得には POP（Post Office Protocol）が使用されます。ColdFusion アプリケーション内で電子メール送受信機能を使用するには、SMTP サーバーへのアクセス許可と POP アカウントが必要です。 </p>
+<p>ColdFusion エンタープライズ版では、メールサーバーのフェイルオーバーと、追加のメール配達オプションをサポートしています。</p>
+<p>ColdFusion では、SMTP メール機能を実装するためにスプールアーキテクチャを利用しています。スプールアーキテクチャでは、<samp class="codeph">cfmail</samp> タグがアプリケーションページ内で処理されても、生成されたメッセージはすぐには送信されない可能性があります。ColdFusion のキューに大量のメッセージが蓄積されている場合は、配達されるまでにしばらく時間がかかることがあります。</p>
+<div class="note"><span class="notetitle">注意：</span><samp class="codeph">cfmail</samp> タグについて詳しくは、『ColdFusion アプリケーションの開発』の「電子メールの送受信」で「cfmail タグによる SMTP 電子メールの送信」を参照してください。</div>
+</div><div id="WS10A61F2E-A4C4-4f55-A468-EAF3CDCCF294" class="nochunk"><a name="WS10A61F2E-A4C4-4f55-A468-EAF3CDCCF294"><!-- --></a><h3 class="topictitle3">[メールサーバーの設定] 領域</h3><div><p>次の表で、基本的なメールサーバーの設定について説明します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2044"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2047"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2044 "><p>[メールサーバー]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>ダイナミック SMTP メールメッセージを送信するための有効なメールサーバー名を入力します。インターネットアドレス（mail.company.com など）やメールサーバーの IP アドレス（127.0.0.1 など）を入力できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>ユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>必要に応じてメールサーバーを利用するためのユーザー名を入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>パスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>必要に応じてメールサーバーを利用するためのパスワードを入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>署名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>メールにデジタル署名を追加するように ColdFusion を設定する場合は、このチェックボックスをオンにします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>キーストア</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>秘密キーと証明書が格納されているキーストアの場所です。サポートされているタイプは JKS（java key store）と pkcs12 です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>[キーストアパスワード]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>キーストアのパスワードです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>[キーエイリアス]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>証明書と秘密キーをキーストアに保存するために使用するキーのエイリアスです。これを指定しない場合は、キーストアの最初のエントリが使用されます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>キーパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>秘密キーを保存するために使用するパスワードです。これを指定しない場合は、[キーストアパスワード] が [キーパスワード] として使用されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>[メールサーバーの接続の確認]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>指定したメールサーバーに ColdFusion から接続できるかどうかを、このフォームの送信後に確認します。</p>
+<p>このオプションを使用しない場合でも、テストメッセージを送信してメールサーバーへの接続が機能することを確認してください。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>サーバーポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>メールサーバーを実行するポート番号を入力します。正しいポート番号がわからない場合は、サーバー管理者に確認してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>バックアップメールサーバー（エンタープライズ版のみ）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>SMTP メールメッセージを送信するためのバックアップサーバーを入力します（省略および複数指定も可）。インターネットアドレス（mail.company.com など）やメールサーバーの IP アドレス（127.0.0.1 など）を入力できます。複数のサーバーを指定する場合は、カンマで区切ります。 </p>
+<p>メールサーバーが認証を必要とする場合は、<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">username</i>:<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">password</i>@<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">mailserveraddress</i> のように、メールサーバーアドレスの前にユーザー名とパスワードを追加します。</p>
+<p>デフォルト（25）以外のポート番号を使用する場合は、<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">mailserveraddress</i>:<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">portnumber</i> という形式で指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>メールサーバーへの接続を維持します</p>
+<p>（エンタープライズ版のみ）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>メールメッセージの送信後に、メールサーバーへの接続を開いたままにします。このオプションを有効にすると、複数のメッセージを配達する際のパフォーマンスが向上します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>接続タイムアウト (秒)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>ColdFusion がメールサーバーからのレスポンスを待つ際のタイムアウトまでの時間を秒単位で指定します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>メールサーバーへの SSL ソケット接続の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>メールサーバーへの接続で SSL の暗号化を有効にします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2044 "><p>メールサーバーへの TLS 接続の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2047 "><p>メールサーバーへの接続で TLS（Transport Layer Security）を有効にします。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><div id="WSC47C646B-7ECD-4acd-9F23-31892A258A82" class="nochunk"><a name="WSC47C646B-7ECD-4acd-9F23-31892A258A82"><!-- --></a><h3 class="topictitle3">[メールスプールの設定] 領域</h3><div><p>次の表で、メールサーバーのスプールの設定について説明します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2192"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2195"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2192 "><p>[スプール間隔 (秒)]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2195 "><p>スプールされたメールがメールサーバーによって処理される間隔を秒単位で指定します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2192 "><p>メール配達スレッド</p>
+<p>（エンタープライズ版のみ）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2195 "><p>スプールされたメールを配達するために同時に使用するスレッド数の最大値を入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2192 "><p>配達されるメールメッセージをスプールします</p>
+<p>（メモリへのスプールはエンタープライズ版のみ）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2195 "><p>送信メールメッセージをメールスプーラーに送ります。このオプションを無効にすると、送信されるメールメッセージは直ちに配達されます。ColdFusion エンタープライズ版では、ディスク（低速であるがシャットダウンしてもメッセージは保持される）またはメモリ（高速であるがシャットダウンするとメッセージは失われる）にメッセージをスプールすることができます。 </p>
+<p>この設定を <samp class="codeph">cfmail</samp> タグで上書きできます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2192 "><p>メモリにスプールされるメッセージの最大数</p>
+<p>（エンタープライズ版のみ）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2195 "><p>メモリにスプールできるメッセージの最大数を入力します。この数を超えるとディスクへのスプールに切り替わります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2192 "><p>[未配達メールの表示]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2195 "><p>クリックすると、配信されなかったメールが表示されます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+  <h2>未配達メールの添付ファイルのダウンロードのブロック</h2>
+  <p>ColdFusion サーバーに変更が加えられ、未配達の電子メールの添付ファイルがダウンロードされないようになりました。未配達メールの添付ファイルのダウンロードを許可または禁止するには、ColdFusion Administrator で次の操作を行います。</p>
+  <ul>
+    <li>ColdFusion Administrator にログインします。</li>
+    <li>サーバーの設定／メールをクリックします。</li>
+    <li>「メールスプールの設定」に移動し、「<strong>未配達メールの添付ファイルのダウンロードを許可します。</strong>」をオンまたはオフにします。</li>
+  </ul>
+  
+</div>
+</div></div><div id="WS635B7577-9C32-4ef7-8381-2026E4EF7D19" class="nochunk">
+  
+  
+  <p><a name="WS635B7577-9C32-4ef7-8381-2026E4EF7D19"><!-- --></a></p>
+  <h3 class="topictitle3">「メールロギングの設定」領域</h3><div><p>次の表の説明に従って、電子メールログ処理の基本設定を指定します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2259"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2262"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2259 "><p>[エラーログの厳格度]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2262 "><p>ドロップダウンリストオブジェクトから、ログファイルに書き込む SMTP 関連エラーメッセージのタイプを選択します。これには次のオプションがあります。</p>
+<div class="para"><ul><li><p>「デバッグ」（「情報」、「警告」、「エラー」が含まれます）</p>
+</li>
+<li><p>[情報] ([警告]、[エラー] が含まれます)</p>
+</li>
+<li><p>[警告] ([エラー] が含まれます)</p>
+</li>
+<li><p>エラー</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2259 "><p>[ColdFusion から送信されるメールメッセージをすべてロギング]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2262 "><p>すべての電子メールメッセージの「宛先」、「差出人」、「件名」フィールドをログファイルに保存します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ColdFusion は、送信済みメールおよびメールエラーログを次のディレクトリに書き込みます。</p>
+<ul><li><p>&yen;coldfusion9&yen;logs (Windows、サーバー設定)</p>
+</li>
+<li><p>/opt/coldfusion9/log (Solaris および Linux、サーバー設定)</p>
+</li>
+<li><p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_webapp_root</i>/WEB-INF/cfusion/logs（マルチサーバーおよび J2EE 設定、すべてのプラットフォーム）</p>
+</li>
+</ul>
+<p>次の表は、電子メールログファイルを示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2316"><p>Log</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2319"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2316 "><p>mailsent.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2319 "><p>送信済み電子メールメッセージを記録します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2316 "><p>mail.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2319 "><p>一般的な電子メールエラーを記録します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div><div id="WSE9CB2E1A-9819-4547-89E5-376B2DDB828E" class="nochunk"><a name="WSE9CB2E1A-9819-4547-89E5-376B2DDB828E"><!-- --></a><h3 class="topictitle3">[メール文字セット設定] 領域</h3><div><p>次の表の説明に従って、メール文字セットのデフォルトの設定を選択します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2351"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2354"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2351 "><p>[デフォルト CFMail 文字設定]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2354 "><p>ドロップダウンリストオブジェクトから、<samp class="codeph">cfmail</samp> タグで使用されるデフォルトの文字セットを選択します。デフォルト値は UTF-8 です。電子メールクライアントのほとんどが特定の文字セットを使用する場合は、この設定を使用して、ロケール特有の文字セットに切り替えることができます。例えば、日本語のメールの多くは ISO-2022-JP 文字セットを使用して送信されます。 </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd8" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd8"><!-- --></a><h2 class="topictitle2">スケジュールされたタスク</h2><div><p>ColdFusion Administrator のスケジューリング機能では、ローカルおよびリモートの Web ページの実行、スタティック HTML ページの生成、<samp class="codeph">cfmail</samp> タグによるメール送信、データベーステーブルの更新、コレクションのインデックス作成、テンポラリファイルの削除、その他、バッチ形式のすべての処理をスケジュールできます。スケジューリング機能は、ユーザーとの対話を必要としないアプリケーション、またはカスタマイズされた出力に役立ちます。ColdFusion 開発者は、この機能を使用して、毎日の売上レポート、社内ディレクトリ、統計レポートなどの作成をスケジューリングできます。 </p>
+<p>タスクのスケジューリングは、書き込みよりも読み取りの頻度が高い情報に適しています。ページがリクエストされるたびに ColdFusion がデータベースに対するクエリーを実行するのではなく、スケジューリングされたイベントによって生成される情報を含んだスタティックページを表示します。データベーストランザクションが発生しないので、レスポンス時間が短縮されます。 </p>
+<p>スケジュールされたタスクは、指定した日に 1 回のみ実行、毎日、毎週または毎月の指定時間に実行、指定した時間ごとに実行、また、指定した日付の間の期間に実行できます。 </p>
+<p>スケジュールされたページが実行されると、schedule.log というログファイルにメッセージが自動的に書き込まれます。このファイルには、スケジュールされたアクション、実行されるページ、スケジュールされたタスクが正常に実行されたかどうかが示されます。スケジュールされたタスクは一時停止および再開できます。 </p>
+</div><div id="WSe61e35da8d31851828f427c7134d088f996-8000" class="nochunk"><a name="WSe61e35da8d31851828f427c7134d088f996-8000"><!-- --></a><h3 class="topictitle3">スケジュールされたタスクページ</h3><div><p>スケジュールされたタスクページでは、スケジュールされたタスクの作成、編集、一時停止、再開および削除が可能です。このページには、次の領域があります。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2400"><p>領域</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2403"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2400 "><p>新規タスクのスケジューリング</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2403 "><p>クリックすると、スケジュールされたタスクを新しく追加できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2400 "><p>アクション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2403 "><p>このアイコンをクリックすると、スケジュールされたタスクを実行、一時停止、編集または削除できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2400 "><p>タスク名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2403 "><p>実行するようにスケジュールされている既存のタスクの名前が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2400 "><p>期間</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2403 "><p>タスクを実行する期間が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2400 "><p>間隔</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2403 "><p>このタスクが実行される頻度が表示されます。 この列には、「1 回」、「毎日」または「指定間隔」のいずれかの値を指定できます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="para"><ul><li><p><strong>アプリケーションレベルでスケジュールされたタスク：</strong>スケジュールしたアプリケーション固有のタスクのリストが、タスクの詳細とともにテーブル形式で表示されます。</p>
+<p>このテーブルには、アクション、アプリケーション名、グループ、タスク名、期間、間隔、最後の実行、次の実行、反復カウント、およびクラスターが有効どうかが表示されます。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>ColdFusion Administrator を使用して、アプリケーション固有のタスクを作成することはできません。しかし、タスクの一時停止、再開または削除は行えます。</div>
+</div>
+</li>
+<li><p><strong>サーバーレベルでスケジュールされたタスク：</strong>スケジュールしたサーバー固有のタスクのリストが、タスクの詳細とともにテーブル形式で表示されます。 </p>
+<p>このテーブルには、グループ、次の実行、反復カウント、クラスターが有効どうか、および残りのタスクカウントなどの新しい詳細が表示されます。</p>
+</li>
+<li><p><strong>クラスター設定を有効にする：</strong>少なくとも 1 つのデータソースが設定されている場合に適用されます。次の詳細を指定します。 </p>
+<ul><li><p><strong>データソースを選択：</strong>接続しているすべてのデータソースがリストされます。 </p>
+</li>
+<li><p><strong>クラスター設定用のテーブルを作成：</strong>チェックを付けると、スケジューラー固有のテーブルがクラスターに対して作成されます。 </p>
+<div class="note"><span class="notetitle">注意：</span>このオプションは、クラスターの 1 つのノードに対してのみ有効にしてください。そうしないと、テーブルが上書きされます。1 つのノードからテーブルを作成した場合、他のノードでは、データソースの選択のみを行う必要があります。すべてのノードが同じデータソースを指すので、クラスターの一部になります。</div>
+</li>
+<li><p>詳細を指定した後、「送信」をクリックします。</p>
+</li>
+</ul>
+<p>クラスターを無効にするには、「クラスターを無効にする」オプションを選択します。</p>
+</li>
+</ul>
+</div>
+</div></div><div id="WSe61e35da8d31851828f427c7134d088f996-7fff" class="nochunk"><a name="WSe61e35da8d31851828f427c7134d088f996-7fff"><!-- --></a><h3 class="topictitle3">スケジュールされたタスクの追加 / 編集ページ</h3><div><p>スケジュールされたタスクの追加／編集ページでは、タスクを追加または編集できます。次のタスクを指定した後、「送信」をクリックします。ページを最初に読み込むと、タスクを作成するための最小限のオプションのみが表示されます。すべての設定を表示するには、「追加設定を表示」をクリックします。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2499"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2502"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2499 "><p>タスク名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>「タスク名」テキストボックスにタスクの名前を入力します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>期間</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>タスクの開始日と終了日を入力します。終了日はオプションです。このタスクを継続的に実行する場合は、「終了日」テキストボックスを空白のままにしておきます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>頻度</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><div class="para">このタスクを実行するスケジュールを選択します。<ul><li><p><strong>1 回のみ</strong> 指定された開始日およびスケジュール時刻にタスクを 1 回のみ実行するようにスケジュールします。日付と時刻を指定します。タスクを正常に実行するためには、15 分以上先にタスクを設定する必要があります。</p>
+</li>
+<li><p><strong>繰り返し</strong> 毎日、毎週または毎月の指定された時間にタスクを実行するようにスケジュールします。 </p>
+</li>
+<li><p><strong>指定間隔</strong> 1 日の間にタスクが反復されるようにスケジュールします。開始時刻と終了時刻を指定して、タスクの開始時刻と終了時刻を指定します。時間、分、秒を指定して、タスクが反復される間隔を設定します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>URL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>実行する ColdFusion ページの URL を入力します。正しいアクセス権があれば、ローカルページまたはリモート ColdFusion サーバーのページを実行できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>ユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）実行するページがセキュリティ保護された場所にある場合にのみ、ユーザー名を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>パスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）実行するページがセキュリティ保護された場所にある場合にのみ、パスワードを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>タイムアウト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）タイムアウト設定を指定します。 これは、Web サーバーの過負荷状態、ネットワークの問題、またはページの実行に時間がかかりすぎることが原因でリクエストが応答しなくなることを防ぐのに役立ちます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>プロキシサーバー：ポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）このリクエストをプロキシサーバー経由でルーティングする必要がある場合は、そのプロキシサーバーの URL およびポート番号を入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>ファイルのパブリッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）このタスクの出力ファイルをパブリッシュするには、「出力をファイルに保存」オプションを選択してから、出力ファイルの絶対パスおよびファイル名を「ファイル」テキストボックスに入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>URL の変換</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>（オプション）「URL の変換」オプションを選択して、結果ページに返されたリンクで使用されている相対 URL を絶対 URL に置換します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>グループ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>スケジュールされたタスクが属するグループです。タスク名とグループの組み合わせが一意であることを確認してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>Crontime</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>cron ジョブシンタックスでタスクスケジューリング時刻を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>上書き</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>選択しないと、タスクが実行されるたびに新しい出力ファイルが作成されます。</p>
+<p>選択すると、新規出力ファイルを作成する代わりに、既存の出力ファイルが上書きされます。</p>
+<p>スケジュールされたタスクのファイルのパブリッシュでは、TXT および .log の拡張子のみがデフォルトで付くようになったことに注意してください。cfusion&yen;lib&yen;neo-cron xml に拡張子を追加できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>イベントハンドラー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>タスクの実行中に各種イベントで呼び出される定義済みのメソッドが含まれる CFC ファイルです。 </p>
+<p>Web ルートに対する相対パスを指定する必要があります。例えば、<samp class="codeph">schedulerdemo.eventhandler</samp> と指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>除外</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>スケジュール期間内で除外する日付または日付範囲のカンマ区切りリストです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>誤実行時</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>スケジュールされたタスクが誤実行された場合にサーバーがどうするかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>例外時</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>タスクでエラーが発生した場合にどうするかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>完了時</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>現在のタスクの完了後に実行するアクションです。次のフォーマットで詳細を指定します。</p>
+<p><samp class="codeph">Task1:Group1,Task3:Group3</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>優先度</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>タスクの優先度を示す整数です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>再試行回数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>タスクでエラーが発生した場合の再試行回数です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2499 "><p>クラスタ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2502 "><p>クラスタ設定でタスクを実行するには、有効にします。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></div>
+<div id="WSe61e35da8d3185186dac731f134c2e64c97-8000" class="nochunk"><a name="WSe61e35da8d3185186dac731f134c2e64c97-8000"><!-- --></a><h2 class="topictitle2">WebSocket ページ</h2><div><p>ColdFusion Administrator（サーバー設定／WebSocket）を使用して、次の WebSocket 関連の詳細を指定します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2697"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2700"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2697 "><p>ポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2700 "><p>WebSocket サーバーがリスンするポートです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2697 "><p>ソケットタイムアウト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2700 "><p>ソケットのタイムアウトです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2697 "><p>最大データサイズ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2700 "><p>送受信されるパケットのデータサイズです。</p>
+</td>
+</tr>
+<tr>
+  <td valign="top" headers="d16e2697 ">WebSocket クラスターを有効化</td>
+  <td valign="top" headers="d16e2700 ">WebSocket クラスターを有効または無効にします。</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2697 "><p>Flash Policy Server を起動</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2700 "><p>Flash クロスドメイン Policy Server をポート 843 で起動します。これは、ネイティブの WebSocket サポートがクライアントサイドにない場合に、Flash のフォールバックで必要になります。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fed" class="nochunk">
+  <p>ColdFusion 10 では、WebSocket プロトコル用のメッセージングレイヤーを提供することで WebSocket を実装しました。これは、CFML と JavaScript を使用して制御できます。メッセージングレイヤーは、WebSocket を信頼性と拡張性のあるものにする機能を備えています。WebSocket を使用すると、株式、チャート作成、オンラインゲーム、ソーシャルネットワーク、様々な目的のダッシュボード、監視などを目的とするリアルタイムアプリケーションを開発できます。<br />
+    ご存じのように、WebSocket 接続では標準的な HTTP ポート（80 と 443）を使用してデータパケットを送受信します。そのため、WebSocket はファイアウォールに邪魔されません。ほぼすべてのファイアウォール設定で、これらの HTTP ポートでのネットトラフィックが許可されるからです。したがって、HTML5 WebSocket を利用するために、新しいハードウェアをインストールしたり、内部ネットワークで新しいポートを開いたりする必要はありません。 <br />
+    ブラウザーと ColdFusion サーバーの間にプロキシサーバー、リバースプロキシサーバー、ファイアウォールがない場合は、サーバーとクライアントが両方とも WebSocket プロトコルに対応している限り、WebSocket 接続は問題なく機能します。ただし、サーバーとクライアントの間には直接的な接続がないのが普通です。ColdFusion Splendor では、WebSocket 用のプロキシがサポートされました。ColdFusion WebSocket のリクエストをインターセプトして ColdFusion サーバーにリダイレクトできる（IIS および Apache Web Server 内で実行される）新しいプロキシモジュールがあります。</p>
+  <h1>新機能（Splendor Beta）</h1>
+  <p>ColdFusion Splendor は、次の新機能をサポートしています。</p>
+  <ul>
+    <li><span data-mce-style="color: #1f497d;"><strong>プロキシのサポート</strong></span> - ColdFusion WebSocket を使用するためのプロキシサーバーの設定に対応しました。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>SSL のサポート</strong></span> &ndash; ColdFusion WebSocket 用に SSL を有効化できるようになりました。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>クラスターのサポート</strong></span> &ndash; ColdFusion WebSocket 用にクラスターのサポートを有効化できるようになりました。</li>
+  </ul>
+  <h1>ColdFusion WebSocket の使用</h1>
+  <p>WebSocket のサポートは、前のバージョンの ColdFusion で導入されました。ColdFusion Splendor では、新たに WebSocket プロキシがサポートされました。<br />
+    WebSocket プロキシについては、次の使用場面を考慮してください。</p>
+  <ul>
+    <li><span data-mce-style="color: #1f497d;"><strong>場面 1：ファイアウォールを設定していない</strong></span> &ndash; WebSocket プロキシを使用できます。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>場面 2：ファイアウォールを設定している</strong></span> &ndash; WebSocket プロキシを使用する必要があります。
+    <br />
+  </li>
+  </ul>
+  <h2>場面1 - ビルトイン WebSocket サーバーの使用（ColdFusion 10）</h2>
+  <p>詳しくは、<a href="Using+ColdFusion+WebSocket.html" data-mce-href="Using+ColdFusion+WebSocket.html">https://learn.adobe.com/wiki/display/coldfusionen/Using+ColdFusion+WebSocket</a> を参照してください。</p>
+  <h2>場面 2 - WebSocket 用のプロキシサーバーの使用（ColdFusion Splendor）</h2>
+  <p><span data-mce-style="color: #1f497d;"><strong>ColdFusion Splendor Beta の新機能</strong></span><br />
+    ColdFusion Splendor では、WebSocket 用のプロキシがサポートされました。ColdFusion WebSocket のリクエストをインターセプトして ColdFusion サーバーにリダイレクトできる（IIS および Apache Web Server 内で実行される）新しいプロキシモジュールがあります。<br />
+    ColdFusion サーバーとともに使用できる外部サーバーを以下に示します。</p>
+  <ul>
+    <li>Windows 8 または Windows Server 2012 で実行されている IIS 8 以上</li>
+    <li>Apache 2.2 以上</li>
+  </ul>
+  <p>ColdFusion 用に WebSocket プロキシサーバーを簡単に設定するには、次の手順に従ってください。</p>
+  <h3>手順 1 - 外部サーバーの設定</h3>
+  <p>WebSocket プロキシの設定を開始する前に、WebSocket プロトコルをサポートする外部サーバーを設定する必要があります。</p>
+  <h4>IIS の設定</h4>
+  <p>IIS での WebSocket プロトコルの有効化については、<a href="http://www.iis.net/learn/get-started/whats-new-in-iis-8/iis-80-websocket-protocol-support" data-mce-href="http://www.iis.net/learn/get-started/whats-new-in-iis-8/iis-80-websocket-protocol-support">このドキュメント</a>を参照してください。</p>
+  <h4>Apache サーバーの設定</h4>
+  <p>設定は必要ありません。</p>
+  <h3>手順 2 - WebSocket プロキシの有効化</h3>
+  <p>ColdFusion Administrator を使用して、WebSocket プロキシポートをサーバーレベルで有効化する必要があります。次の手順に従ってください。</p>
+  <ol>
+    <li>ColdFusion Administrator ページにアクセスします。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>サーバーの設定／Web ソケット</strong></span>をクリックします。</li>
+    <li>「<span data-mce-style="color: #1f497d;"><strong>WebSocket サーバーを有効化</strong></span>」をクリックして、「<span data-mce-style="color: #1f497d;"><strong>WebSocket プロキシポートを使用</strong></span>」を選択します。</li>
+  </ol>
+  <p><br />
+  </p>
+  <h3>手順 3 - 外部サーバーの追加</h3>
+  <p>wsconfig ツールを使用して、外部 Web サーバーコネクターと ColdFusion サーバーを設定する必要があります。<br />
+    次のタスクを実行します。</p>
+  <ol>
+    <li><em>&lt;CF_INSTALL_HOME&gt;</em>/cfusion/runtime/bin に移動します。</li>
+    <li>wsconfig ツールを実行します。</li>
+    <li>GUI で「追加」をクリックします。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>Web サーバー</strong></span>ドロップダウンフィールドで、外部サーバーを選択します。</li>
+    <li>「<span data-mce-style="color: #1f497d;"><strong>設定ディレクトリ</strong></span>」フィールドで、外部サーバーの設定ディレクトリのパスを参照して選択します。</li>
+    <li>「OK」をクリックします。</li>
+    <li>外部サーバーが実行されていない場合は、サーバーを起動するよう求めるメッセージが表示されます。</li>
+    <li>「はい」をクリックして外部サーバーを起動します。</li>
+    <li>「終了」をクリックします。</li>
+  </ol>
+  <h3>手順 4 - WebSocket プロキシサーバーの設定</h3>
+  <p>ColdFusion Splendor には、wsproxyconfig という新しい設定ツールが導入されており、WebSocket プロキシを簡単に設定できます。次のタスクを実行します。</p>
+  <ol>
+    <li><em>&lt;CF_INSTALL_HOME&gt;</em>/cfusion/bin に移動します。</li>
+    <li>wsproxyconfig ツールを実行します。</li>
+    <li>GUI で「追加」をクリックします。</li>
+    <li><span data-mce-style="color: #1f497d;"><strong>Web サーバー</strong></span>ドロップダウンフィールドで、外部サーバーを選択します。</li>
+    <li>「<span data-mce-style="color: #1f497d;"><strong>設定ディレクトリ</strong></span>」フィールドで、外部サーバーの設定ディレクトリのパスを参照して選択します。</li>
+    <li>「OK」をクリックします。</li>
+    <li>外部サーバーが実行されていない場合は、サーバーを起動するよう求めるメッセージが表示されます。</li>
+    <li>プロキシ設定を確認します。</li>
+    <li>「閉じる」をクリックします。</li>
+  </ol>
+  <h3>設定 5 - プロキシ設定の検証</h3>
+  <p>WebSocket プロキシを適切に設定したら、<em>&lt;CF_INSTALL_HOME&gt;</em>/config/wsproxy/1 に必要なプロキシファイルが作成されているかどうかを確認します。<br />
+    <em>&lt;CF_INSTALL_HOME&gt;</em>/config/wsproxy/1 にある config.ini ファイルを手動で変更することもできます。<br />
+    また、新しいアプリケーションである <span data-mce-style="color: #1f497d;"><strong>cfws</strong></span> も、外部サーバーのアプリケーションルートで利用できます。<br />
+    &lt;cfwebsocket&gt; タグは新しい属性をサポートしています。</p>
+  <ul>
+    <li>
+      <p>secure &ndash; （オプション）セキュアポート（SSL）が（Web サービスの通信の目的で）WebSocket サーバー用に設定されている場合にのみ、すべての WebSocket 通信は自動的にセキュアチャネルを介して行われます。ただし、両方のポート（SSL と 非 SSL）が定義されているときに、セキュリティで保護された TCP ソケットを介して通信を設定する必要がある場合は、secure を true に設定する必要があります。デフォルトは false です。</p>
+      <p>ColdFusion Splendor には、機能強化により、ノードのクラスターをまたぐメッセージのリアルタイムブロードキャストや、セキュア WebSocket 通信（WSS プロトコル）のための SSL のサポートなど、エンタープライズレベルの機能が追加されています。</p>
+      <h1>クラスターのサポート</h1>
+      アプリケーションが様々なノード間で実行されており、メッセージを単一のノードにパブリッシュしているときに、同じメッセージをすべてのノード間でブロードキャストしたい場合に、この機能を使用できます。 <br />
+      例えば、Node1 に、「ストック」チャネルをサブスクライブしている 2 つのクライアント（C1 と C2）があるとします。同様に、Node2 の 2 つのクライアント（C4、C6）と Node3 の 2 つのクライアント（C8、C10）も「ストック」チャネルをサブスクライブしているとします。クライアント C1 がこの「ストック」チャネルでメッセージをパブリッシュするときに、単に C1 と C2 だけにメッセージを送信するのではなく、他のノード（C4、C6、C8、C10）のクライアントもこのメッセージを受信する必要があります。<br />
+      この機能を使用する際に、クラスターを有効化することで、クラスターの様々なノード間でチャネルの全サブスクライバーにメッセージをパブリッシュできます。この機能を有効化するには、クラスターオプションを選択し、ノードを上位および下位に移動するイベントをブロードキャストするマルチキャストポートを定義します。 
+      <h1><strong>JavaScript 関数</strong></h1>
+      <p>次の JavaScript 関数が機能強化され、クラスター機能が自動的にサポートされるようになりました。</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><p>関数</p></td>
+            <td><p>引数</p></td>
+            <td><p>戻り型</p></td>
+          </tr>
+          <tr>
+            <td><p>publish</p></td>
+            <td><p>(&quot;channelname&quot;, messageBody, {filterOptions}</p></td>
+            <td><p>boolean</p></td>
+          </tr>
+          <tr>
+            <td><p>getSubscriberCount</p></td>
+            <td><p>(&quot;channelname&quot;)</p></td>
+            <td><p>boolean</p></td>
+          </tr>
+          <tr>
+            <td><p>invokeAndPublish</p></td>
+            <td><p>(&quot;channelName&quot;, cfcName, cfcMethod, [function_parameter] ,{custom_options})</p></td>
+            <td><p>boolean</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <p><span data-mce-style="color: #4f81bd;"><strong>publish</strong></span> ColdFusion 10 では、この関数は、フィルター条件に基づいた特定のチャネルにメッセージを送信できました。ColdFusion 11 では、この関数が機能強化され、デフォルトでクラスター内のすべてのノードにメッセージが送信されるようになりました。<br />
+        Publish(&quot;channelname &quot;, messageBody, {filterOptions});  <br />
+        <span data-mce-style="color: #4f81bd;"><strong>getSubscriberCount</strong></span> ColdFusion 10 では、この関数は、フィルター条件に基づいた特定のチャネルからサブスクライバー数を取得できました。ColdFusion 11 では、この関数が機能強化され、デフォルトですべてのノードからサブスクライバー数が取得されるようになりました。<br />
+        getSubscriberCount(&quot;channelname&quot;)<br />
+        <span data-mce-style="color: #4f81bd;"><strong>invokeAndPublish</strong></span> メッセージのパブリッシュと CFC の呼び出しを別々のスレッドで実行するには、この関数を使用します。<br />
+        invokeandPublish(&quot;channelname &quot;, cfcName, cfcMethod, [function_parameter] ,{custom_options})</p>
+      <h2>ビルトイン ColdFusion 関数</h2>
+      クラスターのサポートをさらに強化するために、ColdFusion 11 では次のビルトイン関数の機能が強化されています。<br />
+      <span data-mce-style="color: #4f81bd;"><strong><em>WSPublish</em></strong></span> クライアントからの入力なしに、サーバーからのメッセージのパブリッシュをトリガーします。複数のノードに接続されている全サブスクライバーにメッセージをブロードキャストしやすいように、「clustered」という新しいパラメーターが追加されました。<br />
+      wsPublish(&quot;channel name&quot;, messageBody [clustered])<br />
+      または<br />
+      wsPublish(&quot;channel name&quot;, messageBody , {filterOptions},[cluster])<br />
+      <br />
+      &lt;cfset wsPublish(&quot;publishdemochannel&quot;,&quot;Welcome to publishdemo&quot;)/&gt;<br />
+      「clustered」パラメーターが定義されていない場合、デフォルト値はクラスターの &lt;Enable/Disable&gt; の設定に基づいて取得されます。<br />
+      <span data-mce-style="color: #4f81bd;"><strong><em>WSGetSubscribers</em></strong></span> 設定済みのすべてのノードからサブスクライバー情報を取得します。設定済みのすべてのノードからサブスクライバー情報を取得できるように、「clustered」という新しいパラメーターが追加されました。<br />
+      WSGetSubscribers(&quot;channel&quot;)<br />
+      または <br />
+      WSGetSubscribers (&quot;channlName&quot; ,[clustered]); <br />
+      &lt;cfset wsgetSubscribers(&quot;stocks&quot;, true)&gt; <br />
+      「clustered」パラメーターが定義されていない場合、デフォルト値はクラスターの &lt;Enable/Disable&gt; の設定に基づいて取得されます。<br />
+      <span data-mce-style="color: #4f81bd;"><strong><em>WSGetAllChannels</em></strong></span> 設定済みのすべてのノードからサブチャネル情報を取得します。設定済みのすべてのノードからサブチャネル情報を取得できるように、「clustered」という新しいパラメーターが追加されました。<br />
+      WSGetAllChannels (&quot;channel&quot;, clustered)<br />
+      <br />
+      &lt;cfset wsgetAllChannels(&quot;stocks&quot; true,)&gt;<br />
+      「clustered」パラメーターが定義されていない場合、デフォルト値はクラスターの &lt;Enable/Disable&gt; の設定に基づいて取得されます。
+      <h1>セキュア WebSocket 通信（SSL を介した WebSocket）</h1>
+      ColdFusion では、WebSocket 画面（Administrator Console／ColdFusion Administrator／サーバーの設定／WebSocket）の機能が強化され、次のオプションが追加されました。<em></em></li>
+    <li>SSL の有効化</li>
+    <li>SSL ポート</li>
+    <li>キーストアファイルの場所</li>
+    <li>
+      <p>キーストアのパスワード</p>
+      <table>
+        <tbody>
+          <tr>
+            <td><p>オプション</p></td>
+            <td><p>説明</p></td>
+          </tr>
+          <tr>
+            <td><p>SSL の有効化</p></td>
+            <td><p>SSL を介して WebSocket を実行するために、Secure Sockets Layer（SSL）を有効化します。</p></td>
+          </tr>
+          <tr>
+            <td><p>キーストアファイルの場所</p></td>
+            <td><p>サーバーのファイルシステムにおけるキーストアの場所です。例えば、C:\OpenSSL\bin\keystore.jks です。</p></td>
+          </tr>
+          <tr>
+            <td><p>キーストアのパスワード</p></td>
+            <td><p>キーストアのパスワードです。 </p></td>
+          </tr>
+          <tr>
+            <td><p>SSL ポート</p></td>
+            <td><p>デフォルトのポートは 8543 です。</p></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Administrator ノードから WebSocket クラスターを有効化するには、サーバーの設定／Web ソケットを選択します。<em></em>Web ソケット画面で、「Web ソケットクラスターを有効にする」チェックボックスをオンにし、マルチキャストポートの詳細を入力します。<em></em>マルチキャストポートフィールドに、デフォルトのマルチキャストポートである 45566 が表示されます。必要に応じてポートの詳細を変更します。クラスター内のすべてのノードでマルチキャストポート値が同じであることを確認してください。</p>
+    </li>
+  </ul>
+  <h2 class="topictitle2"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fed" id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fed2">
+    <!-- -->
+  </a>チャートページ</h2><div><p>ColdFusion のチャートおよびグラフ作成サーバーでは、<samp class="codeph">cfquery</samp> タグを使用して、高度にカスタマイズ可能なビジネスグラフィックを様々な形式で作成できます。Administrator のチャートページを使用すると、サーバーの特性を制御することができます。 </p>
+<p>次の表では、ColdFusion のチャートおよびグラフ作成サーバーのためのキャッシュとスレッドの設定について説明しています。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2751"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2754"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2751 "><p>[キャッシュタイプ]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2754 "><p>キャッシュタイプを設定します。チャートをメモリまたはディスクにキャッシュできます。メモリキャッシュはより高速ですが、メモリを多く使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2751 "><p>キャッシュされるイメージの最大数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2754 "><p>キャッシュに保管するチャートの最大数を指定します。キャッシュが一杯になってから新規チャートを生成すると、ColdFusion によりキャッシュ内の一番古いチャートが破棄されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2751 "><p>チャートを処理するスレッドの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2754 "><p>同時処理が可能なチャートリクエストの最大数を指定します。最小値は 1 で、最大値は 5 です（大きい数値を指定するほど、多くのメモリが必要となります）。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2751 "><p>ディスクキャッシュの位置</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2754 "><p>ディスクにキャッシュする場合は、生成されたチャートを保管するディレクトリを指定します。 </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fec" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fec"><!-- --></a><h2 class="topictitle2">フォント管理ページ</h2><div><p>フォント管理ページでは、出力形式を Adobe&reg; FlashPaper&trade; または Acrobat&reg; PDF に設定した場合に使用するフォントの確認と定義を行えます。ColdFusion では、ColdFusion Report Builder で作成されたレポートを呼び出すために使用される <samp class="codeph">cfdocument</samp> タグと <samp class="codeph">cfreport</samp> タグにより、FlashPaper および PDF 出力が生成されます。</p>
+<p>ColdFusion は自動的に Acrobat の常駐フォントと通常の場所（Windows&yen;fonts ディレクトリなど）にあるフォントを登録します。通常以外の場所にフォントがインストールされている場合は、ColdFusion Administrator でそれらのフォントを登録します。これにより、<samp class="codeph">cfdocument</samp> タグと <samp class="codeph">cfreport</samp> タグを使用してフォントを検索し、PDF レポートと FlashPaper レポートをレンダリングできるようになります。</p>
+<p>このページには、次のトピックが含まれています。</p>
+<dl><dt class="dlterm">新規フォントを ColdFusion で登録</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">フォントが格納されているディレクトリを参照するか、特定のフォントを指定します。</dd><p class="dlseparator"></p><dt class="dlterm">ユーザー定義のフォント</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">明示的に登録したフォントが表示されます。</dd><p class="dlseparator"></p><dt class="dlterm">現在のシステムフォント</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">プラットフォームに特有のシステムフォントディレクトリに格納されているフォントが表示されます。 <p>次の表で、フォント管理ページのフィールドについて説明します。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2844"><p>領域 </p>
+</th>
+<th valign="top" width="NaN%" id="d16e2847"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2844 "><p>新規フォント / フォントディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><div class="para">フォントファイルを含むディレクトリまたは特定のフォントファイルへの完全修飾パスを指定します。ColdFusion Administrator では、次のタイプのフォント形式を登録できます。<ul><li><p>TTF：TrueType フォント</p>
+</li>
+<li><p>TTC：TrueType フォントまたは OpenType フォントのコレクション</p>
+</li>
+<li><p>OTF：OpenType フォント</p>
+</li>
+<li><p>PFB：（Adobe プリンターフォント）</p>
+</li>
+<li><p>AFM：Adobe Font Metrics</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>フォントファミリー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>概要フォント名（Arial または Times New Roman など）。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>フォントスタイル</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>固有のフォントスタイル（Arial Italic または Times New Roman Bold など）。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>ポストスクリプト名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>フォントのポストスクリプト名を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>フォントタイプ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>フォントタイプ（TrueType または Adobe ビルトインなど）</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>使用先</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>PDF、FlashPaper または両方のフォーマットでフォントを使用できるかどうかを指定します。Adobe ビルトインフォントは、FlashPaper の出力フォーマットでは使用できないことに注意してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2844 "><p>パス</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2847 "><p>フォントファイルへの完全修飾パスです。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>フォント管理ページには、PDF のみで使用できるビルトイン Acrobat フォントも表示されます。</p>
+<p>ColdFusion のレポート作成機能について詳しくは、『ColdFusion アプリケーションの開発<i></i>』の「印刷用のレポートとドキュメントの作成」を参照してください。</p>
+</dd><p class="dlseparator"></p></dl>
+</div><div id="WSe61e35da8d318518156c4be7134ccf066c8-8000" class="nochunk"><a name="WSe61e35da8d318518156c4be7134ccf066c8-8000"><!-- --></a><h3 class="topictitle3">フォント管理について</h3><div><p>ColdFusion では、PDF と FlashPaper の両方のフォーマットでドキュメントとレポートを作成できます。これら両方のフォーマットでは、HTML スタイル（cfdocument タグ）またはレポート定義（ColdFusion Report Builder）で使用されているフォントにサーバーコンピューターがアクセスできる必要があります。ColdFusion では、PDF および FlashPaper のドキュメントを正しく表示したり、指定時に PDF ファイルにフォントを埋め込むために、これらのフォントにアクセスする必要があります。</p>
+<div class="section"><h4 class="sectiontitle">フォントおよびフォント拡張子のタイプ</h4><div class="para">ColdFusion Administrator では、次のタイプのフォントを登録できます。
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e2944"><p>タイプ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2947"><p>ファイル拡張子</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2950"><p>説明</p>
+</th>
+<th valign="top" width="NaN%" id="d16e2953"><p>使用先</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e2944 "><p>True Type</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2947 "><p>TTF</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2950 "><p>Apple 社によって開発され、すべての Macintosh および Windows オペレーティングシステムでサポートされているスケーラブルフォントフォーマットです。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2953 "><p>PDF および FlashPaper</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2944 "><p>True Type Collection</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2947 "><p>TTC</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2950 "><p>複数の TrueType または OpenType フォントを含むファイルです。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2953 "><p>PDF および FlashPaper</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2944 "><p>Open Type</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2947 "><p>OTF</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2950 "><p>TrueType フォントフォーマットの拡張型です。 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2953 "><p>PDF および FlashPaper</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2944 "><p>Adobe プリンターフォント</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2947 "><p>PFB</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2950 "><p>Adobe プリンターフォント</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2953 "><p>PDF のみ</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e2944 "><p>Adobe Font Metrics</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2947 "><p>AFM</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2950 "><p>一般的なフォント情報およびフォントメトリック情報を含むフォントフォーマットです。通常は、UNIX のみで使用されます。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e2953 "><p>PDF のみ</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+フォント管理ページには、PDF のみで使用できるビルトイン Acrobat フォントも表示されます。ColdFusion では、PFM または FFT フォントは使用されません。</div>
+</div>
+<div class="section"><h4 class="sectiontitle">フォントの場所</h4><p>ColdFusion Administrator では、プラットフォーム固有の次のデフォルトの場所で見つかったフォントが自動的に表示されます。</p>
+<div class="para"><ul><li><p><strong>Windows</strong> - Windows/Fonts ディレクトリ（WINDOWS/Fonts や WINNT/Fonts など）</p>
+</li>
+<li><p><strong>Unix</strong> - 次のディレクトリ</p>
+<div class="para"><ul><li><p>/usr/X/lib/X11/fonts/TrueType</p>
+</li>
+<li><p>/usr/openwin/lib/X11/fonts/TrueType</p>
+</li>
+<li><p>/usr/share/fonts/default/TrueType</p>
+</li>
+<li><p>/usr/X11R6/lib/X11/fonts/ttf</p>
+</li>
+<li><p>/usr/X11R6/lib/X11/fonts/truetype</p>
+</li>
+<li><p>/usr/X11R6/lib/X11/fonts/TTF</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<p>さらに、サーバーの別の場所に保存されているフォントを定義できます。これらは、ユーザー定義フォントと呼ばれます。例えば、Sun JDK の <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">jdk_root</i>/jre/lib/fonts ディレクトリに提供される TrueType フォントの Lucida ファミリーを登録する場合があります。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">PDF 出力へのフォントの埋め込み</h4><p>レポート開発者は、ColdFusion で PDF ファイルにフォントを埋め込むようにオプションで指定できます（FlashPaper では常にフォントが埋め込まれます）。cfdocument タグを使用する際には、fontEmbed が yes または selective に設定されている場合にフォントが埋め込まれます。Report Builder で定義されたレポートを使用する際には、レポート定義ファイルに指定されている場合にフォントが埋め込まれます。</p>
+<p>フォントを埋め込むとファイルサイズが大きくなりますが、クライアントコンピューターにフォントがインストールされているかどうかに関係なく、レポートは必ず適切に表示されます。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>一部のフォントライセンスでは埋め込みが禁止されています。ColdFusion では、not-for-embedding というマークが付いているフォントは埋め込まれません。</div>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">クライアント要件</h4><p>フォントが PDF ファイルに埋め込まれていない場合は、レポートが適切に表示されるようにするために、クライアントコンピューターにフォントをインストールする必要があります。</p>
+<p>ほとんどの Windows コンピューターには、Internet Explorer が同梱されており、一連の TrueType フォントを含む Microsoft コアフォントが含まれています。 </p>
+</div>
+<div class="section"><h4 class="sectiontitle">UNIX についての注意事項</h4><p>ColdFusion を UNIX コンピューターにインストールする場合は、コンピューターがコンソールアクセスのみを提供している場合でも、適切なフォントがインストールされていることを確認する必要があります。UNIX の TrueType フォントについて詳しくは、<a href="http://corefonts.sourceforge.net/" target="_self">http://corefonts.sourceforge.net/</a> を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">ColdFusion Report Builder についての注意事項</h4><p>ColdFusion Report Builder では、サーバー上で使用可能なフォントが自動的には認識されないので、レポート定義の開発者が ColdFusion MX 管理者に問い合わせて、サーバーで使用可能なフォントを特定する必要があり、必要に応じて Administrator でフォントを登録するか、Report Builder を実行するコンピューターにフォントをインストールする必要があります。</p>
+</div>
+</div></div></div>
+<div id="WSA5D55EAA-F5B0-46bc-86B1-ADB51B638AB8" class="nochunk"><a name="WSA5D55EAA-F5B0-46bc-86B1-ADB51B638AB8"><!-- --></a><h2 class="topictitle2">ドキュメントページ</h2><div><p>ドキュメントページでは、OpenOffice アプリケーションの設定を行えます。インストール時に設定を行わなかった場合は、OpenOffice のディレクトリパスを指定します。</p>
+<p>ColdFusion サーバーがローカルサーバーとリモートサーバーのどちらにインストールされているかに応じて、ColdFusion サーバーインスタンスに OpenOffice を設定できます。 </p>
+<p>ColdFusion を使用した OpenOffice の設定について詳しくは、『ColdFusion インストール』<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>の<a href="http://help.adobe.com/ja_JP/ColdFusion/10.0/Installing/WS899EE911-747B-45cf-8550-DC9123823364.html" target="_self">
+OpenOffice の設定</a>を参照してください。 </p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7feb" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7feb"><!-- --></a><h2 class="topictitle2">Java と JVM ページ</h2><div><div class="para"><div class="note"><span class="notetitle">注意：</span>このページは、ColdFusion を J2EE サーバーにデプロイする場合には当てはまりません。</div>
+</div>
+<p>Java と JVM ページでは、ColdFusion と Java を連動させるために次の設定を行えます。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3130"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3133"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3130 "><p>[Java 仮想マシンのパス]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3133 "><p>Java 仮想マシン（JVM）ルートディレクトリの場所を絶対ファイルパスで指定します。デフォルト値は &quot;&lt;ColdFusion のルートディレクトリ&gt;/runtime/jre&quot; です。<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3130 "><p>[最小 JVM ヒープサイズ]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3133 "><p>JVM の初期ヒープサイズです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3130 "><p>[最大 JVM ヒープサイズ] </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3133 "><p>JVM の最大ヒープサイズです。デフォルト値は 512 MB です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3130 "><p>ColdFusion クラスパス</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3133 "><p>ColdFusion で使用する JAR ファイルが含まれるディレクトリのファイルパスを指定します。必要な JAR ファイルが含まれるディレクトリの完全修飾名か、完全修飾 JAR ファイル名を指定します。複数のエントリを区切るにはカンマを使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3130 "><p>[JVM 引数]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3133 "><p>JVM への引数。複数のエントリは、空白で区切ります（例：-Xint -Xincgc）。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>変更後に ColdFusion を再起動する必要があります。</div>
+</div>
+<p>Java と JVM の設定ページを更新すると、<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_root&yen;runtime&yen;bin</i> にある jvm.config に変更が書き込まれます。変更内容が保存される前に、現在の jvm.config ファイルのコピーが jvm.bak として保存されます。変更によって ColdFusion を再起動できなくなった場合は、jvm.bak を使用してシステムを復元してください。例えば、jvm.config を jvm.config_BAD という名前に変更してから、jvm.bak を jvm.config という名前に変更します。</p>
+<p>ColdFusion では、次のような jvm.args 属性のデフォルト設定が jvm.config ファイルからフィルターで除外されます。</p>
+<div class="para"><pre>aArgs[i] contains '-Xmx' 
+aArgs[i] contains '-Xms' 
+aArgs[i] contains &quot;-Djava.security.manager&quot; 
+aArgs[i] contains &quot;-Djava.security.policy&quot; 
+aArgs[i] contains &quot;-Djava.security.auth.policy&quot; 
+aArgs[i] contains '-Djava.awt.graphicsenv' 
+aArgs[i] contains '-Djava.awt.headless' 
+aArgs[i] contains '-Dcoldfusion.classPath' 
+aArgs[i] contains '-Dcoldfusion.rootDir' 
+aArgs[i] contains '-Dcoldfusion.libPath' 
+aArgs[i] contains '{application.home}/lib/webchartsJava2D.jar'</pre>
+</div>
+<p>Oracle 10g の ColdFusion の J2EE デプロイメントでサーバーモニターまたはマルチサーバーモニターを使用するには、JVM 引数を <samp class="codeph">-Doc4j.jmx.security.proxy.off=true</samp> に設定します。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fea" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fea"><!-- --></a><h2 class="topictitle2">設定要約ページ</h2><div><p>設定要約ページには、すべての ColdFusion 設定が表示されます。グループ名をクリックすると、そのグループの「Administrator」セクションが開き、設定を編集できます。このページは、スタンダード版では使用できません。</p>
+<p>ColdFusion では、このページの「PDF として保存」ボタンをクリックして、サーバー設定を PDF にエクスポートできます。</p>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"></div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/en_US/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/en_US/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

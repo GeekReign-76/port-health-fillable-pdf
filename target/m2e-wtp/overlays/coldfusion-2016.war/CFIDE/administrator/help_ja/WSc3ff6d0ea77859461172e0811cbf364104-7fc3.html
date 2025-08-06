@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * マルチホーム</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fc3.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fc3.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>マルチホーム</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>同一コンピュータ上で実行する Web サーバーと ColdFusion サーバーとの接続を設定するには、通常は Web サーバー設定ツールを使用します。しかし、Web サーバーコネクタを使用して、複数の仮想サイトへのリクエストを 1 つの ColdFusion サーバーに転送することができます。この手法は "<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">マルチホーム</i>" と呼ばれています。</p>
+<p>マルチホーム環境では、複数の仮想ホスト (仮想サイトとも呼ばれます) を 1 つの ColdFusion サーバーに接続します。そのような仮想ホストは、個別のアプリケーション用 (たとえば、人事管理用、給与処理用、マーケティング用など) として使用することや、ホスティング環境で個別のユーザー用に使用することができます。</p>
+<div class="note"><span class="notetitle">注意：  </span>Web サーバー固有のメソッドを使用して、用途ごとに個別の仮想 Web サイトを作成します。</div>
+<p>マルチホームを設定するタスクには次の作業が含まれます。</p>
+<dl><dt class="dlterm">ColdFusion Administrator に対するアクセスの有効化</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">仮想ホストの下に ColdFusion Administrator にアクセスする必要があるアプリケーションが 1 つでもある場合は、元の CFIDE ディレクトリを指す /CFIDE の Web サーバーマッピング (Apache では Alias ディレクティブ) を作成します。または、CFIDE ディレクトリ全体をその仮想 Web サイトにコピーします。</dd><p class="dlseparator"></p><dt class="dlterm">"cfform.js" ファイルに対するアクセスの有効化</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">/CFIDE の Web サーバーマッピングを作成しない場合で、仮想ホストの下に <samp class="codeph">cfform</samp> タグを使用するアプリケーションが 1 つでもある場合は、その仮想ホストから "CFIDE/scripts" ディレクトリ内の JavaScript ファイルを検索できるようにします。それらのスクリプトに対するアクセスを有効にするには、次のいずれかの方法を使用します。<ul><li><p>"&lt;元の Web ルート&gt;/CFIDE/scripts" ディレクトリを、該当する仮想ホストの "CFIDE/scripts" ディレクトリにコピーします。</p>
+</li>
+<li><p>すべての <samp class="codeph">cfform</samp> タグを修正し、<samp class="codeph">scriptsrc</samp> 属性で "cfform.js" ファイルの場所を指定するようにします。</p>
+</li>
+</ul>
+</dd><p class="dlseparator"></p><dt class="dlterm">cacheRealPath 属性の無効化</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">常に正しいサーバーのページが ColdFusion から返されるようにするには、ColdFusion Administrator の [キャッシュ機能] ページで [Web サーバーパスのキャッシュ] を無効にします <p>マルチホームを有効化するために実行する手順は、Web サーバーの種類によって異なります。</p>
+</dd><p class="dlseparator"></p></dl>
+<ul class="navlinklist"><li><a href="WSc3ff6d0ea77859461172e0811cbf363a5d-7fef.html">IIS</a></li>
+<li><a href="WSc3ff6d0ea77859461172e0811cbf364104-7fd5.html">Apache</a></li>
+<li><a href="WSc3ff6d0ea77859461172e0811cbf363a5d-7fed.html">Sun ONE Web サーバーおよび iPlanet</a></li>
+</ul>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

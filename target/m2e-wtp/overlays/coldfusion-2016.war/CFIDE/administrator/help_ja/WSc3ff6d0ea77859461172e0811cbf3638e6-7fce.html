@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * [イベントゲートウェイ] セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7fce.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7fce.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>[イベントゲートウェイ] セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSe61e35da8d318518799be42134d16f39f6-8000"><span class="topictitle1">イベントゲートウェイの概要</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fcd"><span class="topictitle1">[イベントゲートウェイの設定] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fcc"><span class="topictitle1">[ゲートウェイタイプ] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fcb"><span class="topictitle1">[ゲートウェイインスタンス] ページ</span>
+</a></p></li></ul></div></div></div></div><div><p>ColdFusion Administrator の [イベントゲートウェイ] セクションでは、イベントゲートウェイの設定、ゲートウェイタイプ、およびゲートウェイインスタンスに関する設定ができます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSe61e35da8d318518799be42134d16f39f6-8000" class="nochunk"><a name="WSe61e35da8d318518799be42134d16f39f6-8000"><!-- --></a><h2 class="topictitle2">イベントゲートウェイの概要</h2><div><p>ColdFusion イベントゲートウェイは、ColdFusion が非同期で外部のイベントやメッセージに応答したり、イベントやメッセージを生成したりするために使用する ColdFusion 要素です。ColdFusion アプリケーションでイベントゲートウェイを使用すれば、HTTP リクエスト以外の方法で情報を受け取って処理することができます。例えば、イベントゲートウェイを使用して、インスタントメッセージ、モバイルデバイスからのショートメッセージまたは TCP/IP ポートに送信されたメッセージを処理できます。ColdFusion には、携帯電話やポケットベルなどのワイヤレスデバイス間で（テキスト）ショートメッセージを送受信するための SMS（Short Message Service）ゲートウェイ、XMPP（Extensible Messaging and Presence Protocol）インスタントメッセージプロトコル用のゲートウェイなど、いくつかのイベントゲートウェイが含まれています。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcd" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcd"><!-- --></a><h2 class="topictitle2">[イベントゲートウェイの設定] ページ</h2><div><p>[イベントゲートウェイの設定] ページでは、すべてのイベントゲートウェイに対する設定の変更と、SMS (Short Message Service) テストサーバーを起動および停止することができます。次の表は、設定項目を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e5568"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e5571"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e5568 "><p>[ColdFusion イベントゲートウェイサービスの有効化]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5571 "><p>サービスを有効化するかどうかを指定します。この設定を変更すると、サービスが再起動します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5568 "><p>[イベントゲートウェイ処理スレッド]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5571 "><p>イベントが到着したときに ColdFusion 関数を実行するために使用されるスレッドの最大数を指定します。大きい数値を設定するほど、リソースの消費量は大きくなりますが、スループットは向上します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5568 "><p>[キューに入れるイベントの最大数]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5571 "><p>イベントキューに格納できるイベントの最大数を指定します。キューの長さがこの値を超えると、ゲートウェイのイベントは処理キューに追加されません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5568 "><p>[SMS テストサーバーの起動] / [SMS テストサーバーの停止]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5571 "><p>SMS (Short Message Service) テストサーバーを起動および停止します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcc" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcc"><!-- --></a><h2 class="topictitle2">[ゲートウェイタイプ] ページ</h2><div><p>[ゲートウェイタイプ] ページでは、そのシステム上で使用可能なゲートウェイのタイプを設定できます。タイプの設定後は、設定したタイプのゲートウェイインスタンスをいくつでも作成できます。 </p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e5618"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e5621"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e5618 "><p>タイプ名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5621 "><p>イベントゲートウェイタイプの名前（例えば、SMS イベントゲートウェイの場合は SMS）を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5618 "><p>説明</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5621 "><p>ゲートウェイタイプの説明を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5618 "><p>Java クラス</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5621 "><p>ゲートウェイクラスの完全 Java クラス名の完全修飾名（例えば、SMS イベントゲートウェイの場合は、coldfusion.eventgateway.sms.SMSGateway）を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5618 "><p>スタートアップタイムアウト [n] 秒</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5621 "><p>スタートアップタイムアウトを秒単位で指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5618 "><p>スタートアップタイムアウト時に停止</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5621 "><p>有効にした場合、スタートアップ時にタイムアウトすると、ゲートウェイクラスが停止されます。 無効にした場合、タイムアウト値を超過すると警告メッセージがログに記録されます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>次の表で、ColdFusion に付属するイベントゲートウェイタイプについて説明します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e5668"><p>ゲートウェイタイプ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e5671"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e5668 "><p>CFML</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>ColdFusion から非同期イベントをトリガします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>DataManagement</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>ColdFusion アプリケーションにより、Flex の宛先にその宛先が管理するデータの変更を通知するようにします。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>DataServicesMessaging</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>Flex アプリケーションとの間でメッセージを送受信します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>FMS ゲートウェイ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>ColdFusion アプリケーションまたは Flash クライアントを通じてデータを修正し、Flash Media Server 共有オブジェクトに変更を反映させます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>SMS</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>SMS メッセージを送信および受信するために使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>SAMETIME</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>Lotus SameTime 経由のインスタントメッセージを送信および受信するために使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>XMPP</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>XMPP (Extensible Messaging and Presence Protocol) 経由のインスタントメッセージを送信および受信するために使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5668 "><p>サンプル</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5671 "><p>サンプルのゲートウェイタイプです。次のタイプがあります。</p>
+<div class="para"><ul><li><p>DirectoryWatcher 特定のディレクトリ内にあるファイルの変更を監視します。</p>
+</li>
+<li><p>JMS Java Messaging Service のコンシューマまたはプロデューサとして機能します。</p>
+</li>
+<li><p>Socket TCP/IP ポートをリスンします。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcb" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fcb"><!-- --></a><h2 class="topictitle2">[ゲートウェイインスタンス] ページ</h2><div><p>[ゲートウェイインスタンス] ページでは、ColdFusion イベントゲートウェイインスタンスを設定して、さまざまなソースからのイベントを、記述した ColdFusion コンポーネント (CFC) に送ることができます。次の表は、設定項目を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e5756"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e5759"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e5756 "><p>[ゲートウェイ ID]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5759 "><p>イベントゲートウェイインスタンスの名前。この値は、ColdFusion <samp class="codeph">GetGatewayHelper</samp> 関数および <samp class="codeph">SendGatewayMessage</samp> 関数で使用します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5756 "><p>[ゲートウェイタイプ]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5759 "><p>イベントゲートウェイのタイプ。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5756 "><p>[CFC パス]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5759 "><p>受信メッセージを処理するリスナー CFC への絶対パスです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5756 "><p>[設定ファイル]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5759 "><p>(オプション) 設定ファイル。選択したイベントゲートウェイインスタンスで必要となる場合に指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e5756 "><p>[スタートアップモード]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e5759 "><p>イベントゲートウェイの起動ステータス。次のいずれかです。</p>
+<div class="para"><ul><li><p>自動 - ColdFusion の起動時にイベントゲートウェイを起動します。</p>
+</li>
+<li><p>手動 - ColdFusion の起動時にはイベントゲートウェイを起動しませんが、[ゲートウェイインスタンス] ページから起動できます。</p>
+</li>
+<li><p>無効 - イベントゲートウェイを起動できないようにします。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * Initial administration tasks</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="Configuring and Administering ColdFusion 11" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="Configuring and Administering ColdFusion 11"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7ffe.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7ffe.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/en_US/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>Initial administration tasks</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>Immediately
+after you install ColdFusion, you might have to perform some or
+all the administrative tasks described in the following table:</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e1012"><p>Task</p>
+</th>
+<th valign="top" width="NaN%" id="d16e1015"><p>Description</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Establish database connections</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>ColdFusion applications require data source
+connections to query and write to databases. To create, verify, edit,
+and delete database connections, use the Data Sources page. </p>
+<p>For
+more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ffa.html">Data Source Management</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Specify directory mappings</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>Directory mappings redirect relative file
+paths to physical directories on your server. To specify server-wide
+directory aliases, use the Mappings page. </p>
+<p>For more information,
+see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff9.html">Mappings page</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Configure debugging settings</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>Debugging information provides important
+data about CFML page processing. To choose the debugging information
+to display, and to designate an IP address to receive debugging
+information, use the Debugging &amp; Logging section.</p>
+<p>For
+more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff8.html">Debugging Output Settings page</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Set up e-mail</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>E-mail lets ColdFusion applications send
+automated e-mail messages. To configure an e-mail server and mail
+options, use the Mail Server page.</p>
+<p>For more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff7.html">Mail page</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Change passwords</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>You might have to change the passwords that
+you set for the ColdFusion Administrator and Remote Development
+Service (RDS) during ColdFusion installation. To change passwords,
+use the Security section.</p>
+<p>For more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff6.html">Administrator page</a> and <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff5.html">RDS page</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Define user-specific access to the ColdFusion
+Administrator</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>To grant user-specific access to the ColdFusion
+Administrator, you create users and specify a user name, password,
+applicable sandboxes, and the sections of the ColdFusion Administrator
+that each user can access. For more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff4.html">Security section</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Configure Java settings</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>(Server configuration only) You might have
+to customize Java settings, such as classpath information, to meet
+the needs of your applications. To change Java settings, use the
+Java and JVM page.</p>
+<p>For more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff3.html">Extensions section</a>.</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e1012 "><p>Restrict tag access</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e1015 "><p>Some CFML tags might present a potential
+security risk for your server. To disable certain tags, use the Sandbox
+Security page.</p>
+<p>For more information, see <a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff2.html">Administering Security</a>.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="navlinklist"></ul>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/en_US/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/en_US/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

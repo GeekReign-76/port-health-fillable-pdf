@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 後でインストールするためのホットフィックスのダウンロード</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSe61e35da8d318518-33adffe0134c60cd31c-7ffe.html";
+    document.cookie = "topicId=" + "WSe61e35da8d318518-33adffe0134c60cd31c-7ffe.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>後でインストールするためのホットフィックスのダウンロード</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><div class="para"><ol><li><p> JRE がシステムパスに入っていることを確認するか、ColdFusion のインストールディレクトリから Java に直接アクセスします。</p>
+</li>
+<li><p>次の場所からダウンロードファイルにアクセスします。</p>
+<p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;cf_home&gt;</i>/hf-updates/</p>
+</li>
+<li><p>コマンドプロンプトが表示されたら、次のようにします。</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">スタンドアローンインストールの場合</h4>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e6647"><p>プラットフォーム</p>
+</th>
+<th valign="top" width="NaN%" id="d16e6650"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e6647 "><p>Windows の場合</p>
+<p>（GUI でもサイレントモードでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6650 "><p><strong>GUI モードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。 こうすると、ホットフィックスインストーラーが起動します。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;ColdFusion_Home&gt; 
+DOC_ROOT=&lt;ColdFusion_Home&gt;/cfusion/wwwroot 
+#The following applies only to multi server scenarios. 
+INSTANCE_LIST=cfusion,cfusion1</pre>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6647 "><p>Linux/Solaris/UNIX の場合</p>
+<p>（コンソールモードでもサイレントモードでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6650 "><p><strong>コンソールモードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。 コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;ColdFusion_Home&gt; 
+DOC_ROOT=&lt;ColdFusion_Home&gt;/cfusion/wwwroot 
+#The following applies only to multi server scenarios. 
+INSTANCE_LIST=cfusion,cfusion1</pre>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6647 "><p>Mac OSX の場合</p>
+<p>（GUI、サイレントモード、コンソールモードのいずれでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6650 "><p><strong>GUI モードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i GUI</samp> というコマンドを実行します。こうすると、ホットフィックスインストーラーが起動します。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>コンソールモードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。 コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;ColdFusion_Home&gt; 
+DOC_ROOT=&lt;ColdFusion_Home&gt;/cfusion/wwwroot 
+#The following applies only to multi server scenarios. 
+INSTANCE_LIST=cfusion,cfusion1</pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>デフォルトでは、ホットフィックスを適用した後にサーバーが再起動します。 サーバーを再起動しない場合は、追加で次のコマンドを指定します。</p>
+<div class="para"><ul><li><p><strong>コンソールモードおよび GUI モードの場合：</strong><samp class="codeph">DDONOT_START_SERVERS_POST_INSTALL=true</samp> という引数を実行します。</p>
+</li>
+<li><p><strong>サイレントインストールの場合：</strong><samp class="codeph">DONOT_START_SERVERS_POST_INSTALL=true</samp> というプロパティをプロパティファイルに追加します。</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">J2EE インストールの場合</h4>
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e6830"><p>プラットフォーム</p>
+</th>
+<th valign="top" width="NaN%" id="d16e6833"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e6830 "><p>Windows の場合</p>
+<p>（GUI でもサイレントモードでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6833 "><p><strong>GUI モードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。 こうすると、ホットフィックスインストーラーが起動します。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>GUI モードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -DINSTALL_FILES_OUTSIDE_CF=true</samp> というコマンドを実行します。こうすると、ホットフィックスインストーラーが起動します。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+#For the following, specify the folder that contains META-INF folder which contains application.xml 
+USER_INSTALL_DIR=&lt;ColdFusion_Deployment_Root_Path&gt; </pre>
+</div>
+<p><strong>サイレントモードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<p>まず、EAR/WAR 以外のホットフィックスファイルをシステムにインストールしてから、EAR/WAR を手動で更新します。</p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;Any directory on your system&gt; 
+INSTALL_FILES_OUTSIDE_CF=true </pre>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6830 "><p>Linux/Solaris/UNIX の場合</p>
+<p>（コンソールモードでもサイレントモードでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6833 "><p><strong>コンソールモードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。 コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>コンソールモードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -DINSTALL_FILES_OUTSIDE_CF=true</samp> というコマンドを実行します。 コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+#For the following, specify the folder that contains META-INF folder which contains application.xml 
+USER_INSTALL_DIR=<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;ColdFusion_Deployment_Root_Path&gt;</i></pre>
+</div>
+<p><strong>サイレントモードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<p>まず、EAR/WAR 以外のホットフィックスファイルをシステムにインストールしてから、EAR/WAR を手動で更新します。</p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;Any directory on your system&gt; 
+INSTALL_FILES_OUTSIDE_CF=true </pre>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6830 "><p>Mac OSX の場合</p>
+<p>（GUI、サイレントモード、コンソールモードのいずれでもインストールできます）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6833 "><p><strong>GUI モードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i GUI</samp> というコマンドを実行します。このようにすると、ホットフィックスインストーラーが起動されます。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>GUI モードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -DINSTALL_FILES_OUTSIDE_CF=true -i GUI</samp> というコマンドを実行します。 こうすると、ホットフィックスインストーラーが起動します。</p>
+</li>
+<li><p>画面の手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>コンソールモードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i></samp> というコマンドを実行します。コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>コンソールモードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -DINSTALL_FILES_OUTSIDE_CF=true</samp> というコマンドを実行します。コンソールに手順が表示されます。</p>
+</li>
+<li><p>コンソールの手順に従います。</p>
+</li>
+</ul>
+</div>
+<p><strong>サイレントモードの場合（展開された EAR/WAR をデプロイする場合）：</strong></p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。 サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+#For the following, specify the folder that contains META-INF folder which contains application.xml 
+USER_INSTALL_DIR=&lt;ColdFusion_Deployment_Root_Path&gt; </pre>
+</div>
+<p><strong>サイレントモードの場合（展開されていない EAR/WAR をデプロイする場合）：</strong></p>
+<p>まず、EAR/WAR 以外のホットフィックスファイルをシステムにインストールしてから、EAR/WAR を手動で更新します。</p>
+<div class="para"><ul><li><p>コマンドプロンプトが表示されたら、<samp class="codeph">java -jar <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;jar-file-name&gt;</i> -i silent -f <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">&lt;install_properties_file_path&gt;</i></samp> というコマンドを実行します。サイレントモードでインストールされます。</p>
+</li>
+</ul>
+</div>
+<p>プロパティファイルの例を次に示します。</p>
+<div class="para"><pre>INSTALLER_UI=SILENT 
+USER_INSTALL_DIR=&lt;Any directory on your system&gt; 
+INSTALL_FILES_OUTSIDE_CF=true </pre>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note"><span class="notetitle">注意：  </span>ColdFusion Administrator から新しいインスタンスを作成すると、デフォルトのインスタンスに適用されるホットフィックスが、作成した新しいインスタンスに自動的に適用されます。</div>
+</div>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

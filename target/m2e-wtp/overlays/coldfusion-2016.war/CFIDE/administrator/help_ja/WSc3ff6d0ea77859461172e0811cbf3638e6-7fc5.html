@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * [パッケージとデプロイ] セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7fc5.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7fc5.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>[パッケージとデプロイ] セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc4"><span class="topictitle1">[ColdFusion アーカイブ] ページ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518-70025aed134e6f6a20b-8000"><span class="topictitle2">アーカイブの作成</span>
+</a></p></li></ul></li><li><p><a href="#WSe61e35da8d318518-7361f1b2134d172af67-8000"><span class="topictitle1">J2EE アーカイブ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518-7361f1b2134d172af67-7fff"><span class="topictitle2">J2EE アーカイブの概要</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc3"><span class="topictitle2">[J2EE アーカイブ] ページ</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>Administrator の [パッケージとデプロイ] セクションでは、CAR ファイルを作成してデプロイできます。また、既存の ColdFusion アプリケーションと ColdFusion ランタイムシステムを含んだ J2EE EAR ファイルまたは WAR ファイルも作成できます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc4" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc4"><!-- --></a><h2 class="topictitle2">[ColdFusion アーカイブ] ページ</h2><div><p>[ColdFusion アーカイブ] ページには、ファイルをすばやくバックアップするために、ColdFusion アプリケーション、環境設定、データソース情報、およびその他のタイプの情報をアーカイブしてデプロイできるツールがあります。アーカイブ可能な情報の一覧は次のとおりです。</p>
+<ul><li><p>名前およびファイルの場所</p>
+</li>
+<li><p>サーバーの設定</p>
+</li>
+<li><p>ColdFusion マッピング</p>
+</li>
+<li><p>データソース</p>
+</li>
+<li><p>Solr コレクション</p>
+</li>
+<li><p>スケジュールされたタスク</p>
+</li>
+<li><p>イベントゲートウェイインスタンス</p>
+</li>
+<li><p>Java アプレット</p>
+</li>
+<li><p>CFX タグ</p>
+</li>
+<li><p>アーカイブのための必要事項リスト</p>
+</li>
+</ul>
+<p>一度情報をアーカイブすると、ColdFusion Administrator を使用して、同じ ColdFusion サーバー、または異なるコンピュータ上で実行されている ColdFusion サーバー上に Web アプリケーションをデプロイできます。また、この機能は ColdFusion のアーカイブファイルのデプロイおよび受信をオンラインで実行できるようにします。</p>
+<p>[アーカイブの設定] ページでは、すべてのアーカイブおよびデプロイオペレーションに適用するさまざまなアーカイブシステム設定を行います。詳細については、オンラインヘルプを参照してください。</p>
+</div><div id="WSe61e35da8d318518-70025aed134e6f6a20b-8000" class="nochunk"><a name="WSe61e35da8d318518-70025aed134e6f6a20b-8000"><!-- --></a><h3 class="topictitle3">アーカイブの作成</h3><div><p>定義をアーカイブするには： </p>
+<div class="para"><ol><li><p>ColdFusion アーカイブページにアクセスするには、ColdFusion Administrator の左側のナビゲーションペインで、パッケージとデプロイ／ColdFusion アーカイブを選択します。</p>
+</li>
+<li><p>ColdFusion アーカイブページで、アーカイブするアーカイブ定義の名前を見つけて、アーカイブの構築アイコンをクリックします。アーカイブウィザードが表示されます。</p>
+</li>
+<li><p>アーカイブウィザードで、アーカイブの要約情報を確認して、「次へ」をクリックして続行します。 アーカイブファイルの位置の選択ページが表示されます。</p>
+</li>
+<li><p>アーカイブファイルの位置の選択ページで、次のようにします。</p>
+<div class="para"><ul><li><p>「ファイル名」テキストボックスに、アーカイブを保存する場所の完全パスとアーカイブの名前を続けて指定します。</p>
+<p>アーカイブ名には、.car 拡張子を付ける必要があります。</p>
+</li>
+<li><p>UNIX ユーザーの場合のみ：特権ユーザーとしてこのアーカイブを実行する必要がある場合は、「Run This Archive As A Specific User」オプションを選択して、任意のシステムアカウント名を「ユーザー名」テキストボックスに入力し、対応するアカウントパスワードを「パスワード」テキストボックスに入力します。 ユーザー名とパスワードは、そのユーザーでこのアーカイブプロセスを実行する、このシステムの既存のユーザー名とパスワードに完全に一致している必要があります。 ユーザー名とパスワードが、このシステムアカウントの既存のユーザー名とパスワードと一致していない場合は、構築操作が失敗します。</p>
+</li>
+</ul>
+</div>
+</li>
+<li><p>「次へ」をクリックして、アーカイブを作成します。</p>
+</li>
+</ol>
+アーカイブ操作が完了すると、次のいずれかのアーカイブメッセージが表示されます。</div>
+<div class="para"><ul><li><p><strong>ビルドに成功しました：</strong>アーカイブが正常に作成されて、手順 4 で指定した場所に保存されました。 「OK」をクリックしてから、ウィザードページの「閉じる」をクリックします。</p>
+</li>
+<li><p><strong>ビルドに失敗しました：</strong>アーカイブは作成されませんでした。 問題の原因を特定するには、ページに表示される情報を確認し、「詳細」をクリックして、問題の原因をさらに分析します。</p>
+</li>
+</ul>
+</div>
+</div></div></div>
+<div id="WSe61e35da8d318518-7361f1b2134d172af67-8000" class="nochunk"><a name="WSe61e35da8d318518-7361f1b2134d172af67-8000"><!-- --></a><h2 class="topictitle2">J2EE アーカイブ</h2><div><ul class="navlinklist"></ul>
+</div><div id="WSe61e35da8d318518-7361f1b2134d172af67-7fff" class="nochunk"><a name="WSe61e35da8d318518-7361f1b2134d172af67-7fff"><!-- --></a><h3 class="topictitle3">J2EE アーカイブの概要</h3><div><p>ColdFusion では、アプリケーション全体を含んだ EAR または WAR ファイルを作成できます。 このアーカイブファイルには、ColdFusion Web アプリケーション、ColdFusion の設定（データソース定義など）、アプリケーションが使用する CFM ページ（テキストまたはコンパイル済みの Java）およびオプションで ColdFusion Administrator が含まれています。この機能により、J2EE の管理者が ColdFusion アプリケーションをデプロイするために使用できるアーカイブをすばやく作成できます。 </p>
+<p>J2EE アーカイブは ColdFusion アーカイブ（CAR）ファイルとは異なります。 CAR ファイルについて詳しくは、「Create and deploy applicationarchives」を参照してください。詳しくは、「ColdFusion Archive overview」を参照してください。 </p>
+<p><strong>コンテキストルート：</strong>J2EE 環境では、複数の独立した Web アプリケーションを 1 台のサーバーインスタンスで実行できるので、サーバーで実行されている各 J2EE Web アプリケーションのルートは、コンテキストルート（またはコンテキストパス）と呼ばれる固有の URL になります。 J2EE アプリケーションサーバーでは、URL の最初の部分（つまり、http://<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">hostname</i> のすぐ後の部分）を使用して、どの Web アプリケーションが着信リクエストを処理しているかが判断されます。例えば、cfmx というコンテキストルートで ColdFusion を実行している場合は、URL http://<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">hostname</i>/<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cfmx</i>/CFIDE/administrator/index.cfm という URL を使用して ColdFusion Administrator を表示します。ほとんどの J2EE アプリケーションサーバーでは、各サーバーインスタンスで 1 つのアプリケーションが /（スラッシュ）をコンテキストルートとして使用できるようになっています。 コンテキストルートとして / を使用する場合、RDS (Remote Development Services) Web アプリケーションは必要ありません。</p>
+</div></div><div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc3" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc3"><!-- --></a><h3 class="topictitle3">[J2EE アーカイブ] ページ</h3><div><p>[J2EE アーカイブ] ページでは、次の項目を含んだ、EAR (Enterprise Application Archive) ファイルまたは WAR (Web Application Archive) ファイルを作成できます。</p>
+<ul><li><p>ColdFusion Web アプリケーション。</p>
+</li>
+<li><p>サーバー設定 (データソース、カスタムタグのパスなど)。</p>
+</li>
+<li><p>ColdFusion Web アプリケーションのルートディレクトリに格納された、アプリケーションの CFML ページ。</p>
+</li>
+</ul>
+<p>この EAR または WAR ファイルを J2EE 管理者が使用して、ColdFusion MX アプリケーションを J2EE アプリケーションサーバー上にデプロイします。</p>
+<div class="tip"><img src="images/tip_help.png" />マルチサーバー構成を使用している場合、サーバーインスタンスのクラスタを作成するには、クラスタ内の個々のサーバーを作成するために必要な WAR または EAR ファイルを、このページを使用して作成します。</div><p>J2EE アーカイブを作成することは、ColdFusion MX をサーバー構成で使用する場合にも、J2EE 構成で使用する場合にも可能です。ただし、EAR または WAR ファイルをデプロイするには J2EE 構成で動作している必要があります。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e6183"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e6186"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e6183 "><p>アーカイブ名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>J2EE アーカイブ定義の名前を指定します。 これは、EAR または WAR ファイルに付けられた名前でもあります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>アプリケーションディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion Web アプリケーションの Web ルートの下に含まれる CFM ファイルの場所を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>デプロイディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion が EAR または WAR ファイルを配置するディレクトリを指定します。 ColdFusion では、アーカイブタイプに応じて、archivename.ear または archivename.war という名前が使用されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>アーカイブタイプ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion で、Web Application Archive（WAR）ファイルまたは Enterprise Application Archive（EAR）ファイルのどちらが作成されるかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>コンテキストルート（EAR に有効）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>EAR ファイルを作成する場合は、ColdFusion Web アプリケーションのコンテキストルートをオプションで指定できます。 デフォルトでは、コンテキストルートは空になります。 詳しくは、「J2EE Packaging overview」を参照してください。WAR ファイルを作成する場合は、アプリケーションサーバー固有の方法でコンテキストルートが処理されます。 一部のアプリケーションサーバーでは、WAR ファイルの名前がデフォルトのコンテキストルートになります。また、デプロイツールまたはサーバー固有の設定ファイルを使用して、コンテキストルートを指定する場合もあります。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>シリアル番号</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion エンタープライズ版の有効なシリアル番号を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>以前のシリアル番号（アップグレードの場合）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion の以前のインストールのシリアル番号を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>COM サポートを含める</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>「COM サポートを含める」では COM サポートを実現するモジュールを含めるかどうかを指定します。 COM サポートを含めないと、アーカイブのサイズが約 12 MB 小さくなります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>デバッグの無効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion Web アプリケーションでデバッグを無効にするかどうかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>CFML ソースを含める</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>元の CFM ファイルを使用するか、ページを Java バイトコードに変換するかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>CF Administrator を含める</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>ColdFusion Administrator のモジュールおよびディレクトリ（CFIDE ディレクトリ構造）を含めるかどうかを指定します。 ColdFusion Administrator を含めないと、アーカイブのサイズが約 2 MB 小さくなります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6183 "><p>アーカイブに含めるデータソースの設定</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6186 "><p>J2EE アーカイブに含めるデータソースを指定します。 右向きおよび左向きの矢印ボタンを使用して、データソースを選択および削除します。 二重矢印ボタンを使用すれば、ワンクリックで、すべてのデータソースを選択および削除できます。 </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 統計情報</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fba.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fba.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>統計情報</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363cdd-7ff0"><span class="topictitle1">リクエストの統計情報</span>
+</a></p><ul><li><p><a href="#WSCBE9CBA7-6772-4c93-8373-9E5DB1E58C3D"><span class="topictitle2">アクティブなリクエスト</span>
+</a></p></li><li><p><a href="#WSE41F29AA-42CA-4c95-AD5A-D7239ED270C8"><span class="topictitle2">アクティブな ColdFusion スレッド</span>
+</a></p></li><li><p><a href="#WS59AA7E60-B0B3-48e1-BB46-213F8E87764B"><span class="topictitle2">低速なリクエスト</span>
+</a></p></li><li><p><a href="#WS410D37AF-E3E7-4c75-8450-62030C733F36"><span class="topictitle2">低速な ColdFusion スレッド</span>
+</a></p></li><li><p><a href="#WS2B53E710-9750-4956-B4A9-D45F98EE25F9"><span class="topictitle2">アクティブなセッション</span>
+</a></p></li><li><p><a href="#WS8D6D876F-A832-44a1-A2BB-EDB16B3102A1"><span class="topictitle2">累積サーバー使用量の多いリクエスト</span>
+</a></p></li><li><p><a href="#WS9C06AEA5-B6BF-4964-B982-DABA120BD906"><span class="topictitle2">ヒット数の多いリクエスト</span>
+</a></p></li><li><p><a href="#WSEE3AFBDC-AD1A-44dc-8E28-CC4273855B87"><span class="topictitle2">テンプレートキャッシュのステータス</span>
+</a></p></li><li><p><a href="#WSEAFB36C5-8568-45ad-8F4E-AE6594C06A01"><span class="topictitle2">リクエストスロットルデータ</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fb8"><span class="topictitle1">メモリ使用量</span>
+</a></p><ul><li><p><a href="#WS38AFCCA9-92B7-4051-B8C1-FB6407E60B3C"><span class="topictitle2">メモリ使用量の要約</span>
+</a></p></li><li><p><a href="#WS0D16E4B3-E82E-4e96-A782-BE68DA934A6F"><span class="topictitle2">メモリ使用量の多いリクエスト</span>
+</a></p></li><li><p><a href="#WSFAF5F5B9-9948-4ddc-AE24-B1F69F188BE8"><span class="topictitle2">メモリ使用量の多い CF スレッド</span>
+</a></p></li><li><p><a href="#WSB19A7011-D7B4-4148-82D5-29BEAD0A73A5"><span class="topictitle2">メモリ使用量の多いクエリー</span>
+</a></p></li><li><p><a href="#WSC21886D8-98D9-4cbe-9943-8D916B02804C"><span class="topictitle2">メモリ使用量の多いセッション</span>
+</a></p></li><li><p><a href="#WS86B9A43F-AF7D-4a5f-91C2-38372D32C714"><span class="topictitle2">アプリケーションスコープでのメモリ使用量</span>
+</a></p></li><li><p><a href="#WS0A1B8D42-3AFF-4b7e-A63F-7C43B8B0949B"><span class="topictitle2">サーバースコープでのメモリ使用量</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fb7"><span class="topictitle1">データベース</span>
+</a></p><ul><li><p><a href="#WS4B3BF217-71FD-487c-8BD4-AAB21F505902"><span class="topictitle2">アクティブなクエリー</span>
+</a></p></li><li><p><a href="#WSEA4E8364-0CDB-476b-84C5-F959A29969EB"><span class="topictitle2">低速なクエリー</span>
+</a></p></li><li><p><a href="#WSF334C833-3E42-4231-AB81-CA90E54919F3"><span class="topictitle2">キャッシュ済みのクエリー</span>
+</a></p></li><li><p><a href="#WS3553B2A1-A2B2-46b2-A977-1DFE102F90F4"><span class="topictitle2">クエリーキャッシュのステータス</span>
+</a></p></li><li><p><a href="#WSF8A8B23B-312C-4c98-9973-E5355ECDDD2D"><span class="topictitle2">プールのステータス</span>
+</a></p></li><li><p><a href="#WS73CE8B93-94D5-4191-AA44-5FA33F965963"><span class="topictitle2">実行頻度の高いクエリー</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363cdd-7ffc"><span class="topictitle1">エラー</span>
+</a></p><ul><li><p><a href="#WS84957419-C4BA-4b44-8A91-D189567D3B3F"><span class="topictitle2">エラーが発生したリクエスト</span>
+</a></p></li><li><p><a href="#WSF78F1587-8E6F-4737-9E16-D08D949A3F1A"><span class="topictitle2">タイムアウトしたリクエスト</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff0" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff0"><!-- --></a><h2 class="topictitle2">リクエストの統計情報</h2><div><p>[リクエストの統計情報] セクションには次のレポートがあります。</p>
+</div><div id="WSCBE9CBA7-6772-4c93-8373-9E5DB1E58C3D" class="nochunk"><a name="WSCBE9CBA7-6772-4c93-8373-9E5DB1E58C3D"><!-- --></a><h3 class="topictitle3">アクティブなリクエスト</h3><div><p>アクティブなリクエストのレポートは、[全般] の設定で指定されたレポートのリクエスト間隔よりもロードに時間がかかるすべての現在アクティブなリクエストをリストします。リクエストには、ブラウザのリクエスト、CFC HTTP リクエスト、Web サービス、ゲートウェイ、および Flash Remoting が含まれます。アクティブなリクエストのリスト、詳細ビュー、またはグラフを表示できます。詳細ビューには CFML スタックトレースが含まれており、これを使用するとデッドロックしているリクエストや実行時間の長いリクエストがブロックされている場所を発見できます。すべてのリクエストのグラフを 1 つのビューに表示するには、[チャート] をクリックします。グラフには、サーバーが現在処理しているリクエスト数、および実行開始のためにアプリケーションサーバースレッドの割り当てを待っているリクエスト数が表示されます。実行待ちのリクエスト数が多いことがグラフからわかった場合は、スレッドプールのサイズを増やしてください。または、ColdFusion がクラスタにデプロイされている場合は、より効率的なロードバランスのためにサーバーインスタンスを追加してください。</p>
+<div class="note"><span class="notetitle">注意：  </span>サーバーモニタには、Flash Remoting リクエストとして LiveCycle Data Management Assemblers が含まれます。</div>
+</div></div><div id="WSE41F29AA-42CA-4c95-AD5A-D7239ED270C8" class="nochunk"><a name="WSE41F29AA-42CA-4c95-AD5A-D7239ED270C8"><!-- --></a><h3 class="topictitle3">アクティブな ColdFusion スレッド</h3><div><p>アクティブな ColdFusion スレッドのレポートは、すべての現在アクティブなスレッドをリストします。アクティブなスレッドのリスト、詳細ビュー、またはグラフを表示できます。</p>
+</div></div><div id="WS59AA7E60-B0B3-48e1-BB46-213F8E87764B" class="nochunk"><a name="WS59AA7E60-B0B3-48e1-BB46-213F8E87764B"><!-- --></a><h3 class="topictitle3">低速なリクエスト</h3><div><p>低速なリクエストのレポートは、低速なリクエストをリストします。リクエストがこのページに表示されるかどうかを決定するしきい値を指定できます。しきい値が低いほど、より多くのリクエストがリストに表示されます。レポートサイズのオプションを使用すると、リストに表示するアイテム数を制限できます。低速なリクエストのリストまたは詳細ビューを表示できます。詳細ビューには CFML スタックトレースが含まれます。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fb5.html">リクエストの処理</a>を参照してください。</p>
+</div></div><div id="WS410D37AF-E3E7-4c75-8450-62030C733F36" class="nochunk"><a name="WS410D37AF-E3E7-4c75-8450-62030C733F36"><!-- --></a><h3 class="topictitle3">低速な ColdFusion スレッド</h3><div><p>低速な ColdFusion スレッドのレポートは、低速な ColdFusion スレッドをリストします。ColdFusion スレッドがこのレポートに表示されるかどうかを決定するしきい値を指定できます。しきい値が低いほど、より多くのリクエストがレポートに表示されます。</p>
+</div></div><div id="WS2B53E710-9750-4956-B4A9-D45F98EE25F9" class="nochunk"><a name="WS2B53E710-9750-4956-B4A9-D45F98EE25F9"><!-- --></a><h3 class="topictitle3">アクティブなセッション</h3><div><p>アクティブなセッションのレポートは、すべてのアクティブなセッションをリストします。アクティブなセッションのリスト、詳細ビュー、またはグラフを表示できます。グラフには、アクティブなセッション、およびサーバーにログインしたユーザー数が表示されます。</p>
+</div></div><div id="WS8D6D876F-A832-44a1-A2BB-EDB16B3102A1" class="nochunk"><a name="WS8D6D876F-A832-44a1-A2BB-EDB16B3102A1"><!-- --></a><h3 class="topictitle3">累積サーバー使用量の多いリクエスト</h3><div><p>累積サーバー使用量の多いリクエストのレポートは、サーバーの CPU 時間を累積して最も使用したリクエストをリストします。1 回のリクエストの実行時間が短くても、頻繁に実行されれば多くの CPU 時間を消費することがあります。累積サーバー時間が多いリクエストを調整すると、サーバー全体のパフォーマンスの向上に役立ちます。累積サーバー使用量の多いリクエストのリスト、詳細ビュー、またはグラフを表示できます。レポートサイズのオプションを使用すると、リストに表示するアイテム数を制限できます。</p>
+</div></div><div id="WS9C06AEA5-B6BF-4964-B982-DABA120BD906" class="nochunk"><a name="WS9C06AEA5-B6BF-4964-B982-DABA120BD906"><!-- --></a><h3 class="topictitle3">ヒット数の多いリクエスト</h3><div><p>ヒット数の多いリクエストのレポートは、ヒット数の多いリクエストをリストします。ヒット数の多いリクエストのリストまたはグラフを表示できます。レポートサイズのオプションを使用すると、リストに表示するアイテム数を制限できます。</p>
+</div></div><div id="WSEE3AFBDC-AD1A-44dc-8E28-CC4273855B87" class="nochunk"><a name="WSEE3AFBDC-AD1A-44dc-8E28-CC4273855B87"><!-- --></a><h3 class="topictitle3">テンプレートキャッシュのステータス</h3><div><p>テンプレートキャッシュのステータスのレポートは、テンプレートキャッシュについての情報を表示して、そのパフォーマンスを示します。テンプレートキャッシュは、ColdFusion がコンパイルされた CFM テンプレートと CFC テンプレートを格納するメモリのことです。テンプレートが初めて実行されると Java バイトコードにコンパイルされ、テンプレートキャッシュに格納されます。テンプレートが変更されない限り、ColdFusion はテンプレートキャッシュにあるコンパイルされた形式のテンプレートを使用します。[テンプレートキャッシュのステータス] ページではキャッシュのヒット率を監視できます。キャッシュのヒット率は、キャッシュのヒット数とキャッシュのミス数の割合を示します。<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">キャッシュのヒットとは、テンプレートがキャッシュから取得されたことを指します。</i><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">キャッシュのミスとは、テンプレートをコンパイルしてキャッシュに配置する必要があることを指します。</i>サーバーのパフォーマンスを向上させるにはヒット数をミス数より多くすること、つまり高いキャッシュのヒット率が必要です。キャッシュのヒット率が低すぎる場合は、ColdFusion Administrator で [サーバーの設定]-[キャッシュ機能] を選択してキャッシュのサイズを増やしてください。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fb6.html">キャッシュ</a>を参照してください。また、[テンプレートキャッシュ] ページでは、キャッシュにあるテンプレート数およびキャッシュが占有する推定メモリ量を監視できます。</p>
+<div class="note"><span class="notetitle">注意：  </span>テンプレートキャッシュの数には、LRU (Least Recently Used: 使用時期が最も古い) キャッシュとソフトキャッシュの両方が含まれます。したがって、その数は ColdFusion Administrator で設定された数を超えることがあります。</div>
+</div></div><div id="WSEAFB36C5-8568-45ad-8F4E-AE6594C06A01" class="nochunk"><a name="WSEAFB36C5-8568-45ad-8F4E-AE6594C06A01"><!-- --></a><h3 class="topictitle3">リクエストスロットルデータ</h3><div><p>リクエストスロットルデータのレポートは、ColdFusion サーバーによってスロットルされたすべてのリクエストをリストします。リクエストを処理するのに十分なメモリが使用可能でないために ColdFusion がリクエストをキューに入れたときに、リクエストがスロットルされます。指定された制限よりも小さいリクエストは、キューに入れられず、合計メモリの一部としてカウントされません。指定された制限を超えるリクエストは総メモリの一部としてカウントされ、リクエストスロットルのメモリサイズを超えている場合は、キューに入れられます。デフォルト値は 4 MB です。スロットルのしきい値とメモリを変更するには、ColdFusion Administrator で [サーバーの設定]-[設定] を選択します。</p>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fb8" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fb8"><!-- --></a><h2 class="topictitle2">メモリ使用量</h2><div><p>[メモリ使用量] セクションには次のレポートがあります。</p>
+</div><div id="WS38AFCCA9-92B7-4051-B8C1-FB6407E60B3C" class="nochunk"><a name="WS38AFCCA9-92B7-4051-B8C1-FB6407E60B3C"><!-- --></a><h3 class="topictitle3">メモリ使用量の要約</h3><div><p>メモリ使用量の要約のレポートは、Server スコープ、アプリケーションスコープ、セッションスコープなどの、サーバー上のパーシスタントスコープによる推定メモリ消費量のグラフを表示します。サーバーのメモリ消費量が多すぎる場合、グラフによってどのスコープがメモリを使いすぎているか、およびいつメモリの使いすぎが始まったかがわかります。詳細レポートによって、サーバースコープ、およびすべてのアクティブなアプリケーションスコープとセッションスコープの推定メモリ消費量を確認できます。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fb3.html">変数のメモリ使用量</a>を参照してください。</p>
+<div class="note"><span class="notetitle">注意：  </span>サーバーモニタに表示されるメモリ使用量の情報は推定であり、実際のメモリ使用量と異なる可能性があります。メモリ使用量のレポートの情報は、さまざまな Java タイプとそれに対応する ColdFusion タイプがメモリを消費する方式の経験的評価に基づくものです。メモリ消費量のレポートで得られる情報は絶対的な基準としてではなく、目安として使用してください。また、サーバーモニタでは、COM オブジェクトのメモリ使用量情報は追跡されません。</div>
+</div></div><div id="WS0D16E4B3-E82E-4e96-A782-BE68DA934A6F" class="nochunk"><a name="WS0D16E4B3-E82E-4e96-A782-BE68DA934A6F"><!-- --></a><h3 class="topictitle3">メモリ使用量の多いリクエスト</h3><div><p>メモリ使用量の多いリクエストのレポートは、メモリを最も使用したリクエストをリストします。リストまたは詳細ビューを表示できます。詳細ビューは、リクエストの実行中に最もメモリを使用した変数をリストします。 </p>
+</div></div><div id="WSFAF5F5B9-9948-4ddc-AE24-B1F69F188BE8" class="nochunk"><a name="WSFAF5F5B9-9948-4ddc-AE24-B1F69F188BE8"><!-- --></a><h3 class="topictitle3">メモリ使用量の多い CF スレッド</h3><div><p>メモリ使用量の多い CF スレッドのレポートは、メモリを最も使用した ColdFusion スレッドをリストします。 </p>
+</div></div><div id="WSB19A7011-D7B4-4148-82D5-29BEAD0A73A5" class="nochunk"><a name="WSB19A7011-D7B4-4148-82D5-29BEAD0A73A5"><!-- --></a><h3 class="topictitle3">メモリ使用量の多いクエリー</h3><div><p>メモリ使用量の多いクエリーのレポートは、メモリを最も使用したクエリーをリストします。クエリーがこのレポートに表示された場合、クエリーを調整して結果セットのサイズを減らすか、クエリーをキャッシュしてメモリ消費量とネットワークのトラフィックを減らしてください。このレポートにはキャッシュクエリーについての情報は含まれません。</p>
+</div></div><div id="WSC21886D8-98D9-4cbe-9943-8D916B02804C" class="nochunk"><a name="WSC21886D8-98D9-4cbe-9943-8D916B02804C"><!-- --></a><h3 class="topictitle3">メモリ使用量の多いセッション</h3><div><p>メモリ使用量の多いセッションのレポートは、メモリを最も使用したセッションをリストします。</p>
+</div></div><div id="WS86B9A43F-AF7D-4a5f-91C2-38372D32C714" class="nochunk"><a name="WS86B9A43F-AF7D-4a5f-91C2-38372D32C714"><!-- --></a><h3 class="topictitle3">アプリケーションスコープでのメモリ使用量</h3><div><p>アプリケーションスコープでのメモリ使用量のレポートは、メモリを最も使用したアプリケーションスコープをリストします。詳細では、メモリを最も使用したアプリケーションスコープ変数をリストします。</p>
+</div></div><div id="WS0A1B8D42-3AFF-4b7e-A63F-7C43B8B0949B" class="nochunk"><a name="WS0A1B8D42-3AFF-4b7e-A63F-7C43B8B0949B"><!-- --></a><h3 class="topictitle3">サーバースコープでのメモリ使用量</h3><div><p>[サーバースコープでのメモリ使用量] ページは、メモリを最も使用した Server スコープ変数をリストします。</p>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fb7" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fb7"><!-- --></a><h2 class="topictitle2">データベース</h2><div><p>[データベース] セクションには次のレポートがあります。</p>
+</div><div id="WS4B3BF217-71FD-487c-8BD4-AAB21F505902" class="nochunk"><a name="WS4B3BF217-71FD-487c-8BD4-AAB21F505902"><!-- --></a><h3 class="topictitle3">アクティブなクエリー</h3><div><p>アクティブなクエリーのレポートは、低速なクエリーのレポートで指定されたしきい値よりもロードに時間がかかるすべての現在アクティブなクエリーをリストします。リストまたは詳細ビューを表示できます。</p>
+</div></div><div id="WSEA4E8364-0CDB-476b-84C5-F959A29969EB" class="nochunk"><a name="WSEA4E8364-0CDB-476b-84C5-F959A29969EB"><!-- --></a><h3 class="topictitle3">低速なクエリー</h3><div><p>低速なクエリーのレポートは、低速なクエリーのレポートと平均で低速なクエリーのレポートを提供します。どちらのレポートでも、テンプレートの名前と行番号でクエリーを識別できます。低速なクエリーのレポートは、低速なクエリーの特定のインスタンスと、そのクエリーの SQL ステートメントを表示します。詳細ビューには SQL ステートメントが含まれます。この情報によって、そのクエリーのインスタンスが低速な理由を特定できます。平均で低速なクエリーのレポートは平均して低速なクエリーを示します。SQL ステートメントはインスタンスによって異なる可能性があるので、このレポートではクエリーの SQL コードは表示されません。どちらのレポートにもキャッシュクエリーは含まれません。パフォーマンスを向上させるには、これらのレポートにリストされたクエリーを調整します。クエリーの結果が固定的である場合は、ColdFusion のクエリーキャッシュを使用してクエリーをキャッシュすることでパフォーマンスを向上できる可能性があります。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fb4.html">データベース応答時間</a>を参照してください。</p>
+</div></div><div id="WSF334C833-3E42-4231-AB81-CA90E54919F3" class="nochunk"><a name="WSF334C833-3E42-4231-AB81-CA90E54919F3"><!-- --></a><h3 class="topictitle3">キャッシュ済みのクエリー</h3><div><p>キャッシュ済みのクエリーのレポートは、キャッシュされたクエリーをリストします。キャッシュ済みのクエリーのリスト、または個々のクエリーの詳細を表示できます。クエリーの実行時間が短い場合は、本当にキャッシュする必要があるか判断します。実行回数が多い場合は、クエリーの <samp class="codeph">cachedafter</samp> 設定と <samp class="codeph">cachedwithin</samp> 設定を調整してください。</p>
+</div></div><div id="WS3553B2A1-A2B2-46b2-A977-1DFE102F90F4" class="nochunk"><a name="WS3553B2A1-A2B2-46b2-A977-1DFE102F90F4"><!-- --></a><h3 class="topictitle3">クエリーキャッシュのステータス</h3><div><p>クエリーキャッシュのステータスのレポートは、キャッシュクエリーの数、クエリーキャッシュが消費する推定メモリ量、およびクエリーキャッシュのヒット率のグラフを表示します。クエリーキャッシュのヒット率が高いほど、パフォーマンスが向上します。キャッシュのヒット率が低すぎる場合は、クエリーキャッシュのサイズを増やしてください。または、アプリケーションのクエリーキャッシュの使用方法を分析するには、<samp class="codeph">cfquery</samp> タグの <samp class="codeph">cachedAfter</samp> 属性と <samp class="codeph">cachedWithin</samp> 属性を調整できるか判断します。クエリーキャッシュが大きすぎる場合は、キャッシュからいくつかクエリーを削除できないか判断します。</p>
+</div></div><div id="WSF8A8B23B-312C-4c98-9973-E5355ECDDD2D" class="nochunk"><a name="WSF8A8B23B-312C-4c98-9973-E5355ECDDD2D"><!-- --></a><h3 class="topictitle3">プールのステータス</h3><div><p>プールのステータスのレポートは、データソース、ColdFusion サーバー上のアプリケーションがデータソースを使用しているかどうか、および接続数をリストします。データソースのリスト、または個々のデータソースの詳細を表示できます。</p>
+</div></div><div id="WS73CE8B93-94D5-4191-AA44-5FA33F965963" class="nochunk"><a name="WS73CE8B93-94D5-4191-AA44-5FA33F965963"><!-- --></a><h3 class="topictitle3">実行頻度の高いクエリー</h3><div><p>実行頻度の高いクエリーのレポートは、最も頻繁に実行されたクエリーをリストします。クエリーの個々のインスタンスの実行時間が短い場合でも、実行頻度の高いクエリーを調整するとパフォーマンスを向上できます。このレポートはキャッシュクエリーについての情報は提供しません。クエリーのリスト、または個々のクエリーの詳細を表示できます。</p>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363cdd-7ffc" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363cdd-7ffc"><!-- --></a><h2 class="topictitle2">エラー</h2><div><p>[エラー] セクションは、次のレポートを含みます。</p>
+</div><div id="WS84957419-C4BA-4b44-8A91-D189567D3B3F" class="nochunk"><a name="WS84957419-C4BA-4b44-8A91-D189567D3B3F"><!-- --></a><h3 class="topictitle3">エラーが発生したリクエスト</h3><div><p>エラーが発生したリクエストのレポートは、エラーを生成したテンプレートをリストします。このレポートには、テンプレートのパス、およびそのテンプレートでエラーが発生した回数が含まれます。レポートは、最近発生したエラーの発生時間、エラーメッセージ、CFML スタックトレース、および Java スタックトレースも表示します。テンプレートのリスト、または個々のテンプレートの詳細を表示できます。詳細情報には CFML スタックトレースが含まれます。</p>
+</div></div><div id="WSF78F1587-8E6F-4737-9E16-D08D949A3F1A" class="nochunk"><a name="WSF78F1587-8E6F-4737-9E16-D08D949A3F1A"><!-- --></a><h3 class="topictitle3">タイムアウトしたリクエスト</h3><div><p>[タイムアウトしたリクエスト] ページは、タイムアウトしたテンプレートをリストします。レポートには、テンプレートのパス、テンプレートのタイムアウト回数、テンプレートの最近の応答時間、テンプレートが最近使用された時刻、最近の推定リクエストサイズ、および CFML スタックトレースが含まれます。タイムアウトは CFML 内でのみ発生するので、Java スタックトレースは提供されません。テンプレートのリスト、または個々のテンプレートの詳細を表示できます。詳細情報には CFML スタックトレースが含まれます。</p>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

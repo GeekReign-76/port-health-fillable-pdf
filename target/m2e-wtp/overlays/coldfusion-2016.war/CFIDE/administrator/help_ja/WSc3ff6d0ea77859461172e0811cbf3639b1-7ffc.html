@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * データソースの追加</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3639b1-7ffc.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3639b1-7ffc.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>データソースの追加</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3639b1-7ffb"><span class="topictitle1">Administrator でのデータソースの追加</span>
+</a></p><ul><li><p><a href="#WSA2A6B77B-A39A-44cd-BF63-58882C44E6B5"><span class="topictitle2">接続文字列の引数の指定</span>
+</a></p></li><li><p><a href="#WS106AE78E-F912-4451-8EDF-5382AE2B8C78"><span class="topictitle2">データソースに関するガイドライン</span>
+</a></p></li><li><p><a href="#WSe9cbe5cf462523a0-537db363122d095452c-8000"><span class="topictitle2">接続の問題</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>データソースを使用するには、ColdFusion Administrator を使用して、ColdFusion と通信できるようにデータソースを設定する必要があります。Administrator にデータソースを追加すると、データベース接続を確立する CFML タグ (cfquery など) にその名前を指定してデータソースにアクセスできるようになります。データソースにより、クエリーの実行時にどのデータベースに接続し、接続にどのパラメータを使用するかが ColdFusion に指示されます。</p>
+<p>ColdFusion Administrator では、ColdFusion サーバーのデータベース接続に関するすべての情報が 1 つの場所に整理されます。データソースを追加するとともに、Administrator を使用して、再配置、名前変更、またはセキュリティ許可における変更など、データベースへの変更を指定することができます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3639b1-7ffb" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3639b1-7ffb"><!-- --></a><h2 class="topictitle2">Administrator でのデータソースの追加</h2><div><p>ColdFusion アプリケーションで使用するデータソースをすばやく追加するには、ColdFusion Administrator を使用します。データソースを追加するには、データソースにデータソース名 (DSN) を指定し、接続の確立に必要なすべての情報を設定します。 </p>
+<div class="note"><span class="notetitle">注意：  </span>ColdFusion には、デフォルトで設定済みのデータソースが付属しています。それらのデータソースは次の手順を実行しなくても操作できます。</div>
+<ol><li><p>ColdFusion Administrator で、[データとサービス]-[データソース] を選択します。</p>
+</li>
+<li><p>[新規のデータソースの追加] で、MyTestDSN などのデータソース名を入力します。次に示す名前は予約されています。これらをデータソース名として使用することはできません。</p>
+<ul><li><p>service</p>
+</li>
+<li><p>jms_provider</p>
+</li>
+<li><p>comp</p>
+</li>
+<li><p>jms</p>
+</li>
+</ul>
+</li>
+<li><p>ドロップダウンリストからドライバを選択します。たとえば、Microsoft SQL Server を選択します。</p>
+</li>
+<li><p>「追加」をクリックします。</p>
+<p>追加の DSN 情報のフォームが表示されます。このフォームで使用できるフィールドは、選択したドライバによって異なります。</p>
+</li>
+<li><p>[データベース] フィールドに、データベース名 (たとえば「Northwind」) を入力します。</p>
+</li>
+<li><p>[サーバー] フィールドには、データベースをホスティングしているサーバーのネットワーク名または IP アドレスを入力し、必要なポート値を入力します。たとえば、デフォルトのポートに接続されたサーバー bullwinkle を指定します。</p>
+</li>
+<li><p>データベースにログイン情報が必要な場合は、ユーザー名とパスワードを入力します。</p>
+<div class="note"><span class="notetitle">注意：  </span>必要なユーザー名とパスワード情報を省略すると、データソースが確認できない原因になります。</div>
+</li>
+<li><p>(オプション) 説明を入力します。</p>
+</li>
+<li><p>(オプション) [詳細設定の表示] をクリックして、ColdFusion 特有の設定を指定します。たとえば、どの SQL コマンドを使用してこのデータソースを操作できるかを設定できます。</p>
+</li>
+<li><p>[送信] をクリックして、データソースを作成します。</p>
+<p>ColdFusion はデータソースに接続できるかどうかを自動的に確認します。</p>
+</li>
+<li><p>(オプション) 後でこのデータソースを確認するには、[アクション] 列の確認アイコンをクリックします。</p>
+<div class="note"><span class="notetitle">注意：  </span>ColdFusion から使用できるすべてのデータソースのステータスを確認するには、[すべての接続の確認] をクリックします。</div>
+</li>
+</ol>
+</div><div id="WSA2A6B77B-A39A-44cd-BF63-58882C44E6B5" class="nochunk"><a name="WSA2A6B77B-A39A-44cd-BF63-58882C44E6B5"><!-- --></a><h3 class="topictitle3">接続文字列の引数の指定</h3><div><p>ColdFusion Administrator では、データソースに対する接続文字列引数を指定できます。[詳細設定] ページの [接続文字列] フィールドに、名前と値のペアをセミコロンで区切って入力します。詳細については、使用するデータベースドライバのドキュメントを参照してください。</p>
+<div class="note"><span class="notetitle">注意：  </span><samp class="codeph">cfquery</samp><samp class="codeph">connectstring</samp> 属性のサポートは廃止されました。</div>
+</div></div><div id="WS106AE78E-F912-4451-8EDF-5382AE2B8C78" class="nochunk"><a name="WS106AE78E-F912-4451-8EDF-5382AE2B8C78"><!-- --></a><h3 class="topictitle3">データソースに関するガイドライン</h3><div><p>ColdFusion にデータソースを追加する際には、次のガイドラインに従ってください。 </p>
+<ul><li><p>データソース名はすべて 1 語で指定する必要があります。</p>
+</li>
+<li><p>データソース名には、文字、数字、ハイフン、およびアンダースコア文字 (_) のみを使用することができます。</p>
+</li>
+<li><p>データソース名に特殊文字またはスペースを使用しないでください。</p>
+</li>
+<li><p>データソース名の大文字と小文字は区別されませんが、大文字の使い方は統一してください。</p>
+</li>
+<li><p>JDBC ドライバによっては、接続文字列および JDBC URL で大文字と小文字が区別される場合があります。</p>
+</li>
+<li><p>Administrator を使用して、ColdFusion がデータソースに接続できることを確認してください。</p>
+</li>
+<li><p>アプリケーションページ上でデータソースを使用してデータを取得するには、そのデータソースが ColdFusion Administrator 内に存在している必要があります。</p>
+</li>
+</ul>
+</div></div><div id="WSe9cbe5cf462523a0-537db363122d095452c-8000" class="nochunk"><a name="WSe9cbe5cf462523a0-537db363122d095452c-8000"><!-- --></a><h3 class="topictitle3">接続の問題</h3><div><p>データベースを再起動した後にクエリーを実行すると、最初のリクエストの際にエラーが発生する場合があります。このエラーは、2 回目以降のリクエストでは発生しません。また、接続プーリングが無効になっている場合も発生しません。このエラーは、最初のリクエストの際に、キャッシュ済みの接続を使用してクエリーが実行され、例外が返されることによって発生します。この問題を回避するには、クエリーを実行する前に接続を検証します。</p>
+<div class="para">接続を検証するには、クエリーを実行する前に、[詳細設定] ページで validationQuery を使用します。 <div class="note"><span class="notetitle">注意：  </span>validationQuery はパフォーマンス上の問題を引き起こす可能性があるので、使用する場合は十分な注意が必要です。</div>
+</div>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

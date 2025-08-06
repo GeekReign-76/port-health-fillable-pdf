@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * クラスタリングの有効化によるロードバランスとフェイルオーバーの実現</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf363c31-7ffa.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf363c31-7ffa.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>クラスタリングの有効化によるロードバランスとフェイルオーバーの実現</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS3F7BDE13-53A4-49ae-8ECC-40687C34E9D5"><span class="topictitle1">ロードバランスとフェイルオーバーのための、サーバーインスタンスのクラスタの設定</span>
+</a></p><ul><li><p><a href="#WS932f2e4c7c04df8f-676a020513514deda38-8000"><span class="topictitle2">クラスタへのリモートインスタンスの追加</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">"ロードバランス" とはエンタープライズレベルの機能で、アプリケーションサーバーがクラスタ内にある複数のサーバーインスタンスへと自動的にリクエストを分散させることです。</i>また、クラスタリングを使用すると、元のサーバーインスタンスが停止した場合でも、動作中の他のサーバーインスタンスへとアプリケーションサーバーがリクエストを転送できます。</p>
+<p>ロードバランスとフェイルオーバーを実現するには、同じ ColdFusion アプリケーションおよび設定内容を複数のサーバーインスタンスにデプロイし、それらのインスタンスを 1 つのクラスタに追加します。各インスタンスとも、デプロイするアプリケーションおよび設定するリソース（データソース、Solr コレクション、マッピングなど）を同じにする必要があります。Web サーバーコネクタは負荷分散を自動的に管理し、いずれかのサーバーインスタンスが停止した場合は別のサーバーインスタンスにリクエストを転送することで、パフォーマンスと安定性を最適化します。</p>
+<div class="note"><span class="notetitle">注意：  </span>クラスタが動作するには、ネットワークに接続されている必要があります。 </div>
+<p>最大限のフェイルオーバー保護を実現するには、1 つのクラスタ内で複数台のコンピュータを使用してください。ただし、使用するコンピュータごとに個別の ColdFusion エンタープライズ版ライセンスを購入する必要があります。</p>
+<p>クラスタ内のサーバーインスタンスでセッションフェイルオーバーを実装するには、各サーバーインスタンスでセッションレプリケーションを有効化します。セッションレプリケーションは、クラスタ内のサーバーインスタンス間でセッション情報をリアルタイムに調整する機能です。セッションレプリケーションを有効にすると、現在のサーバーが使用不可能な場合に、動作中の他のサーバーへと Tomcat がリクエストを自動的に転送します。</p>
+<div class="note"><span class="notetitle">注意：  </span>セッションレプリケーションを使用するクラスタの場合、セッションデータは、変化するたびにクラスタ内の他の各サーバーへとコピーされます。したがって、セッションスコープに大量の情報を格納していると、この動作のためにパフォーマンスが低下する可能性があります。セッションスコープに格納する情報が大量になると考えられる場合は、その情報をデータベース内のクライアント変数に格納することを検討してください。</div>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WS3F7BDE13-53A4-49ae-8ECC-40687C34E9D5" class="nochunk"><a name="WS3F7BDE13-53A4-49ae-8ECC-40687C34E9D5"><!-- --></a><h2 class="topictitle2">ロードバランスとフェイルオーバーのための、サーバーインスタンスのクラスタの設定</h2><div><p>ColdFusion Administrator を使用してクラスタを管理します。</p>
+<ol><li><p>ColdFusion Administrator で、エンタープライズマネージャ／クラスタマネージャをクリックします。</p>
+</li>
+<li><p>クラスタ名を入力して、「追加」をクリックします。</p>
+</li>
+<li><p>クラスタ名をクリックして、要件に基づいてサーバーをクラスタに移動します。</p>
+</li>
+<li><p>（必要に応じて）マルチキャストポートを編集します。</p>
+<p>マルチキャストポートは、クラスタメンバーをグループ化するために使用されます。 マルチキャストポートのデフォルト値は 45564 です。 クラスタを作成すると、<samp class="codeph"><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cfroot</i>¥cfusion¥config¥cluster.xml</samp> ファイルにポートが追加されます。 </p>
+<p>マルチキャストポートについて詳しくは、<a href="http://tomcat.apache.org/tomcat-6.0-doc/config/cluster-membership.html" target="_self">http://tomcat.apache.org/tomcat-6.0-doc/config/cluster-membership.html</a> を参照してください。</p>
+</li>
+<li><p>スティッキーセッションが必要かどうかを指定します。</p>
+<p>スティッキーセッションでは、インスタンスにセッションが確立された後、そのクライアントからのそれ以降のすべてのリクエストが、そのインスタンスに必ずマッピングされるようになります。 </p>
+</li>
+<li><p>「送信」をクリックします。</p>
+</li>
+</ol>
+</div><div id="WS932f2e4c7c04df8f-676a020513514deda38-8000" class="nochunk"><a name="WS932f2e4c7c04df8f-676a020513514deda38-8000"><!-- --></a><h3 class="topictitle3">クラスタへのリモートインスタンスの追加</h3><div><p>クラスタにリモートインスタンスを追加するには、リモートインスタンスの <samp class="codeph">server.xml</samp> にクラスタブロックを追加します。 次に、リモートインスタンスを登録して、インスタンスをクラスタに追加します。 Tomcat でのクラスタ設定について詳しくは、<a href="http://tomcat.apache.org/tomcat-5.5-doc/cluster-howto.html" target="_self">http://tomcat.apache.org/tomcat-5.5-doc/cluster-howto.html</a> を参照してください。</p>
+<div class="para">セッションレプリケーションを使用する場合は、[メモリ変数] ページに移動して J2EE セッションを有効化します。クラスタ内のすべてのサーバーインスタンスに対して J2EE を有効化してください。J2EE セッションが ColdFusion Administrator で有効になっていない場合、セッションレプリケーションは正しく機能しません。CFC のシリアル化により、クラスタで J2EE セッションレプリケーションを使用し、クラスタ内のすべてのインスタンスでセッションデータの CFC にアクセスできるようになります。セッションレプリケーションを有効にすると、セッションスコープ変数もクラスタ内で複製されます。ただし、セッションレプリケーションではセッションスコープの CFC または変数内の配列のレプリケーションはサポートされません。また、セッションフェイルオーバーの場合は CFC 内にデータを保持してアクセスすることもできます。セッションスコープ内に格納された ColdFusion 構造体は、フェイルオーバーの後でもセッションスコープで使用できます。例えば、複数の ColdFusion のインスタンスを実行してサーバーの負荷を分散させている場合、セッション内に有用なデータ（CFC を含む）を格納して、そのセッションで配信されるすべてのページでデータにアクセスすることができます。CFC のシリアル化を有効にするには、次のようにセッションで CFC を設定します。<pre>&lt;cfset cfccomponent = CreateObject("component", "CFIDE.adminapi.datasource")&gt; 
+&lt;cfset session.datasourcecomponent = cfccomponent&gt;</pre>
+フェイルオーバーが発生したら、次のように CFC のメソッドにアクセスしてメソッドを呼び出すことができます。<pre>&lt;cfset check = session.datasourcecomponent.verifyDSN("testdsn")&gt;</pre>
+</div>
+<div class="para"><ol><li><p>リモートインスタンスをローカルマシンに登録します。</p>
+</li>
+<li><p>ローカルマシンでクラスタを作成します。</p>
+</li>
+<li><p>リモートインスタンスの <samp class="codeph">cfroot¥<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">instance-name¥</i>runtime¥conf¥server.xml</samp> ファイルを開きます。</p>
+</li>
+<li><p><samp class="codeph">&lt;/host&gt; </samp>エントリと <samp class="codeph">&lt;/engine&gt;</samp> エントリの間に次のブロックを追加します。</p>
+<div class="para"><pre> 
+&lt;Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"         channelSendOptions="8"&gt; 
+    &lt;Manager notifyListenersOnReplication="true" expireSessionsOnShutdown="false" className="org.apache.catalina.ha.session.DeltaManager"&gt; 
+    &lt;/Manager&gt; 
+    &lt;Channel className="org.apache.catalina.tribes.group.GroupChannel"&gt; 
+        &lt;Membership port="<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">45565</i>" dropTime="3000" address="228.0.0.4"     className="org.apache.catalina.tribes.membership.McastService" frequency="500"&gt; 
+        &lt;/Membership&gt; 
+        &lt;Receiver port="4003" autoBind="100" address="auto" selectorTimeout="5000"     maxThreads="6" className="org.apache.catalina.tribes.transport.nio.NioReceiver"&gt; 
+        &lt;/Receiver&gt; 
+        &lt;Sender className="org.apache.catalina.tribes.transport.ReplicationTransmitter"&gt; 
+            &lt;Transport className="org.apache.catalina.tribes.transport.nio.PooledParallelSender"&gt; 
+            &lt;/Transport&gt; 
+        &lt;/Sender&gt; 
+        &lt;Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector"&gt; 
+        &lt;/Interceptor&gt; 
+        &lt;Interceptor     className="org.apache.catalina.tribes.group.interceptors.MessageDispatch15Interceptor"&gt; 
+        &lt;/Interceptor&gt; 
+    &lt;/Channel&gt; 
+    &lt;Valve className="org.apache.catalina.ha.tcp.ReplicationValve" filter=""&gt; 
+    &lt;/Valve&gt; 
+    &lt;Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"&gt; 
+    &lt;/Valve&gt; 
+ 
+    &lt;ClusterListener     className="org.apache.catalina.ha.session.JvmRouteSessionIDBinderListener"&gt; 
+    &lt;/ClusterListener&gt; 
+    &lt;ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener"&gt; 
+    &lt;/ClusterListener&gt; 
+ 
+&lt;/Cluster&gt; </pre>
+</div>
+</li>
+<li><p>エントリ内のメンバーシップポートをクラスタのマルチキャストポートで更新します。</p>
+</li>
+<li><div class="para">ローカルホストの ColdFusion Administrator を使用して、ローカルインスタンスとリモートインスタンスをクラスタに追加します。<div class="note"><span class="notetitle">注意：  </span>スティッキーセッションを有効にする場合は、リモートインスタンスとローカルインスタンスの JVM ルートを同じにしないでください。</div>
+</div>
+</li>
+<li><p>すべてのインスタンスを再起動します。</p>
+</li>
+</ol>
+</div>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

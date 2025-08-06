@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * アプリケーションの隔離の有効化</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fc0.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fc0.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>アプリケーションの隔離の有効化</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>それぞれ別の ColdFusion アプリケーションを実行する個別のサーバーインスタンスを作成すると、各アプリケーションに ColdFusion および J2EE サーバーのリソースを個別に割り当てることができます。この設定では、複数のサーバーインスタンスを実行する単一の外部 Web サーバーを 1 台のコンピュータ上に構成し、各サーバーインスタンスごとに仮想ホスト (またはサイト) を割り当てるのが普通です。</p>
+<div class="note"><span class="notetitle">注意：  </span>ColdFusion と同様に、他の J2EE アプリケーションサーバーにも同等の機能があるので、そのような J2EE サーバーに ColdFusion J2EE 設定をデプロイする場合もほとんどの概念がそのまま通用します。</div>
+<p>この方法で複数の独立したアプリケーションを実行することには、次のような利点があります。</p>
+<ul><li><p>ColdFusion アプリケーションレベルまたは Tomcat サーバーレベルでエラーが発生しても、他の ColdFusion アプリケーションに影響を与えません。</p>
+</li>
+<li><p>マルチホームサーバーをサポートできます。1 つの Web サーバーで複数の IP アドレスまたはドメイン名 (たとえば、www.mycompany.com と services.anothercompany.com の両方) をサポートし、それぞれに対して別の Web ルートの内容を提供できます。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fc3.html">マルチホーム</a>を参照してください。</p>
+</li>
+</ul>
+<div class="note"><span class="notetitle">注意：  </span>『ColdFusion インストール』では、1 台のコンピュータ上に複数のサーバーインスタンスを作成する方法を説明しています。複数台のコンピュータ上にサーバーインスタンスを作成するには、各コンピュータ上に個別の ColdFusion エンタープライズ版のライセンスが必要です。</div>
+<p>アプリケーションの隔離を完全に実現するには、使用する Web サーバーの機能を使用して、各アプリケーション用に個別の Web サイトを作成します。この概念を表す用語は Web サーバーによって異なります。たとえば IIS では個別の Web サイト (Windows サーバー版でのみ使用可能) を定義し、Apache では複数の仮想ホストを作成します。</p>
+<p>ここでは、マルチサーバー設定で ColdFusion を実行する場合の手順を説明しますが、他の J2EE アプリケーションサーバーで ColdFusion を実行する場合も原理は同じです。ただし、すべての J2EE アプリケーションサーバーに外部 Web サーバーとの統合機能があるわけではありません。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fc3.html">マルチホーム</a>を参照してください。</p>
+<p>次の手順では、各アプリケーションをそれぞれ名前の付いたコンテキストルートにデプロイするものと仮定します。この場合、ユーザーは http://&lt;ホスト名&gt;/&lt;コンテキストルート&gt;/&lt;ページ名&gt;.cfm を指定して CFM ページにアクセスできます。同じサーバーインスタンスで別の Web アプリケーションが動作している場合は、個々の Web アプリケーションごとに異なるコンテキストルートを使用する必要があります。</p>
+<p>たとえば、コンテキストルートが <samp class="codeph">cf</samp> の場合、ユーザーが CFM ページにアクセスするには http://&lt;ホスト名&gt;/<strong>cf</strong>/&lt;ページ名&gt;.cfm を指定します。コンテキストルートの詳細については、『ColdFusion インストール』を参照してください。</p>
+<div class="note"><span class="notetitle">注意：  </span>この "<samp class="codeph">cf</samp>" はコンテキストルートですが、Web アプリケーションのディレクトリ構造とは関連していません。 </div>
+<ul class="navlinklist"><li><a href="WSf01dbd23413dda0e-25e72d5d120574d8991-8000.html">複数のサーバーインスタンスを使用したアプリケーションの隔離</a></li>
+<li><a href="WSc3ff6d0ea77859461172e0811cbf364104-7fc4.html">アプリケーションの隔離を行う場合の Web サーバー設定</a></li>
+</ul>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

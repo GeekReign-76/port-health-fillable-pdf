@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * サンドボックスセキュリティの使用</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fc8.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fc8.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>サンドボックスセキュリティの使用</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363b95-8000"><span class="topictitle1">複数のサンドボックスの使用 (エンタープライズ版のみ)</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363b95-7ff8"><span class="topictitle1">制限できるリソース</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fcc"><span class="topictitle1">ディレクトリとアクセス許可について</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363b95-7ffa"><span class="topictitle1">サンドボックスを追加する (エンタープライズ版のみ)</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf363b95-7ffd"><span class="topictitle1">サンドボックスの設定</span>
+</a></p></li><li><p><a href="#WS1d1b45f647252298133c5daf123c9646ac8-8000"><span class="topictitle1">サンドボックスについての注意事項</span>
+</a></p></li></ul></div></div></div></div><div><p>サンドボックスセキュリティ (スタンダード版ではリソースセキュリティ) は、ColdFusion ページの場所を使用して ColdFusion リソースへのアクセスを制御します。"<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">サンドボックス</i>" とは、セキュリティ制限の適用対象となるサイト内の所定のディレクトリです。サンドボックスセキュリティを使用すると、特定のディレクトリとその下位ディレクトリにある ColdFusion ページについて、どのタグ、関数、およびリソース (ファイル、ディレクトリ、データソースなど) を使用できるかを指定できます。</p>
+<p>サンドボックスセキュリティを J2EE 設定で使用するには、そのアプリケーションサーバーでセキュリティマネージャー（<samp class="codeph">java.lang.SecurityManager</samp>）が実行されている必要があり、次の JVM 引数を定義する必要があります（Tomcat の場合、この引数は <i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_root</i>/cfusion/bin/jvm.config ファイルの java.args 行で定義します）。</p>
+<pre>-Djava.security.manager "-Djava.security.policy=<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_root</i>/WEB-INF/cfusion/lib/coldfusion.policy" "-Djava.security.auth.policy=<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_root</i>/WEB-INF/cfusion/lib/neo_jaas.policy" </pre>
+<div class="note"><span class="notetitle">注意：  </span>デフォルトでは、サンドボックスセキュリティは有効になっていません。[セキュリティ]-[サンドボックスセキュリティ] ページで有効化するまで、サンドボックスセキュリティの設定は ColdFusion に適用されません。 </div>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363b95-8000" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363b95-8000"><!-- --></a><h2 class="topictitle2">複数のサンドボックスの使用 (エンタープライズ版のみ)</h2><div><p>デフォルトで、サンドボックスのサブディレクトリは、1 レベル上のディレクトリの設定を継承します。ただし、サブディレクトリのサンドボックスを定義した場合には、サブディレクトリは親の設定を継承しなくなり、親のディレクトリのサンドボックス設定は完全に上書きされます。たとえば、次のディレクトリの例を考えてみます。</p>
+<pre>C:\Inetpub\wwwroot 
+C:\Inetpub\wwwroot\sales 
+C:\Inetpub\wwwroot\rnd 
+C:\Inetpub\wwwroot\rnd\dev 
+C:\Inetpub\wwwroot\rnd\'a</pre>
+<p>wwwroot ディレクトリにサンドボックスを定義した場合には、その設定が sales ディレクトリと rnd ディレクトリにも適用されます。rnd ディレクトリのサンドボックスも定義した場合は、rnd のサンドボックス設定が dev および qa ディレクトリにも適用されます。wwwroot および sales ディレクトリでは元の設定が保持され、rnd ディレクトリとそのサブディレクトリでは wwwroot ディレクトリの設定よりも rnd の設定のほうが優先されます。</p>
+<p>この階層形式のセキュリティにより、異なるセキュリティレベルのユーザーへのパーソナライズされたサンドボックスの設定が可能です。たとえば、ColdFusion の共有サーバー上で複数のクライアントにホスティングしている Web ホスティング管理者の場合は、各顧客に対してサンドボックスを設定することができます。これによって顧客が別の顧客のデータソースやファイルにアクセスするのを制限できます。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363b95-7ff8" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363b95-7ff8"><!-- --></a><h2 class="topictitle2">制限できるリソース</h2><div><p>制限できるのは、次のリソースです。</p>
+<dl><dt class="dlterm">データソース</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ColdFusion データソースの使用を制限します。</dd><p class="dlseparator"></p><dt class="dlterm">CF タグ</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ファイル、レジストリ、LDAP (Lightweight Directory Access Protocol)、メール、ログなど、サーバー (または外部サーバー) のリソースを操作する ColdFusion タグの使用を制限します。</dd><p class="dlseparator"></p><dt class="dlterm">CF 関数</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">ファイルシステムにアクセスする ColdFusion 関数の使用を制限します。</dd><p class="dlseparator"></p><dt class="dlterm">ファイル / ディレクトリ</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">サンドボックス内のタグおよび関数が、サンドボックスの外側のファイルおよびディレクトリにアクセスできるようにします。<div class="note"><span class="notetitle">注意：  </span>サンドボックスセキュリティを有効にした状態で Administrator API を使用するには、"&lt;ColdFusion の Web ルートディレクトリ&gt;/CFIDE/adminapi" ディレクトリへのアクセスを許可します。</div>
+</dd><p class="dlseparator"></p><dt class="dlterm">サーバー / ポート</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">サードパーティリソースを呼び出す ColdFusion タグが使用できるサーバー、ポート、およびポート範囲を指定します。<p>詳しくは、Administrator のオンラインヘルプを参照してください。</p>
+<div class="note"><span class="notetitle">注意：  </span>ColdFusion を IBM WebSphere 上の J2EE 設定で実行する場合、[ファイル / ディレクトリ] タブおよび [サーバー / ポート] タブは有効になりません。</div>
+</dd><p class="dlseparator"></p></dl>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fcc" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fcc"><!-- --></a><h2 class="topictitle2">ディレクトリとアクセス許可について</h2><div><p>サンドボックスの外側にあるファイルへのアクセスを有効にするときは、ファイル名を指定します。サンドボックスの外側にあるディレクトリへのアクセスを有効にするときは、&lt;ディレクトリ名&gt;¥&lt;インジケータ&gt; を指定します。この &lt;インジケータ&gt; には、次のようにダッシュ (-) またはアスタリスク (*) を指定します。</p>
+<ul><li><p>円記号の後ろにダッシュを付けると (¥-)、タグおよび関数は指定したディレクトリ内のすべてのファイルにアクセスできる他、再帰的にサブディレクトリ内のすべてのファイルにもアクセスできます。</p>
+</li>
+<li><p>円記号の後ろにアスタリスクを付けると (¥*)、タグおよび関数は指定したディレクトリ内のすべてのファイルにアクセスできる他、サブディレクトリのリストにもアクセスできます。ただし、このオプションの場合はサブディレクトリ内のファイルには一切アクセスできません。</p>
+</li>
+</ul>
+<p>また、ColdFusion タグおよび関数からサンドボックスの外側にあるファイルやディレクトリに対して実行可能なアクションも指定できます。次の表に、ファイルおよびディレクトリのアクセス許可の関係を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e13286"><p>アクセス許可</p>
+</th>
+<th valign="top" width="NaN%" id="d16e13289"><p>ファイルに対する意味</p>
+</th>
+<th valign="top" width="NaN%" id="d16e13292"><p>ディレクトリに対する意味</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e13286 "><p>読み込み</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13289 "><p>ファイルの表示</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13292 "><p>ディレクトリ内のすべてのファイルのリスト</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e13286 "><p>書き込み</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13289 "><p>ファイルへの書き込み</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13292 "><p>該当なし</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e13286 "><p>実行</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13289 "><p>ファイルの実行 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13292 "><p>該当なし</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e13286 "><p>削除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13289 "><p>ファイルの削除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e13292 "><p>ディレクトリの削除</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363b95-7ffa" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363b95-7ffa"><!-- --></a><h2 class="topictitle2">サンドボックスを追加する (エンタープライズ版のみ)</h2><div><p>ColdFusion エンタープライズ版では、複数のセキュリティサンドボックスを定義できます。</p>
+<ol><li><p>ColdFusion Administrator の [セキュリティ]-[サンドボックスセキュリティ] ページを開きます。</p>
+<p>[サンドボックスセキュリティ許可] ページが表示されます。</p>
+</li>
+<li><p>[セキュリティサンドボックスの追加] ボックスに新しいサンドボックスの名前を入力します。この名前は、ColdFusion マッピング (Administrator で定義) または絶対パスのいずれかでなければなりません。</p>
+</li>
+<li><p>ドロップダウンリストから [新規のサンドボックス] を選択して、デフォルトサンドボックスをベースにしてサンドボックスを作成するか、または既存のサンドボックスを選択してその設定を新しいサンドボックスにコピーします。 </p>
+</li>
+<li><p>「追加」をクリックします。</p>
+<p>[定義されたディレクトリ権限] リストに新規サンドボックスが表示されます。</p>
+</li>
+</ol>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf363b95-7ffd" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf363b95-7ffd"><!-- --></a><h2 class="topictitle2">サンドボックスの設定</h2><div><p>セキュリティサンドボックスの設定を開始する前に、アプリケーションとその使い方を解析し、アプリケーションが必要とするタグ、関数、およびリソースを決定します。その後でサンドボックスを設定して、必要なリソースへのアクセスを有効化することや、適切なタグおよび関数の使用を無効にすることができます。たとえば、サンドボックス内のアプリケーションが <samp class="codeph">cfregistry</samp> タグを使用しない場合は、そのタグを無効にしても問題ありません。</p>
+<div class="note"><span class="notetitle">注意：  </span>スタンダード版では、ルートセキュリティコンテキストが唯一のサンドボックスです。ここには、定義済みのディレクトリ権限の初期リストが存在しません。</div>
+<ol><li><p>ColdFusion Administrator で [セキュリティ]-[サンドボックスセキュリティ] ページ (スタンダード版の場合は [セキュリティ]-[リソースセキュリティ] ページ) を開きます。</p>
+</li>
+<li><p>(エンタープライズ版のみ) [定義されたディレクトリ権限] リストで、ディレクトリの名前または [編集] アイコンをクリックします。</p>
+<p>複数のタブがあるページが表示されます。スタンダード版では、これが初期ページです。この後の手順では、各タブの使い方を説明します。</p>
+</li>
+<li><p>データソースを無効にするには、[データソース] タブの左側の列で、無効にするデータソースをハイライトし、右矢印をクリックします。</p>
+<p>デフォルトでは、このサンドボックス内の ColdFusion ページはすべてのデータソースにアクセスできます。</p>
+<div class="note"><span class="notetitle">注意：  </span>[有効化されたデータソース] 列に &lt;すべてのデータソース&gt; がある場合は、追加するすべてのデータソースが有効になります。&lt;すべてのデータソース&gt; を [無効化されたデータソース] 列に移動すると、新しいデータソースはすべて無効になります。</div>
+</li>
+<li><p>[CF タグ] タブをクリックします。</p>
+</li>
+<li><p>タグを無効にするには、[CF タグ] タブの左側の列で、タグをハイライトし、右矢印をクリックします。</p>
+<p>デフォルトでは、このサンドボックスにある ColdFusion ページは、リストされたタグすべてにアクセスすることができます。</p>
+</li>
+<li><p>[CF 関数] タブをクリックします。</p>
+</li>
+<li><p>関数を無効にするには、[CF 関数] タブの左側の列で関数を強調表示して、右矢印をクリックします。</p>
+<p>デフォルトでは、このサンドボックスにある ColdFusion ページは、リストされた関数すべてにアクセスすることができます。</p>
+</li>
+<li><p>[ファイル/ディレクトリ] タブをクリックします。</p>
+</li>
+<li><p>ファイルまたはディレクトリを有効にするには、[ファイルのパス] ボックスに、ファイルまたはディレクトリを入力して (例 : C:¥pix など) ブラウズします。特殊トークン &lt;&lt;ALL FILES&gt;&gt; があるファイルパスはすべてのファイルを指します。円記号とハイフン (¥-)、円記号とアスタリスク (¥*) の 2 つのワイルドカード文字を使用する方法については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fcc.html">ディレクトリとアクセス許可について</a>を参照してください。</p>
+</li>
+<li><p>適切な権限を選択します。</p>
+<p>たとえば、[読み込み] チェックボックスをオンにすると、mytestapps サンドボックス内の ColdFusion ページは C:¥pix ディレクトリにあるファイルを読み取ることができます。</p>
+</li>
+<li><p>[ファイル/パスの追加] をクリックします。既存のサンドボックスを編集するときは、このボタンには [ファイル/パスの編集] と表示されます。</p>
+<p>ファイルのパスおよびその権限が [保護されたファイルとディレクトリ] リストに表示されます。</p>
+</li>
+<li><p>[保護されたファイルとディレクトリ] リストで、ファイルのパスが正しいことを確認します。</p>
+<p>円記号 (¥) の後の文字は重要です。詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fcc.html">ディレクトリとアクセス許可について</a>を参照してください。</p>
+<div class="note"><span class="notetitle">注意：  </span>[ファイル/ディレクトリ] タブは、オペレーティングシステムのファイルベースのアクセス許可と連動します。ユーザーが別のユーザーのディレクトリをブラウズしないように制限するには、ファイルベースのアクセス許可を使用します。</div>
+</li>
+<li><p>[サーバー/ポート] タブをクリックします。</p>
+</li>
+<li><p>デフォルトの動作 (すべてのサーバーおよびポートへのグローバルアクセス) をオフにするには、このサンドボックス内のページが、外部リソースにアクセスするタグ (たとえば <samp class="codeph">cfmail</samp>、<samp class="codeph">cfpop</samp>、<samp class="codeph">cfldap</samp>、<samp class="codeph">cfhttp</samp>) を使用して接続できる IP アドレスとポート番号を入力します。指定できるのは、IP アドレス、サーバー名 (www.someservername.com など)、またはドメイン名 (someservername.com など) です。また、必要に応じてポートの制限も指定できます。</p>
+<div class="note"><span class="notetitle">注意：  </span>ここでは、有効にする項目を選択するのであって、[CF タグ] などの他のタブで無効にする項目を選択する場合とは異なります。このタブに値を設定した場合、このサンドボックス内で実行された外部リソースタグは、指定されたサーバーおよびポートのみにアクセスできます。</div>
+<p>たとえば、このサンドボックスが、ポート番号 80 以下にある 207.88.220.3 にアクセスするには、次の手順を実行します。</p>
+<ol type="a"><li><p>[IP アドレス] フィールドに「207.88.220.3」と入力します。</p>
+</li>
+<li><p>[ポート] フィールドに「80」と入力し、[このポートとそれ以下] をクリックします。</p>
+</li>
+</ol>
+<div class="note"><span class="notetitle">注意：  </span>これらの ColdFusion タグによるサイト全体へのアクセスを拒否するには、ローカルメールサーバーや FTP サーバーなどローカルリソースへのアクセスを有効にしてください。</div>
+</li>
+<li><p>[終了] をクリックして、サンドボックスの変更を保存します。</p>
+</li>
+</ol>
+</div></div>
+<div id="WS1d1b45f647252298133c5daf123c9646ac8-8000" class="nochunk"><a name="WS1d1b45f647252298133c5daf123c9646ac8-8000"><!-- --></a><h2 class="topictitle2">サンドボックスについての注意事項</h2><div><div class="section"><h4 class="sectiontitle">サンドボックス内での OpenOffice の使用</h4><div class="para">次のファイルパスに対して、サンドボックスの権限を付与する必要があります。<ul><li><p>D:¥ColdFusion10¥cfusion¥runtime¥servers¥lib - 読み取り </p>
+</li>
+<li><p>D:¥ColdFusion10¥cfusion¥runtime¥servers¥lib¥ - 読み取り </p>
+</li>
+<li><p>D:¥ColdFusion10¥cfusion¥runtime¥lib¥ - 読み取り </p>
+</li>
+<li><p>D:¥ColdFusion10¥cfusion¥runtime¥lib - 読み取り</p>
+</li>
+<li><p>C:¥Program Files¥OpenOffice.org 3¥ - 読み取り、実行</p>
+</li>
+<li><p>C:¥Program Files¥OpenOffice.org 3¥ - 読み取り</p>
+</li>
+</ul>
+、実行</div>
+</div>
+<div class="section"><h4 class="sectiontitle">サンドボックス内でのキャッシングの使用</h4><p>サンドボックス内でディスクベースのキャッシングを使用するには、ディスクキャッシュディレクトリに対する読み取り / 書き込み権限をサンドボックスで付与する必要があります。このフォルダには、デフォルトのディレクトリ (<samp class="codeph">java.io.tmpdir</samp>) または <samp class="codeph">diskStore</samp> プロパティで指定されたユーザー設定ディレクトリを使用できます。</p>
+<div class="para">ディスクキャッシュ用のディレクトリを指定するには、"&lt;ColdFusion のルートディレクトリ&gt;¥lib¥ehcache.xml" ファイルの <samp class="codeph">diskStore</samp> プロパティを使用します (<samp class="codeph">&lt;diskStore path="java.io.tmpdir"/&gt;</samp>)。一時ディレクトリを指定するには、次のコードを使用します。<pre>&lt;cfscript&gt; 
+writeoutput("Temp Dir : " &amp; createobject("java","java.lang.System").getProperty("java.io.tmpdir") ); 
+&lt;/cfscript&gt;</pre>
+また、"&lt;ColdFusion のルートディレクトリ&gt;¥lib¥ehcache.xml" に対する読み取り権限を付与しないと、ehCache.xml に対して読み取りまたは書き込みを行う関数が正しく動作しない場合があります。そのような関数の例としては、<samp class="codeph">cacheGetProperties</samp> や <samp class="codeph">cacheSetProperties</samp> があります。</div>
+</div>
+<div class="section"><h4 class="sectiontitle">サンドボックス内でのサービス CFC の使用</h4><p>次の権限を付与する必要があります。</p>
+<div class="para"><ul><li><p>"&lt;ColdFusion のルートディレクトリ&gt;¥CustomTags¥com¥adobe¥coldfusion" に対する実行権限</p>
+</li>
+<li><p>"&lt;ColdFusion のルートディレクトリ&gt;¥WEB-INF¥cftags¥META_INF¥taglib.tld" に対する読み取り権限</p>
+</li>
+</ul>
+</div>
+</div>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

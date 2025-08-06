@@ -1,0 +1,11 @@
+.help-caution p, 
+.help-note p, 
+.help-important p, 
+.help-warning p,
+span.italic,
+.help-tip,
+div.image small,
+.textcomment .comment:before
+{
+    font-style: italic;
+}

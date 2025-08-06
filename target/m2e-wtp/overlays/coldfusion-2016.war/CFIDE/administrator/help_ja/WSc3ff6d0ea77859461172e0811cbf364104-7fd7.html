@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 外部 Web サーバーの使用</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fd7.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fd7.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>外部 Web サーバーの使用</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>ColdFusion は、Tomcat Web サーバーコネクタを使用して、外部 Web サーバーからのリクエストを ColdFusion ランタイムシステムに転送します。</p>
+<p>CFM ページに対するリクエストがあると、Web サーバーのコネクタが Tomcat プロキシサービスへの接続を開きます。 ColdFusion ランタイムシステムはリクエストを処理し、プロキシサービスとコネクタを使用してレスポンスを返します。Web サーバーコネクタは、次の表に示すように、Web サーバー固有のプラグインモジュールを使用します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e11749"><p>Web サーバー</p>
+</th>
+<th valign="top" width="NaN%" id="d16e11752"><p>コネクタの詳細</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e11749 "><p>Apache</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11752 "><p>Web サーバー設定ツールは、Apache の "httpd.conf" ファイルに次の要素を追加します。 </p>
+<div class="para"><ul><li><p>LoadModule ディレクティブはコネクタを定義します。</p>
+</li>
+<li><p>AddHandler ディレクティブは、ColdFusion ページに対するリクエストをコネクタを使用して転送するよう Apache に指示します。 </p>
+</li>
+</ul>
+</div>
+<p>Apache 2.x の場合、接続モジュールは mod_jk.so です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11749 "><p>IIS</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11752 "><p>Web サーバー設定ツールは、グローバルレベル (デフォルト) または Web サイトレベルのいずれかで、次の要素を追加します。</p>
+<div class="para"><ul><li><p>コネクタ関連のすべてのファイルを格納する<samp class="codeph">1</samp> というフォルダーを <samp class="codeph">cf_root¥config¥wsconfig</samp> に作成します。 </p>
+</li>
+<li><p><samp class="codeph">cf_root¥config¥wsconfig</samp>（IIS 内）に <samp class="codeph">Jakarta</samp> という仮想ディレクトリを作成します。 </p>
+</li>
+<li><p><samp class="codeph">tomcat</samp> というエントリを <samp class="codeph">ISAPI FILTERS</samp> の下に追加します。 これは、<samp class="codeph">cf_root¥config¥wsconfig¥1¥ isapi_redirect.dll</samp> を指します。</p>
+</li>
+<li><p><samp class="codeph">tomcat</samp> というエントリを <samp class="codeph">cf_root¥config¥wsconfig¥1¥isapi_redirect.dll</samp> に <samp class="codeph">allowed</samp> という権限で ISAPI および CGI の制限の下に追加します。 これは、IIS マネージャーのグローバルサイトの場合に当てはまります。</p>
+</li>
+<li><p><samp class="codeph">cfcHandler</samp>、<samp class="codeph">cfmHandler</samp>、<samp class="codeph">cfmlHandler</samp>、<samp class="codeph">cfrHandler</samp> および <samp class="codeph">cfswfHandler</samp> という <samp class="codeph">isapi</samp> ハンドラーを追加します。</p>
+</li>
+<li><p>デバッグの問題の場合は、<samp class="codeph">cf_roots¥config¥wsconfig¥1¥</samp> ディレクトリにある <samp class="codeph">isapi_redirect.properties</samp> ファイルのログレベルを <samp class="codeph">debug</samp> に設定します。</p>
+</li>
+<li><p>Web サーバーのバッファーを無効にするには、<samp class="codeph">cf_root¥config¥wsconfig¥1¥isapi_redirect.properties</samp> ファイルの <samp class="codeph">is_buffer_enable</samp> を <samp class="codeph">false</samp> に変更します。 これは、<samp class="codeph">cfflush</samp> を IIS コネクタ上で機能させる場合に行います。 アプリケーションで <samp class="codeph">cfflush</samp> を使用しない場合は、これを <samp class="codeph">true</samp> に設定します。 こうすると、パフォーマンスが向上する場合があります。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11749 "><p>Sun ONE Web Server</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11752 "><p>Web サーバー設定ツールは、Sun ONE Web Server の設定ファイルに次の要素を追加します。</p>
+<div class="para"><ul><li><p>コネクタ関連のすべてのファイルが格納される <samp class="codeph">1</samp> というフォルダーが <samp class="codeph">ColdFusion10¥config¥wsconfig</samp> フォルダーに作成されます。 </p>
+</li>
+<li><p>Sun ONE の <samp class="codeph">magnus.conf</samp> ファイルに次のエントリが追加されます。 デバッグの場合は、ログレベルを <samp class="codeph">debug</samp> に変更します。</p>
+<pre>Init fn="load-modules" shlib="C:/ColdFusion10/config/wsconfig/2/nsapi_redirect.dll" funcs="jk_init,jk_service" 
+Init fn="jk_init" worker_file="cf_root/config/wsconfig/2/workers.properties" log_level="info" log_file="cf_root/config/wsconfig/2/nsapi.log" shm_file="cf_root/config/wsconfig/2/jk_shm"</pre>
+</li>
+<li><p>Sun ONE の <samp class="codeph">obj.conf</samp> ファイルにすべての拡張子のエントリが追加されます。 次に例を示します。 </p>
+<pre>NameTrans fn="assign-name" from="/*.cfc/*" name="jknsapi" 
+NameTrans fn="assign-name" from="/*.cfc" name="jknsapi" 
+NameTrans fn="assign-name" from="/*.cfml" name="jknsapi" 
+&lt;Object name="jknsapi"&gt; 
+Service fn="jk_service" method="*" worker="server1" 
+&lt;/Object&gt;</pre>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="navlinklist"></ul>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * ColdFusion をどのように開始および停止しますか。</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSe61e35da8d31851842debae5134d0ab42ed-7ffc.html";
+    document.cookie = "topicId=" + "WSe61e35da8d31851842debae5134d0ab42ed-7ffc.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>ColdFusion をどのように開始および停止しますか。</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><div class="para"><div class="note"><span class="notetitle">注意：  </span>この説明は、ColdFusion を J2EE サーバーにデプロイする場合には当てはまりません。 </div>
+</div>
+<p>通常は、インストール時に ColdFusion のサービスとプロセスを起動して、システムの起動時に、ColdFusion のサービスとプロセスが常に開始されて実行されるように設定します。 次のアクションのいずれかを ColdFusion Administrator で実行した後は、ColdFusion のサービスを停止して再起動します。</p>
+<div class="para"><ul><li><p>セキュリティの有効化または無効化</p>
+</li>
+<li><p>Java と JVM の設定ページのオプションの変更</p>
+</li>
+<li><p>ネイティブの Windows パフォーマンスモニターを使用できるようにするパフォーマンス監視オプションの有効化</p>
+</li>
+</ul>
+設定時に、ColdFusion は一連のシステムサービスとしてインストールされ、通常はシステムの起動時に自動的に開始されます。</div>
+<div class="section"><h4 class="sectiontitle">ColdFusion サーバーサービスの手動停止または手動開始</h4><div class="para"><ol><li><p>コントロールパネルのサービスウィンドウを開きます。 サービスが実行中の場合、状態は「開始」になっています。 実行中でない場合、状態は表示されません。</p>
+</li>
+<li><p>サービスを停止するには、サービスを選択して「停止」をクリックします。サービスを停止することを確認するプロンプトが表示されるので、「はい」をクリックします。サービスの状態が「開始」でなくなります。</p>
+</li>
+<li><p>サービスを開始するには、サービスを選択して「開始」をクリックします。 状態が「開始」になります。</p>
+</li>
+<li><p>サービスを再起動するには、サービスを選択して「再起動」をクリックします。 これはサービスを停止して開始するのと同じです。</p>
+</li>
+<li><p>「閉じる」をクリックします。 サービスウィンドウが閉じます。</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">ColdFusion サーバーの自動開始または手動開始の設定</h4><div class="para"><ol><li><p>コントロールパネルのサービスウィンドウでサービスをダブルクリックします。 サービスのウィンドウが開きます。</p>
+</li>
+<li><p>「スタートアップの種類」で、「自動」または「手動」を選択します。</p>
+</li>
+<li><p>「OK」をクリックします。設定が保存されます。</p>
+</li>
+<li><p>「閉じる」をクリックします。 サービスウィンドウが閉じます。</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

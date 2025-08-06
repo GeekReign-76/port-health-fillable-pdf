@@ -1,0 +1,133 @@
+ {
+  "rules" : [{
+            "security" :
+                          [            
+	                    {
+		              "name":"sqlinjection",
+		              "description":
+			                     {
+					       "title": "SQL injection",
+					       "problemstatement": "The attacker can create arbitrary SQL statements to execute against the database by passing values into the vulnerable variables",
+					       "solution": "By using the cfqueryparam tag, you have parameterized the variable in your SQL query, which separates the variables (or parameters) in your SQL query from the SQL statements. In database terms, this is called a prepared statement, and can sometimes yield performance improvements in addition to security."
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+		             {
+		              "name":"xssattack",
+			      "description":
+			                     {
+					       "title": "XSS Attack",
+					       "problemstatement": "Using the vulnerable code, the attacker can pass JavaScript into the vulnerable variables that will be executed in the browser of anyone visiting the URL",
+					       "solution": "The EncodeForHTML function (requires ColdFusion 10 or higher) will encode the variable to escape special characters using their HTML entity. For example, the < character will be replaced with &lt;"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			      {
+		              "name":"htmltopdfxssattack",
+			      "description":
+			                     {
+					       "title": "PDF XSS Attack",
+					       "problemstatement": "The cfhtmltopdf tag, introduced in ColdFusion 11 provides powerful HTML rendering, powered by WebKit to produce PDF files. Because the HTML is rendered by the server, care should be taken when using variables in the PDF document.",
+					       "solution": "Consider running the PDF Generation service on an isolated dedicated server to mitigate the risks associated with the rendering of dynamic content."
+					     },
+			      "enabled":true,
+			      "severity":1
+			     },
+			      {
+		              "name":"csrfattack",
+			      "description":
+			                     {
+					       "title": "CSRF attack",
+					       "problemstatement": "Cross Site Request Forgeries (CSRF) vulnerabilities are exploited when an attacker can trick an authenticated user into clicking a URL, or embedding a URL in a page that will be requested by their authenticated browser.",
+					       "solution": "ColdFusion 10 added two functions for working with CSRF tokens, CSRFGenerateToken and CSRFVerifyToken"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			      {
+		              "name":"cookiesvalidations",
+			      "description":
+			                     {
+					       "title": "HTTPOnly and Secure attribute of cfcookie should be true",
+					       "problemstatement": "Since cookies are often used to maintain state or sessions, understanding practices to limit their transmission and readability can improve security",
+					       "solution": "When the secure attribute is enabled on a cookie, the browser will only send the cookie back to the server over a secure transport mechanism (such as HTTPS). If a cookie contains sensitive information (such as session identifiers) it should only be sent over a secure transport mechanism (to prevent eavesdropping), and thus should have the secure attribute enabled.If an attacker is able to exploit a XSS vulnerability, they can read the visitors cookies using JavaScripts document.cookie variable. In 2002 browser vendors began supporting a new cookie attribute called HttpOnly which prevents the cookie from being read by non HTTP APIs, such as JavaScript. So when a cookie is set with the HttpOnly attribute, its value is not available in document.cookie."
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"cflocationvalidations",
+			      "description":
+			                     {
+					       "title": "Addtoken attribute of cflocation should be false",
+					       "problemstatement": "Avoid appending the session identifiers to the URL query string.End users will email, or publish URLs without realizing their session identifier is in the url. When you use the cflocation tag it will append the session identifier by default, unless you specify addtoken=false",
+					       "solution": "Addtoken attribute should be false and it will not append session identifiers in the url"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			     {
+		              "name":"passwords",
+			      "description":
+			                     {
+					       "title": "Hard-coded password should be avoided",
+					       "problemstatement": "Hard coded passwords were found in the code",
+					       "solution": "Passwords should be salted with a random unique string and stored using a one way function. ColdFusion provides the Hash function, a one way function which supports multiple algorithms implemented by the Java Cryptography Extension (JCE)."
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			     {
+		              "name":"fileupload",
+			      "description":
+			                     {
+					       "title": "Uploading files to server",
+					       "problemstatement": "Whenever files are uploaded to the server, take extreme care to ensure that you have properly validated the file path and file type.",
+					       "solution": "Use strict attribute and keep it as true.When strict=true the file content is validated internally using the FileGetMimeType function. When strict=false, it uses the file extension of the uploaded file to match the mime type."
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"getvspost",
+			      "description":
+			                     {
+					       "title": "Get vs Post",
+					       "problemstatement": "It is a good idea to ensure that certain operations only occur over the HTTP POST method, to prevent attack vectors that implicitly use HTTP GET (such as img tags or iframes).",
+					       "solution": "Use Post instead of Get for form submissions specially when it is submitting some sensitive information"
+					     },
+			      "enabled":true,
+			      "severity":1
+			     },
+			     {
+		              "name":"fileinjection",
+			      "description":
+			                     {
+					       "title": "File path injection",
+					       "problemstatement": "An attacker can use the vulnerable code to read any file on the server that ColdFusion has access to. For example by requesting ?header=../../server-config.txt the attacker may read a configuration file that is not meant to be public.",
+					       "solution": "Always validate variables used in file paths directly before use"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"unnamedapp",
+			      "description":
+			                     {
+					       "title": "Unnamed Application",
+					       "problemstatement": "You have not defined name for your application",
+					       "solution": "Avoid creating unnamed applications"
+					     },
+			      "enabled":true,
+			      "severity":1
+			     }
+			   ]      
+	    }],
+   
+   "threads" : 5,
+   "exclude" : ".cfc",
+   "recurse" : true,
+   "defaultpath" : ""
+ }

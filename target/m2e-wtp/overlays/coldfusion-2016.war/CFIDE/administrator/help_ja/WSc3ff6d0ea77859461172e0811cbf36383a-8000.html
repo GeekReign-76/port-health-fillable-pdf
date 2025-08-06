@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * ColdFusion の管理</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf36383a-8000.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf36383a-8000.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>ColdFusion の管理</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf36383a-7fff"><span class="topictitle1">ColdFusion Administrator について</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518-5970fe04134e6fd6784-8000"><span class="topictitle2">ColdFusion Administrator の主な機能</span>
+</a></p></li></ul></li><li><p><a href="#WSe61e35da8d3185187333d6e9134c7c298b9-8000"><span class="topictitle1">ColdFusion Administrator でできること</span>
+</a></p></li><li><p><a href="#WSe61e35da8d31851874c57066134e62b3e10-8000"><span class="topictitle1">オプション設定の概要</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-4a0c870d134e6480be4-8000"><span class="topictitle1">サービスとプロセス</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518-4a0c870d134e6480be4-7fff"><span class="topictitle2">Windows の ColdFusion サービス</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-5970fe04134e6fd6784-7fff"><span class="topictitle2">UNIX の ColdFusion プロセス</span>
+</a></p></li></ul></li><li><p><a href="#WSe61e35da8d3185187333d6e9134c7c298b9-7fff"><span class="topictitle1">作業環境</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d3185187333d6e9134c7c298b9-7ffe"><span class="topictitle2">ColdFusion Administrator のレイアウト</span>
+</a></p></li><li><p><a href="#WSe61e35da8d3185187333d6e9134c7c298b9-7ffd"><span class="topictitle2">Web サーバーが実行中であることの確認</span>
+</a></p></li><li><p><a href="#WSe61e35da8d31851823c5628f134c7c6b150-8000"><span class="topictitle2">システム情報</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf36383a-7ffe"><span class="topictitle1">Web サーバーの管理について</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf36383a-7ffd"><span class="topictitle1">Solr の管理について</span>
+</a></p></li><li><p><a href="#WSe61e35da8d3185187333d6e9134c7c298b9-7ffc"><span class="topictitle1">このリリースの新機能</span>
+</a></p></li></ul></div></div></div></div><div><p>ColdFusion Administrator では ColdFusion の管理タスクのほとんどを実行できる他、データベース、Web サーバー設定、および ColdFusion 検索サーバーについても管理できます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf36383a-7fff" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf36383a-7fff"><!-- --></a><h2 class="topictitle2">ColdFusion Administrator について</h2><div><p>ColdFusion Administrator には、ColdFusion 環境を管理するためのブラウザベースのインターフェイスが用意されています。さまざまな設定を行って最適なレベルのセキュリティと機能性を維持することができます。使用可能なオプションは、ColdFusion のエディション（スタンダード版またはエンタープライズ版）によって、また、設定（サーバーまたは J2EE）によって異なります。ColdFusion の設定の詳細については、『ColdFusion インストール』の<a href="http://help.adobe.com/ja_JP/ColdFusion/10.0/Installing/WSc3ff6d0ea77859461172e0811cdec186d9-7ffd.html" target="_self">Preparing to Install ColdFusion</a>を参照してください。</p>
+<p>ColdFusion Administrator ログインページのデフォルトの場所は、次のとおりです。</p>
+<p>http://&lt;サーバー名&gt;[:&lt;ポート番号&gt;]/CFIDE/administrator/index.cfm</p>
+<p>この URL 内の &lt;サーバー名&gt; は、ご使用の Web サーバーの完全修飾ドメイン名です。通常、&lt;サーバー名&gt; は、ローカルコンピュータの Web サーバーを指す localhost または 127.0.0.1 です。</p>
+<p>ColdFusion ビルトイン Web サーバーを使用する場合は、サーバー名の一部としてポート番号を含めます。サーバー設定のデフォルトのポート番号は 8500 です（例：http://<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">servername</i>:8500/CFIDE/administrator/index.cfm）。 </p>
+<div class="tip"><img src="images/tip_help.png" />ColdFusion MX 7 より前のバージョンでビルトイン Web サーバーを使用していた場合、ColdFusion 8 にアップグレードすると、ビルトイン Web サーバー用の未使用ポート (通常は 8501) がインストーラによって自動的に検索されます。</div><p>ColdFusion Administrator がリモートコンピュータ上にある場合は、そのリモートホストの DNS (Domain Name Services) 名または IP (Internet Protocol) アドレスを使用します。</p>
+<p>ColdFusion Administrator にアクセスするには、ColdFusion のインストール時に指定したパスワードを入力します。</p>
+<div class="note"><span class="notetitle">注意：  </span>マルチホーム環境での ColdFusion の実行中に ColdFusion Administrator がうまく表示されない場合は、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ffd.html">Web サーバーの管理</a>で設定に関する情報を参照してください。</div>
+<p>詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-8000.html">ColdFusion Administrator の使用</a>を参照してください。</p>
+<ul class="navlinklist"></ul>
+</div><div id="WSe61e35da8d318518-5970fe04134e6fd6784-8000" class="nochunk"><a name="WSe61e35da8d318518-5970fe04134e6fd6784-8000"><!-- --></a><h3 class="topictitle3">ColdFusion Administrator の主な機能</h3><div><div class="para"><ul><li><p><strong>サーバー設定：</strong>Administrator のサーバー領域では、ColdFusion の機能を設定および管理できます。 キャッシュ環境設定の定義、ColdFusion アプリケーションで使用するデータソースへの接続、デバッグオプションの選択、変数の管理、タスク自動化の設定、および Java アプレット、設定およびカスタムタグの登録を行えます。</p>
+</li>
+<li><p><strong>セキュリティ：</strong>Administrator のセキュリティ領域では、開発環境をセキュリティ保護できます。 Administrator のパスワード保護の有効化、リモートアクセスに対するパスワード保護の有効化、ColdFusion のタグおよび機能を使用したサーバーリソースへのアクセス制御を行えます。</p>
+</li>
+<li><p><strong>ColdFusion のリソース：</strong>ColdFusion Administrator のホームページでは、次の情報およびサポートにアクセスできます。</p>
+<ul><li><p><strong>ローカルリソース</strong> - リリースノート、新機能マニュアル、製品マニュアルおよびサンプルアプリケーション</p>
+</li>
+<li><p><strong>テクニカルサポート</strong> - インストール、サポート、リソースおよびテクニカルノート</p>
+</li>
+<li><p><strong>オンラインリソース</strong> - 製品登録、開発者情報、ホワイトペーパー、トレーニング、機能強化リクエストおよびセキュリティ</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div></div></div>
+<div id="WSe61e35da8d3185187333d6e9134c7c298b9-8000" class="nochunk"><a name="WSe61e35da8d3185187333d6e9134c7c298b9-8000"><!-- --></a><h2 class="topictitle2">ColdFusion Administrator でできること</h2><div><p>ColdFusion Administrator では、次のようなタスクを実行できます。</p>
+<div class="para"><ul><li><p>サーバーの設定と保守</p>
+</li>
+<li><p>ColdFusion クラスタの作成と管理</p>
+</li>
+<li><p> システムパフォーマンスの監視</p>
+</li>
+<li><p>リソースのセキュリティ保護</p>
+</li>
+<li><p> ログファイルの管理と分析</p>
+</li>
+<li><p>ColdFusion データソースへの接続</p>
+</li>
+<li><p> タスクのスケジュール</p>
+</li>
+<li><p> Java アプレットとカスタムタグの統合</p>
+</li>
+<li><p> Server Manager のダウンロードとインストール</p>
+</li>
+<li><p>OpenOffice の設定</p>
+</li>
+<li><p> 未配達メールの管理</p>
+</li>
+<li><p>オンライン製品マニュアル、リリースノート、製品アップグレードおよびテクニカルノートへのアクセス</p>
+</li>
+<li><p>製品アップデートとホットフィックスのダウンロードとインストール</p>
+</li>
+</ul>
+</div>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSe61e35da8d31851874c57066134e62b3e10-8000" class="nochunk"><a name="WSe61e35da8d31851874c57066134e62b3e10-8000"><!-- --></a><h2 class="topictitle2">オプション設定の概要</h2><div><p>Administrator のページで、基本設定タスクを実行した後、次のアクションを実行することを考慮してください。</p>
+<div class="para"><ul><li><p><strong>Web サイト訪問者のアイデンティティの特定：</strong>ColdFusion では、クライアント変数を使用して、サイトを訪問するクライアントのアイデンティティを特定できます。 クライアント変数を管理すれば、この情報を使用して、クライアント向けにページのコンテンツをカスタマイズできます。 ColdFusion Administrator のナビゲーションペインで、サーバーの設定／クライアント変数を選択して、クライアント変数のデフォルト保存メカニズムを指定し、オプションで、クライアント情報を保存するために使用するデータソースを指定します。 詳しくは、「Client variable planning and Manage client variables」を参照してください。</p>
+</li>
+<li><p><strong>物理ディレクトリに対する論理エイリアスの作成：</strong>サーバー上のディレクトリへのパスに対する論理エイリアスを作成できます。 ColdFusion Administrator のナビゲーションペインで、サーバーの設定／マッピングを選択します。 </p>
+<div class="para">サーバー上のディレクトリに対するエイリアスを作成すれば、ColdFusion アプリケーションでエイリアスを使用できます。 これらのエイリアスをマッピングと呼びます。 通常は、次の 2 つのタイプのマッピングを使用します。 <ul><li><p><strong>ColdFusion マッピング：</strong>論理パス（/payroll など）が物理ディレクトリパス（C:¥finance¥payroll など）と同じと見なされます。 ColdFusion では、cfinclude タグと cfmodule タグに対して、および ColdFusion コンポーネントを検索する際に、これらのマッピングが使用されます。</p>
+</li>
+<li><p><strong>Web サーバーマッピング：</strong>Web サーバーマッピングでも、論理パスが物理パスと同じと見なされますが、Web サーバーレベルで同じと見なされます。 Web サーバーマッピングは、Web サーバーに対して行われるすべてのリクエストに対して有効です。 多くの場合、Web サーバーマッピングを使用すると ColdFusion マッピングは不要になります。</p>
+</li>
+</ul>
+</div>
+<p>詳しくは、「Create logical mappings」を参照してください。</p>
+</li>
+<li><p><strong>Java アプレットおよび CFX タグの登録：</strong>Java アプレットおよび CFX タグを ColdFusion アプリケーションで使用できます。 ColdFusion Administrator のナビゲーションペインで、拡張機能／Java アプレットまたは拡張機能／CFX タグを選択して、適切な拡張機能ページのアプレットを登録します。 アプレットを登録した後、アプレットおよびタグをアプリケーションに取り込むことができます。 詳しくは、「Java applets and the CFX Tags」を参照してください。</p>
+</li>
+<li><p><strong>標準デバッグオプションの設定：</strong>デバッグ環境設定を設定すれば、アプリケーションページのリクエストに関する有益なデバッグ情報を取得できます。 デバッグを設定するには、ColdFusion Administrator のナビゲーションペインで、デバッグとロギング／デバッグ出力の設定を選択します。 詳しくは、「Select debugging options」を参照してください。 </p>
+</li>
+<li><p><strong>詳細管理タスクの実行：</strong>ColdFusion のリソースに対してさらに細かいセキュリティ管理が必要な場合、または ColdFusion の管理責任を分散する必要がある場合には、ColdFusion Security を実装します。 ColdFusion Administrator のナビゲーションペインで、セキュリティ／サンドボックスセキュリティ（エンタープライズ版）またはセキュリティ／リソースセキュリティ（スタンダード版）を選択します。 サーバー上のリソース（データソース、ファイル、ディレクトリ、IP アドレスなど）に対するアプリケーションのアクセスを制御するために提供されている ColdFusion の追加機能を利用するには、サンドボックスセキュリティを設定することを検討します。 詳しくは、「Configure ColdFusion security」を参照してください。</p>
+</li>
+</ul>
+</div>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSe61e35da8d318518-4a0c870d134e6480be4-8000" class="nochunk"><a name="WSe61e35da8d318518-4a0c870d134e6480be4-8000"><!-- --></a><h2 class="topictitle2">サービスとプロセス</h2><div><p>ColdFusion では、Windows オペレーティングシステムのサービスおよび UNIX システムのプロセスを使用します。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：  </span>これは、ColdFusion を J2EE サーバーにデプロイする場合には当てはまりません。</div>
+ColdFusion Administrator で、セキュリティを有効または無効にした場合、または Java と JVM の設定ページのオプションを変更した場合は、変更を有効にするために、ColdFusion を停止して再起動する必要があります。 詳しくは、「Start and stop ColdFusion」を参照してください。</div>
+<ul class="navlinklist"></ul>
+</div><div id="WSe61e35da8d318518-4a0c870d134e6480be4-7fff" class="nochunk"><a name="WSe61e35da8d318518-4a0c870d134e6480be4-7fff"><!-- --></a><h3 class="topictitle3">Windows の ColdFusion サービス</h3><div><div class="para">ColdFusion をインストールすると、Windows 2000、Windows XP および Windows 2003 に次のサービスが作成されます。
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e404"><p>サービス</p>
+</th>
+<th valign="top" width="NaN%" id="d16e407"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e404 "><p>ColdFusion アプリケーションサーバー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e407 "><p>ColdFusion のメインサービスです。このサービスが実行されていないと、ColdFusion ページが処理されません。</p>
+<p>注意：これは、ColdFusion を J2EE サーバーにデプロイする場合には当てはまりません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e404 "><p>ColdFusion .NET 拡張機能</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e407 "><p>この拡張機能では、.NET assembly クラスに ColdFusion オブジェクトとしてアクセスできるようになります。 Java プロキシを使用して ColdFusion システム上の .NET クラスを表します。ColdFusion の .NET 側のエージェントが、assembly が存在するシステム上で動作している必要があります。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e404 "><p>ColdFusion ODBC Agent</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e407 "><p>ColdFusion ODBC Server のデータソースを設定するサービスです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e404 "><p>ColdFusion ODBC Server</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e407 "><p>Microsoft Access および ODBC Socket 用に ColdFusion DataDirect ドライバーを使用する ODBC 接続の中間層サービスです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e404 "><p>ColdFusion Jetty Server</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e407 "><p>Solr の設定およびサービスを管理および制御します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div><div id="WSe61e35da8d318518-5970fe04134e6fd6784-7fff" class="nochunk"><a name="WSe61e35da8d318518-5970fe04134e6fd6784-7fff"><!-- --></a><h3 class="topictitle3">UNIX の ColdFusion プロセス</h3><div><div class="para"><div class="note"><span class="notetitle">注意：  </span>ColdFusion プロセスの説明は、ColdFusion を J2EE サーバーにデプロイする場合には当てはまりません。</div>
+</div>
+<p>ColdFusion をインストールすると、UNIX に <samp class="codeph">cfusion</samp> と呼ばれる 1 つのプロセスが作成されます。このプロセスが実行中かどうかを調べるには、次のコマンドを使用します。</p>
+<p><samp class="codeph">ps - eaf | grep coldfusion</samp></p>
+<p>実行中の場合は、次のような行が戻されます。 </p>
+<p><samp class="codeph">nobody 4528 1 10 12:44 pts/0 00:00:07 /opt/coldfusion/bin/coldfusion -start</samp></p>
+<div class="section"><h4 class="sectiontitle">UNIX で ColdFusion プロセスを管理するには</h4><ol><li><p>root としてログインします。</p>
+</li>
+<li><p><samp class="codeph">cd cf_root/bin</samp> というコマンドを入力します。</p>
+</li>
+<li><p>次の表の説明に従い、適切なコマンドを入力します。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e492"><p>タスク</p>
+</th>
+<th valign="top" width="NaN%" id="d16e495"><p>コマンド</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e492 "><p>ColdFusion の起動</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e495 "><p><samp class="codeph">coldfusion start</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e492 "><p>ColdFusion の停止</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e495 "><p><samp class="codeph">coldfusion stop</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e492 "><p>ColdFusion の再起動</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e495 "><p><samp class="codeph">coldfusion restart</samp></p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e492 "><p>ColdFusion のステータス情報の表示</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e495 "><p><samp class="codeph">coldfusion status</samp></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div></div></div>
+<div id="WSe61e35da8d3185187333d6e9134c7c298b9-7fff" class="nochunk"><a name="WSe61e35da8d3185187333d6e9134c7c298b9-7fff"><!-- --></a><h2 class="topictitle2">作業環境</h2><div><ul class="navlinklist"></ul>
+</div><div id="WSe61e35da8d3185187333d6e9134c7c298b9-7ffe" class="nochunk"><a name="WSe61e35da8d3185187333d6e9134c7c298b9-7ffe"><!-- --></a><h3 class="topictitle3">ColdFusion Administrator のレイアウト</h3><div><p>ColdFusion Administrator のページレイアウトを理解するために、Administrator を開いて、次の説明を参照してください。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e553"><p>領域またはボタン</p>
+</th>
+<th valign="top" width="NaN%" id="d16e556"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e553 "><p>ヘルプボタン</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e556 "><p>表示している ColdFusion Administrator のページに対するオンラインヘルプが表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e553 "><p>システム情報ボタン</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e556 "><p>システム情報が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e553 "><p>リソースボタン</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e556 "><p>情報の追加ソースへのリンクが表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e553 "><p>左ペイン</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e556 "><p>ColdFusion Administrator のページにナビゲートできます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></div><div id="WSe61e35da8d3185187333d6e9134c7c298b9-7ffd" class="nochunk"><a name="WSe61e35da8d3185187333d6e9134c7c298b9-7ffd"><!-- --></a><h3 class="topictitle3">Web サーバーが実行中であることの確認</h3><div><div class="para">ColdFusion をインストールする前に、Web サーバーがインストールされて実行中であることを確認します。<ol><li><p>Web ブラウザーを開きます。</p>
+</li>
+<li><p>Web ページまたはサイトの URL をアドレス行に入力します。 例えば、myindex.htm ファイルが Web ドキュメントのルートディレクトリにある場合は、次のように localhost の URL を入力してページをブラウザーに読み込みます。 </p>
+<p><samp class="codeph">http://127.0.0.1/myindex.htm</samp> または <samp class="codeph">http://127.0.0.1:8500/myindex.htm</samp>（ビルトイン Web サーバー）</p>
+</li>
+<li><p>「Enter」をクリックします。 Web サーバーが実行中であれば、ページが表示され、そうでなければ、エラーメッセージが表示されます。</p>
+</li>
+</ol>
+</div>
+</div></div><div id="WSe61e35da8d31851823c5628f134c7c6b150-8000" class="nochunk"><a name="WSe61e35da8d31851823c5628f134c7c6b150-8000"><!-- --></a><h3 class="topictitle3">システム情報</h3><div><div class="para">ColdFusion のシステム情報ページを使用して、次の作業を行います。<ul><li><p>トライアル版またはデベロッパー版の ColdFusion を次のように更新またはアップグレードします。</p>
+<div class="para"><ol><li><p>システム情報ページの「新規のライセンス」フィールドに製品のシリアル番号を入力します。</p>
+</li>
+<li><p> 「変更の送信」をクリックします。</p>
+</li>
+</ol>
+</div>
+</li>
+<li><p>ColdFusion Administrator のトライアル版の有効期限を表示します。</p>
+</li>
+<li><p>いくつかの ColdFusion サーバー変数に対応する値を表示します。</p>
+</li>
+</ul>
+ColdFusion のシステム情報ページにアクセスするには、ColdFusion Administrator の右上にあるシステム情報ボタンをクリックします。</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf36383a-7ffe" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf36383a-7ffe"><!-- --></a><h2 class="topictitle2">Web サーバーの管理について</h2><div><p>ColdFusion アプリケーションを使用するには、Web サーバーが CFML (ColdFusion Markup Language) ページを処理できることが必要です。サーバー設定の場合、ビルトイン Web サーバーが提供されているのに加え、Apache、IIS、Sun ONE Web Server（以前の名称は iPlanet）などの外部 Web サーバーがサポートされています。 </p>
+<p>詳細については、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ffd.html">Web サーバーの管理</a>を参照してください。</p>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf36383a-7ffd" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf36383a-7ffd"><!-- --></a><h2 class="topictitle2">Solr の管理について</h2><div><p>ColdFusion には、Solr サーバーの検索テクノロジーが含まれています。 Solr は、高性能分散型システムでの検索を高速で処理するために設計されたオープンな高性能検索エンジンです。 </p>
+<p>詳しくは、Solr Server and Collectionsを参照してください。</p>
+<ul class="navlinklist"></ul>
+</div></div>
+<div id="WSe61e35da8d3185187333d6e9134c7c298b9-7ffc" class="nochunk"><a name="WSe61e35da8d3185187333d6e9134c7c298b9-7ffc"><!-- --></a><h2 class="topictitle2">このリリースの新機能</h2><div><p>ColdFusion Administrator には、次のような重要な新機能が搭載されいます。</p>
+<div class="section"><h4 class="sectiontitle">サーバー更新</h4><p>ColdFusion Administrator（サーバー更新／更新）を使用して、製品アップデートがあるかどうかを確認します。 アップデートには、ColdFusion 10 のホットフィックスおよびセキュリティホットフィックスが含まれる場合があります。詳しくは、<a href="WSe61e35da8d318518-33adffe0134c60cd31c-7fff.html">更新ページ</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">ビルトイン Web サーバーの設定</h4><p>ColdFusion 10 スタンドアローンインストールでは、JRun の代わりに Tomcat が組み込まれます。 ColdFusion Administrator には、Tomcat を設定するオプションがあります。 詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc2.html">[エンタープライズマネージャ] セクション</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">スケジューリング</h4><p>このリリースでは、タスクのスケジューリング機能（サーバーの設定／スケジュールされたタスク）が機能拡張されました。 この機能拡張には、アプリケーションおよびサーバーレベルでのタスクのスケジューリングおよびクラスタ設定の有効化が含まれています。 詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd8.html">スケジュールされたタスク</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">キャッシュ</h4><p>内部キャッシュを使用したクエリの保存、クエリキャッシュのクリア、フォルダー固有のテンプレートキャッシュのクリアを行うオプションです。 詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf3638e6-7ff9.html">[キャッシュ機能] ページ</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">Web サービス</h4><p>ColdFusion では、Axis 2 Web サービスがサポートされており、Axis のバージョンを指定するオプションが用意されています。 詳しくは、<a href="WSe61e35da8d318518-cfc6153134d13aef47-8000.html">Web サービス</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">REST サービス</h4><p>REST サービスにアプリケーションを登録するオプションです。 詳しくは、<a href="WSe61e35da8d318518-17fae27134c7aed33a-8000.html">REST サービスページ</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">RDS の有効化</h4><p>ColdFusion Administrator から RDS を有効化できます。 詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff5.html">[RDS] ページ</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">ColdFusion Administrator へのアクセス</h4><p>デベロッパー版の ColdFusion を使用している場合、以前のリリースでは、ColdFusion Administrator に同時にアクセスできる IP アドレスは 2 つのみでした。 両方またはどちらかの IP アドレスで ColdFusion Administrator にアクセスしていない場合でも、3 番目の IP アドレスの権限は拒否されていました。 </p>
+<p>このリリースでは、任意の 2 つの IP アドレスから同時にアクセスできるようになりました。 例えば、Client1 と Client2 が既に ColdFusion Administrator にアクセスしているとします。 Client1 または Client2 のどちらかが ColdFusion Administrator にアクセスしなくなると、Client3 がアクセスできるようになります。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">ColdFusion Administrator へのアクセスの制限</h4><p>詳しくは、<a href="WSe61e35da8d318518-32a693a2134f111bf34-8000.html">ColdFusion Administrator へのアクセスの制限</a>を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">管理者のアクションのロギング</h4><p>デフォルトでは、ColdFusion Administrator の大きなアクションはすべてログに記録されます。 ログには、現在のユーザー、日付、時刻、実行したアクションを含む詳細が含まれています。</p>
+<div class="para">ログには、次のようなアクションの概要のみが含まれることに注意してください。<pre>&lt;timestamp&gt;: &lt;Username&gt;: &lt;deleted data source name&gt;</pre>
+ログのデフォルトの場所は、cfusion¥logs¥audit.log です。</div>
+</div>
+<div class="section"><h4 class="sectiontitle">デフォルト設定に対する変更</h4><p>このリリースでは、以前のリリースの ColdFusion の次のデフォルト設定が見直されました。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e769"><p>領域 / UI</p>
+</th>
+<th valign="top" width="NaN%" id="d16e772"><p>パス</p>
+</th>
+<th valign="top" width="NaN%" id="d16e775"><p>以前の値</p>
+</th>
+<th valign="top" width="NaN%" id="d16e778"><p>新しい値</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e769 "><p>クライアント変数ストレージ名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／クライアント変数／クライアントセッション用のデフォルトのストレージメカニズムを選択</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>レジストリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>Cookie</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>cftoken 用の UUID の使用</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／設定</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>チェック解除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>チェック</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>グローバルなスクリプト保護の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／設定 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>チェック解除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>チェック</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>同時テンプレートリクエストの最大数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／リクエストの調整／リクエストの制限 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>10</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>25</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>同時 CFC 関数リクエストの最大数 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／リクエストの調整／リクエストの制限 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>10</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>15</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>最小 JVM ヒープサイズ（MB）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／Java と JVM </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 ">&#160;</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>256</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>送信データの最大サイズ（MB 単位）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>サーバーの設定／設定／リクエストサイズの制限 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>100</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>20</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e769 "><p>ColdFusion イベントゲートウェイサービスの有効化 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e772 "><p>イベントゲートウェイ／設定</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e775 "><p>チェック</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e778 "><p>チェック解除</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">セッション Cookie の設定</h4><p>ColdFusion Administrator（サーバーの設定／メモリ変数／セッション Cookie 設定）を使用して、サーバーレベルで次の設定を行えます。 </p>
+<p>新しい設定を使用することをお勧めします。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e898"><p>設定</p>
+</th>
+<th valign="top" width="NaN%" id="d16e901"><p>デフォルト</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e898 "><p>HTTPONLY セッション Cookie</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e901 "><p>チェック</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e898 "><p>セキュアセッション Cookie</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e901 "><p>チェック解除</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e898 "><p>セッション Cookie タイムアウト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e901 "><p>最大 30 年、最小 2 分</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<ul class="navlinklist"></ul>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

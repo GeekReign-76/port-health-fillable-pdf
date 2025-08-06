@@ -1,0 +1,133 @@
+ {
+  "rules" : [{
+            "security" :
+                          [            
+	                    {
+		              "name":"sqlinjection",
+		              "description":
+			                     {
+					       "title": "SQL の挿入",
+					       "problemstatement": "脆弱な変数に値を渡すことによって、データベースに対して実行する任意の SQL ステートメントを攻撃者が作成する可能性があります。",
+					       "solution": "cfqueryparam tag を使用することにより、SQL クエリー内の変数をパラメーター化しました。これにより、SQL クエリー内の変数 (またはパラメーター) が、SQL ステートメントと分離されます。データベース用語では、これはプリペアドステートメントと呼ばれ、セキュリティに加えてパフォーマンスも改善される場合があります。"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+		             {
+		              "name":"xssattack",
+			      "description":
+			                     {
+					       "title": "XSS 攻撃",
+					       "problemstatement": "脆弱なコードを使用して、URL の訪問者のブラウザーで実行される JavaScript を脆弱な変数に渡す攻撃が行われる可能性があります",
+					       "solution": "EncodeForHTML function (ColdFusion 10 以降が必要) は、変数をエンコードして、HTML エンティティを使用して特殊文字をエスケープします。例えば、< 文字は &lt; に置き換えられます。"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			      {
+		              "name":"htmltopdfxssattack",
+			      "description":
+			                     {
+					       "title": "PDF XSS 攻撃",
+					       "problemstatement": "ColdFusion 11 で導入された cfhtmltopdf tag では、WebKit を備えた強力な HTML レンダリングによって PDF ファイルを作成します。HTML はサーバーによってレンダリングされるので、PDF ドキュメントで変数を使用する場合は注意が必要です。",
+					       "solution": "ダイナミックコンテンツのレンダリングに関連するリスクを最小限に抑えるために、PDF 生成サービスは独立した専用サーバーで実行することを検討してください。"
+					     },
+			      "enabled":true,
+			      "severity":1
+			     },
+			      {
+		              "name":"csrfattack",
+			      "description":
+			                     {
+					       "title": "CSRF 攻撃",
+					       "problemstatement": "クロスサイトリクエストフォージェリ (CSRF) の脆弱性が悪用されるのは、攻撃者が認証ユーザーをだまして URL をクリックさせたり、認証ブラウザーから要求されるページに URL を埋め込ませたりできる場合です。",
+					       "solution": "ColdFusion 10 では、CSRF トークンと連動する 2 つの function、CSRFGenerateToken と CSRFVerifyToken が追加されました"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			      {
+		              "name":"cookiesvalidations",
+			      "description":
+			                     {
+					       "title": "cfcookie の HTTPOnly および Secure attribute は true に設定する必要があります",
+					       "problemstatement": "状態またはセッションを維持するために cookie が使用されることが多いので、cookie の送信や読みやすさを制限する方法を理解すると、セキュリティを向上できます",
+					       "solution": "cookie で secure attribute が有効になると、ブラウザーからサーバーへの cookie の送信は、セキュリティ保護されたトランスポートメカニズム (HTTPS など) 経由でのみ行われます。慎重を期する情報 (セッション識別子など) が cookie に含まれている場合は、セキュリティ保護されたトランスポートメカニズム経由でのみ送信する必要があるので (傍受を防ぐため)、secure attribute を有効にする必要があります。XSS の脆弱性を悪用できる攻撃者は、JavaScript の document.cookie 変数を使用すれば、訪問者の cookie を読み取ることができます。2002 年に、ブラウザーのベンダーは、HttpOnly という新しい cookie 属性のサポートを開始し、これによって、JavaScript など HTTP 以外の API による cookie の読み取りを防ぐことができます。したがって、HttpOnly attribute を含めて設定した cookie の値は、document.cookie では使用できません。"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"cflocationvalidations",
+			      "description":
+			                     {
+					       "title": "cflocation の addtoken attribute は false に設定する必要があります",
+					       "problemstatement": "URL クエリー文字列にセッション識別子を追加しないでください。エンドユーザーは、自分のセッション識別子が URL に含まれていることに気付かないまま、電子メールの送信や URL の発行を行います。cflocation tag を使用すると、addtoken=false を指定しない限り、セッション識別子がデフォルトで追加されます。",
+					       "solution": "addtoken attribute を false に設定すると、セッション識別子は URL に追加されません"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			     {
+		              "name":"passwords",
+			      "description":
+			                     {
+					       "title": "ハードコードされたパスワードは使用しないでください",
+					       "problemstatement": "ハードコードされたパスワードがコード内に見つかりました",
+					       "solution": "パスワードはランダムで一意な文字列のソルトとし、一方向の関数を使用して保存する必要があります。ColdFusion で提供されている Hash function は、Java Cryptography Extension (JCE) によって実装される複数のアルゴリズムをサポートする、一方向の関数です。"
+					     },
+			      "enabled":true,
+			      "severity":3
+			     },
+			     {
+		              "name":"fileupload",
+			      "description":
+			                     {
+					       "title": "サーバーへのファイルのアップロード",
+					       "problemstatement": "ファイルをサーバーにアップロードするときは常に、ファイルパスとファイルタイプを適切に検証済みであることを、最大の注意を払って確認してください。",
+					       "solution": "strict attribute を使用し、true の設定を維持します。strict=true のとき、ファイルコンテンツは FileGetMimeType function を使用して内部で検証されます。strict=false のときは、アップロードされたファイルのファイル拡張子を使用して MIME タイプを照合します。"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"getvspost",
+			      "description":
+			                     {
+					       "title": "Get と Post",
+					       "problemstatement": "HTTP GET (img tag や iframe など) を暗黙的に使用する攻撃ベクターを防ぐために、一定の操作を HTTP POST method 経由でのみ行うよう設定することをお勧めします。",
+					       "solution": "慎重を期する情報を送信するときは特に、フォーム送信には Get ではなく Post を使用します"
+					     },
+			      "enabled":true,
+			      "severity":1
+			     },
+			     {
+		              "name":"fileinjection",
+			      "description":
+			                     {
+					       "title": "ファイルパスの挿入",
+					       "problemstatement": "脆弱なコードを利用した攻撃により、ColdFusion からアクセスできるサーバー上のファイルが読み取られる可能性があります。例えば、?header=../../server-config.txt をリクエストすることにより、非公開の設定ファイルが攻撃者によって読み取られる場合があります。",
+					       "solution": "ファイルパスで使用する変数を使用の直前に常に検証します"
+					     },
+			      "enabled":true,
+			      "severity":2
+			     },
+			     {
+		              "name":"unnamedapp",
+			      "description":
+			                     {
+					       "title": "名前のないアプリケーション",
+					       "problemstatement": "アプリケーションの名前が定義されていません",
+					       "solution": "名前のないアプリケーションは作成しないでください"
+					     },
+			      "enabled":true,
+			      "severity":1
+			     }
+			   ]      
+	    }],
+   
+   "threads" : 5,
+   "exclude" : ".cfc",
+   "recurse" : true,
+   "defaultpath" : ""
+ }

@@ -1,0 +1,501 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>The ColdFusion Server Monitor lets you track activities on a ColdFusion Server. You can identify information about the server, including requests, queries, memory usage, and errors. You can start and stop collecting server information and take snapshots of the server.</p>
+<p>To track the status of more than one ColdFusion server, use the Multiserver Monitor.</p>
+<h2>Gathering information about ColdFusion servers</h2>
+<p>The Server Monitor and Multiserver Monitor provide information about your ColdFusion servers. Generally, the information that the Server Monitor provides is more detailed than the information that the Multiserver Monitor provides. However, the Multiserver Monitor provides a good way to track the status of multiple ColdFusion servers.<br />
+  The Server Monitor provides information about the following:</p>
+<ul>
+  <li>Requests, queries, sessions, and threads</li>
+  <li>Response time</li>
+  <li>Memory usage</li>
+  <li>Alerts and errors</li>
+  <li>Snapshots of server information<br />
+    The Multiserver Monitor provides the following information:</li>
+  <li>Requests</li>
+  <li>Response time</li>
+  <li>JVM memory usage</li>
+  <li>Alerts, errors, and time outs
+    <hr />
+    <strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></li>
+</ul>
+<h2>Starting the ColdFusion Server Monitor</h2>
+<p>The ColdFusion Server Monitor is a SWF application that you access from the ColdFusion Administrator. The Server Monitor begins gathering and displaying data when you start it.<br />
+  The ColdFusion Multiserver Monitor is a SWF application that can provide information about more than one ColdFusion server. To gather detailed information about one ColdFusion server, use the Server Monitor. To gather information about several servers, use the Multiserver Monitor.</p>
+<h3>Start the ColdFusion Server Monitor</h3>
+<ol>
+  <li>Start the ColdFusion Administrator.</li>
+  <li>Select Server Monitoring &gt; Server Monitor, and then click Launch Server Monitor.</li>
+</ol>
+<h3>Start the ColdFusion Multiserver Monitor</h3>
+<ol>
+  <li>Start the ColdFusion Administrator.</li>
+  <li>
+    <p>Select Server Monitoring &gt; Server Monitor, and then click Launch Multiserver Monitor.</p>
+    <table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+      <tbody>
+        <tr>
+          <td><p>The cross domain details need to be mentioned in the crossdomain.xml file and this file must be placed directly under webroot. Previously, this file was placed under &lt;webroot&gt;/CFIDE/multiservermonitor-access-policy.xml. For more information, see <a href="http://www.adobe.com/devnet/flashplayer/articles/fplayer9_security.html">www.adobe.com/devnet/flashplayer/articles/fplayer9_security.html</a></p></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>By default, server monitoring is turned off. To start and stop monitoring, profiling, and memory tracking, click the corresponding buttons in the top bar of the Server Monitor. The following table indicates what data the Server Monitor collects when you click the Start button:</p>
+  </li>
+</ol>
+<table>
+  <tbody>
+    <tr>
+      <th><p>Button</p></th>
+      <th><p>Action</p></th>
+    </tr>
+    <tr>
+      <td><p>Start Monitoring</p></td>
+      <td><p>Starts gathering information about all requests, including active requests, slowest requests, active sessions, cumulative server usage, highest hit counts, template cache status, request throttle data, requests that timed out, requests with errors, and server alerts. The Server Monitor does not gather information for requests that are excluded on the Filter Settings page.</p></td>
+    </tr>
+    <tr>
+      <td><p>Start Profiling</p></td>
+      <td><p>Starts gathering tag and function timing information for the Slowest Requests report; the CFML stack trace for the Active Requests report; information about active queries, slowest queries, cached queries, and query cache status; database pool status; and the most frequently run queries. This information gathering lets you find bottlenecks in your application. You can view details about each request that is slow or consumes a lot of memory. You can determine which tags and functions cause the request to run slowly and which variables consume the most memory. You can use this information on development servers. To gather the profiling information, turn on monitoring, profiling, and, if needed, memory tracking.</p></td>
+    </tr>
+    <tr>
+      <td><p>Start Memory Tracking</p></td>
+      <td><p>Starts gathering information about memory consumption, including overall memory usage, the queries and sessions that use the most memory, the memory usage of all application and server scopes, and profiling information on the largest variables on the Requests by Memory Usage report, if profiling is enabled.You must enable profiling to view query-related reports; you must enable profiling and memory tracking to view the Queries by Memory Usage report.</p></td>
+    </tr>
+    <tr>
+      <td><p>Reset All Statistics</p></td>
+      <td><p>Resets all statistics collected on the server.</p></td>
+    </tr>
+    <tr>
+      <td><p>Refresh</p></td>
+      <td><p>Updates the data for all the graphs, reports, and message boxes on the page.</p></td>
+    </tr>
+  </tbody>
+</table>
+<table data-macro-name="info" data-macro-body-type="RICH_TEXT">
+  <tbody>
+    <tr>
+      <td><p>Do not enable these options on the production server. Enabling them will slow the server considerably.</p></td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<p><strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></p>
+<h2>Viewing Server Monitor Reports</h2>
+<p>When you start the Server Monitor, the Overview page appears. To return to the Overview page from any other page, click Overview.<br />
+  By default, the Server Monitor retrieves data for graphs every 5 seconds; it retrieves data for reports every 30 seconds. All the graphs let you display either all the data collected, or the data collected for a specified recent period.<br />
+  The Server Monitor lets you control the detail, which you turn on and off with the following buttons:</p>
+<ul>
+  <li><strong>Start Monitoring</strong> Turns on all monitoring.</li>
+  <li><strong>Start Profiling</strong> Turns on monitoring of individual tags, functions, and query execution times.</li>
+  <li><strong>Start Memory Tracking</strong> Turns on tracking of memory that different scopes use. If Profiling is also on, the Server Monitor tracks the memory that individual tags, functions, and queries use. Turning on or off monitoring, profiling, and memory tracking determines which data the Server Monitor gathers. For example, all the query reports require that you turn on profiling. The performance effect of turning on monitoring and profiling is minimal; however the performance effect of memory tracking can be significant.</li>
+</ul>
+<h3>Overview</h3>
+<p>The Overview page appears when you start the ColdFusion Server Monitor. It provides an indication of the overall performance of the server, and displays the following reports:</p>
+<ul>
+  <li><strong>Average response time</strong> Total response time divided by the number of requests. Click the drop-down list to view data collected since the server started, for the past 5 min, or for the past minute.</li>
+  <li><strong>Requests per second</strong> Number of requests per second. Click the drop-down list to view data collected since the server started, for the past 5 min, or for the past minute.</li>
+  <li><strong>Slowest active requests</strong> Lowest active requests that are slower than the threshold set on Slowest Requests page. The number of requests in the list depends on the report size set on the Slowest Requests page.</li>
+  <li><strong>Alerts</strong> Lists any alerts. To specify when an alert is generated, select Alerts &gt; Alert Configuration. Alerts indicate whether your server is approaching an unresponsive state or if it is running slowly.</li>
+  <li><strong>Last error</strong>Most recent error that any application generates on the server that is in the included paths specified on the Filter Settings page. In addition, the Summary page lists the other reports available. To view a different report, click its name. The available reports are:
+    <ul>
+      <li>Requests with errors</li>
+      <li>Requests that timed out</li>
+      <li>Requests slower than 20 seconds</li>
+      <li>Requests that use more than 40MB</li>
+      <li>Sessions that exceed 4KB</li>
+      <li>Queries slower than 20 seconds</li>
+      <li>Queries slower than 10 seconds on average</li>
+      <li>Queries that exceed 20KB</li>
+    </ul>
+  </li>
+</ul>
+<h3>Statistics</h3>
+<h4>Request Statistics</h4>
+<p>The Request Statistics section contains the following reports:</p>
+<h5>Active Requests</h5>
+<p>The Active Requests report lists all currently active requests that take longer to load than the request interval for reports specified in the Refresh Interval setting. Requests include browser requests, CFC HTTP requests, web services, gateways, and Flash remoting. You can view a list, a detailed view, or a graph of active requests. The detailed view includes the CFML stack trace, which you can use to find deadlocked requests and where a long running request is blocked. To see all request graphs in one view, click Chart. The graph indicates the number of requests that the server is currently processing and the number of requests that are awaiting allocation of an application server thread to begin execution. If the graph indicates that many requests are queued, you might want to increase the size of the thread pool. Alternatively, if ColdFusion is deployed in a cluster, you may want to add a server instance for more efficient load balancing.</p>
+<table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+  <tbody>
+    <tr>
+      <td><p>The Server Monitor includes LiveCycle Data Management Assemblers as Flash Remoting requests.</p></td>
+    </tr>
+  </tbody>
+</table>
+<h5>Active ColdFusion Threads</h5>
+<p>The Active ColdFusion Threads report lists all currently active threads. You can view a list, a detailed view, or a graph of active threads.</p>
+<h5>Slowest Requests</h5>
+<p>The Slowest Requests report lists the slowest requests. You can specify the threshold that determines whether a request appears on this page. The lower the threshold, the more requests appear on the list. Use the Report Size option to limit the number of items in the list. You can view a list or a detailed view of the slowest requests. The detailed view includes the CFML stack trace. For more information, see <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-Requesthandling">Request handling</a>.</p>
+<h5>Slowest ColdFusion Threads</h5>
+<p>The Slowest ColdFusion Threads report lists the slowest ColdFusion threads. You can specify the threshold that determines whether a ColdFusion thread appears in this report. As the threshold decreases, the number of requests in the report increases.</p>
+<h5>Active Sessions</h5>
+<p>The Active Sessions report lists all active sessions. You can view a list, a detailed view, or a graph of active sessions. The graph displays the active sessions and the number of users logged in to the server.</p>
+<h5>Cumulative Server Usage</h5>
+<p>The Cumulative Server Usage report lists the requests that have cumulatively used the most CPU time on the server. Even if a request runs rapidly, if it runs frequently, it can consume a large proportion of CPU time. Tuning requests with high cumulative server time can provide server-wide performance benefits. You can view a list, a detailed view, or a graph of cumulative server usage. Use the Report Size option to limit the number of items in the list.</p>
+<h5>Highest Hit Counts</h5>
+<p>The Highest Hit Counts report lists the requests that have the highest hit count. You can view a list or a graph of requests with the highest hit count. Use the Report Size option to limit the number of items in the list.</p>
+<h5>Template Cache Status</h5>
+<p>The Template Cache status report shows information about the template cache to indicate how it is performing. The template cache is where ColdFusion stores compiled CFM and CFC templates in memory. When a template is executed for the first time, it is compiled to Java bytecode, and then stored in the template cache. As long as the template is unchanged, ColdFusion uses the compiled form of the template stored in the template cache. The Template Cache status page lets you monitor the cache-hit ratio, which indicates the number of cache hits in relation to the number of cache misses. <em>Cache hits</em> are the templates retrieved from the cache. <em>Cache misses</em> are the templates that must be compiled before being placed in the cache. A server that is performing well should have more cache hits than misses, which is a high cache-hit ratio. If the cache-hit ratio is too low, you might want to increase the cache size by selecting Server Settings &gt; Caching in the ColdFusion Administrator. For more information, see <a href="https://wikidocs.adobe.com/wiki/display/coldfusionen/Caching" data-linked-resource-id="87506307" data-linked-resource-type="page" data-linked-resource-default-alias="Caching" data-base-url="https://wikidocs.adobe.com/wiki">Caching</a>. The Template Cache page also lets you monitor the number of templates in the cache, and the estimated memory that the cache occupies.</p>
+<table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+  <tbody>
+    <tr>
+      <td><p>The template cache count includes both the Least Recently Used (LRU) cache and the soft cache. As a result, the count can exceed the number configured in the ColdFusion Administrator.</p></td>
+    </tr>
+  </tbody>
+</table>
+<h5>Request Throttle Data</h5>
+<p>The Request Throttle Data report lists all requests that the ColdFusion server throttles. Requests are throttled when ColdFusion queues them, because not enough total memory is available to handle them. Requests smaller than the specified limit are not queued or counted as part of the total memory. Requests larger than the specified limit are counted as part of total memory and are queued if the request throttle-memory size of the request is exceeded. The default value is 4 MB. To change the throttle threshold and memory, select Server Settings &gt; Settings in the ColdFusion Administrator.</p>
+<h4>Memory Usage</h4>
+<p>The Memory Usage section contains the following reports:</p>
+<h5>Memory Usage Summary</h5>
+<p>The Memory Usage Summary report displays a graph that shows the estimated memory consumption by persistent scopes on the server, including the server scope, the application scopes, and the session scopes. If your server is consuming too much memory, the graph provides information about which scope is using too much memory, and when the increased memory consumption began. Detailed reports let you examine estimated memory consumption for the server scope and all active application and session scopes. For more information, see <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-Variablememoryusage">Variable memory usage</a>.</p>
+<table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+  <tbody>
+    <tr>
+      <td><p>Memory usage information displayed in the Server Monitor is estimated and might vary from the actual memory usage. The information in the memory usage report is based on empirical estimates of how different Java types, and their corresponding ColdFusion types, consume memory. Use the information provided in the memory usage report as an indicator rather than an absolute measure. Also, the Server Monitor does not track COM objects for memory usage information.</p></td>
+    </tr>
+  </tbody>
+</table>
+<h5>Requests by Memory Usage</h5>
+<p>The Requests by Memory Usage report lists the requests that use the most memory. You can view a list or a detailed view. The detailed view lists the variables that use the most memory during the execution of the request.</p>
+<h5>CF Threads by Memory Usage</h5>
+<p>The CF Threads by Memory Usage report lists the ColdFusion threads that use the most memory.</p>
+<h5>Queries by Memory Usage</h5>
+<p>The Queries by Memory Usage report lists the queries that use the most memory. When a query appears in this report, you might want to tune the query to reduce the size of the result set, or cache the query to reduce memory consumption and network traffic. This report does not include information about cached queries.</p>
+<h5>Sessions by Memory Usage</h5>
+<p>The Sessions by Memory Usage report lists the sessions that use the most memory.</p>
+<h5>Application Scope Memory Usage</h5>
+<p>The Application Scope Memory Usage report lists the application scopes that use the most memory. The detail lists the application scope variables that use the most memory.</p>
+<h5>Server Scope Memory Usage</h5>
+<p>The Server Scope Memory Usage page lists the server scope variables that use the most memory.</p>
+<h4>Database</h4>
+<p>The Database section contains the following reports:</p>
+<h5>Active Queries</h5>
+<p>The Active Queries report lists all currently active queries that take longer to load than the threshold specified on the Slowest Queries report. You can view a list or a detailed view.</p>
+<h5>Slowest Queries</h5>
+<p>The Slowest Queries report provides the Slowest Queries report and the Slowest Queries by Average report. Both reports let you identify queries by template name and line number. The slowest queries report shows specific instances of a query that is slow, along with the SQL statement for the query. The detail view includes the SQL statement. This information lets you determine why an instance of that query was slow. The Slowest Queries by Average report indicates queries that are slow on average. This report does not provide the SQL code for the queries because the SQL statement might vary from one instance of the query to another. Cached queries are not included in either report. To improve performance, tune the queries listed in these reports. If the result of a query is static, you can improve performance by caching the query using ColdFusion's query cache. For more information, see <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-Databaseresponsetime">Database response time</a>.</p>
+<h5>Cached Queries</h5>
+<p>The Cached Queries report lists the queries that were cached. You can view a list of cached queries or details about an individual query. If the execution time of a query is low, determine if you really need to cache it. If the execution count is high, tune the cachedafter andcachedwithin settings of the query.</p>
+<h5>Query Cache Status</h5>
+<p>The Query Cache Status report graphs the number of cached queries, the estimated memory that the query cache consumes, and the query cache-hit ratio. Performance increases as the query cache-hit ratio increases. If the cache-hit ratio is too low, you might want to increase the size of the query cache. Alternatively, to analyze how your application uses the query cache, determine whether you can tune the cachedAfter and cachedWithin attributes of the cfquery tag. If the query cache is too large, determine if you can move some queries out of the cache.</p>
+<h5>Pool Status</h5>
+<p>The Pool Status report lists the data sources, whether an application on the ColdFusion server is using the data source, and the number of connections. You can view a list of data sources or details about an individual data source.</p>
+<h5>Most Frequently Run Queries</h5>
+<p>The Most Frequently Run Queries report lists the queries that were made the most. Even if individual instances of a query run rapidly, tuning queries with a high frequency can result in improved performance. This report does not provide information about cached queries. You can view a list of queries or details about an individual query.</p>
+<h4>Errors</h4>
+<p>The Errors section includes the following reports:</p>
+<h5>Requests with Errors</h5>
+<p>The Requests with Errors report lists the templates that generate an error. The report includes the path of the template, and the number of times errors occurred in that template. For the most recent error, the report indicates the time of the error, the error message, CFML stack traces, and Java stack traces. You can view a list of templates or details about an individual template. The detailed information includes the CFML stack trace.</p>
+<h5>Requests Timed Out</h5>
+<p>The Requests Timed Out page lists the templates that timed out. The report includes the path of the template, the number of times the template timed out, the most recent response time for the template, the time when the template was most recently used, the most recent estimated request size, and the CFML stack trace. A Java stack trace is not provided because time outs can only occur within CFML. You can view a list of templates or details about an individual template. The detailed information includes the CFML stack trace.</p>
+<h3>Alerts</h3>
+<p>The Alerts report lists all the snapshots that alerts generate.</p>
+<h4>Alert Configuration</h4>
+<p>The Alert Configuration page lets you specify the thresholds for when to generate an alert. Alerts provide warnings of potential problems, including a slow server or an unresponsive server. The slow-server alert is triggered when the server's average response time exceeds a specified limit. The unresponsive-server alert is triggered when more than a specified number of threads are busy for more than a specified number of seconds. The unresponsive-server alert creates a snapshot file, which lets you determine where request threads are unresponsive. Both types of alert let you run a custom CFC when the alert is triggered, which lets you provide your own automated response to an alert condition. You can specify whether to send an e-mail notification when an alert is triggered, and to whom. You can also specify the user name and password to log in to the server that is specified on the Mail page of the ColdFusion Administrator.</p>
+<h3>Snapshots</h3>
+<p>The Snapshots report lists all snapshots that are triggered. Snapshots include details about the ColdFusion server at the moment the snapshot is triggered. These details include:</p>
+<ul>
+  <li>The time and reason the snapshot was triggered</li>
+  <li>Whether profiling and memory tracking are enabled</li>
+  <li>How many running and queued requests exist at the moment of the snapshot</li>
+  <li>Information about memory usage, including:
+    <ul>
+      <li>JVM memory usage</li>
+      <li>Server, application, and session scope memory usage</li>
+      <li>Throttle-queue size and memory usage</li>
+    </ul>
+  </li>
+  <li>Information about cached queries</li>
+  <li>Status of the database pool</li>
+  <li>The Java stack trace<br />
+    Snapshots are triggered when one of the following occurs:</li>
+  <li>You click Trigger Snapshot on the User Snapshots page of the Server Monitor</li>
+  <li>The threshold for either an unresponsive server or a slow server is exceeded<br />
+    When you click Trigger Snapshot, the Server Monitor collects the information for the snapshot and saves it in a file named snapshot_usrgen_<em>timestamp</em>.txt in the <em>cf_root</em>/logs/snapshots folder. When the Server Monitor creates a snapshot, it saves the information in a file named snapshot_sysgen_timestamp.txt in the <em>cf_root</em>/logs/snapshots folder.
+    <hr />
+    <strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></li>
+</ul>
+<h2>Specifying Server Monitor Settings</h2>
+<p>To specify the settings to use to generate reports, click Settings.<br />
+  You can specify the following:</p>
+<ul>
+  <li>How often to refresh Server Monitor reports</li>
+  <li>How often to refresh Server Monitor graphs</li>
+  <li>How often to calculate average response times</li>
+  <li>Whether to show the entire template path<br />
+    To specify what file paths to exclude and include in monitoring and whether to monitor the ColdFusion Administrator, click Settings, and then click the Filter Settings tab. <br />
+    To specify what file paths to exclude from profiling, click Settings, and then click the Profiling Filter tab.<br />
+    By default, the Server Monitor collects information about all ColdFusion templates in the <em>webroot</em> directory and its subdirectories and in any directories specified on the Mappings page of the ColdFusion Administrator. However, you might not want to monitor all requests on the server. You specify a path to exclude so that the Server Monitor does not collect information about files in that directory or in any of its subdirectories. This capability is especially useful in restricting monitoring on production servers. Use the Include Paths option to monitor any subdirectories of an excluded directory.<br />
+    To specify an alias for a template path, click Settings, and then click the Aliasing tab.
+    <hr />
+    <strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></li>
+</ul>
+<h2>ColdFusion Server Monitor API</h2>
+<p>Use the Server Monitor API to programmatically retrieve all the data that the Server Monitor collects. The servermonitoring.cfc ColdFusion component contains methods that you call to perform Server Monitor tasks. For example, use the getAverageResponseTime method to get the average response time for the server.<br />
+  To view the methods, method arguments, and documentation for the Server Monitor API, use the CFC Explorer. To do so, go to<a href="http://localhost:8500/CFIDE/adminapi/servermonitoring.cfc" rel="nofollow">http://localhost:8500/CFIDE/adminapi/servermonitoring.cfc</a>.</p>
+<h3>Use the Server Monitor API</h3>
+<ol>
+  <li>
+    <p>Instantiate administrator.cfc:</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>&lt;cfscript&gt;   	adminObj = createObject(&quot;component&quot;,&quot;cfide.adminapi.administrator&quot;);  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+    <table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+      <tbody>
+        <tr>
+          <td><p>You can instantiate administrator.cfc and call the login_ method in a single line of code, as the following example shows:_</p></td>
+        </tr>
+      </tbody>
+    </table>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>createObject(&quot;component&quot;,&quot;cfide.adminapi.administrator&quot;).login(&quot;admin&quot;);  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Call the administrator.cfc loginmethod, passing the ColdFusion Administrator password or the RDS password:</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>adminObj.login(&quot;admin&quot;);  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Instantiate the Server Monitor CFC:</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>myObj = createObject(&quot;component&quot;,&quot;cfide.adminapi.servermonitoring&quot;);  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Call the CFC method you want (this example uses getAverageResponseTime):</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>myObj.getAverageResponseTime();  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ol>
+<h3>Example</h3>
+<p>The following example uses the Server Monitor API to list the data sources to which the ColdFusion Server is connected and the number of connections:</p>
+<table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+  <tbody>
+    <tr>
+      <td><pre>&lt;cfscript&gt;   	   // Login to the ColdFusion Administrator.   	   adminObj = createObject(&quot;component&quot;,&quot;cfide.adminapi.administrator&quot;);   	   adminObj.login(&quot;admin&quot;);      	   // Instantiate the Server Monitor object.   	   myObj = createObject(&quot;component&quot;,&quot;cfide.adminapi.servermonitoring&quot;);      	   //  Get the dsn pool data array   	   dbpool = myObj.getDbPoolStats();   &lt;/cfscript&gt;      &lt;!---  List the data sources ---&gt;   The ColdFusion server is connected to the following data sources:&lt;br /&gt;    &lt;cfloop index=&quot;i&quot; from=&quot;1&quot; to=&quot;#ArrayLen(dbpool)#&quot;&gt;    	   &lt;cfoutput&gt;#dbpool[i].DSN# #dbpool[i].TOTALCONNECTIONCOUNT#&lt;br /&gt;&lt;/cfoutput&gt;   &lt;/cfloop&gt;  </pre></td>
+    </tr>
+  </tbody>
+</table>
+<hr />
+<p><strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></p>
+<h2>Using the Server Monitor to improve server performance</h2>
+<p>The Server Monitor provides information that you can use to help improve the performance of your ColdFusion server.</p>
+<h3>Find bottlenecks in your application during development</h3>
+<ol>
+  <li>Turn on monitoring, profiling, and memory tracking.</li>
+  <li>Set the Slowest Request and Requests By Memory Usage report thresholds to zero (0).</li>
+  <li>Run your templates.</li>
+  <li>For each request, find the following:
+    <ul>
+      <li>The slowest tags and functions in the Slowest Requests report.</li>
+      <li>The largest variables in the Requests By Memory Usage report.</li>
+    </ul>
+  </li>
+</ol>
+<h3>JVM memory usage</h3>
+<p>Because ColdFusion is an enterprise Java application, the Java Virtual Machine (JVM) is the software component that most influences performance. Different JVMs from different vendors and different versions of the same JVM from the same vendor have different performance characteristics. You might benefit from changing the JVM that you are using with ColdFusion. <br />
+  ColdFusion contains an embedded version of Tomcat as the application server and the Sun 1.6 version of the JVM. By contrast, ColdFusion for J2EE running on IBM WebSphere Application Server uses the JVM that WebSphere is configured to use. <br />
+  To configure ColdFusion to use a different JVM, edit the <em>cf_root</em>/runtime/lib/jvm.config file with a text editor by modifying the value of java.home to point to the root directory of the JVM to use. Alternatively, you can switch to a different JVM in the ColdFusion Administrator on the Java and JVM Settings page.<br />
+  Because switching the JVM changes the software environment significantly, do so first in a development or testing environment. Also, fully test your ColdFusion applications before you make the change on a production server. <br />
+  The JVM performs memory management and can have a significant effect on your performance depending on how you configure the JVM. The most important settings for the JVM are the initial heap size and maximum heap size. The initial heap size represents the amount of memory that the JVM uses on startup; the maximum heap size represents the amount of memory that the JVM can use. You can modify these settings in the ColdFusion Administrator on the Java and JVM Settings page. The Initial Memory Size setting specifies the initial heap size; the Maximum Memory Size setting specifies the maximum heap size. The JVM arguments for initial heap size and maximum heap size are -XmsNm and -XmxNm respectively, where N is the size of the heap in megabytes (MB). These JVM arguments are stored in the jvm.config file, in the value of the java.args setting.<br />
+  The default maximum heap size is set to 512 MB in ColdFusion. For best performance, set the initial heap size and the maximum heap size to the same value. Determining the optimal size for the heap to run the applications on your ColdFusion server results in improved performance. Setting the value too high can result in poorer performance because of the higher degree of garbage collection and internal memory management required for the larger heap. Conversely, setting the heap size too small can result in a java.lang.OutOfMemoryError error if your application tries to use more memory than is available to it. <br />
+  The best way to find the optimal heap size is to run your application under simulated peak load with a large heap and monitor how much memory your application actually uses. If you find that your application uses only 180 MB of memory, for example, you might see performance benefit from reducing your heap size to 256 MB. <br />
+  The java.lang.OutOfMemoryError error can occur in other, more complicated, conditions. One common cause of the error is when objects fill up the heap's permanent generation, which defaults to 64 MB. You can increase the value, for example, to 128 MB, by adding the following JVM argument to the Java and JVM Settings page of the ColdFusion Administrator:</p>
+<table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+  <tbody>
+    <tr>
+      <td><pre>-XX:MaxPermSize=128m.  </pre></td>
+    </tr>
+  </tbody>
+</table>
+<p>Physical hardware memory is an important consideration when determining the optimal heap size. Setting the maximum heap size to a value that exceeds the amount of free physical memory causes severe performance degradation. For example, if you have only 512 MB of physical memory, do not set the maximum heap size to 512 MB. Because the operating system and other running applications use memory, much less than 512 MB of memory is available for the JVM process. it is important to have hardware that meets the requirements of your software application. For best results, run on server hardware with 1 GB or more of physical memory.<br />
+  The Server Monitor Summary page monitors the JVM's memory usage. Use this information when determining the optimal heap size.</p>
+<h3>Variable memory usage</h3>
+<p>Configure client variable storage to use cookies or an RDBMS for best performance when using client variables; you do this on the Client Variables page of the ColdFusion Administrator.<br />
+  Wherever possible, it is best to fully scope your variable names, especially when using the isdefined() }}function. For example, {{&lt;cfif isdefined(&quot;variables.myvariable&quot;)&gt; performs much better than &lt;cfif isdefined(&quot;myvariable&quot;)&gt;.<br />
+  To monitor how variables use memory, view the reports in the <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-MemoryUsage">Memory Usage</a> of the Server Monitor.</p>
+<h3>Request handling</h3>
+<p>The Simultaneous Requests setting on the Settings page of the ColdFusion Administrator has the largest effect on how well an application performs under load. This setting dictates how many threads are used to simultaneously process incoming requests. For most applications, a good starting point for the optimal value for this setting is three per processor; you can set a dual processor computer to six simultaneous requests. To find the optimal value for this setting, test your application under load with different values until you find the value that provides the best performance under load. While you test your application, you can view the average response time on the Server Monitor Summary page and the reports in <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-Statistics">Statistics</a>.</p>
+<h3>Caching</h3>
+<p>You can turn on the trusted-cache setting on the Caching page of the ColdFusion Administrator for production applications so that the server does not check the file system to see if the CFML source code changed since it was last compiled. This setting provides the benefit of minimizing system I/O, which has a major effect on performance. Set the template-cache size on the Caching page of the ColdFusion Administrator to be roughly equal to the number of ColdFusion templates that are normally used. To monitor how your settings affect performance, use the <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-TemplateCacheStatus">Template Cache Status</a> in the Request Statistics section of the Server Monitor.<br />
+  In addition, use one of the following methods to cache wherever possible in your application:</p>
+<ul>
+  <li>The cfcache tag</li>
+  <li>Database query caching. Database caching can provide significant performance and scalability improvements, and is accomplished with the cachedwithin and cachedafter attributes of database tags that support them, such as the cfquery tag.</li>
+  <li>Storing data in persistent scopes such as session, making it available for longer than a single request.</li>
+</ul>
+<h3>Database response time</h3>
+<p>Wherever possible, it's best to allow database servers to handle data manipulation. Adding SQL code to handle this work is much more efficient than doing string manipulations or doing in-memory queries (query of queries). Additionally, stored procedures generally provide a higher level of performance than regular SQL queries. Converting queries in cfquery calls to stored procedures and using thecfstoredproc tag typically improves performance. To view database response time information, use the Database section of the Server Monitor (see <a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-Database">Database</a>).</p>
+<hr />
+<p><strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></p>
+<h2>Setting up Server Manager client</h2>
+<p>Server Manager is an AIR-based desktop application that allows you to centrally manage multiple ColdFusion servers from one location. From the Server Monitoring page, you can download and install the Server Manager client AIR application. <br />
+  For details about configuring the Server Manager client for ColdFusion server instances, see <a href="https://wikidocs.adobe.com/wiki/display/coldfusionen/Working+with+Server+Manager" data-linked-resource-id="87505903" data-linked-resource-type="page" data-linked-resource-default-alias="Working with Server Manager" data-base-url="https://wikidocs.adobe.com/wiki">Working with Server Manager</a>.</p>
+<hr />
+<p><strong><em><a href="https://wikidocs.adobe.com/wiki/plugins/viewsource/viewpagesrc.action?pageId=87505906#UsingtheColdFusionServerMonitor-backtotop" data-anchor="back to top" data-linked-resource-default-alias="back to top" data-base-url="https://wikidocs.adobe.com/wiki">#back to top</a></em></strong></p>
+<h2>Configuring the Server monitoring settings</h2>
+<p>The monitoring server can be configured in one of the following ways:</p>
+<ul>
+  <li>Use ColdFusion Administrator</li>
+  <li>Manually edit neo-monitoring.xml and jetty.xml</li>
+  <li>Use Admin API (servermonitoring.cfc)</li>
+</ul>
+<h3>Using the ColdFusion Administrator</h3>
+<p>The Server Monitoring Settings Page in the ColdFusion Administrator (Server Monitoring &gt; Monitoring Settings) lets the following configurations:</p>
+<ul>
+  <li>
+    <p>Enable monitoring server.</p>
+    <table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+      <tbody>
+        <tr>
+          <td><p>When you enable monitoring server and configure it to use SSL, include the following setting to java.args in the JVM.config file: Dcoldfusion.jsafe=true</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Specify the port on which monitoring server listens. The default port is 5500</p>
+    <table data-macro-name="note" data-macro-parameters="title=Note" data-macro-body-type="RICH_TEXT">
+      <tbody>
+        <tr>
+          <td><p>If a server monitoring application is already running, the configuration mentioned here takes effect only after you relaunch the application.</p></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+<h4>Manually editing neo-monitoring.xml and jetty.xml</h4>
+<h5>neo-monitoring.xml</h5>
+<p>Go to the following location:cf_root\lib (in the server configuration)orcf_root/WEB-INF/cfusion/lib (in the J2EE configuration).Modify the value to true in the following code:&lt;var name='ismonitoringserverenabled'&gt;&lt;boolean value='false'/&gt;&lt;/var&gt;</p>
+<h5>Jetty.xml</h5>
+<p>Modify Jetty.xml only if you have to change the port or if your connection uses HTTPS protocol.Go to the following location:cf_root\lib (in the server configuration)orcf_root/WEB-INF/cfusion/lib (in the J2EE configuration).You can specify the following configurations in the XML file:</p>
+<ul>
+  <li>Port</li>
+  <li>MaxThreads</li>
+  <li>Logging</li>
+</ul>
+<h5>For connections using HTTPS protocol</h5>
+<ol>
+  <li>Open jetty.xml.</li>
+  <li>
+    <p>Remove or comment out the Set Connectors section:</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>&lt;Call name=&quot;addConnector&quot;&gt;         &lt;Arg&gt;             &lt;New class=&quot;org.eclipse.jetty.server.nio.SelectChannelConnector&quot;&gt;               &lt;Set name=&quot;host&quot;&gt;0.0.0.0&lt;/Set&gt;               &lt;Set name=&quot;port&quot;&gt;5500&lt;/Set&gt;               &lt;Set name=&quot;maxIdleTime&quot;&gt;300000&lt;/Set&gt;               &lt;Set name=&quot;Acceptors&quot;&gt;2&lt;/Set&gt;               &lt;Set name=&quot;statsOn&quot;&gt;false&lt;/Set&gt;               &lt;Set name=&quot;lowResourcesConnections&quot;&gt;10&lt;/Set&gt;   	    	&lt;Set name=&quot;lowResourcesMaxIdleTime&quot;&gt;5000&lt;/Set&gt;             &lt;/New&gt;         &lt;/Arg&gt;  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <p>Uncomment the Set SSL Connector section:</p>
+    <table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+      <tbody>
+        <tr>
+          <td><pre>&lt;Call name=&quot;addConnector&quot;&gt;   	  &lt;Arg&gt;   		&lt;New class=&quot;org.eclipse.jetty.server.ssl.SslSelectChannelConnector&quot;&gt;   			&lt;Set name=&quot;host&quot;&gt;0.0.0.0&lt;/Set&gt;   			&lt;Set name=&quot;port&quot;&gt;5500&lt;/Set&gt;   			&lt;Set name=&quot;maxIdleTime&quot;&gt;300000&lt;/Set&gt;   			&lt;Set name=&quot;Acceptors&quot;&gt;1&lt;/Set&gt;   			&lt;Set name=&quot;AcceptQueueSize&quot;&gt;100&lt;/Set&gt;   			&lt;Set name=&quot;Keystore&quot;&gt;&quot;path to keystore&quot;&lt;/Set&gt;   			&lt;Set name=&quot;Password&quot;&gt;OBF:1vny1zlo1x8e1vnw1vn61x8g1zlu1vn4&lt;/Set&gt;   			&lt;Set name=&quot;KeyPassword&quot;&gt;OBF:1u2u1wml1z7s1z7a1wnl1u2g&lt;/Set&gt;   			&lt;Set name=&quot;truststore&quot;&gt;&quot;path to keystore&quot;&lt;/Set&gt;   			&lt;Set name=&quot;trustPassword&quot;&gt;OBF:1vny1zlo1x8e1vnw1vn61x8g1zlu1vn4&lt;/Set&gt;   		&lt;/New&gt;         &lt;/Arg&gt;       &lt;/Call&gt;  </pre></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Specify the port and the keystore-related settings.</li>
+</ol>
+<h3>Using Admin APIs</h3>
+<p>To programmatically configure the Server Monitoring server, use the ServerMonitoring.cfc.<br />
+  The following Administrator APIs are added in this release:</p>
+<table>
+  <tbody>
+    <tr>
+      <th><p>API</p></th>
+      <th><p>Description</p></th>
+    </tr>
+    <tr>
+      <td><p>setMonitoringServerPort(port);</p></td>
+      <td><p>Sets the port information for the monitoring server.</p></td>
+    </tr>
+    <tr>
+      <td><p>getMonitoringServerPort();</p></td>
+      <td><p>Gets details of the port to which the monitoring server listens.</p></td>
+    </tr>
+    <tr>
+      <td><p>getMonitoringServerProtocol();</p></td>
+      <td><p>Gets the protocol details for the monitoring server.</p></td>
+    </tr>
+    <tr>
+      <td><p>enableMonitoringServer();</p></td>
+      <td><p>Enables the monitoring server and starts it if not running.</p></td>
+    </tr>
+    <tr>
+      <td><p>stopMonitoringServer();</p></td>
+      <td><p>Stops the monitoring server</p></td>
+    </tr>
+    <tr>
+      <td><p>startMonitoringServer();</p></td>
+      <td><p>Starts the monitoring server</p></td>
+    </tr>
+    <tr>
+      <td><p>disableMonitoringServer();</p></td>
+      <td><p>Disables the monitoring server and stops it if it is running</p></td>
+    </tr>
+    <tr>
+      <td><p>isMonitoringServerEnabled();</p></td>
+      <td><p>Indicates if the monitoring server is enabled</p></td>
+    </tr>
+    <tr>
+      <td><p>isMonitoringServerRunning();</p></td>
+      <td><p>Indicates if the monitoring server is running</p></td>
+    </tr>
+    <tr>
+      <td><p>configureMonitoringServer(flag, port);</p></td>
+      <td><p>Enables monitoring server and sets port information</p></td>
+    </tr>
+  </tbody>
+</table>
+<h3>Troubleshooting scenarios</h3>
+<h4>Multi-server monitoring</h4>
+<p>For multi-server monitoring, ensure that you specify the cross domain details in the crossdomain.xml in (<em>CFRoot</em>/MonitoringServer).</p>
+<h4>Someone changes port in XML</h4>
+<p>The exception does not appear in the ColdFusion Administrator. You verify the log.</p>
+<h4>Monitoring with SSL</h4>
+<p>You might encounter an error while starting Monitoring Server in SSL mode.<br />
+  To resolve this known issue, add the following in the jvm.config:<br />
+  &quot;-Dcoldfusion.disablejsafe=true&quot;</p>
+<h4>Updating the threadpool</h4>
+<p>You can update the threadpool in the jetty.xml.<br />
+  Modify the threadpool in the Server Threadpool section of the XML file:</p>
+<table data-macro-name="code" data-macro-default-parameter="ActionScript" data-macro-body-type="PLAIN_TEXT">
+  <tbody>
+    <tr>
+      <td><pre>&lt;Set name=&quot;ThreadPool&quot;&gt;         &lt;!-- Default queued blocking threadpool         --&gt;         &lt;New class=&quot;org.eclipse.jetty.util.thread.QueuedThreadPool&quot;&gt;           &lt;Set name=&quot;minThreads&quot;&gt;2&lt;/Set&gt;           &lt;Set name=&quot;maxThreads&quot;&gt;50&lt;/Set&gt;         &lt;/New&gt;         &lt;!-- Optional Java 5 bounded threadpool with job queue         &lt;New class=&quot;org.eclipse.thread.concurrent.ThreadPool&quot;&gt;           &lt;Set name=&quot;corePoolSize&quot;&gt;50&lt;/Set&gt;           &lt;Set name=&quot;maximumPoolSize&quot;&gt;50&lt;/Set&gt;         &lt;/New&gt;         --&gt;       &lt;/Set&gt;  </pre></td>
+    </tr>
+  </tbody>
+</table>
+<p> </p>
+</body>
+</html>

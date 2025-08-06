@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * ColdFusion サーバーモニタの開始</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf363cdd-7ff1.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf363cdd-7ff1.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>ColdFusion サーバーモニタの開始</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSD34F7B5B-6547-4fb2-B80C-9C24FC1C7719"><span class="topictitle1">ColdFusion サーバーモニタの開始</span>
+</a></p></li><li><p><a href="#WSE06B4957-B296-4115-9583-A7C7188599A4"><span class="topictitle1">ColdFusion マルチサーバーモニタの開始</span>
+</a></p></li></ul></div></div></div></div><div><p>ColdFusion サーバーモニタは、ColdFusion Administrator からアクセスする SWF アプリケーションです。サーバーモニタを開始すると、データの収集と表示が開始されます。</p>
+<p>ColdFusion マルチサーバーモニタは、複数の ColdFusion サーバーについての情報を提供する SWF アプリケーションです。特定の ColdFusion サーバーの詳細情報を収集するには、サーバーモニタを使用します。複数のサーバーの情報を収集するには、マルチサーバーモニタを使用します。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSD34F7B5B-6547-4fb2-B80C-9C24FC1C7719" class="nochunk"><a name="WSD34F7B5B-6547-4fb2-B80C-9C24FC1C7719"><!-- --></a><h2 class="topictitle2">ColdFusion サーバーモニタの開始</h2><div><ol><li><p>ColdFusion Administrator を開始します。</p>
+</li>
+<li><p>[ColdFusion サーバーの監視]-[サーバーモニタ] を選択し、[サーバーモニタの起動] をクリックします。</p>
+</li>
+</ol>
+</div></div>
+<div id="WSE06B4957-B296-4115-9583-A7C7188599A4" class="nochunk"><a name="WSE06B4957-B296-4115-9583-A7C7188599A4"><!-- --></a><h2 class="topictitle2">ColdFusion マルチサーバーモニタの開始</h2><div><ol><li><p>ColdFusion Administrator を開始します。</p>
+</li>
+<li><p>[ColdFusion サーバーの監視]-[サーバーモニタ] を選択して、[マルチサーバーモニタの起動] をクリックします。</p>
+<div class="note"><span class="notetitle">注意：  </span> クロスドメインに関する詳細は crossdomain.xml ファイルで指定し、このファイルを Web ルートの直下に配置する必要があります。従来、このファイルは "&lt;Web ルート&gt;/CFIDE/multiservermonitor-access-policy.xml" に配置されていました。詳細については、<a href="http://www.adobe.com/jp/devnet/flashplayer/articles/fplayer9_security.html" target="_self">www.adobe.com/jp/devnet/flashplayer/articles/fplayer9_security.html</a> を参照してください。</div>
+</li>
+</ol>
+<p>デフォルトでは、サーバーモニタはオフになっています。監視、プロファイリング、メモリトラッキングを開始または終了するには、サーバーモニタの上部のバーにあるボタンをクリックします。次の表は、開始ボタンをクリックしたときにサーバーモニタが収集するデータを示しています。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e14219"><p>ボタン</p>
+</th>
+<th valign="top" width="NaN%" id="d16e14222"><p>アクション</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e14219 "><p>[監視を開始]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e14222 "><p>すべてのリクエストについての情報の収集を開始します。アクティブなリクエスト、低速なリクエスト、アクティブなセッション、累積サーバー使用量の多いリクエスト、ヒット数の多いリクエスト、テンプレートキャッシュのステータス、リクエストスロットルデータ、タイムアウトしたリクエスト、エラーが発生したリクエスト、サーバーのアラートなどの情報を収集できます。サーバーモニタは、[フィルタの設定] ページで除外されたリクエストについての情報は収集しません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e14219 "><p>[プロファイリングを開始]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e14222 "><p>プロファイリングについての情報の収集を開始します。低速なリクエストのレポートのタグや関数のタイミング情報、アクティブなリクエストのレポートの CFML スタックトレース、アクティブなクエリー、低速なクエリー、キャッシュクエリー、クエリーキャッシュのステータスについての情報、データベースプールのステータス、実行頻度の高いクエリーなどの情報を収集できます。この情報収集によって、アプリケーションのボトルネックを特定できます。個々の低速なリクエストやメモリ消費量の多いリクエストごとに詳細を表示できます。実行速度に影響を及ぼしているタグや関数を特定したり、メモリ消費量が最も高い変数を確認できます。この情報を開発サーバーで使用できます。プロファイリング情報を収集するには、監視、プロファイリング、および (必要であれば) メモリトラッキングを有効にします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e14219 "><p>[メモリトラッキングを開始]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e14222 "><p>メモリ消費量についての情報の収集を開始します。全体的なメモリ使用量、最もメモリを使用しているクエリーとセッション、すべてのアプリケーションとサーバースコープでのメモリ使用量、および (プロファイリングが有効な場合は) メモリ使用量の多いリクエストのレポートでの最大の変数に関するプロファイリング情報などを収集できます。</p>
+<p>クエリー関連のレポートを表示するには、プロファイリングを有効にする必要があります。メモリ使用量の多いクエリーのレポートを表示するには、プロファイリングとメモリトラッキングを有効にする必要があります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e14219 "><p>[すべての統計情報をリセット]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e14222 "><p>サーバー上で収集されたすべての統計情報をリセットします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e14219 "><p>更新</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e14222 "><p>ページ上のすべてのグラフ、レポート、およびメッセージボックスのデータを更新します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="important"><span class="importanttitle">重要：  </span>本番サーバーではこれらのオプションを有効にしないでください。有効にするとサーバーの動作が大幅に遅くなります。</div>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

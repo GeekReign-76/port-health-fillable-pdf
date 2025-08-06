@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 複数のサーバーの管理</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff6.html";
+    document.cookie = "topicId=" + "WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff6.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>複数のサーバーの管理</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff5"><span class="topictitle1">複数のサーバーに対する設定の適用</span>
+</a></p></li><li><p><a href="#WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff4"><span class="topictitle1">テンプレートキャッシュのクリア</span>
+</a></p></li><li><p><a href="#WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff3"><span class="topictitle1">ホットフィックスの適用</span>
+</a></p></li><li><p><a href="#WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff2"><span class="topictitle1">Server Manager の環境設定の定義</span>
+</a></p></li></ul></div></div></div></div><div><p>Server Manager を使用すると、複数の ColdFusion サーバーインスタンスに対してバッチ操作を実行できます。 </p>
+<p>特定の設定項目をドラッグ &amp; ドロップする場合、その設定項目がドロップ先のサーバーに既に存在しているときは、既存の設定値が新しい設定値で上書きされます。たとえば、XXX というデータソースを特定のサーバーにドロップし、そのデータソースがサーバー上に既に存在していた場合、そのデータソースは新しい設定で上書きされます。警告は表示されません。</p>
+<p>バッチ操作では、次のタスクを実行できます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff5" class="nochunk"><a name="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff5"><!-- --></a><h2 class="topictitle2">複数のサーバーに対する設定の適用</h2><div><p>Server Manager の左ペインに、1 台以上の ColdFusion サーバーに関して設定可能な項目が一覧表示されます。複数の ColdFusion サーバーに設定を適用するには :</p>
+<ol><li><p>Server Manager の左ペインに表示されている設定を使用して、1 台の ColdFusion サーバーの設定を定義します。</p>
+</li>
+<li><p>その設定を適用する他の ColdFusion サーバーを選択します。</p>
+</li>
+<li><p>設定を右クリックし、[選択したサーバーに適用] オプションを選択します。また、Server Manager の右ペインで、選択したサーバーに設定をドラッグ &amp; ドロップすることもできます。 </p>
+<p>Server Manager ウィンドウの下部に進捗状況バーが表示され、設定の適用状況が示されます。タスクが完了すると、タスクが成功したかどうかを示すメッセージが表示されます。 </p>
+</li>
+<li><p>進行状況バーの右側には、[削除] アイコンと [スナップショットを保存] アイコンが表示されます。バッチ操作のログを保存するには、[スナップショットを保存] アイコンをクリックしてログファイルを保存します。 </p>
+</li>
+</ol>
+<p>Server Manager では、複数の ColdFusion サーバーに設定を適用できるだけでなく、次のアクションも実行できます。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e15930"><p>設定</p>
+</th>
+<th valign="top" width="NaN%" id="d16e15933"><p>アクション</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e15930 "><p>データソース</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><div class="para"><ul><li><p>左ペインにある [データソース] 設定を右クリックして、データソースを追加します。</p>
+</li>
+<li><p>左ペインにあるデータソースを右クリックして、既存のデータソースを編集します。</p>
+</li>
+<li><p>左ペインにあるデータソースを右クリックして、既存のデータソースを削除します。</p>
+</li>
+<li><p>左ペインにあるデータソースを右クリックして、既存のデータソースを検証します。検証に成功した場合は、データソースノードの横に緑のアイコンが表示されます。失敗した場合は、データソースの横に赤いアイコンとエラーメッセージが表示されます。</p>
+</li>
+<li><p>左ペインにあるデータソースノードを右クリックして、すべてのデータソースを検証します。 </p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>マッピング</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><div class="para"><ul><li><p>[マッピング] 設定を右クリックして、マッピングを追加します。</p>
+</li>
+<li><p>左ペインにあるマッピングを右クリックして、既存のマッピングを編集します。</p>
+</li>
+<li><p>左ペインにあるマッピングを右クリックして、既存のマッピングを削除します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>スケジュールされたタスク</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>[スケジュールされたタスク] 設定に対しては、次のアクションを実行できます。</p>
+<div class="para"><ul><li><p>[スケジュールされたタスク] 設定を右クリックして、スケジュールされたタスクを追加します。</p>
+</li>
+<li><p>既存のスケジュールされたタスクを編集します。</p>
+</li>
+</ul>
+</div>
+<p>タスクに対しては、次のアクションを実行できます。</p>
+<div class="para"><ul><li><p>タスク項目を右クリックして [実行] をクリックし、タスクを実行します。</p>
+</li>
+<li><p>タスク項目を右クリックして [一時停止] をクリックし、タスクを一時停止します。</p>
+</li>
+<li><p>タスク項目を右クリックして [再開] をクリックし、タスクを再開します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>JVM</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、JVM 設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>メール</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、メール設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>チャート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、チャート設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>メモリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、メモリ設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>サーバー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、サーバー設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>リクエストの調整</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、リクエストの調整設定を編集および更新します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e15930 "><p>ロギング</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e15933 "><p>左ペインにある設定を右クリックして、ロギング設定を編集および更新します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="note"><span class="notetitle">注意：  </span>どの設定を編集する場合も、最初に内容を更新して最新の設定を取得してから、設定を編集します。設定の編集に使用するオプションは、ColdFusion Administrator のオプションと同じです。 </div>
+</div></div>
+<div id="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff4" class="nochunk"><a name="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff4"><!-- --></a><h2 class="topictitle2">テンプレートキャッシュのクリア</h2><div><p>Server Manager では、複数のサーバーのテンプレートキャッシュを同時にクリアできます。テンプレートキャッシュをクリアするには :</p>
+<ol><li><p>[サーバータスクまたは設定の適用] チェックボックスをオンにして、サーバーを選択します。</p>
+</li>
+<li><p>右上隅にある [サーバータスク] オプションをクリックします。 </p>
+</li>
+<li><p>[テンプレートキャッシュのクリア] をクリックします。 </p>
+<p>下部の進行状況バーに、キャッシュのクリア状況が表示されます。 </p>
+<p>タスクの完了後、[スナップショットを保存] アイコンをクリックしてキャッシュログを保存するか、[削除] アイコンをクリックしてログを削除できます。</p>
+</li>
+</ol>
+</div></div>
+<div id="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff3" class="nochunk"><a name="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff3"><!-- --></a><h2 class="topictitle2">ホットフィックスの適用</h2><div><p>複数の ColdFusion サーバーインスタンスを Server Manager に登録した後は、それらのインスタンスを更新できます。 </p>
+<div class="note"><span class="notetitle">注意：  </span>ホットフィックスを適用した後は、ホットフィックスを有効にするために、サーバーを再起動します。</div>
+<p>複数のサーバーにホットフィックスを適用するには :</p>
+<ol><li><p>[サーバータスクまたは設定の適用] チェックボックスをオンにして、更新する必要があるサーバーインスタンスを選択します。</p>
+</li>
+<li><p>右上のメニューバーで、[サーバータスク]-[ホットフィックスの適用] をクリックします。</p>
+</li>
+<li><p>確認メッセージが表示されたら [はい] をクリックします。</p>
+</li>
+<li><p>ホットフィックスとして使用する JAR ファイルの場所に移動します。</p>
+</li>
+<li><p>[開く] をクリックして、ホットフィックスをサーバーインスタンスに適用します。</p>
+</li>
+</ol>
+<p>サーバーインスタンスに適用されたホットフィクス (JAR ファイル) は、"<samp class="codeph">&lt;ColdFusion のホームディレクトリ&gt;/lib/updates</samp>" に保存されます。</p>
+<div class="note"><span class="notetitle">注意：  </span>この手順はホットフィックスが JAR ファイルである場合にのみ役立ちます。この JAR ファイルは "&lt;ColdFusion のホームディレクトリ&gt;/lib/updates" ディレクトリに配置してください。他の場所にホットフィックスファイルを配置した場合は、手動でホットフィックスを実装する必要があります。 </div>
+</div></div>
+<div id="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff2" class="nochunk"><a name="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff2"><!-- --></a><h2 class="topictitle2">Server Manager の環境設定の定義</h2><div><p>Server Manager の環境設定を定義するには、[設定]-[環境設定] をクリックします。Server Manager では次の環境設定を定義できます。</p>
+<ul><li><p>[ポーリング間隔] : Server Manager が ColdFusion サーバーでアラートや警告が発生していないかをチェックする間隔 (秒) を設定します。また、Server Manager でサーバーインスタンスのステータスが [到達不能] になった場合は、指定されたポーリング間隔が経過した後に Server Manager からサーバーへの再接続が試みられます。</p>
+</li>
+<li><p>[エラー発生時にバッチ操作を停止] : このチェックボックスはデフォルトで選択されています。このチェックボックスを選択解除した場合は、エラーが発生してもバッチ操作が続行されます。バッチ操作には、ホットフィックスの適用、テンプレートキャッシュのクリア、サーバーからの設定の取得、複数のサーバーへの設定の適用などのタスクが含まれます。</p>
+</li>
+<li><p>[アラートウィンドウ位置] : このドロップダウンリストを使用して、Server Manager 内で通知やアラートを表示する位置を選択します。</p>
+</li>
+<li><p>[サーバーの確認応答の受信後にダイアログボックスを閉じる] : サーバー設定ダイアログボックスの値が編集されているときに、確認応答を受信するまでダイアログボックスを閉じないようにする場合は、このオプションを選択します。</p>
+</li>
+<li><p>[バッチ操作の進行状況を表示] : このオプションはデフォルトで選択されています。このオプションを選択解除すると、バッチ操作の進行状況が Server Manager ウィンドウの下部に表示されなくなります。</p>
+</li>
+<li><p>[内蔵ブラウザを使用] : このチェックボックスを選択すると、任意のサーバー URL を内部ブラウザまたはシステムのデフォルトブラウザで開くことができます。</p>
+</li>
+</ul>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

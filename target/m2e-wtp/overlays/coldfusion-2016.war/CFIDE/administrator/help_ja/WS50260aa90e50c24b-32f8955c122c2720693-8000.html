@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * 接続プロパティ</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WS70f0d54f063b9b08238ab6dc122b1a20785-8000.html";
+    document.cookie = "topicId=" + "WS70f0d54f063b9b08238ab6dc122b1a20785-8000.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>接続プロパティ</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>次の表に、接続プロパティの詳細と、そのプロパティが適用されるデータベースを示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e9976"><p>プロパティ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e9979"><p>適用される状況</p>
+</th>
+<th valign="top" width="NaN%" id="d16e9982"><p>説明</p>
+</th>
+<th valign="top" width="NaN%" id="d16e9985"><p>適用対象</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e9976 "><p>KeyStore</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>データベースサーバーでクライアント認証が有効になっている場合にのみ適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>使用されるキーストアファイルのディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Oracle</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>KeyStorePassword</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>データベースサーバーでクライアント認証が有効になっている場合にのみ適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p> キーストアファイルにアクセスするためのパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Oracle</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>KeyPassword</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+<p>キーストアファイル内のキーにキーストアファイルと異なるパスワードが設定されている場合に使用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>キーストアファイル内の個々のキーにアクセスするためのパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Oracle</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>TrustStore</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p><samp class="codeph">ValidateServerCertificate=false</samp> の場合は無視されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p> トラストストアファイルのディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Microsoft SQL Server、Oracle、Sybase</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>TrustStorePassword</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p><samp class="codeph">ValidateServerCertificate=false</samp> の場合は無視されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>トラストストアファイルにアクセスするためのパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Microsoft SQL Server、Oracle、Sybase</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>ValidateServerCertificate</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p><samp class="codeph">true|false</samp></p>
+<p>データベースサーバーから送信された証明書をドライバで検証するかどうかを決定します </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Microsoft SQL Server、Oracle、Sybase</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>HostNameInCertificate</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+<p><samp class="codeph">EncryptionMethod=SSL</samp> および <samp class="codeph">ValidateServerCertificate=true</samp> の場合に適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p><samp class="codeph">host_name | #SERVERNAME#</samp></p>
+<p>証明書の検証に使用するホスト名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>DB2、Microsoft SQL Server、Oracle、Sybase</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>useSSL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>SSL を有効化する場合は必須</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p><samp class="codeph">true|false</samp></p>
+<p>サーバーと通信するときに SSL を使用します</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>requireSSL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p><samp class="codeph">true|false</samp></p>
+<p><samp class="codeph">useSSL=true</samp> の場合に SSL 接続を要求します</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>verifyServerCertificate</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p><samp class="codeph">true|false</samp></p>
+<p>データベースサーバーから送信された証明書を検証するかどうかを決定します</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>clientCertificateKeyStoreUrl</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>データベースサーバーでクライアント認証が有効になっている場合にのみ適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>クライアント証明書キーストアへの URL。指定されていない場合はデフォルト設定が使用されます。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>clientCertificateKeyStoreType</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+<p>使用している JVM でサポートされるキーストアタイプに依存します</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>クライアント証明書のキーストアタイプ。NULL または空白の場合はデフォルト設定が使用されます。JVM でサポートされる標準のキーストアタイプは、"JKS" および "PKCS12" です。JVM で使用しているセキュリティ製品の種類によっては、その他のタイプも使用できる場合があります。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>clientCertificateKeyStorePassword</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>データベースサーバーでクライアント認証が有効になっている場合にのみ適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>クライアント証明書キーストアのパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL (4/5)</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>trustCertificateKeyStoreUrl</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p><samp class="codeph">verifyServerCertificate=true</samp> の場合にのみ適用されます</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>信頼できるルート証明書キーストアへの URL。指定されていない場合はデフォルト設定が使用されます。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL (4/5)</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>trustCertificateKeyStoreType</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p>オプション</p>
+<p>使用している JVM でサポートされるキーストアタイプに依存します</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>信頼できるルート証明書のキーストアタイプ。NULL または空白の場合はデフォルト設定が使用されます。JVM でサポートされる標準のキーストアタイプは、"JKS" および "PKCS12" です。JVM で使用しているセキュリティ製品の種類によっては、その他のタイプも使用できる場合があります。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL (4/5)</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e9976 "><p>trustCertificateKeyStorePassword</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9979 "><p><samp class="codeph">verifyServerCertificate=true</samp> の場合は必須</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9982 "><p>信頼できるルート証明書キーストアのパスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e9985 "><p>MySQL (4/5)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

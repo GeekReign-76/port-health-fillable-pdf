@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * コマンドラインインターフェイスの使用</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fd9.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fd9.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>コマンドラインインターフェイスの使用</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WS4EAEA485-0F9F-424e-9B0F-63451E843739"><span class="topictitle1">コマンドラインインターフェイスの実行</span>
+</a></p></li><li><p><a href="#WSA843B485-3804-45df-9836-E8140EFCC6DB"><span class="topictitle1">バッチファイルとシェルスクリプトの使用</span>
+</a></p></li><li><p><a href="#WSA9EC0483-C2FB-4147-A745-1DE5B589EEF2"><span class="topictitle1">コマンドラインインターフェイスの例</span>
+</a></p></li></ul></div></div></div></div><div><p>Web サーバー設定ツールはコマンドラインインターフェイスを使用して実行することもできます。 </p>
+</div>
+<div id="WS4EAEA485-0F9F-424e-9B0F-63451E843739" class="nochunk"><a name="WS4EAEA485-0F9F-424e-9B0F-63451E843739"><!-- --></a><h2 class="topictitle2">コマンドラインインターフェイスの実行</h2><div><ol><li><p>コンソールウィンドウを開きます。</p>
+</li>
+<li><p><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_root</i>/runtime/bin（サーバー設定）ディレクトリに移動します。</p>
+</li>
+<li><p>次のようにして、wsconfig.exe (Windows) コマンドまたは wsconfig (UNIX) コマンドを実行します。</p>
+<pre>      wsconfig.exe [-options] 
+      ./wsconfig [-options]</pre>
+</li>
+</ol>
+<p>次の表にオプションを示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e12019"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e12022"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-ws</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>次のように、Web サーバーを指定します。</p>
+<div class="para"><ul><li><p>IIS </p>
+</li>
+<li><p>Apache </p>
+</li>
+<li><p>SunOne</p>
+</li>
+</ul>
+</div>
+<p>Web サーバー名の指定では、大文字と小文字は区別されません。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-dir </samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>構成ディレクトリ（SunONE config）へのパスを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-site</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>IIS の Web サイト名を指定します (大文字と小文字は区別されます)。All または 0 を指定して、グローバルレベルのコネクタを設定します。この設定はすべての IIS Web サイトに適用されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-host </samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>ColdFusion サーバーアドレスを指定します。デフォルト値は <samp class="codeph">localhost</samp> です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-norestart</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Web サーバーを再起動しないよう指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-cluster</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Tomcat クラスタ名を指定します。 このオプションを使用して、単一サーバーではなく Tomcat クラスタへの接続を定義できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-l</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>コネクタの verbose ロギングを有効化します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-upgrade</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>既存の設定済みコネクタを、新しい "wsconfig.jar" ファイルの新しいモジュールでアップグレードします。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-service</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Apache Windows サービス名を指定します。デフォルト値は <samp class="codeph">Apache</samp> です。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-bin</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Apache サーバーのバイナリファイル (Windows では apache.exe、UNIX では httpd) のパスを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-script</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Apache UNIX コントロールスクリプトファイル (apachectl) のパスを指定します (Apache 派生製品の Stronghold などではファイルが若干異なる場合があります)。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-v</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>Web サーバー設定ツールからの verbose 出力を有効にします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-list</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>設定されたすべての Web サーバーをリストします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-list -host server-host</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>指定されたホストのすべての Tomcat サーバーをリストします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-remove</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>設定を削除します。–<samp class="codeph">ws</samp> オプションと、–<samp class="codeph">dir</samp> または –<samp class="codeph">site</samp> オプションが必要です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-uninstall</samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>設定済みコネクタをすべて削除します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e12019 "><p><samp class="codeph">-h </samp></p>
+</td>
+<td valign="top" width="NaN%" headers="d16e12022 "><p>すべてのパラメータをリストします。 </p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSA843B485-3804-45df-9836-E8140EFCC6DB" class="nochunk"><a name="WSA843B485-3804-45df-9836-E8140EFCC6DB"><!-- --></a><h2 class="topictitle2">バッチファイルとシェルスクリプトの使用</h2><div><p>ColdFusion サーバー設定には、コマンドラインでの一般的なコネクタ設定を実装するバッチファイルとシェルスクリプトが含まれています。それらのファイルは、"&lt;ColdFusion のルートディレクトリ&gt;/bin/connectors" ディレクトリにあります。たとえば、"IIS_connector.bat" ファイルでは、IIS のすべてのサイトを 0 に設定することでグローバルに定義されたコネクタを確立し、そのフィルタとマッピングがすべてのサイトに継承されるようにします。</p>
+<p>Apache または Sun ONE Web Server を使用する場合は、これらのファイルをプロトタイプとして使用し、サイトに応じて編集して保存します。</p>
+</div></div>
+<div id="WSA9EC0483-C2FB-4147-A745-1DE5B589EEF2" class="nochunk"><a name="WSA9EC0483-C2FB-4147-A745-1DE5B589EEF2"><!-- --></a><h2 class="topictitle2">コマンドラインインターフェイスの例</h2><div><p>複数の Web サーバーを使用する場合の例</p>
+<ol><li><p>特定の IIS サイトを設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig.exe -ws iis -site "web31" -v</pre>
+<p>すべてのサイトで ColdFusion を実行するシステムでは、通常は個々のサイトを設定する必要はありません。 </p>
+</li>
+<li><p>すべての既存 IIS サイト (ISP) を設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig.exe -ws iis -site 0 -v</pre>
+</li>
+<li><p>1 台目の UNIX 上の Apache を設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig -ws Apache -bin /opt/apache2/bin/httpd -script /opt/apache2/bin/apachectl -dir /opt/apache2/conf -v</pre>
+</li>
+<li><p>2 台目の UNIX 上の Apache を設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig -ws Apache-bin /usr/bin/httpd -script /usr/bin/httpd -dir /etc/httpd/conf -coldfusion -v</pre>
+</li>
+<li><p>Windows 上の Apache を設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig.exe -ws apache -dir "c:\program files\apache group\apache2\conf" -coldfusion -v</pre>
+</li>
+<li><p>UNIX 上の Sun ONE Web Server を設定します。</p>
+<pre>cf_root/runtime/bin/wsconfig -ws sunone -dir [path to config] -coldfusion -v</pre>
+</li>
+</ol>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<map xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:fn="http://www.w3.org/2005/xpath-functions" DTDVersion="V1.1.3" domains="(map mapgroup-d)" class="- map/map ">
+   <topicref class="- map/topicref " href="WSf01dbd23413dda0e51f089d212047ee7a02-8000.html" navtitle="ホーム" type="homepage"/>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3637ad-7ffd.html" navtitle="はじめに" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3637ad-7fff.html" navtitle="ColdFusion のマニュアルについて" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf36383a-8000.html" navtitle="ColdFusion の管理" type="topic"/>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-8000.html" navtitle="ColdFusion Administrator の使用" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffe.html" navtitle="最初の管理作業" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffd.html" navtitle="ユーザー支援機能へのアクセス" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7ffc.html" navtitle="[サーバーの設定] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fe9.html" navtitle="[データとサービス] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fe0.html" navtitle="[デバッグとロギング] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd4.html" navtitle="[ColdFusion サーバーの監視] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7ff3.html" navtitle="[拡張機能] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fce.html" navtitle="[イベントゲートウェイ] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7ff4.html" navtitle="[セキュリティ] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc5.html" navtitle="[パッケージとデプロイ] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc2.html" navtitle="[エンタープライズマネージャ] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSe61e35da8d318518-33adffe0134c60cd31c-8000.html" navtitle="「サーバー更新」セクション" type="topic">
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-33adffe0134c60cd31c-7fff.html" navtitle="更新ページ" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-33adffe0134c60cd31c-7ffe.html" navtitle="後でインストールするためのホットフィックスのダウンロード" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fbf.html" navtitle="[カスタム拡張機能] セクション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fcf.html" navtitle="Administrator API" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7ffa.html" navtitle="データソース管理" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3639b1-7ffd.html" navtitle="JDBC について" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3639b1-7ffc.html" navtitle="データソースの追加" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fdb.html" navtitle="Apache Derby Client への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fda.html" navtitle="Apache Derby Embedded への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fdd.html" navtitle="DB2 Universal Database への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe8.html" navtitle="Informix への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe7.html" navtitle="Microsoft Access への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe6.html" navtitle="Microsoft Access (Unicode) への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe5.html" navtitle="Microsoft SQL Server への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe4.html" navtitle="MySQL への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4bcf6a8f122a6749eaf-8000.html" navtitle="DataDirect 接続での JDBC のサポート" type="topic">
+         <topicref class="- map/topicref " href="WSfd7453be0f56bba4bcf6a8f122a6749eaf-7fff.html" navtitle="DataDirect ドライバの機能" type="topic"/>
+         <topicref class="- map/topicref " href="WSfd7453be0f56bba4bcf6a8f122a6749eaf-7ffe.html" navtitle="MySQL でのデータソースの作成" type="topic"/>
+         <topicref class="- map/topicref " href="WSfd7453be0f56bba4bcf6a8f122a6749eaf-7ffd.html" navtitle="新しい querytimeout 接続オプション" type="topic"/>
+         <topicref class="- map/topicref " href="WS70f0d54f063b9b08238ab6dc122b1a20785-8000.html" navtitle="SSL 接続の有効化" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe3.html" navtitle="ODBC Socket への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe2.html" navtitle="Oracle への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe9.html" navtitle="その他のデータソースへの接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3639b1-7fff.html" navtitle="PostgreSQL への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fe0.html" navtitle="Sybase への接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fdf.html" navtitle="JNDI データソースへの接続" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf3639b1-7fe6.html" navtitle="外部 JDBC Type 4 データソースへの接続" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7ffd.html" navtitle="Web サーバーの管理" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363a5d-7ff7.html" navtitle="ColdFusion の Web サーバーについて" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd8.html" navtitle="ビルトイン Web サーバーの使用" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd7.html" navtitle="外部 Web サーバーの使用" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd6.html" navtitle="Web サーバーの設定" type="topic">
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363a5d-7ffc.html" navtitle="GUI モードの使用" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd9.html" navtitle="コマンドラインインターフェイスの使用" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363a5d-7ffb.html" navtitle="設定ファイル" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fc3.html" navtitle="マルチホーム" type="topic">
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363a5d-7fef.html" navtitle="IIS" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd5.html" navtitle="Apache" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363a5d-7fed.html" navtitle="Sun ONE Web サーバーおよび iPlanet" type="topic"/>
+      </topicref>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363af9-7ff6.html" navtitle="ColdFusion アプリケーションのデプロイ" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363af9-8000.html" navtitle="アーカイブとデプロイのオプション" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd3.html" navtitle="アプリケーションの CAR ファイルへのパッケージ化" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd1.html" navtitle="アプリケーションの J2EE アーカイブファイルへのパッケージ化" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd0.html" navtitle="cfcompile ユーティリティの使用" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7ff2.html" navtitle="セキュリティの管理" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363b95-7ff6.html" navtitle="ColdFusion セキュリティについて" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363b95-7ffb.html" navtitle="パスワード保護の使用" type="topic"/>
+      <topicref class="- map/topicref " href="WSA25F4E98-110A-4092-9F3F-A5D6A8B0BCFA.html" navtitle="ユーザーに対するサービスの公開" type="topic"/>
+      <topicref class="- map/topicref " href="WS8193FF16-0341-45c4-AF9C-047EB392A0A7.html" navtitle="公開サービスにアクセスするための IP アドレスの設定" type="topic"/>
+      <topicref class="- map/topicref " href="WSe61e35da8d318518-32a693a2134f111bf34-8000.html" navtitle="ColdFusion Administrator へのアクセスの制限" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fc8.html" navtitle="サンドボックスセキュリティの使用" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363c31-7ff4.html" navtitle="複数のサーバーインスタンスの使用" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363c31-7ff5.html" navtitle="複数のサーバーインスタンスについて" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fd4.html" navtitle="追加サーバーインスタンスの定義" type="topic">
+         <topicref class="- map/topicref " href="WSAB4367BA-6D91-4c69-8DBA-E2839394658A.html" navtitle="サーバーインスタンスの定義" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fc0.html" navtitle="アプリケーションの隔離の有効化" type="topic">
+         <topicref class="- map/topicref " href="WSf01dbd23413dda0e-25e72d5d120574d8991-8000.html" navtitle="複数のサーバーインスタンスを使用したアプリケーションの隔離" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fc4.html" navtitle="アプリケーションの隔離を行う場合の Web サーバー設定" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363c31-7ffa.html" navtitle="クラスタリングの有効化によるロードバランスとフェイルオーバーの実現" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363c31-7ff2.html" navtitle="リモートサーバーインスタンスに関する ColdFusion Administrator での定義" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff7.html" navtitle="ColdFusion サーバーモニタの使用" type="topic">
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7fce.html" navtitle="ColdFusion サーバーについての情報の収集" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff1.html" navtitle="ColdFusion サーバーモニタの開始" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff3.html" navtitle="サーバーモニタのレポートの表示" type="topic">
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff5.html" navtitle="概要" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf364104-7fba.html" navtitle="統計情報" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ffb.html" navtitle="アラート" type="topic"/>
+         <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7fd2.html" navtitle="スナップショット" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ffa.html" navtitle="サーバーモニタの設定の指定" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7ff4.html" navtitle="ColdFusion サーバーモニタ API" type="topic"/>
+      <topicref class="- map/topicref " href="WSc3ff6d0ea77859461172e0811cbf363cdd-7fe2.html" navtitle="サーバーモニタを使用したサーバーのパフォーマンスの向上" type="topic"/>
+      <topicref class="- map/topicref " href="WS3AB107E1-16CB-48bb-BA20-C653175A831B.html" navtitle="Server Manager クライアントのセットアップ" type="topic"/>
+      <topicref class="- map/topicref " href="WSbfbbf049491c37b01e63e3d129fe2500fd-7fff.html" navtitle="サーバーの監視設定の設定" type="topic">
+         <topicref class="- map/topicref " href="WSbfbbf049491c37b01e63e3d129fe2500fd-7ffe.html" navtitle="ColdFusion Administrator の使用" type="topic"/>
+         <topicref class="- map/topicref " href="WSbfbbf049491c37b01e63e3d129fe2500fd-7ffc.html" navtitle="Admin API の使用" type="topic"/>
+         <topicref class="- map/topicref " href="WSbfbbf049491c37b01e63e3d129fe2500fd-7ffb.html" navtitle="トラブルシューティング" type="topic"/>
+      </topicref>
+   </topicref>
+   <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-8000.html" navtitle="Server Manager の使用" type="topic">
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7fff.html" navtitle="Server Manager の起動" type="topic"/>
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ffe.html" navtitle="サーバーの登録" type="topic"/>
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff7.html" navtitle="グループの作成" type="topic"/>
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff6.html" navtitle="複数のサーバーの管理" type="topic"/>
+      <topicref class="- map/topicref " href="WSfd7453be0f56bba4-2a6b48f122a6582c7f-7ff1.html" navtitle="複数のサーバーの監視" type="topic"/>
+   </topicref>
+   <topicref class="- map/topicref " href="WS6029a80579ffffcd1f6883df134d05bd229-8000.html" navtitle="基本的なトラブルシューティングとよくある質問" type="topic">
+      <topicref class="- map/topicref " href="WSe61e35da8d318518-69b2bf03134d0730d5e-8000.html" navtitle="基本的なトラブルシューティングの概要" type="topic">
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-69b2bf03134d0730d5e-7fff.html" navtitle="Web サーバーが実行中であることの確認" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-69b2bf03134d0730d5e-7ffe.html" navtitle="ColdFusion が実行中であることの確認" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-69b2bf03134d0730d5e-7ffd.html" navtitle="ColdFusion ユーザーアカウントの変更" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-69b2bf03134d0730d5e-7ffc.html" navtitle="ログファイルのサーバーアクティビティの分析" type="topic"/>
+      </topicref>
+      <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-8000.html" navtitle="よくある質問" type="topic">
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7fff.html" navtitle="ColdFusion はどのようにアンインストールしますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ffd.html" navtitle="ColdFusion Administrator のパスワードはどのように変更しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-1bc1bf7e13586a377e4-8000.html" navtitle="Administrator パスワードまたは Administrator コンポーネントパスワードを忘れた場合はどうすればよいですか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ffc.html" navtitle="ColdFusion をどのように開始および停止しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ffb.html" navtitle="パフォーマンスモニターはどのように設定しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ffa.html" navtitle="マルチサーバーモニターはどのように使用しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ff9.html" navtitle="アプリケーションごとの設定の設定方法" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ff8.html" navtitle="未配達メールをどのように管理しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d31851842debae5134d0ab42ed-7ff7.html" navtitle="ログ内容をどのように表示および検索しますか。" type="topic"/>
+         <topicref class="- map/topicref " href="WSe61e35da8d318518-2d7f111b134e73f05d7-8000.html" navtitle="アーカイブはどのようにデプロイしますか。" type="topic"/>
+      </topicref>
+   </topicref>
+</map>

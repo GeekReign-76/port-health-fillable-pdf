@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe ColdFusion 10 * 「データとサービス」セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="Configuring and Administering ColdFusion 10" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content=""  /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="Configuring and Administering ColdFusion 10"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7fe9.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7fe9.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/en_US/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>「データとサービス」セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fe8"><span class="topictitle1">データソースページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fef"><span class="topictitle1">ColdFusion コレクションページ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518-1a175391134d09e8e48-8000"><span class="topictitle2">Solr コレクションの値の設定</span>
+</a></p></li></ul></li><li><p><a href="#WS5A6C4658-104D-41b8-99C7-68CEC320A35B"><span class="topictitle1">Solr サーバーページ</span>
+</a></p><ul><li><p><a href="#WSB597D099-DF84-4026-B92C-91D41E708D0B"><span class="topictitle2">Solr コレクション</span>
+</a></p></li><li><p><a href="#WS580FB6DE-E6AE-4dba-8940-A4AF0BF280FC"><span class="topictitle2">Solr サーバー</span>
+</a></p></li></ul></li><li><p><a href="#WSe61e35da8d318518-cfc6153134d13aef47-8000"><span class="topictitle1">Web サービス</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-cfc6153134d13aef47-7fff"><span class="topictitle1">Web サービスの概要</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fee"><span class="topictitle1">Web サービスページ</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-17fae27134c7aed33a-8000"><span class="topictitle1">REST サービスページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7fed"><span class="topictitle1">Flex 統合ページ</span>
+</a></p><ul><li><p><a href="#WS7F9E1EC8-AD77-46f1-96FA-ED6231B9276F"><span class="topictitle2">SSL の有効化</span>
+</a></p></li><li><p><a href="#WS13F77A98-EB49-423b-9A02-439493C2173D"><span class="topictitle2">キーストアの作成</span>
+</a></p></li><li><p><a href="#WS9062D407-6FD4-4bb7-8EF1-28D2EC13654D"><span class="topictitle2">Flex の設定</span>
+</a></p></li><li><p><a href="#WS5A4BEE63-DBAB-458a-B2E2-956A0D7FEEA3"><span class="topictitle2">ColdFusion Administrator での SSL の有効化</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>ColdFusion Administrator の「データとサービス」セクションは、ColdFusion、データソース、検索およびインデックス作成機能のインターフェイスです。次の表に、ColdFusion Administrator の「データとサービス」セクションで実行できる一般的なタスクの一部を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3216"><p>タスク</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3219"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3216 "><p>JDBC データソースの作成および管理</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3219 "><p>データソースページでは、ColdFusion 用の JDBC データソース接続の確立、編集および削除が可能です。詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ffa.html">データソース管理</a>を参照してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3216 "><p>ColdFusion コレクションの作成と保守</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3219 "><p>ColdFusion コレクションページでは、Solr コレクションの作成と削除、および作成したコレクションの保守作業が可能です。詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fef.html">ColdFusion コレクションページ</a>を参照してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3216 "><p>Web サービスへのマッピングの定義 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3219 "><p>Web サービスページを使用すると、リモートアプリケーションの機能をインターネットを介して公開したり利用したりできます。詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fee.html">Web サービスページ</a>を参照してください。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3216 "><p>Adobe&reg; Flex&trade; アプリケーションとの統合のための設定の指定</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3219 "><p>Flex 統合ページでは、どの Flex 統合機能を有効にし、どの IP アドレスでデータサービス操作を実行するかを指定できます。詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fed.html">Flex 統合ページ</a>を参照してください。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fe8" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fe8"><!-- --></a><h2 class="topictitle2">データソースページ</h2><div><p>ColdFusion では、動的なデータベースコンテンツを Web にすばやく配信できます。データソースは、データベース操作に対するエントリポイントです。</p>
+<p>データソースページでは、JDBC データソースの作成、編集および削除が可能です。ColdFusion アプリケーションでデータベースを使用するには、まず ColdFusion Administrator でデータソースを登録します。詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ffa.html">データソース管理</a>を参照してください。 </p>
+<div class="para">ColdFusion アプリケーションでデータベースにアクセスする前に、次のことを行う必要があります。<ol><li><p>データソースとやりとりするために必要なデータベースドライバーを把握して決定します。ColdFusion では、JDBC データベースドライバーを使用してデータソースと通信します。</p>
+</li>
+<li><p>ドライバーを指定し、データソース情報を追加し、データベースに接続することにより、データベースを ColdFusion データソースとして設定します。</p>
+</li>
+<li><p>データソースを確認します。</p>
+</li>
+</ol>
+</div>
+<p>データソースの追加について詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf3639b1-7ffc.html">データソースの追加</a>を参照してください。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fef" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fef"><!-- --></a><h2 class="topictitle2">[ColdFusion コレクション] ページ</h2><div><p>このページを使用すると、Solr コレクションを作成して管理できます。 </p>
+<p>ColdFusion Administrator では、コレクションの管理を実行できます。ColdFusion に接続されている Solr コレクションのインデックス作成、最適化、破棄または削除が可能です。[アクション] 列内のアイコンを使用して、次のアクションを実行します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3316"><p>アクション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3319"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3316 "><p>インデックス作成</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3319 "><p>コレクション内のファイルを分析し、メタデータおよびそのファイルを指すポインターを組み立てます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3316 "><p>最適化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3319 "><p>検索をさらに高速化するために、コレクションのインデックスを統合することによって、ファイルの削除や変更後にできた領域をメモリ空間を再利用できるようにします。コレクションを定期的に最適化する必要があります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3316 "><p>破棄</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3319 "><p>コレクション内のすべてのドキュメントを削除しますが、コレクション自体は削除しません。コレクションのディレクトリ構造を保持します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3316 "><p>削除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3319 "><p>コレクションを削除します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>ColdFusion には、インデックス作成と検索のテクノロジーを提供する Solr が含まれています。そのため、高速かつ効率的なサイト検索を行えるように最適化されたインデックス付きデータコレクションの作成、挿入および管理が可能です。</p>
+<p>「コレクション」<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>とは、ドキュメントの論理グループおよびドキュメントについてのメタデータです。「メタデータ」<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>には、単語のインデックス、ドキュメントフィールド情報の内部ドキュメントテーブル、ドキュメントファイルに対する論理ポインターが含まれます。</p>
+<p>検索インターフェイスの構築について詳しくは、『ColdFusion アプリケーションの開発<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>』の「検索インターフェイスの構築」および「Solr 検索のサポート」を参照してください。</p>
+<p>ColdFusion コレクションページでコレクションを取得できない場合は、Solr 検索サーバーが動作しているか確認してください。</p>
+</div><div id="WSe61e35da8d318518-1a175391134d09e8e48-8000" class="nochunk"><a name="WSe61e35da8d318518-1a175391134d09e8e48-8000"><!-- --></a><h3 class="topictitle3">Solr コレクションの値の設定</h3><div><div class="para">コレクションを作成した後、「Solr コレクション」セクションを使用して、指定したディレクトリのテキストファイルおよびバイナリファイルのデータでコレクションに値を設定（またはインデックス作成）します。コレクションは、インデックス作成されたドキュメントを説明するメタデータで構成されています。ColdFusion クエリーのデータは、ColdFusion の <samp class="codeph">cfindex</samp> タグのみを使用してインデックス作成できます。コレクションに値を設定またはインデックス作成するには：<ol><li><p>Solr コレクションのリストで、コレクションの名前またはその「コレクションのインデックス作成」ボタンをクリックします。Solr コレクションのインデックス作成ページが表示されます。</p>
+</li>
+<li><p>「ファイル拡張子」フィールドの拡張子を確認します。コレクションのファイルの拡張子を追加、編集または削除できます。</p>
+</li>
+<li><p>インデックス作成するディレクトリへのパスを「ディレクトリパス」フィールドに入力します。パスを検索して入力するには、「サーバーのブラウズ」をクリックします。</p>
+</li>
+<li><p>指定したディレクトリのサブディレクトリを含めるには、「サブディレクトリを再帰的にインデックス」オプションを選択します。</p>
+</li>
+<li><p>（オプション）ブラウザー内の検索で見つかったドキュメントを表示するために使用された URL 接頭辞を「返信先 URL」フィールドに入力します。 </p>
+<p>例えば、ColdFusion のマニュアルディレクトリのインデックスを作成する場合は、<samp class="codeph">C:&yen;ColdFusion9&yen;wwwroot&yen;cfdocs</samp> がインデックスを作成するディレクトリになります。 </p>
+<p>返信先 URL には <samp class="codeph">http://localhost:8500/cfdocs/ と入力します。</samp>ここでは、ポート 8500 でビルトイン Web サーバーを使用しているものと仮定しています。</p>
+</li>
+<li><p>「送信」をクリックします。指定したディレクトリのデータでコレクションの値が設定されます。次に、ColdFusion コレクションページが表示されます。</p>
+</li>
+</ol>
+</div>
+<p>変更を保存せずにページを閉じるには、「キャンセル」をクリックします。</p>
+<div class="section"><h4 class="sectiontitle">Solr コレクションのエイリアスの名前変更または作成</h4><div class="para"><ol><li><p>ColdFusion コレクションページで、名前を変更する ColdFusion コレクションをクリックします。コレクションの管理ページが表示されます。</p>
+</li>
+<li><p>「コレクション名の変更」セクションの「コレクションの新しい名前」フィールドに新しい名前を入力して、「送信」をクリックします。</p>
+</li>
+<li><p>コレクションのエイリアスを指定するには、「コレクションのエイリアス」フィールドにエイリアスを入力して、「送信」をクリックします。</p>
+</li>
+</ol>
+</div>
+</div>
+</div></div></div>
+<div id="WS5A6C4658-104D-41b8-99C7-68CEC320A35B" class="nochunk"><a name="WS5A6C4658-104D-41b8-99C7-68CEC320A35B"><!-- --></a><h2 class="topictitle2">Solr サーバーページ</h2><div><p>Solr サーバーインスタンスは、サービスとして起動または停止できる、独立したサーバーとして動作します。ColdFusion Administrator を使用すると、インデックス作成および検索機能用の Solr コレクションを設定できます。</p>
+</div><div id="WSB597D099-DF84-4026-B92C-91D41E708D0B" class="nochunk"><a name="WSB597D099-DF84-4026-B92C-91D41E708D0B"><!-- --></a><h3 class="topictitle3">Solr コレクション</h3><div><p>Solr コレクションは ColdFusion Administrator または <samp class="codeph">&lt;cfcollection&gt;</samp> タグを使用して作成できます。 </p>
+<p>ColdFusion Administrator では、「データとサービス」領域の次のパネルを使用して Solr サポートを実装します。</p>
+<dl><dt class="dlterm">ColdFusion コレクション</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">コレクションを作成するときに、Solr コレクションオプションを選択します。Solr コレクションが作成されたら、パネルの下部にある「Solr コレクション」領域で、インデックス作成、最適化、破棄、削除のいずれかのアクションを使用できます。 <p>また、ColdFusion Administrator では、Solr コレクションの名前の変更やエイリアスの設定も行えます。これを行うには、次のようにします。</p>
+<div class="para"><ol><li><p>ColdFusion コレクションページで、名前を変更する ColdFusion コレクションをクリックします。コレクションの管理ページが表示されます。</p>
+</li>
+<li><p>「コレクション名の変更」セクションの「コレクションの新しい名前」フィールドに新しい名前を入力して、「送信」をクリックします。</p>
+</li>
+<li><p> コレクションのエイリアスを指定するには、「コレクションのエイリアス」フィールドにエイリアスを入力して、「送信」をクリックします。</p>
+</li>
+</ol>
+</div>
+</dd><p class="dlseparator"></p><dt class="dlterm">Solr サーバー</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Solr サーバーページでは、Solr サーバーのホスト名、ホームディレクトリおよびその他の詳細設定を指定できます。</dd><p class="dlseparator"></p></dl>
+</div></div><div id="WS580FB6DE-E6AE-4dba-8940-A4AF0BF280FC" class="nochunk"><a name="WS580FB6DE-E6AE-4dba-8940-A4AF0BF280FC"><!-- --></a><h3 class="topictitle3">Solr サーバー</h3><div><p>Solr 検索サービスはローカルホストまたはリモートホストにインストールして設定できます。リモートサーバーの場合は、検索操作を実行する際に ColdFusion が使用するホストを設定できます。 </p>
+<p>Solr サーバーページで、Solr サーバーのホスト名とホームディレクトリを指定します。また、管理ポート、Web アプリケーション名、バッファー制限などの詳細設定も指定できます。</p>
+</div></div></div>
+<div id="WSe61e35da8d318518-cfc6153134d13aef47-8000" class="nochunk"><a name="WSe61e35da8d318518-cfc6153134d13aef47-8000"><!-- --></a><h2 class="topictitle2">Web サービス</h2><div><ul class="navlinklist"></ul>
+</div></div>
+<div id="WSe61e35da8d318518-cfc6153134d13aef47-7fff" class="nochunk"><a name="WSe61e35da8d318518-cfc6153134d13aef47-7fff"><!-- --></a><h2 class="topictitle2">Web サービスの概要</h2><div><p>Web サービスを使用すると、リモートアプリケーションの機能をインターネットを介して公開したり利用したりできます。ユーザーは、リモートアプリケーションにリクエストを行って、アクションを実行させることができます。ColdFusion Administrator を使用して Web サービスを登録できるので、Web サービスを参照するときに WSDL の URL 全体をクライアントで指定する必要はありません。ColdFusion を使用した Web サービスの公開と利用について詳しくは、『ColdFusion 開発ガイド』を参照してください。</p>
+<div class="section"><h4 class="sectiontitle">Web サービスの追加</h4><ol><li><p>Web サービスの名前を「Web サービス名」ボックスに入力します。</p>
+</li>
+<li><p>Web Services Description Language（WSDL）の URL を「WSDL URL」ボックスに入力します。</p>
+</li>
+<li><p>ユーザー名とパスワードを入力します。</p>
+</li>
+<li><p>（必要に応じて）プロキシサーバーの詳細および資格情報を指定します。</p>
+</li>
+<li><p>（オプション）Web サービスリクエストのタイムアウト値を秒単位で指定します。</p>
+</li>
+<li><p>「Web サービスの追加」をクリックします。アクティブな ColdFusion Web サービスのリストに、Web サービス名が表示されます。</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">Web サービスの編集</h4><ol><li><p>「アクティブな ColdFusion Web サービス」領域で、Web サービス名をクリックします。</p>
+<p>ColdFusion Administrator のウィンドウの上部に Web サービスが表示されます。</p>
+</li>
+<li><p>設定を変更します。</p>
+</li>
+<li><p>「Web サービスの更新」をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="section"><h4 class="sectiontitle">Web サービスの WSDL の表示</h4><p><img src="images/dingbat.png" /> 「アクティブな ColdFusion Web サービス」領域で、「WSDL URL」をクリックします。<p>新規ブラウザーウィンドウで、WSDL が開きます。</p>
+</p>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fee" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fee"><!-- --></a><h2 class="topictitle2">Web サービスページ</h2><div><p>Web サービスを使用すると、リモートアプリケーションの機能をインターネットを介して公開したり利用したりできます。ColdFusion Administrator を使用して Web サービスを登録できるので、Web サービスを参照するときに Web Services Description Language（WSDL）の URL 全体を指定する必要はありません。Web サービスを初めて参照すると、その Web サービスが ColdFusion Administrator に自動的に登録されます。</p>
+<p>Web サービスを登録すると、コードを短縮でき、コードを編集せずに Web サービスの URL を変更できるようになります。詳しくは、『ColdFusion アプリケーションの開発<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>』の「Web サービスの使用」を参照してください。</p>
+</div></div>
+<div id="WSe61e35da8d318518-17fae27134c7aed33a-8000" class="nochunk"><a name="WSe61e35da8d318518-17fae27134c7aed33a-8000"><!-- --></a><h2 class="topictitle2">REST サービスページ</h2><div><p>REST を有効にする CFC を作成した後、ColdFusion Administrator で Web サービスとして登録するフォルダーを指定します。</p>
+<div class="note"><span class="notetitle">注意：</span>ネストされた REST アプリケーションは登録できません。</div>
+<p>フォルダーを指定する際に、<samp class="codeph">rest</samp> または <samp class="codeph">restPath</samp> を指定したフォルダーまたはサブフォルダーにあるすべての CFC が登録されます。</p>
+<div class="para"><ol><li><p>ColdFusion で CFC が検索されるアプリケーションパスまたはルートフォルダーを参照して選択します。</p>
+</li>
+<li><p>（オプション）「サービスマッピング」セクションで、アプリケーション名の代わりに仮想マッピングを指定します。</p>
+<p>Application.cfc とアプリケーション名がフォルダーにある場合は、アプリケーション名でサービスが識別されます。サービスマッピングを指定すれば、これを上書きできます。この場合、指定されたサービスマッピングでサービスが識別されます。フォルダーに Applicaiton.cfc がない場合は、サービスマッピングの指定は必須です。 </p>
+</li>
+<li><p>（オプション）デフォルトの REST サービスとしてアプリケーションを指定します。1 つのサーバーインスタンスに対してデフォルトとして設定できるアプリケーションは 1 つだけです。デフォルトアプリケーションはいつでも変更できます。「デフォルトアプリケーションを設定する」を選択し、「サービスを追加」をクリックします。デフォルトとしてのサービスを削除するには、選択を解除します。</p>
+</li>
+<li><p>詳細を指定した後、「サービスを追加」をクリックして登録します。</p>
+<p>「アクティブな ColdFusion REST サービス」セクションで、すべての登録済み Web サービスの詳細を指定します。</p>
+</li>
+</ol>
+</div>
+<p>登録が済むと、すべての CFC は RESTful サービスとして公開されます。登録後に起動すると、登録されたサービスが自動的に公開されます。</p>
+<div class="para"><div class="note">
+  <p><span class="notetitle">注意：</span>アプリケーションの REST 関連コンポーネントを変更したときは、必ずアプリケーションを更新してください。</p>
+  <p>ColdFusion Splendor では、サイトレベルの REST アプリケーションがサポートされ、プラグ可能なシリアライザーとデシリアライザーを使用できるようになりました。</p>
+  <h2><a name="_Toc374371815" id="_Toc374371815">サイトレベルの REST アプリケーションのサポート</a></h2>
+  <p>ColdFusion 10 では、たとえアプリケーションが異なるホストに存在する場合でも、複数のアプリケーションで同じ名前を持つことはできません。ColdFusion Splendor では、REST 機能が強化され、異なるホストの複数のアプリケーションで同じ名前を持つことができます。また、仮想ホストごとにデフォルトのアプリケーション（REST サービスを含む）を 1 つ設定できます。 <br />
+    次のオプションのいずれかを使用して、REST サービスを含むディレクトリを登録できます。</p>
+  <ul>
+    <li>アプリケーション設定の自動登録</li>
+    <li>ColdFusion Administrator コンソール</li>
+    <li>ColdFusion Admin API</li>
+    <li>restInitApplication メソッド</li>
+  </ul>
+  <h3><a name="_Toc374371816" id="_Toc374371816"><strong>オプション 1：アプリケーション設定の自動登録</strong></a></h3>
+  <p>ColdFusion Splendor では、新しいアプリケーション設定の「自動登録<em></em>」が導入されました。</p>
+  <ul>
+    <li>アプリケーションの自動登録を有効にする場合、autoregister を true に設定します。</li>
+  </ul>
+  <p>&lt;cfset this.restsettings.autoregister=&quot;true&quot;/&gt; </p>
+  <ul>
+    <li>servicemapping の指定はオプションです。servicemapping が指定されていない場合、&quot;this.name&quot;/アプリケーション名がデフォルトとして使用されます。</li>
+  </ul>
+  <p>&lt;cfset this.restsettings.servicemapping=&quot;testmapping&quot;/&gt;                                                                                                                                           </p>
+  <ul>
+    <li>usehost または hostname を指定します。usehost 属性を true に設定すると、ホスト名は URL から解析され、使用されます。</li>
+  </ul>
+  <p>&lt;cfset this.restsettings.usehost=true/&gt;                                                                                                                                                           </p>
+  <ul>
+    <li>host に明示的に名前を指定すると、ホスト名が作成されます。host が指定されていない場合は、usehost 名がデフォルトになります。</li>
+  </ul>
+  <p>&lt;cfset this.restsettings.host=&quot;www.adobe.com&quot;/&gt; <br />
+  </p>
+  <ul>
+    <li>isDefault を true に設定すると、そのアプリケーションがデフォルトアプリケーションになります。 </li>
+  </ul>
+  <p>&lt;cfset this.restsettings.isDefault=true/&gt;</p>
+  <p><em>usehost</em> と <em>host</em> の両方が指定されていない場合、そのアプリケーションはホスト名なしで登録されます。アプリケーションに最初のリクエストが到達し、そのリクエストが REST リクエストでない場合、アプリケーションが開始され、登録されます。 </p>
+  <table border="0" cellpadding="0">
+    <tr>
+      <td valign="top"></td>
+      <td><p>最初のリクエスト自体が REST リクエストである場合、アプリケーションは開始されません。</p></td>
+    </tr>
+  </table>
+  <h3><a name="_Toc374371817" id="_Toc374371817"><strong>オプション 2：ColdFusion Administrator コンソールを使用した REST アプリケーションの登録</strong></a></h3>
+  <ul>
+    <li>Administrator コンソールを使用して、REST 対応 CF コンポーネントを含むディレクトリを登録します。Adobe<strong> ColdFusion Splendor Administrator コンソール</strong>／<strong>データとサービス</strong>／<strong>REST サービス</strong>を選択します。</li>
+    <li>ColdFusion が REST 対応 CF コンポーネントのセットを含むディレクトリを検索する際のルートパス（またはアプリケーションのパス）を参照して選択します。 <br />
+      （オプション）「サービスマッピング」セクションで、アプリケーション名の代わりに仮想マッピングを指定します。フォルダーに <em>Application.cfc</em> ファイルがあり、アプリケーション名が指定されている場合、アプリケーション名を使用してディレクトリ内の REST サービスを特定します。 <br />
+      （オプション）ホスト名を入力します。これにより、選択したアプリケーションをホストとマッピングできます。ホストごとにデフォルトアプリケーションを持つことができ、同じアプリケーション名を持つ複数のアプリケーションが異なるホストにマッピングできます。</li>
+    <li>「デフォルトアプリケーションとして設定する」オプションを設定することで、REST アプリケーションをデフォルトアプリケーションとして設定します。このオプションを選択することで、URI でサービスマッピングやアプリケーション名を指定する必要がなくなります。</li>
+    <li>「<strong>サービスを追加</strong>」ボタンをクリックして、ディレクトリの登録を完了します。</li>
+    <li>「アクティブな ColdFusion REST サービス」表示テーブルを表示して、アクティブなサービスのマッピングのリストを表示します。将来のサービスマッピングの編集または削除に、同じ表示テーブルを使用できます。</li>
+  </ul>
+  <p><br />
+    <a name="_Toc374371818" id="_Toc374371818">オプション 3：ColdFusion Admin API を使用した REST アプリケーションの登録</a><br />
+    CFIDE.adminapi.extensions CFC で定義した関数を使用して、REST アプリケーションを管理できます。その関数を次に示します。</p>
+  <ul>
+    <li><em><strong>registerRESTService(path[,serviceMapping[,host[,isdef]]]</strong></em>：この関数は、REST アプリケーションを登録します。ルートパスは、REST 対応 CF コンポーネントを含むディレクトリを指定します。オプションで、REST アプリケーションのサービスマッピング、ホスト名および isdefault を指定できます。</li>
+    <li><strong><em>getRESTServices()</em></strong>：この関数は、ColdFusion Administrator で登録した REST サービスの配列を返します。</li>
+    <li><strong><em>deleteRESTService(rootPath)</em></strong>：この関数は、ColdFusion Administrator で登録された REST アプリケーションのうち指定されたものを削除します。</li>
+    <li><strong><em>refreshRESTService(rootPath)</em></strong>：REST 対応 CF コンポーネントに変更を加えた場合、この関数を呼び出すことで、登録されたアプリケーションを更新できます。</li>
+    <li><strong><em>getDefaultRestService()</em></strong>：サーバー全体のデフォルトの REST アプリケーションを返します。</li>
+    <li><strong><em>getAllDefaultRESTServices</em></strong>：すべてのデフォルト REST サービスを返します。値は、パスとホストのペアの配列です。</li>
+  </ul>
+  <p><a name="_Toc374371819" id="_Toc374371819">オプション 4：restInitApplication メソッドを使用した REST アプリケーションの登録</a><br />
+    また、メソッド restInitApplication を呼び出すことでも、REST アプリケーションを登録できます。<br />
+    構文を次に示します：<br />
+    restInitApplication(rootPath[,serviceMapping[,options]])<br />
+  <br />
+    options はオプションの引数です。options 構造体で、次を渡すことができます： </p>
+  <ul>
+    <li>ホスト</li>
+    <li>useHost</li>
+    <li>isDefault</li>
+  </ul>
+  <p>host を明示的に指定することで登録する場合：</p>
+  <pre>
+&lt;cfset str=structNew()&gt;
+&lt;cfset str.host = &quot;www.site1.com:82&quot;&gt;
+&lt;cfset str.isDefault = &quot;true&quot;&gt;
+&lt;cfscript&gt;
+     RestInitApplication(&quot;C:&yen;dev&yen;ColdFusion&yen;cf_main&yen;cfusion&yen;wwwroot&yen;withhostAndDefault&quot;,  &quot;withhostAndDefault&quot;, str);
+     &lt;/cfscript&gt;
+&lt;cfoutput&gt; App registered &lt;/cfoutput&gt;</pre>
+  <p><br />
+    <br />
+    useHost 属性を指定することで登録する場合：ホスト名は、リクエスト URL から抽出され、登録に使用されます。 </p>
+  <pre>
+&lt;cfset str=structNew()&gt;
+&lt;cfset str.useHost = &quot;true&quot;&gt;
+&lt;cfset str.isDefault = &quot;true&quot;&gt;
+&lt;cfscript&gt;
+     RestInitApplication(&quot;C:&yen;dev&yen;ColdFusion&yen;cf_main&yen;cfusion&yen;wwwroot&yen;withhostAndDefault&quot;,  &quot;withhostAndDefault&quot;, str);
+     &lt;/cfscript&gt;
+&lt;cfoutput&gt; App registered &lt;/cfoutput&gt;</pre>
+  
+  <table border="0" cellpadding="0">
+    <tr>
+      <td valign="top"></td>
+      <td><p><br />
+        このタスクを実行するのに、管理者権限は必要ありません。構文を次に示します。<br />
+        <em>restInitApplication(rootPath[,serviceMapping[,options]])</em></p></td>
+    </tr>
+  </table>
+  <ul type="disc">
+    <li>options には、<em>host、useHost、isDefault</em> を指定できます。<em></em>このオプションの使用方法は、<em>autoRegister</em> 機能と同じです。 </li>
+    <li>既に Administrator モジュールを使用してアプリケーションを登録済みの場合、restInitApplication を呼び出してREST サービスを更新します。</li>
+    <li>restDeleteApplication 関数を使用して REST サービスを削除します。構文は restDeleteApplication(rootPath) です。</li>
+  </ul>
+  <h2><a name="_Toc374371820" id="_Toc374371820">プラグ可能なシリアライザーおよびデシリアライザーのサポート</a></h2>
+  <p>application.cfc で、複合型のシリアライズおよびデシリアライズのための独自のハンドラーを登録できます。シリアライザーが指定されていない場合、ColdFusion は、デフォルトのシリアル化メカニズムを使用します。<br />
+    例：次のパラメーターでシリアル化する必要のある電話帳がある場合：</p>
+  <ul type="disc">
+    <li>主要なデータ構造は配列です。 </li>
+    <li>配列の各要素は、構造体です。 </li>
+    <li>構造体には、2 つの要素が含まれます。 </li>
+    <li>1 番目は連絡先の名前で、2 番目はコードおよび電話番号を含む構造体です。</li>
+  </ul>
+  
+  <p>配列<br />
+    構造体<br />
+    [ <br />
+    name(String], <br />
+    phoneNo(Struct) <br />
+    [<br />
+    code(String),<br />
+    no(String)<br />
+    ]<br />
+    ]<br />
+    構造体<br />
+    [ <br />
+    name(String], <br />
+    phoneNo(Struct) <br />
+    [<br />
+    code(String),<br />
+    no(String)<br />
+    ]<br />
+    ]</p>
+  <p><br />
+    <br />
+    デフォルトの ColdFusion シリアル化データは次のように表示されます。 <br />
+    &lt;Array size=&quot;1&quot;&gt; &lt;Item index=&quot;1&quot;&gt; &lt;Struct&gt; &lt;Entry&gt; &lt;Key&gt;Name&lt;/Key&gt; &lt;Value&gt;Paul&lt;/Value&gt; &lt;/Entry&gt; &lt;Entry&gt; &lt;Key&gt;PhoneNo&lt;/Key&gt; &lt;Value&gt; &lt;Struct&gt; &lt;Entry&gt; &lt;Key&gt;Code&lt;/Key&gt; &lt;Value&gt;080&lt;/Value&gt; &lt;/Entry&gt; &lt;Entry&gt; &lt;Key&gt;No&lt;/Key&gt; &lt;Value&gt;411150326&lt;/Value&gt; &lt;/Entry&gt; &lt;/Struct&gt; &lt;/Value&gt; &lt;/Entry&gt; &lt;/Struct&gt; &lt;/Item&gt; &lt;/Array&gt;<br />
+    <br />
+    またこの例では、構造体のみを単純な形式でシリアル化し、次のような結果を得ることを目的とします。 <br />
+    &lt;Array size=&quot;1&quot;&gt; &lt;Item index=&quot;1&quot;&gt; &lt;root&gt; &lt;Name&gt;Paul&lt;/Name&gt; &lt;PhoneNo&gt; &lt;root&gt; &lt;Code&gt;080&lt;/Code&gt; &lt;No&gt;411150326&lt;/No&gt; &lt;/root&gt; &lt;/PhoneNo&gt; &lt;/root&gt; &lt;/Item&gt; &lt;/Array&gt;<br />
+    <br />
+    強化された ColdFusion Splendor REST 機能により、ユーザーは、デフォルトのシリアル化メカニズムを使用する代わりに、プラグインのカスタムシリアライザーを使用できます。カスタムシリアライザーには、次の 4 つの関数があります。 </p>
+  <ul type="disc">
+    <li><strong><em>canSerialize</em></strong>：ブール値を返し、リクエストの「承認タイプ」を引数として取ります。カスタムシリアライザーに、渡された引数タイプにデータをシリアル化させたい場合、true を返すことができます。</li>
+    <li><strong><em>Serialize</em></strong>：主要なシリアル化ロジックは、この関数で実装される必要があります。canSerialize がリクエストに「True」を返す場合、ColdFusion はこの関数を使用してシリアル化します。canSerialize がリクエストに「false」を返す場合、ColdFusion はデフォルトのシリアル化メカニズムを使用してシリアル化します。</li>
+    <li><strong><em>CanDeserialize</em></strong>：ブール値を返し、リクエストの「コンテンツタイプ」を引数として取ります。カスタムシリアライザーにデータを逆シリアル化させたい場合、true を返すことができます。</li>
+    <li><strong><em>DeSerialize</em></strong>：主要な逆シリアル化ロジックは、この関数で実装される必要があります。canDeSerialize がリクエストに「True」を返す場合、ColdFusion はこの関数を使用して逆シリアル化します。canDeSerialize がリクエストに「false」を返す場合、ColdFusion はデフォルトの逆シリアル化関数を使用して逆シリアル化します。</li>
+  </ul>
+  <p>次の CustomSerializer コード例は、上記で説明したシナリオ（電話帳のシリアル化／逆シリアル化のカスタマイズ）で結果を出すのに役立ちます。<br />
+  </p>
+  
+  <pre>&lt;cfcomponent&gt;
+&lt;cffunction  name=&quot;serializeData&quot; access=&quot;remote&quot;  returntype=&quot;String&quot;&gt;
+&lt;cfargument name=&quot;arg&quot; type=&quot;any&quot; hint=&quot;The  object to be serialized&quot;/&gt;
+&lt;cfargument name=&quot;type&quot; type=&quot;string&quot;
+     hint=&quot;The accept header of the request in array format. The order  of types in the array is according to the priority of the MIME types in the  header.&quot;/&gt;
+&lt;cfif  #type# eq &quot;XML&quot;&gt;
+&lt;cfif  isStruct(#arg#)&gt;
+&lt;cfset var result =  &quot;&lt;root&gt;&quot;&gt;
+&lt;cfset var key = &quot;&quot;&gt;
+&lt;cfloop collection=#arg# item=&quot;key&quot;&gt;
+&lt;cfset var result = result &amp; &quot;&lt;&quot; &amp; #key# &amp;  &quot;&gt;&quot;&gt;
+&lt;cfset var result = result &amp; serializeXML(#arg[key]#, true)&gt;
+&lt;cfset var result = result &amp; &quot;&lt;/&quot; &amp; #key# &amp;  &quot;&gt;&quot;&gt;
+&lt;/cfloop&gt;
+&lt;cfset var result = result &amp; &quot;&lt;/root&gt;&quot;&gt;
+&lt;cfreturn result&gt;
+&lt;cfelse&gt;
+&lt;cfreturn serializeXML(#arg#)&gt;
+&lt;/cfif&gt;
+&lt;cfelseif  #type# eq &quot;JSON&quot;&gt;
+&lt;cfdump var=&quot;#arg.getClass().getName()#&quot;  output=&quot;console&quot;&gt;
+&lt;cfif arg.getClass().getName() eq  &quot;java.lang.String&quot;&gt;
+&lt;cfreturn &quot;test&quot; &amp; #arg#&gt;
+&lt;!---&lt;cfelseif isStruct(#arg#)&gt;
+&lt;cfdump var=&quot;#arg#&quot; output=&quot;console&quot; &gt;
+&lt;cfset var kresult = &quot;{&quot;&gt;
+&lt;cfset var kkey = &quot;&quot;&gt;
+&lt;cfloop collection=#arg# item=&quot;key&quot;&gt;
+&lt;cfset var kresult = kresult &amp; &quot;__&quot; &amp; #kkey# &amp;  &quot;__&quot;&gt;
+&lt;cfset var kresult = kresult &amp; serializeJSON(#arg[kkey]#)&gt;
+&lt;cfset var kresult = kresult &amp; &quot;&lt;/&quot; &amp; #kkey#  &amp; &quot;&gt;&quot;&gt;
+&lt;/cfloop&gt;
+&lt;cfset var kresult = kresult &amp; &quot;}&quot;&gt;
+&lt;cfreturn kresult&gt;---&gt;
+&lt;cfelse&gt;
+&lt;cfreturn  serializeJSON(#arg#)&gt;
+&lt;/cfif&gt;
+&lt;cfelse&gt;
+&lt;cfreturn serialize(#arg#, #type#)&gt;
+&lt;/cfif&gt;
+&lt;/cffunction&gt;
+&lt;cffunction  name=&quot;canSerialize&quot; access=&quot;remote&quot;  returntype=&quot;boolean&quot;&gt;
+&lt;cfargument name=&quot;type&quot; type=&quot;string&quot;/&gt;
+&lt;cfif  #type# eq &quot;XML&quot;&gt;
+&lt;cfreturn true&gt;
+&lt;cfelseif  #type# eq &quot;JSON&quot;&gt;
+&lt;cfreturn true&gt;
+&lt;cfelse&gt;
+&lt;cfreturn false&gt;
+&lt;/cfif&gt;
+&lt;/cffunction&gt;
+&lt;cffunction  name=&quot;canDeserialize&quot; access=&quot;remote&quot;  returntype=&quot;boolean&quot;&gt;
+&lt;cfargument name=&quot;type&quot; type=&quot;string&quot;/&gt;
+&lt;cfif  #type# eq &quot;XML&quot;&gt;
+&lt;cfreturn true&gt;
+&lt;cfelseif  #type# eq &quot;JSON&quot;&gt;
+&lt;cfreturn true&gt;
+&lt;cfelse&gt;
+&lt;cfreturn false&gt;
+&lt;/cfif&gt;
+&lt;/cffunction&gt;
+&lt;cffunction  name=&quot;deserializeData&quot; access=&quot;remote&quot;  returntype=&quot;any&quot;&gt;
+&lt;cfargument name=&quot;arg&quot; type=&quot;String&quot;  hint=&quot;The string to be deserialized&quot;/&gt;
+&lt;cfargument name=&quot;type&quot; type=&quot;String&quot;  hint=&quot;The content-type header of the request.&quot;/&gt;
+&lt;cfargument name=&quot;returntype&quot; type=&quot;String&quot;  required=&quot;false&quot; defaultvalue=&quot;any&quot;
+     hint=&quot;The expected type of data. It could be any for the contents  of complex types such as Struct, array etc.&quot;/&gt;
+&lt;cfif #type# equals &quot;XML&quot; and  isXml(arg)&gt;
+&lt;cfset  var xmlDoc = xmlParse(arg)&gt;
+&lt;cfif  #xmlDoc.XmlRoot.XmlName# equals &quot;root&quot;&gt;
+&lt;cfset var result = StructNew()&gt;
+&lt;cfset var numEntries = ArrayLen(xmlDoc.root.XMLChildren)&gt;
+&lt;cfloop index=&quot;i&quot; from=&quot;1&quot; to=#numEntries#&gt;
+&lt;!--- &lt;cfdump  var=&quot;#xmlDoc.root.XMLChildren[i].XMLChildren#&quot;  output=&quot;console&quot; &gt; ---&gt;
+&lt;cfset var key = xmlDoc.root.XMLChildren[i].XmlName&gt;
+&lt;cfif &quot;&quot; eq Trim(xmlDoc.root.XMLChildren[i].XMLText)&gt;
+&lt;cfset var value =  deserializeXML(ToString(xmlDoc.root.XMLChildren[i].XMLChildren[1]), true)&gt;
+&lt;cfelse&gt;
+&lt;cfset var value =  deserializeXML(xmlDoc.root.XMLChildren[i].XMLText, true)&gt;
+&lt;/cfif&gt;
+&lt;cfset result[key] = value&gt;
+&lt;/cfloop&gt;
+&lt;cfreturn result&gt;
+&lt;cfelse&gt;
+&lt;cfreturn  deserializeXML(#arg#, true)&gt;
+&lt;/cfif&gt;
+&lt;cfelse&gt;
+&lt;cfreturn deserializeXML(#arg#, true)&gt;
+&lt;/cfif&gt;
+&lt;/cffunction&gt;
+&lt;/cfcomponent&gt;</pre>
+  
+  <p><br />
+    実装した CustomSerializer は、application.cfc で指定できます。  <br />
+    &lt;cfset  this.customSerializer=&quot;CustomSerializer&quot;&gt;</p>
+  <table border="0" cellpadding="0">
+    <tr>
+      <td valign="top"></td>
+      <td><div>
+        <p><strong>注意：</strong>この新しいプラグ可能なシリアライザー／デシリアライザーは、RESTful Web サービスに限定されません。ColdFusion では、このプラグ可能なシリアライザー／デシリアライザーを使用できる新しい API を提供しています。以下のリストを参照してください。</p>
+      </div></td>
+    </tr>
+  </table>
+</div>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7fed" class="nochunk">
+  <p><a name="WSc3ff6d0ea77859461172e0811cbf364104-7fed"><!-- --></a>
+  </p>
+  <h2 class="topictitle2">PDF サービスページ</h2>
+  <h2><a name="_Toc374371784" id="_Toc374371784"></a><a name="_Toc367122045" id="_Toc367122045">リモート PDF サービスマネージャーの使用</a></h2>
+  <p>次の場合は、ローカル PDF サービスマネージャーの代わりにリモート PDF サービスマネージャーを使用する必要があります。</p>
+  <ul>
+    <li>ローカル PDF サービスマネージャーでサポートされていない OS 上で ColdFusion サーバーが実行されている場合</li>
+    <li>PDF 生成が CPU に負荷をかけるので、ローカルの ColdFusion サーバーのパフォーマンスが重要になる場合</li>
+    <li>PDF 生成の負荷を分散して最大限のスループットを確保する場合</li>
+  </ul>
+  <h3><a name="_Toc374371785" id="_Toc374371785"></a><a name="_Toc367122046" id="_Toc367122046">PDF サービスマネージャーの追加および編集</a></h3>
+  <p>Administrator コンソールで、<strong>データとサービス／PDF サービス</strong>をクリックします。<br />
+    名前、ホスト名、ポートおよびその他の設定の詳細を指定して PDF サービスマネージャーを追加または編集できます。<strong> </strong><br />
+  <strong> </strong><br />
+    リモートサービスマネージャーを追加または編集するには、サービスマネージャーがデプロイされるローカルまたはリモートマシンで実行される Jetty サービスの詳細を指定する必要があります。このプロセスを完了するには、次の手順を実行します。</p>
+  <ol start="1" type="1">
+    <li>名前を入力します。PDF サービスマネージャーを表す一意の名前です。</li>
+    <li>ホスト名を入力します。これは、リモート PDF サービスマネージャーのホスト名です。</li>
+    <li>ポート番号を入力します。これは、PDF サービスマネージャーのポート番号です。デフォルトでは、ポートは 8987 に設定されます。</li>
+    <li>PDF サービスマネージャーの「<strong>重み</strong>」の詳細を入力します。重みは負荷分散係数であり、サービスマネージャーで処理可能な PDF 変換の量を指定します。システムの設定に基づいてこの値を設定してください。</li>
+    <li>PDF サービスマネージャーが HTTPS プロトコルで実行される場合は、「HTTPS が有効」チェックボックスをオンにします。</li>
+    <li>「<strong>PDF サービスマネージャーを追加</strong>」ボタンをクリックしてプロセスを完了します。</li>
+  </ol>
+  <table border="0" cellpadding="0">
+    <tr>
+      <td valign="top"></td>
+      <td><div>
+        <p>ローカルサービスマネージャー：サービスマネージャーを編集、有効化、無効化および確認できます。ローカルサービスマネージャーを追加または削除することはできません。また、ローカルサービスマネージャーのホスト名を変更することもできません。  </p>
+      </div></td>
+    </tr>
+  </table>
+  <p>リモートサービスマネージャーを使用すると、サービスマネージャーの追加、編集、削除、有効化、無効化および確認が可能です。  </p>
+  <h3><a name="_Toc374371786" id="_Toc374371786"></a><a name="_Toc367122047" id="_Toc367122047">PDF サービスマネージャーの操作</a></h3>
+  <p>「PDF サービスマネージャー」<strong></strong>セクションには、使用可能な PDF サービスマネージャーがすべて表示されます。<br />
+    <br />
+    上の図にある各アクションボタンの説明は次のとおりです。</p>
+  <table border="1" cellspacing="0" cellpadding="0">
+    <tr>
+      <td valign="top"><br />
+        <strong>ボタン</strong><strong> </strong></td>
+      <td valign="top"><p><strong>ボタンの説明</strong><strong></strong></p></td>
+      <td valign="top"><p><strong>アクション</strong><strong> </strong></p></td>
+    </tr>
+    <tr>
+      <td valign="top"><p><strong> </strong><strong> </strong></p></td>
+      <td valign="top"><p>編集 </p></td>
+      <td valign="top"><p>既存のサービスマネージャーの設定をユーザーが編集できるようにします。 </p></td>
+    </tr>
+    <tr>
+      <td valign="top"><p><strong> </strong><strong> </strong></p></td>
+      <td valign="top"><p>確認 </p></td>
+      <td valign="top"><p>サービスマネージャーの現在の接続ステータスをユーザーが確認できるようにします。 </p></td>
+    </tr>
+    <tr>
+      <td valign="top"><p><strong> </strong><strong> </strong></p></td>
+      <td valign="top"><p>削除 </p></td>
+      <td valign="top"><p>PDF サービスをユーザーが削除できるようにします。  </p></td>
+    </tr>
+  </table>
+  <div>
+    <p><strong>注意：</strong><em></em><strong></strong>「<strong>すべてのサービスマネージャーを確認</strong>」<em></em><strong></strong>ボタンは、表示されているすべての PDF サービスマネージャーを確認するために使用されます。 </p>
+  </div>
+  <h3><a name="_Toc374371787" id="_Toc374371787"></a><a name="_Toc367122048" id="_Toc367122048">PDF サービスマネージャーの設定</a></h3>
+  <p>PDF サービスマネージャーを設定するには、&lt;cf_install_root&gt;/&lt;CF Instance&gt;/jetty/webapps/PDFgServlet/WEB-INF/ にある設定ファイル（web.xml）を使用します。使用可能な設定は次のとおりです。</p>
+  <ul>
+    <li><strong>minService</strong> = プロセスプールで実行されるサービスの最小数。デフォルト値は 1 です。</li>
+    <li><strong>maxService</strong> = プロセスプールで実行可能なサービスの最大数。デフォルト値は 2 です。PDF 変換は CPU に負荷がかかる操作なので、システムのプロセッサー数に基づいて、この値を適切に設定する必要があります。この値をマシンの CPU 数以下にすることをお勧めします。</li>
+    <li><strong>idlePDFGServiceTimeout</strong> = プロセスプールのサービスのアイドルタイムアウト。タイムアウト後にサービスは削除されます。デフォルト値は 2 分です。サービスの作成および初期化は負荷のかかる操作です。また、サービスでは変換のためにメモリを消費します。変換の頻度と負荷に基づいて、このパラメーターを調整する必要があります。</li>
+    <li><strong>waitingQueueSize</strong> = サービスマネージャーのキューで待機可能な PDF 変換リクエスト数。デフォルト値は 10 です。使用可能なサービスが変換プロセスに取り掛かると、予定されている変換リクエストがキューで待機します。特定の時点におけるサービスマネージャーへの負荷に基づいて、キューサイズを設定する必要があります。</li>
+    <li><strong>waitingQueueTimeout</strong>= サービスマネージャーのキューで待機する PDF タスクのタイムアウト（秒）。デフォルト値は 60 秒です。この値は、次のパラメーターを考慮して調整する必要があります。</li>
+    <ul>
+      <li>PDF の平均的な生成時間。</li>
+      <li>サーバーで設定されているサービスマネージャーの総数。複数のサービスマネージャーがサーバーで設定されている場合は、waitingQTimeout の値を高く設定すると、タスクを処理できるアイドル状態のサービスが他のサービスマネージャーにある場合でも、変換タスクの不要な待機時間が生じる可能性があります。</li>
+    </ul>
+    <li><strong>maxPDFConversionForService</strong> = 各サービスで許可されている PDF 変換の最大数。デフォルト値は 1000 です。指定された数の PDF 変換がサービスによって実行されると、サービスが再起動されます。<strong>注意：</strong>アプリケーションで生成する PDF のサイズに基づいて、この値を調整する必要があります。サイズの大きい PDF の場合は、サイズの小さい PDF の場合よりも速くサービスのメモリの使用量が増加します。そのため、maxPDFConversionForService の値は低く設定する必要があります。</li>
+    <li><strong>startScanPort</strong> = サービスで使用するスキャン開始ポート。デフォルト値は 1600 です。</li>
+    <li><strong>endScanPort</strong> = サービスで使用するスキャン終了ポート。デフォルト値は 1800 です。</li>
+    <li><strong>enableLogging</strong> = デフォルトでは、PDF サービスマネージャーのロギングは無効です。ロギングを有効にするには、このフラグを true に設定します。このオプションはデバッグにのみ使用してください。</li>
+  </ul>
+  <h3><a name="_Toc374371788" id="_Toc374371788"></a><a name="_Toc367122049" id="_Toc367122049">ロギングの監査ログの詳細について</a></h3>
+  <p>PDF サービスマネージャーのロギングは、サービスマネージャーに関連する問題を追跡するために使用されます。ロギングでは、サービスおよび変換リクエストのライフサイクルに関する詳細を含むログが生成されます。また、ロギングを使用して PDF 変換リクエストを追跡できます。</p>
+  <div><br />
+    <strong>注意：</strong>本番環境で長時間ロギングを使用することはできません。長時間使用すると、生成されるログのサイズが大きくなり、パフォーマンスに影響が生じます。 </div>
+  <p>以降の節では、PDF 生成プロセスに対して加えられた機能拡張について説明します。<br />
+    PDFG サービスのログは、&lt;cf_install_root&gt;/cfusion/jetty/webapps/PDFgServlet/ にあります。</p>
+  
+  <h2 class="topictitle2">Flex 統合ページ</h2>
+  <div><p>このページを使用すると、どの Flex 統合機能を有効にし、どの IP アドレスでデータサービス操作を実行するかを指定できます。Adobe LiveCycle Data Services ES サポートを有効にした場合に IP アドレスを指定しないと、ローカルコンピューター上のプロセスのみが ColdFusion の LiveCycle Data Services ES サーバーに接続できます。 </p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3607"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3610"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3607 "><p>[Flash Remoting サポートの有効化]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3610 "><p>この ColdFusion サーバーに接続して ColdFusion コンポーネント（CFC）のメソッドを呼び出すために、Flash クライアントを有効にするかどうかを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3607 "><p>リモート LiveCycle Data Management アクセスの有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3610 "><p>この ColdFusion サーバーに接続して CFC のメソッドを呼び出すために、LiveCycle Data Services ES サーバーを有効にするかどうかを指定します。これらのメソッドでは、Flex アプリケーションで使用される結果セットでレコードを入力、同期、取得またはカウントできます。このオプションは、LiveCycle Data Services ES をリモートで実行している場合にのみ有効にします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3607 "><p>サーバー ID</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3610 "><p>Flex Data Management サポートを有効にする ColdFusion サーバーを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3607 "><p>SSL による RMI を Data Management 用に有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3610 "><p>ColdFusion と Flex との間の通信を暗号化するために、SSL（Secure Sockets Layer）を有効にします。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3607 "><p>LiveCycle Data Service が動作している IP アドレスの選択</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3610 "><p>どの LiveCycle Data Services ES サーバーが ColdFusion の LiveCycle Data Services ES サポートに接続できるかを指定します。使用できる IP アドレスのリストを指定しなかった場合は、ローカルコンピューター上のプロセスのみが ColdFusion の LiveCycle Data Services ES サポートに接続できます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>SSL を使用するには、キーストアファイルを作成します。キーストアは自己署名証明書です（認証機関が署名した証明書は不要ですが、そのような証明書を使用する場合は、以下の手順で示す Flex の設定は不要です）。キーストア内の情報は暗号化され、指定したパスワードを使用しないとアクセスできません。キーストアを作成するには、Java keytool ユーティリティを使用します。このユーティリティは Java Runtime Environment（JRE）に付属しています。 </p>
+</div><div id="WS7F9E1EC8-AD77-46f1-96FA-ED6231B9276F" class="nochunk"><a name="WS7F9E1EC8-AD77-46f1-96FA-ED6231B9276F"><!-- --></a><h3 class="topictitle3">SSL の有効化</h3><div><ol><li><p>キーストアを作成します。</p>
+</li>
+<li><p>Flex を設定します。</p>
+</li>
+<li><p>ColdFusion Administrator で SSL を有効化します。</p>
+</li>
+</ol>
+</div></div><div id="WS13F77A98-EB49-423b-9A02-439493C2173D" class="nochunk"><a name="WS13F77A98-EB49-423b-9A02-439493C2173D"><!-- --></a><h3 class="topictitle3">キーストアの作成</h3><div><div class="para"><img src="images/dingbat.png" /> SSL サーバー（ColdFusion）キーストアファイルを作成するには、keytool ユーティリティを使用します。コマンドはほぼ次のようになります。<pre>keytool -genkey -v -alias FlexAssembler -dname &quot;cn=FlexAssembler&quot; -keystore cf.keystore -keypass mypassword -storepass mypassword</pre>
+<p>次の表で、keytool ユーティリティのパラメーターを説明します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3686"><p>パラメータ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3689"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-alias</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>キーストア項目の名前。常にその名前で参照する限りは、任意の名前が使用できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-dname</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>識別名。サーバーの一般名（cn）を含みます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-keystore</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>キーストアファイルの場所。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-keypass</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>秘密キー用のパスワード。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-storepass</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>キーストア用のパスワード。暗号化された storepass が ColdFusion 設定ファイルに記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-rfc</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>printable encoding 形式で証明書を作成します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-file</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>キーストアファイルの名前。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3686 "><p>-v</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3689 "><p>詳細な証明書情報を出力します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>JVM が信頼する証明書を判断するときに使用するファイルの中に、作成した証明書を格納します。証明書を格納するファイル（通常の名前は cacerts）は JRE の lib/security フォルダーにあります。 </p>
+</div>
+</div></div><div id="WS9062D407-6FD4-4bb7-8EF1-28D2EC13654D" class="nochunk"><a name="WS9062D407-6FD4-4bb7-8EF1-28D2EC13654D"><!-- --></a><h3 class="topictitle3">Flex の設定</h3><div><ol><li><p>キーストアを証明書に書き出すには、keytool ユーティリティを使用します。コマンドはほぼ次のようになります。 </p>
+<pre>keytool -export -v -alias FlexAssembler -keystore cf.keystore -rfc -file cf.cer</pre>
+</li>
+<li><p>サーバーの JRE cacerts ファイルに証明書を読み込むには、keytool ユーティリティを使用します。コマンドはほぼ次のようになります。</p>
+<pre>keytool -import -v -alias FlexAssembler -file cf.cer -keystore C:\fds2\UninstallerData\jre\lib\security\cacerts</pre>
+</li>
+</ol>
+</div></div><div id="WS5A4BEE63-DBAB-458a-B2E2-956A0D7FEEA3" class="nochunk"><a name="WS5A4BEE63-DBAB-458a-B2E2-956A0D7FEEA3"><!-- --></a><h3 class="topictitle3">ColdFusion Administrator での SSL の有効化</h3><div><ol><li><p>データとサービス／Flex 統合を選択し、「キーストアの絶対パス」ボックスでキーストアファイルを指定します。</p>
+</li>
+<li><p>「キーストアパスワード」ボックスでキーストアのパスワードを指定します。</p>
+</li>
+<li><p>「SSL による RMI を Data Management 用に有効化」を選択し、「変更の送信」をクリックします。</p>
+</li>
+</ol>
+<p>無効なキーストアファイルやパスワードを指定した場合、SSL は有効にならず、LiveCycle Data Management サポートは無効になります。</p>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"> </div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/en_US/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/en_US/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

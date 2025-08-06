@@ -1,0 +1,22 @@
+@charset 'UTF-8';
+* {
+	font-family: MS P Gothic, Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+    line-height:150%;
+}
+
+/* ITALIC CLASSES */
+i, cite, em, var, dfn,
+.fig,
+.fig .desc,
+.fig .dlentry,
+.keyword,
+.note, 
+.important, 
+.tip,
+.related-links:before, 
+div.fignone,
+div.fignone *,
+div.fignone div.figdesc,
+div.fignone dd	{ font-style: normal; }
+#content_title h1{ font-size: 17pt !important; }

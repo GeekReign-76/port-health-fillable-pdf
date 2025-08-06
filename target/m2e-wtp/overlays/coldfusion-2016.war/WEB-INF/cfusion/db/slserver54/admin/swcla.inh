@@ -1,0 +1,917 @@
+[CLAHelp:ActivateLocalConfig]
+ActivateLocalConfig - alc
+  Syntax
+    ActivateLocalConfig | alc
+  Description
+    Connect to the agent on the local machine.
+  Example
+    alc
+[CLAHelp:ActivateRemoteConfig]
+ActivateRemoteConfig - arc
+  Syntax
+    ActivateRemoteConfig | arc <agent connection info>
+  Description
+    Connect to a remote agent.
+  Example
+    arc caspar.merant.be:7500
+[CLAHelp:ActivateSecureRemoteConfig]
+ActivateSecureRemoteConfig - asrc
+  Syntax
+    ActivateSecureRemoteConfig | asrc <agent connection info>
+  Description
+    Connect to a remote secure agent.
+  Example
+    arc caspar.datadirect.be:8500
+[CLAHelp:ActivateOfflineConfig]
+ActivateOfflineConfig - aoc
+  Syntax
+    ActivateOfflineConfig | aoc <configuration file>
+  Description
+    Open local configuration file.
+  Example
+    aoc "C:\Program Files\Merant\SLSERVER50\cfg\swandm.ini"
+[CLAHelp:CloseConfig]
+CloseConfig - cc
+  Syntax
+    CloseConfig | cc
+  Description
+    Close the activated configuration.
+  Example
+    cc
+[CLAHelp:SaveConfig]
+SaveConfig - save
+  Syntax
+    SaveConfig | save
+  Description
+    Save the current configuration. This command is only available when the AutoSave setting is set to off.
+  Example
+    save
+[CLAHelp:ServiceList]
+ServiceList - sl
+  Syntax
+    ServiceList | sl
+  Description
+    List all available service.
+  Example
+    sl
+[CLAHelp:ServiceInfo]
+ServiceInfo - si
+  Syntax
+    ServiceInfo | si <service name>
+  Description
+    List all attributes and their values for the specified service.
+  Example
+    si SLOracle8
+[CLAHelp:ServiceCreate]
+ServiceCreate - sc
+  Syntax
+    ServiceCreate | sc <service name> <service ID> <tcp port>
+  Description
+    Create a service based on a service ID.    
+    Service ID's can be obtained with the ServiceTemplateList (stl) command.
+  Example
+    sc SLOracle81 SL5_Oracle81 19996
+[CLAHelp:ServiceDelete]
+ServiceDelete - sd
+  Syntax
+    ServiceDelete | sd <service name>
+  Description
+    Delete the specified service.
+  Example
+    sd SLOracle8
+[CLAHelp:ServiceStart]
+ServiceStart - ss
+  Syntax
+    ServiceStart | ss <service name>
+  Description
+    Start the specified service.
+  Example
+    ss SLOracle8
+[CLAHelp:ServiceStop]
+ServiceStop - sst
+  Syntax
+    ServiceStop | sst <service name>
+  Description
+    Stop the specified service.
+  Example
+    sst SLOracle8
+[CLAHelp:ServiceRegister]
+ServiceRegister - sr
+  Syntax
+    ServiceRegister | sr <service name>
+  Description
+    Register the specified service.
+  Example
+    sr SLOracle8
+[CLAHelp:ServiceUnregister]
+ServiceUnregister - su
+  Syntax
+    ServiceUnregister | su <service name>
+  Description
+    Unregister the specified service.
+  Example
+  su SLOracle8
+[CLAHelp:ServiceDebugLogLevel]
+ServiceDebugLogLevel - sdll
+  Syntax
+    ServiceDebugLogLevel | sdll <service name> [ [dis | disable] [enall | enableall] [en | enable] [<ferr | fatalerror>=<off | on>] | [<err | errors>=<off | on>] | [<war | warnings>=<off | on>] | [<info | informationals>=<off | on>] | [<debug | debugging>=<off | on>] | [<sspp | ssppackets>=<off | on>] | [<sspr | ssprequests>=<off | on>] | ... ]
+  Description
+    Display or change the debug log level of the specified service.    
+    When no debug log level values are provided, the current settings are listed.
+  Example
+    sdll SLOracle8 debug=on err=off    
+    sdll SLOracle8
+[CLAHelp:ServiceAttributeAdd]
+ServiceAttributeAdd - saa
+  Syntax
+    ServiceAttributeAdd | saa <service name> <attribute name> <value>
+  Description
+    Add a attribute for the specified service.
+  Example
+    saa SLOracle8 ServiceUser sqlnk
+[CLAHelp:ServiceAttributeDelete]
+ServiceAttributeDelete - sad
+  Syntax
+    ServiceAttributeDelete | sad <service name> <attribute name>
+  Description
+    Delete a attribute for the specified service.
+  Example
+    sad SLOracle8 ServiceCodePage
+    sad SLOracle8 ServiceUser[2]
+[CLAHelp:ServiceAttributeReplace]
+ServiceAttributeReplace - sar
+  Syntax
+    ServiceAttributeReplace | sar <service name> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute and service.
+  Example
+    sar SLOracle8 ServiceUser[2] devuser
+[CLAHelp:ServiceTemplateList]
+ServiceTemplateList - stl
+  Syntax
+    ServiceTemplateList | stl
+  Description
+    List all available service templates.
+  Example
+    stl
+[CLAHelp:ServiceTemplateInfo]
+ServiceTemplateInfo - sti
+  Syntax
+    ServiceTemplateInfo | sti <service template ID>
+  Description
+    List all attributes and their values for the specified service template ID.
+  Example
+    sti SL5_Oracle81
+[CLAHelp:DataSourceCreate]
+DataSourceCreate - dsc
+  Syntax
+    DataSourceCreate | dsc <service name> <data source name>
+  Description
+    Create a data source for a service.
+  Example
+    dsc SLOracle81 DS_Employees
+[CLAHelp:DataSourceDelete]
+DataSourceDelete - dsd
+  Syntax
+    DataSourceDelete | dsd <service name> <data source name>
+  Description
+    Delete the specified service and data source name.
+  Example
+    dsd SLOracle81 DS_Employees
+[CLAHelp:DataSourceInfo]
+DataSourceInfo - dsi
+  Syntax
+    DataSourceInfo | dsi <service name> <data source name>
+  Description
+    List all attributes and their values for the specified service and data source name.
+  Example
+    dsi SLOracle81 DS_Employees
+[CLAHelp:DataSourceList]
+DataSourceList - dsl
+  Syntax
+    DataSourceList | dsl
+  Description
+    List all available data sources.
+  Example
+    dsl
+[CLAHelp:DataSourceAttributeAdd]
+DataSourceAttributeAdd - dsaa
+  Syntax
+    DataSourceAttributeAdd | dsaa <service name> <data source name> <attribute name> <value>
+  Description
+    Add a attribute for the specified service and data source name.
+  Example
+    dsaa SLOracle81 DS_Employees DataSourceCurrentCatalog employees
+[CLAHelp:DataSourceAttributeDelete]
+DataSourceAttributeDelete - dsad
+  Syntax
+    DataSourceAttributeDelete | dsad <service name> <data source name> <attribute name>
+  Description
+    Delete a attribute for the specified service and data source name.
+  Example
+    dsad SLOracle81 DS_Employees DataSourceCurrentCatalog
+[CLAHelp:DataSourceAttributeReplace]
+DataSourceAttributeReplace - dsar
+  Syntax
+    DataSourceAttributeReplace | dsar <service name> <data source name> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute, service and data source name.
+  Example
+    dsar SLOracle81 DS_Employees DataSourceCurrentCatalog partners
+[CLAHelp:MVSGlobalInfo]
+MVSGlobalInfo - mgi
+  Syntax
+    MVSGlobalInfo | mgi
+  Description
+    List all attributes and their values for the MVS global.
+  Example
+    mgi
+[CLAHelp:MVSGlobalAttributeAdd]
+MVSGlobalAttributeAdd - mgaa
+  Syntax
+    MVSGlobalAttributeAdd | mgaa <attribute name> <value>
+  Description
+    Add a attribute in the MVS global.
+  Example
+    mgaa MVSTcpTrace 1
+[CLAHelp:MVSGlobalAttributeDelete]
+MVSGlobalAttributeDelete - mgad
+  Syntax
+    MVSGlobalAttributeDelete | mgad <attribute name>
+  Description
+    Delete a attribute in the MVS global.
+  Example
+    mgad MVSTcpTrace
+[CLAHelp:MVSGlobalAttributeReplace]
+MVSGlobalAttributeReplace - mgar
+  Syntax
+    MVSGlobalAttributeReplace | mgar <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute in the MVS global.
+  Example
+    mgar MVSTcpTrace 0
+[CLAHelp:MVSDB2InterfaceCreate]
+MVSDB2InterfaceCreate - mdic
+  Syntax
+    MVSDB2InterfaceCreate | mdic <DB2 interface ID>
+  Description
+    Create a external CICS interface.
+  Example
+    mdic DB2_Interface
+[CLAHelp:MVSDB2InterfaceDelete]
+MVSDB2InterfaceDelete - mdid
+  Syntax
+    MVSDB2InterfaceDelete | mdid <DB2 interface ID>
+  Description
+    Delete the specified DB2 interface ID.
+  Example
+    mdid DB2_Interface
+[CLAHelp:MVSDB2InterfaceList]
+MVSDB2InterfaceList - mdil
+  Syntax
+    MVSDB2InterfaceList | mdil
+  Description
+    List all available external CICS interfaces.
+  Example
+    mdil
+[CLAHelp:MVSDB2InterfaceInfo]
+MVSDB2InterfaceInfo - mdii
+  Syntax
+    MVSDB2InterfaceInfo | mdii <DB2 interface ID>
+  Description
+    List all attributes and their values for the specified DB2 interface ID.
+  Example
+    mdii DB2_Interface
+[CLAHelp:MVSDB2InterfaceAttributeAdd]
+MVSDB2InterfaceAttributeAdd - mdiaa
+  Syntax
+    MVSDB2InterfaceAttributeAdd | mdiaa <DB2 interface ID> <attribute name> <value>
+  Description
+    Add a attribute for the specified DB2 interface ID.
+  Example
+    mdiaa DB2_Interface MVSDB2TraceTableSize 128
+[CLAHelp:MVSDB2InterfaceAttributeDelete]
+MVSDB2InterfaceAttributeDelete - mdiad
+  Syntax
+    MVSDB2InterfaceAttributeDelete | mdiad <DB2 interface ID> <attribute name>
+  Description
+    Delete a attribute for the specified DB2 interface ID.
+  Example
+    mdiad DB2_Interface MVSDB2TraceTableSize
+[CLAHelp:MVSDB2InterfaceAttributeReplace]
+MVSDB2InterfaceAttributeReplace - mdiar
+  Syntax
+    MVSDB2InterfaceAttributeReplace | mdiar <DB2 interface ID> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute and DB2 interface ID.
+  Example
+    mdiar DB2_Interface MVSDB2TraceTableSize 256
+[CLAHelp:MVSeXternalCicsInterfaceCreate]
+MVSeXternalCicsInterfaceCreate - mxcic
+  Syntax
+    MVSeXternalCicsInterfaceCreate | mxcic <external CICS interface ID>
+  Description
+    Create a external CICS interface.
+  Example
+    mxcic CICS_Interface
+[CLAHelp:MVSeXternalCicsInterfaceDelete]
+MVSeXternalCicsInterfaceDelete - mxcid
+  Syntax
+    MVSeXternalCicsInterfaceDelete | mxcid <external CICS interface ID>
+  Description
+    Delete the specified external CICS interface ID.
+  Example
+    mxcid CICS_Interface
+[CLAHelp:MVSeXternalCicsInterfaceInfo]
+MVSeXternalCicsInterfaceInfo - mxcii
+  Syntax
+    MVSeXternalCicsInterfaceInfo | mxcii <external CICS interface ID>
+  Description
+    List all attributes and their values for the specified external CICS interface ID.
+  Example
+    mxcii CICS_Interface
+[CLAHelp:MVSeXternalCicsInterfaceList]
+MVSeXternalCicsInterfaceList - mxcil
+  Syntax
+    MVSeXternalCicsInterfaceList | mxcil
+  Description
+    List all available external CICS interfaces.
+  Example
+    mxcil
+[CLAHelp:MVSeXternalCicsInterfaceAttributeAdd]
+MVSeXternalCicsInterfaceAttributeAdd - mxciaa
+  Syntax
+    MVSeXternalCicsInterfaceAttributeAdd | mxciaa <external CICS interface ID> <attribute name> <value>
+  Description
+    Add a attribute for the specified external CICS interface ID.
+  Example
+    mxciaa CICS_Interface MVSExciMsgCase MIXED
+[CLAHelp:MVSeXternalCicsInterfaceAttributeDelete]
+MVSeXternalCicsInterfaceAttributeDelete - mxciad
+  Syntax
+    MVSeXternalCicsInterfaceAttributeDelete | mxciad <external CICS interface ID> <attribute name>
+  Description
+    Delete a attribute for the specified external CICS interface ID.
+  Example
+    mxciad CICS_Interface MVSExciMsgCase
+[CLAHelp:MVSeXternalCicsInterfaceAttributeReplace]
+MVSeXternalCicsInterfaceAttributeReplace - mxciar
+  Syntax
+    MVSeXternalCicsInterfaceAttributeReplace | mxciar <external CICS interface ID> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute and external CICS interface ID.
+  Example
+    mxciar CICS_Interface MVSExciMsgCase UPPER
+[CLAHelp:MVSCicsCreate]
+MVSCicsCreate - mcc
+  Syntax
+    MVSCicsCreate | mcc <MVS CICS ID>
+  Description
+    Create a MVS CICS.
+  Example
+    mcc CICS1
+[CLAHelp:MVSCicsDelete]
+MVSCicsDelete - mcd
+  Syntax
+    MVSCicsDelete | mcd <MVS CICS ID>
+  Description
+    Delete the specified MVS CICS.
+  Example
+    mcd CICS1
+[CLAHelp:MVSCicsInfo]
+MVSCicsInfo - mci
+  Syntax
+    MVSCicsInfo | mci <MVS CICS ID>
+  Description
+    List all attributes and their values for the specified MVS CICS.
+  Example
+    mci CICS1
+[CLAHelp:MVSCicsList]
+MVSCicsList - mcl
+  Syntax
+    MVSCicsList | mcl
+  Description
+    List all available MVS CICS's.
+  Example
+    mcl
+[CLAHelp:MVSCicsAttributeAdd]
+MVSCicsAttributeAdd - mcaa
+  Syntax
+    MVSCicsAttributeAdd | mcaa <MVS CICS ID> <attribute name> <value>
+  Description
+    Add a attribute for the specified MVS CICS ID.
+  Example
+    mcaa CICS1 MVSCicsConnType GENERIC
+[CLAHelp:MVSCicsAttributeDelete]
+MVSCicsAttributeDelete - mcad
+  Syntax
+    MVSCicsAttributeDelete | mcad <MVS CICS ID> <attribute name>
+  Description
+    Delete a attribute for the specified MVS CICS ID.
+  Example
+    mcad CICS1 MVSCicsConnType
+[CLAHelp:MVSCicsAttributeReplace]
+MVSCicsAttributeReplace - mcar
+  Syntax
+    MVSCicsAttributeReplace | mcar <MVS CICS ID> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute and MVS CICS ID.
+  Example
+    mcar CICS1 MVSCicsConnType SPECIFIC
+[CLAHelp:MVSUserIDMapCreate]
+MVSUserIDMapCreate - muimc
+  Syntax
+    MVSUserIDMapCreate | muimc <user ID map>
+  Description
+    Create a user ID map.
+  Example
+    muimc UserID1
+[CLAHelp:MVSUserIDMapDelete]
+MVSUserIDMapDelete - muimd
+  Syntax
+    MVSUserIDMapDelete | muimd <user ID map>
+  Description
+    Delete the specified user ID map.
+  Example
+    muimd UserID1
+[CLAHelp:MVSUserIDMapInfo]
+MVSUserIDMapInfo - muimi
+  Syntax
+    MVSUserIDMapInfo | muimi <user ID map>
+  Description
+    List all attributes and their values for the specified user ID map.
+  Example
+    muimi UserID1
+[CLAHelp:MVSUserIDMapList]
+MVSUserIDMapList - muiml
+  Syntax
+    MVSUserIDMapList | muiml
+  Description
+    List all available user ID maps.
+  Example
+    muiml
+[CLAHelp:MVSUserIDMapAttributeAdd]
+MVSUserIDMapAttributeAdd - muimaa
+  Syntax
+    MVSUserIDMapAttributeAdd | muimaa <user ID map> <attribute name> <value>
+  Description
+    Add a attribute for the specified user ID map.
+  Example
+    muimaa UserID1 MVSUIDDefaultAccess PERMIT
+[CLAHelp:MVSUserIDMapAttributeDelete]
+MVSUserIDMapAttributeDelete - muimad
+  Syntax
+    MVSUserIDMapAttributeDelete | muimad <user ID map> <attribute name>
+  Description
+    Delete a attribute for the specified user ID map.
+  Example
+    muimad UserID1 MVSUIDDefaultAccess
+[CLAHelp:MVSUserIDMapAttributeReplace]
+MVSUserIDMapAttributeReplace - muimar
+  Syntax
+    MVSUserIDMapAttributeReplace | muimar <user ID map> <attribute name> <value>
+  Description
+    Change the attribute value for the specified attribute and user ID map.
+  Example
+    muimar UserID1 MVSUIDDefaultAccess DENY
+[CLAHelp:ProfileMonitorCreate]
+ProfileMonitorCreate - pmc
+  Syntax
+    ProfileMonitorCreate | pmc <service name> [<enable shared counters (yes|no)>]
+  Description
+    Create the monitor profile for the specified service.
+    Arguments
+      <service name>: The service name to create monitor profile for.
+      [<enable shared counters (yes | no)>] : Indicate whether shared counters should be enabled.
+    Remark: This option is only available on Windows NT when working in offline or local configuration.
+  Example
+    pmc SLOracle8
+    Windows only: pmc SLOracle8 yes
+[CLAHelp:ProfileMonitorDelete]
+ProfileMonitorDelete - pmd
+  Syntax
+    ProfileMonitorDelete | pmd <service name>
+  Description
+    Delete the monitor profile for the specified service.
+  Example
+    pmd SLOracle8
+[CLAHelp:ProfileMonitorEdit]
+ProfileMonitorEdit - pme
+  Syntax
+    ProfileMonitorEdit | pme <service name> enable | disable | <monitor level> [enable | disable | <counter name> | <counter id> [on | off]]
+  Description
+    Change the monitor profile for the specified service.    
+  Arguments
+      <service name> : Name of service whose event monitor profile to edit.
+      enable | disable | <monitor level>:
+        enable  : enable all counters in the monitor profile.
+        disable : disable all counters in the monitor profile.
+        <monitor level> : The monitor level whose counters to change.
+          Available values: service|srvc, session|sess or statement|stmt
+      [enable | disable | <counter name> | <counter id> [on | off]]
+        enable: enable all counters for the specified monitor level in the monitor profile.
+        disable: disable all counters for the specified monitor level in the monitor profile.
+        <counter name> : The counter name of the specified monitor level to change in the monitor profile. See the ProfileMonitorInfo command for a list of available counter names. Remark: The counter id's are subject to change.
+        <counter id> : The counter id of the specified monitor level to change in the monitor profile. See the ProfileMonitorInfo command for a list of available counter names.
+        [on | off] : The new state of the specified counter (name or id).
+  Example
+    pme SLOracle8 enable    
+    pme SLOracle8 disable    
+    pme SLOracle8 service enable    
+    pme SLOracle8 session disable    
+    pme SLOracle8 session "database user" off    
+    pme SLOracle8 session 10 off    
+    pme SLOracle8 stmt sql on
+[CLAHelp:ProfileMonitorInfo]
+ProfileMonitorInfo - pmi
+  Syntax
+    ProfileMonitorInfo | pmi <service name>
+  Description
+    List profile monitor information for the specified service.
+  Example
+    pmi SLOracle8
+[CLAHelp:ProfileEventTraceCreate]
+ProfileEventTraceCreate - petc
+  Syntax
+    ProfileEventTraceCreate | petc <service name>
+  Description
+    Create the event trace profile for the specified service.    
+    Arguments:    
+      <service name> : The service name to create the event trace profile for.
+  Example
+    petc SLOracle8
+[CLAHelp:ProfileEventTraceDelete]
+ProfileEventTraceDelete - petd
+  Syntax
+    ProfileEventTraceDelete | petd <service name>
+  Description
+    Delete the event trace profile for the specified service.
+  Example
+    petd SLOracle8
+[CLAHelp:ProfileEventTraceEdit]
+ProfileEventTraceEdit - pete
+  Syntax
+    ProfileEventTraceEdit | pete <service name> enable | disable | <event trace level> [enable | disable | <event name> | <event id> [on | off]] [<custom event filter>]
+  Description
+    Change the event trace profile for the specified service.    
+    Arguments
+      <service name> : Name of service whose event trace profile to edit.
+      enable | disable | <event trace level>:
+        enable: enable all events in the profile.
+        disable: disable all events in the profile.
+      <event trace level> : The event trace level whose events to change.
+        Available values:
+          service | srvc: Events related to services ( starting, stopping, ... ).
+          session | sess: Events related to sessions ( starting, stopping, ... ).
+          statement | stmt: Events related to statements ( opened, closed, executed, ... ).
+          transaction | trans: Events related to transactions ( started, commited, ... ).
+          network | net: Events related to network events.
+          error | err: Events related to error events.
+          other | oth: Miscellaneous events.
+      [enable | disable | <event name> | <event id> [on | off]]
+        enable: enable all events for the specified event trace level.
+        disable: disable all events for the specified event trace level.
+        <event name> : The event name of the specified event trace level. See the ProfileEventTraceInfo command for a list of available event names.
+        <event id> : The event id for the specified event trace level. See the ProfileEventTraceInfo command for a list of available event id's.
+        [on | off] : The new state of the specified event (name or id).
+      [<custom event filter>] : Optional event filter that can be specified for all events being enabled.
+  Example
+    pete SLOracle8 disable    
+    pete SLOracle8 enable '${ClientInfo} = "127.0.0.1"'    
+    pete SLOracle8 service enable    
+    pete SLOracle8 err disable    
+    pete SLOracle8 trans "Transaction Rollback" off    
+    pete SLOracle8 sess 2 on '${DbmsUser} = "scott"'
+[CLAHelp:ProfileEventTraceInfo]
+ProfileEventTraceInfo - peti
+  Syntax
+    ProfileEventTraceInfo | peti <service name>
+  Description
+    List event trace profile information for the specified service.
+  Example
+    peti SLOracle8
+[CLAHelp:ServiceActiveInfo]
+ServiceActiveInfo - sai
+  Syntax
+    ServiceActiveInfo | sai <service name>
+  Description
+    List specific information about the active service.
+  Example
+    sai SLOracle8
+[CLAHelp:ServiceActiveDebugLogLevel]
+ServiceActiveDebugLogLevel - sadll
+  Syntax
+    ServiceActiveDebugLogLevel | sadll <service name> [ [dis | disable] [enall | enableall] [en | enable] [<ferr | fatalerror>=<off | on>] | [<err | errors>=<off | on>] | [<war | warnings>=<off | on>] | [<info | informationals>=<off | on>] | [<debug | debugging>=<off | on>] | [<sspp | ssppackets>=<off | on>] | [<sspr | ssprequests>=<off | on>] | ... ]
+  Description
+    Display or change the debug log level of the specified active service. When no debug log level values are provided, the current settings are listed.
+  Example
+    sadll SLOracle debug=off err=on
+[CLAHelp:SessionInfo]
+SessionInfo - sesi
+  Syntax
+    SessionInfo | sesi <service name> <session ID>
+  Description
+    List specific information about the specified session ID and associated statement (only for DBMS sessions) for the specified service. Session ID's can be obtained with the ServiceActiveInfo (sai) command.
+  Example
+    sesi SLOracle8 5
+[CLAHelp:SessionStop]
+SessionStop - sess
+  Syntax
+    SessionStop | sess <service name> <session ID>
+  Description
+    Stop the specified session for the specified service.
+  Example
+    sess SLOracle8 5
+[CLAHelp:SessionDebugLogLevel]
+SessionDebugLogLevel - sesdll
+  Syntax
+    SessionDebugLogLevel | sesdll <service name> <session ID> [ [dis | disable] [enall | enableall] [en | enable] [<ferr | fatalerror>=<off | on>] | [<err | errors>=<off | on>] | [<war | warnings>=<off | on>] | [<info | informationals>=<off | on>] | [<debug | debugging>=<off | on>] | [<sspp | ssppackets>=<off | on>] | [<sspr | ssprequests>=<off | on>] | ... ]
+  Description
+    Display or change the debug log level of the specified session. When no debug log level values are provided, the current settings are listed.
+  Example
+    sesll SLOracl8 5 err=on debug=off
+[CLAHelp:EventList]
+EventList - el
+  Syntax
+    EventList | el <service name> | [remote]file=<event trace file name> [ [details] [ [service | srvc] | [session | sess] | [statement | stmt] | [transaction | trans] | [network | net] | [error | err] [other | oth] ] [count=[+ | -]all | <number>] [offset=begin | end|[+ | -]<number>] ] [query='<custom event filter string>']
+  Description
+    List events from the event trace.
+
+    Offline configuration:
+      The following log configurations are available:
+        <service name>: The event trace file from the service specified will be listed.
+        file=<event trace file name>: The local event trace file specified will be listed.
+    Local or remote configuration:
+      The following log configurations are available:
+        <service name>: The event trace file from the service specified will be listed.
+        file=<event trace file name>: The local event trace file specified will be listed.
+        remotefile=<remote event trace file name>: The event trace file on the machine where the connected service is running will be listed. 
+
+    Detailed information (optional):
+      The option "details" will list detailed information on the event.
+
+    Count and offset (optional):
+      The count and offset allows you to list a specific number of events.
+
+    Offset:
+      Use option "offset=begin | end|[+ | -]<number>" to start listing event from event <number>.    
+      Use the keyword "begin" to start listing at the beginning of the event trace or use "end" to start listing at the end of the event trace ( default is "end" ).
+
+    Count:
+      The option "count=[+ | -]all|<number>" will only retreive <number> events from the event log starting from the offset. Use the keyword "all" to retreive all events starting from the offset. Use + to get the next events or - to get the previous events starting from the offset.
+
+    Event filtering (optional) on the retreived events (these options can be combined):
+      Using event groups:
+        The following event groups are available:    
+          service | srvc: Events related to services ( starting, stopping, ... ).
+          session | sess: Events related to sessions ( starting, stopping, ... ).
+          statement | stmt: Events related to statements ( opened, closed, executed, ... ).
+          transaction | trans: Events related to transactions ( started, commited, ... ).
+          network | net: Events related to network events.
+          error | err: Events related to error events.
+          other | oth: Miscellaneous events.
+      Using event filter string
+        If you specify query='<custom event filter string>'
+  Example
+    Offline configuration:    
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc"
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" count=10
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" count=-all offset=end
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" offset=5 service session
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" service details
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" count=10
+      el SLOracle81 details service count=all offset=10
+
+    Local host or remote configuration:    
+      el "file=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" count=10
+      el "remotefile=C:\Program Files\Merant\SLSERVER50\tracing\SLOracle81.trc" service details
+      el SLOracle details service count=all offset=10
+      el SLAgent details
+      el SLOracle80 stmt query='${ReturnCode} != 0'
+[CLAHelp:EventExport]
+EventExport - ee
+  Syntax
+    EventExport | ee <service name> | [remote]file=<event trace file name> <export format> <export file name> | [remote]file=<event trace file name> [ [ [service | srvc] | [session | sess] | [statement | stmt] | [transaction | trans] | [network | net] | [error | err] [other | oth] ] [count=[+ | -]all | <number>] [offset=begin | end|[+ | -]<number>] ] [query='<custom event filter string>']
+  Description
+    Export events from the event trace.
+
+    Offline configuration:
+      The following log configurations are available:
+        <service name>: The event trace file from the service specified will be listed.
+        file=<event trace file name>: The local event trace file specified will be listed.
+    Local or remote configuration:
+      The following log configurations are available:
+        <service name>: The event trace file from the service specified will be listed.
+        file=<event trace file name>: The local event trace file specified will be listed.
+        remotefile=<remote event trace file name>: The event trace file on the machine where the connected service is running will be listed. 
+
+    Export type and file name
+      <export format> : The export file format.
+        The following event groups are available:    
+          delimited_txt | deltxt: Comma seperated text file.
+          raw_xml | rxml: Raw XML data.
+          validated_xml | vxml: Validated XML data.
+      <export file name> : The export file name.
+
+    Count and offset (optional):
+      The count and offset allows you to list a specific number of events.
+
+    Offset:
+      Use option "offset=begin | end|[+ | -]<number>" to start listing event from event <number>.    
+      Use the keyword "begin" to start listing at the beginning of the event trace or use "end" to start listing at the end of the event trace ( default is "end" ).
+
+    Count:
+      The option "count=[+ | -]all|<number>" will only retreive <number> events from the event log starting from the offset. Use the keyword "all" to retreive all events starting from the offset. Use + to get the next events or - to get the previous events starting from the offset.
+
+    Event filtering (optional) on the retreived events (these options can be combined):
+      Using event groups:
+        The following event groups are available:    
+          service | srvc: Events related to services ( starting, stopping, ... ).
+          session | sess: Events related to sessions ( starting, stopping, ... ).
+          statement | stmt: Events related to statements ( opened, closed, executed, ... ).
+          transaction | trans: Events related to transactions ( started, commited, ... ).
+          network | net: Events related to network events.
+          error | err: Events related to error events.
+          other | oth: Miscellaneous events.
+      Using event filter string
+        If you specify query='<custom event filter string>'
+  Example
+    Offline configuration:
+      ee SLOracle81 deltxt export.txt
+      ee SLOracle81 deltxt export.txt details service count=all offset=10
+      ee "file=C:\Program Files\Merant\SLSERVER51\tracing\SLOracle81.trc" raw_xml export.xml
+
+    Local host or remote configuration:    
+      ee SLAgent delimited_txt agent_events.txt
+      ee SLOracle80 validated_xml export.xml stmt query='${ReturnCode} != 0'
+[CLAHelp:SSLCredentialCreate]
+SSLCredentialCreate - sslcc
+  Syntax
+    SSLCredentialCreate | sslcc <alias name>
+  Description
+    Create SSL credential with alias name.
+  Example
+    sslcc keystore
+[CLAHelp:SSLCredentialDestroy]
+SSLCredentialDestroy - sslcd
+  Syntax
+    SSLCredentialDestroy | sslcd <alias name>
+  Description
+    Destroy SSL credential with alias name.
+  Example
+    sslcd keystore
+[CLAHelp:SSLCredentialKeyAdd]
+SSLCredentialKeyAdd - sslcka
+  Syntax
+    SSLCredentialKeyAdd | sslcak <alias name> | [<alg | algorithm>=<rsa | dsa>] | [<sz | size>=<value>]
+  Description
+    Add key to SSL credential with alias name 
+  Arguments 
+      <alg | algorithm> : key algorithm
+	  <sz | size> : key size
+  Example
+    sslcka keystore alg=rsa sz=1024
+[CLAHelp:SSLCredentialImportKey]
+SSLCredentialImportKey - sslcik
+  Syntax
+    SSLCredentialImportKey | sslcik <alias name> <file>=<key file name> <password | pwd>=<value>
+  Description
+    Import key from file and add to SSL credential with alias name.
+  Arguments
+      <file> : file containing pkcs#8 formatted key (der encoded)
+	  <password | pwd> : password used to protected the private key
+  Example
+    sslcik keystore file=c:\keys\mykey.der pwd=abc123
+[CLAHelp:SSLCredentialCertificateGenerate]
+SSLCredentialCertificateGenerate - sslccg
+  Syntax
+    SSLCredentialCertificateGenerate | sslccg <alias name> <common name | cn>=<value> | [<country | c>=<value>] | [<state | s>=<value>] | [<locality | l>=<value>] | [<organisation | o>=<value>] | [<organisational unit | ou>=<value>] | [<email | e>=<value>] | [<validity | v>=<value>]
+  Description
+    Generate self signed certificate and add to SSL credential with alias name. The certificate authenticates the key previously added or imported. 
+  Arguments
+      <common name | cn> : common name of a person
+	  <country | c> : two-letter country code
+	  <state | s> : state or province name
+	  <locality | l> : locality (city) name
+	  <organisation | o> : large organisation name
+	  <organisation unit | ou> : small organisation name, e.g. department or division 
+	  <email | e> : email address 
+	  <validity | v> : number of days the certificate will be valid from now
+  Example
+    sslccg keystore cn=Mark Smith c=US s=California l=Los Angeles o=Merant ou=R&D v=100
+SSLCredentialGenerateCertificateRequest - sslcgcr
+  Syntax
+    SSLCredentialGenerateCertificateRequest | sslcgcr <alias name> <common name | cn>=<value> | [<country | c>=<value>] | [<state | s>=<value>] | [<locality | l>=<value>] | [<organisation | o>=<value>] | [<organisational unit | ou>=<value>] | [<email | e>=<value>]
+  Description
+    Generate certificate request for certificate authority. The certificate must authenticates the key previously added or imported to the credential with alias name. 
+  Arguments
+      <common name | cn> : common name of a person
+	  <country | c> : two-letter country code
+	  <state | s> : state or province name
+	  <locality | l> : locality (city) name
+	  <organisation | o> : large organisation name
+	  <organisation unit | ou> : small organisation name, e.g. department or division 
+	  <email | e> : email address contact person 
+  Example
+    sslcgcr keystore cn=Mark Smith c=US s=California l=Los Angeles o=Merant ou=R&D
+[CLAHelp:SSLCredentialImportCertificate]
+SSLCredentialImportCertificate - sslcic
+  Syntax
+    SSLCredentialImportCertificate | sslcic <alias name> <file>=<certificate file name>
+  Description
+    Import certificate from file and add to SSL credential with alias name. The certificate must authenticates the key previously added or imported to the credential.
+  Arguments
+      <file> : file containing pkcs#7 or x509 formatted certificate (der or pem encoded)
+  Example
+    sslcic keystore file=c:\certs\mycert.der
+[CLAHelp:SSLCredentialDeleteCertificate]
+SSLCredentialDeleteCertificate - sslcdc
+  Syntax
+    SSLCredentialDeleteCertificate | sslcdc <alias name>
+  Description
+    Delete certificate from SSL credential with alias name.
+  Example
+    sslcdc keystore
+[CLAHelp:SSLCredentialInfo]
+SSLCredentialInfo - sslci
+  Syntax
+    SSLCredentialInfo | sslci <alias name>
+  Description
+    Display content of SSL credential with alias name.
+  Example
+    sslci keystore
+[CLAHelp:NoOperation]
+NoOperation - noop
+  Syntax
+    NoOperation | noop
+  Description
+    Do no operation.
+  Example
+    noop
+[CLAHelp:Echo]
+Echo - e
+  Syntax
+    Echo | e <string>
+  Description
+    Echo string.
+  Example
+    echo "Testing echo command."
+[CLAHelp:Set]
+Set - s
+  Syntax
+    Set | s [option1=<on | off, ...> [option2=<on|off, ...>...]]
+  Description
+    The set command allows you the set certain command line settings. If no parameters are provided with the set command, all available settings and there value are printed.
+
+    The following settings are available:
+
+      AutoSave=on|off
+        When set to on, the  configuration will be saved to disk whenever a change has been made. When set to off, the configuration will not automatically be saved to disk, and an explicit call to SaveConfig (save) has to be made in order to save the configuration. Default is on.
+      Echo=on|off
+        When set to on, all commands entered on the command line will be printed to output. Default is off.
+      IgnoreErrors=on|off
+        When set to on, the CLA will stop whenever an error occurs. This setting is useful when running CLA script files and the CLA must not continue when an error has occured. When set to off, the setting has no special function. Default is off.
+      More=on|off
+        When set to on, the cladministrator will redirect the output of the commands to the application specified in the MoreExecPath setting. The output will only be redirected when working interactive, not when running CLA script files. Default is on.
+      MoreExePath=<path string>
+        The MoreExePath settings contains the path to the application where the output must be redirected to when the setting more is set to on.
+        Default value:
+          Windows: more.com
+          UNIX: /usr/bin/more
+  Example
+    set    
+    set echo=on    
+    set echo=on ignoreerrors=on
+[CLAHelp:Quit]
+Quit - q
+  Syntax
+    Quit | q
+  Description
+    Quit the application.
+  Example
+    q
+[CLAHelp:Exit]
+Exit - e
+  Syntax
+    Exit | e
+  Description
+    Quit the application.
+  Example
+    exit
+[CLAHelp:Help]
+Help - ?
+  Syntax
+    Help | ? [<short command name> | <long command name>]
+  Description
+    Get help about a command.
+  Example
+    ? aoc
+[CLAHelp:About]
+About - a
+  Syntax
+    About | a
+  Description
+    Print about string.
+  Example
+    a
+

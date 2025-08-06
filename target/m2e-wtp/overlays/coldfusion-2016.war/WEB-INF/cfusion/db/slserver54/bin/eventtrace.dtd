@@ -1,0 +1,29 @@
+<!--
+	SequeLink 6.0 DTD for SequeLink Server Event Trace files in XML format
+
+	$Date:       $
+	$Revision:   $
+-->
+
+<!ELEMENT eventtrace (header, event*)>
+<!ELEMENT header  (#PCDATA)>
+
+<!-- Header -->
+<!ATTLIST header created_by CDATA #REQUIRED
+                 multi_service CDATA #REQUIRED
+                 time_saved CDATA #REQUIRED>
+
+
+
+<!-- Event -->
+<!ELEMENT event (attrib*)>
+
+<!-- Event id, date, time -->
+<!ATTLIST event id CDATA #REQUIRED
+                time CDATA #REQUIRED
+                source CDATA #IMPLIED>
+
+<!-- Attributes -->
+<!ELEMENT attrib EMPTY>
+<!ATTLIST attrib id CDATA #REQUIRED
+                 value CDATA #IMPLIED>

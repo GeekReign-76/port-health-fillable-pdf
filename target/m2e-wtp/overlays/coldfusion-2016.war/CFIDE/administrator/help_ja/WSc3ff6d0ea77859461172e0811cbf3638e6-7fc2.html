@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * [エンタープライズマネージャ] セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7fc2.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7fc2.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>[エンタープライズマネージャ] セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc1"><span class="topictitle1">[インスタンスマネージャ] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc0"><span class="topictitle1">[クラスタマネージャ] ページ</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-7e03b9dc134cd84aa77-8000"><span class="topictitle1">クラスタの編集ページ</span>
+</a></p><ul><li><p><a href="#WS932f2e4c7c04df8f13876df1350fcc6d07-8000"><span class="topictitle2">クラスタの管理</span>
+</a></p></li><li><p><a href="#WS932f2e4c7c04df8f13876df1350fcc6d07-7fff"><span class="topictitle2">クラスタへのリモートインスタンスの追加</span>
+</a></p></li></ul></li></ul></div></div></div></div><div><p>ColdFusion Administrator の「エンタープライズマネージャ」セクションでは、デプロイ済みの ColdFusion を使用した Tomcat サーバーインスタンスの作成、リモート Tomcat サーバーインスタンスの登録、Tomcat サーバーインスタンスのクラスタの作成を行えます。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc1" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc1"><!-- --></a><h2 class="topictitle2">[インスタンスマネージャ] ページ</h2><div><div class="note"><span class="notetitle">注意：  </span>エンタープライズマネージャーは、エンタープライズ版およびデベロッパー版でのみ表示されます。</div>
+<p>インスタンスマネージャページでは、動作中の cfusion サーバーからアクセスできる、ローカルおよびリモートの Tomcat サーバーを表示できます。</p>
+<p>次のようにして、新規ローカル Tomcat サーバーを定義したり、リモートコンピューター上で動作する既存の Tomcat サーバーを登録したりできるページに、このページからアクセスできます。</p>
+<dl><dt class="dlterm">新規インスタンスの追加</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">Tomcat サーバーを作成し、現在の ColdFusion MX アプリケーションのコピーをそのサーバーに自動的にデプロイします。  <div class="note"><span class="notetitle">注意：  </span>ColdFusion 10 は、J2EE アーカイブページを使用してパッケージ化されたアプリケーションのデプロイはサポートしません。</div>
+</dd><p class="dlseparator"></p><dt class="dlterm">リモートインスタンスの登録</dt>
+<dd xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">クラスタに追加するために、既存のリモート Tomcat サーバーをインスタンスマネージャーに対して定義します。 対象のリモート Tomcat サーバーインスタンスは、インスタンスマネージャーに定義する際に動作している必要はありません。 ただし、クラスタに追加する際には動作している必要があります。<p><strong>ColdFusion サーバーの編集：</strong>サーバーインスタンスのビルトイン Web サーバー設定を変更します。</p>
+</dd><p class="dlseparator"></p></dl>
+<div class="section"><h4 class="sectiontitle">使用可能なサーバー</h4><div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e6323"><p>領域</p>
+</th>
+<th valign="top" width="NaN%" id="d16e6326"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e6323 "><p>アクション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>Tomcat サーバーを開始、停止、再起動および削除できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>名前</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>Tomcat サーバー名を指定します。 サーバーが開始している場合は、この名前をクリックして、Tomcat サーバーの Web ルートをブラウザーウィンドウで開けます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>サーバーディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>サーバーディレクトリを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>HTTP ポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>ビルトイン Web サーバーのポートを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>リモートポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>サーバーインスタンスのリモートポートです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>ホスト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>サーバーインスタンスのホスト名または IP アドレスを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e6323 "><p>クラスタ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e6326 "><p>「クラスタ」ではサーバーが含まれているクラスタの名前を指定します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<ul><li><p>デフォルトでは、インスタンスマネージャーは、現在の cfusion アプリケーション（データソース、設定、管理者パスワードなど）のコピーをデプロイします。</p>
+</li>
+<li><p>「EAR/WAR からの作成」オプションを使用して、以前にアーカイブされたアプリケーションからサーバーを作成することもできます。</p>
+</li>
+</ul>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc0" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc0"><!-- --></a><h2 class="topictitle2">[クラスタマネージャ] ページ</h2><div><p>ColdFusion Administrator のクラスタマネージャページでは、同じ ColdFusion アプリケーションを含んだ個々の Tomcat サーバーから構成されるクラスタを作成および管理できます。 </p>
+<div class="para"><ol><li><p>「クラスタ名」ボックスに名前を入力し、「追加」をクリックして、クラスタを追加します。 こうすると、クラスタが作成されて、「設定済みクラスタ」テーブルに追加されます。</p>
+</li>
+<li><p>「設定済みクラスタ」テーブルのクラス名の横の編集アイコンをクリックして、クラスタにサーバーを追加します。 こうすると、クラスタの編集ページが表示されます。</p>
+</li>
+</ol>
+</div>
+</div></div>
+<div id="WSe61e35da8d318518-7e03b9dc134cd84aa77-8000" class="nochunk"><a name="WSe61e35da8d318518-7e03b9dc134cd84aa77-8000"><!-- --></a><h2 class="topictitle2">クラスタの編集ページ</h2><div><p>ColdFusion Administrator のクラスタの編集ページでは、クラスタのサーバーインスタンスを定義して、クラスタ設定をカスタマイズできます。</p>
+</div><div id="WS932f2e4c7c04df8f13876df1350fcc6d07-8000" class="nochunk"><a name="WS932f2e4c7c04df8f13876df1350fcc6d07-8000"><!-- --></a><h3 class="topictitle3">クラスタの管理</h3><div><p>ColdFusion Administrator を使用してクラスタを管理します。ColdFusion アプリケーションがセッションレプリケーションを使用している場合、通常、スティッキーセッションは必要ありません。</p>
+<div class="note"><span class="notetitle">注意：  </span>セッションレプリケーションが有効になっていると、Tomcat は、セッション変数が変化するたびに、セッション変数の情報をクラスタ内のすべてのサーバーに反映します。アプリケーションのビジネス要件でセッションレプリケーションが必要かどうか、およびセッションレプリケーションを有効にする前にネットワークのトラフィックが増加しているかどうかを検討してください。セッション変数の代わりにクライアント変数の使用を検討してください。</div>
+<p>スティッキーセッションおよびセッションレプリケーションオプションを利用するには、クラスタに参加しているすべてのインスタンスが J2EE セッションを使用する必要があります。J2EE セッションを有効にするには、メモリ変数ページで「J2EE セッション変数の使用」オプションを有効にします。これをクラスタ内のサーバーごとに行います。</p>
+<ol><li><p>ColdFusion Administrator で、エンタープライズマネージャ／クラスタマネージャをクリックします。</p>
+</li>
+<li><p>クラスタ名を入力して、「追加」をクリックします。</p>
+</li>
+<li><p>クラスタ名をクリックして、要件に基づいてサーバーをクラスタに移動します。</p>
+</li>
+<li><p>（必要に応じて）マルチキャストポートを編集します。</p>
+<p>マルチキャストポートは、クラスタメンバーをグループ化するために使用されます。 マルチキャストポートのデフォルト値は 45564 です。 クラスタを作成すると、<samp class="codeph"><i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">cf_install_dir</i>¥cfusion¥config¥cluster.xml</samp> ファイルにポートが追加されます。 </p>
+<p>マルチキャストポートについて詳しくは、<a href="http://tomcat.apache.org/tomcat-6.0-doc/config/cluster-membership.html" target="_self">http://tomcat.apache.org/tomcat-6.0-doc/config/cluster-membership.html</a> を参照してください。</p>
+</li>
+<li><p>スティッキーセッションが必要かどうかを指定します。</p>
+<p>スティッキーセッションでは、インスタンスにセッションが確立された後、そのクライアントからのそれ以降のすべてのリクエストが、そのインスタンスに必ずマッピングされるようになります。 </p>
+</li>
+<li><p>「送信」をクリックします。</p>
+</li>
+</ol>
+</div></div><div id="WS932f2e4c7c04df8f13876df1350fcc6d07-7fff" class="nochunk"><a name="WS932f2e4c7c04df8f13876df1350fcc6d07-7fff"><!-- --></a><h3 class="topictitle3">クラスタへのリモートインスタンスの追加</h3><div><div class="para">クラスタにリモートインスタンスを追加するには、リモートインスタンスの <samp class="codeph">server.xml</samp> にクラスタブロックを追加します。 次に、リモートインスタンスを登録して、インスタンスをクラスタに追加します。 Tomcat でのクラスタ設定について詳しくは、<a href="http://tomcat.apache.org/tomcat-5.5-doc/cluster-howto.html" target="_self">http://tomcat.apache.org/tomcat-5.5-doc/cluster-howto.html</a> を参照してください。<ol><li><p>リモートインスタンスをローカルマシンに登録します。</p>
+</li>
+<li><p>ローカルマシンでクラスタを作成します。</p>
+</li>
+<li><p>リモートインスタンスの <samp class="codeph">cf_install_dir¥<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">instance-name¥</i>runtime¥conf¥server.xml</samp> ファイルを開きます。</p>
+</li>
+<li><p><samp class="codeph">&lt;/host&gt; </samp>エントリと <samp class="codeph">&lt;/engine&gt;</samp> エントリの間に次のブロックを追加します。</p>
+<div class="para"><pre> 
+&lt;Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"         channelSendOptions="8"&gt; 
+    &lt;Manager notifyListenersOnReplication="true" expireSessionsOnShutdown="false" className="org.apache.catalina.ha.session.DeltaManager"&gt; 
+    &lt;/Manager&gt; 
+    &lt;Channel className="org.apache.catalina.tribes.group.GroupChannel"&gt; 
+        &lt;Membership port="<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema">45565</i>" dropTime="3000" address="228.0.0.4"     className="org.apache.catalina.tribes.membership.McastService" frequency="500"&gt; 
+        &lt;/Membership&gt; 
+        &lt;Receiver port="4003" autoBind="100" address="auto" selectorTimeout="5000"     maxThreads="6" className="org.apache.catalina.tribes.transport.nio.NioReceiver"&gt; 
+        &lt;/Receiver&gt; 
+        &lt;Sender className="org.apache.catalina.tribes.transport.ReplicationTransmitter"&gt; 
+            &lt;Transport className="org.apache.catalina.tribes.transport.nio.PooledParallelSender"&gt; 
+            &lt;/Transport&gt; 
+        &lt;/Sender&gt; 
+        &lt;Interceptor className="org.apache.catalina.tribes.group.interceptors.TcpFailureDetector"&gt; 
+        &lt;/Interceptor&gt; 
+        &lt;Interceptor     className="org.apache.catalina.tribes.group.interceptors.MessageDispatch15Interceptor"&gt; 
+        &lt;/Interceptor&gt; 
+    &lt;/Channel&gt; 
+    &lt;Valve className="org.apache.catalina.ha.tcp.ReplicationValve" filter=""&gt; 
+    &lt;/Valve&gt; 
+    &lt;Valve className="org.apache.catalina.ha.session.JvmRouteBinderValve"&gt; 
+    &lt;/Valve&gt; 
+ 
+    &lt;ClusterListener     className="org.apache.catalina.ha.session.JvmRouteSessionIDBinderListener"&gt; 
+    &lt;/ClusterListener&gt; 
+    &lt;ClusterListener className="org.apache.catalina.ha.session.ClusterSessionListener"&gt; 
+    &lt;/ClusterListener&gt; 
+ 
+&lt;/Cluster&gt; </pre>
+</div>
+</li>
+<li><p>エントリ内のメンバーシップポートをクラスタのマルチキャストポートで更新します。</p>
+</li>
+<li><div class="para">ローカルホストの ColdFusion Administrator を使用して、ローカルインスタンスとリモートインスタンスをクラスタに追加します。<div class="note"><span class="notetitle">注意：  </span>スティッキーセッションを有効にする場合は、リモートインスタンスとローカルインスタンスの JVM ルートを同じにしないでください。</div>
+</div>
+</li>
+<li><p>すべてのインスタンスを再起動します。</p>
+</li>
+</ol>
+</div>
+</div></div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

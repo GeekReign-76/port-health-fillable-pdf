@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * [デバッグとロギング] セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf3638e6-7fe0.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf3638e6-7fe0.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>[デバッグとロギング] セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSe61e35da8d318518-462eebb0134d02ecc1d-8000"><span class="topictitle1">デバッグ設定の概要</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7ff8"><span class="topictitle1">[デバッグ出力の設定] ページ</span>
+</a></p><ul><li><p><a href="#WS9F365555-357A-4a15-AC72-449EF611E342"><span class="topictitle2">cfstat ユーティリティの使用</span>
+</a></p></li><li><p><a href="#WS461F2C7B-9331-43eb-BB55-92BE901135C1"><span class="topictitle2">cfstat のオプション</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fdc"><span class="topictitle1">[デバッグする IP アドレス] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fdb"><span class="topictitle1">[デバッガの設定] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fda"><span class="topictitle1">[ロギングの設定] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fd9"><span class="topictitle1">[ログファイル] ページ</span>
+</a></p><ul><li><p><a href="#WSd160b5fdf5100e8f1a9fa44312a37dfaba0-8000"><span class="topictitle2">ロギングの有効化と無効化</span>
+</a></p></li><li><p><a href="#WSe61e35da8d3185186bb90c52134e6e21f96-8000"><span class="topictitle2">ログ内容のフィルタリング</span>
+</a></p></li><li><p><a href="#WSd160b5fdf5100e8f1a9fa44312a37dfaba0-7fff"><span class="topictitle2">ColdFusion 9.0.1 に導入されたログファイル</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fd7"><span class="topictitle1">システムプローブ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d318518325dd97e134cd5912d9-8000"><span class="topictitle2">[システムプローブ] ページ</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518325dd97e134cd5912d9-7fff"><span class="topictitle2">システムプローブの追加 / 編集ページ</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fd6"><span class="topictitle1">[コードアナライザ] ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fd5"><span class="topictitle1">[ライセンススキャナー] ページ</span>
+</a></p></li></ul></div></div></div></div><div><ul class="navlinklist"></ul>
+</div>
+<div id="WSe61e35da8d318518-462eebb0134d02ecc1d-8000" class="nochunk"><a name="WSe61e35da8d318518-462eebb0134d02ecc1d-8000"><!-- --></a><h2 class="topictitle2">デバッグ設定の概要</h2><div><p>[デバッグ出力の設定] ページおよび [デバッグする IP アドレス] ページでは、ブラウザによってリクエストされたすべてのアプリケーションページにデバッグ情報を提供するように ColdFusion を設定できます。次のページを使用してデバッグの基本設定を指定します。</p>
+<ul><li><p><a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff8.html">[デバッグ出力の設定] ページ</a>で、デバッグ出力オプションを選択します。 デバッグが有効な場合、デバッグ出力は、通常のページ出力に続いてブロック形式で表示されます。</p>
+</li>
+<li><p><a href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fdc.html">[デバッグする IP アドレス] ページ</a>で、デバッグ出力へのアクセスを制限します。 デバッグオプションが有効な場合はデフォルトで、すべてのユーザーがデバッグ出力を見ることができます。</p>
+</li>
+<li><p><a href="WSc3ff6d0ea77859461172e0811cbf3638e6-7fda.html">[ロギングの設定] ページ</a>で、有益なデバッグ情報を含むエラーログファイルのディレクトリを指定します。</p>
+</li>
+</ul>
+<div class="note"><span class="notetitle">注意：  </span>デバッグを有効にするとパフォーマンスが低下します。本番サーバーではデバッグを有効にしないことをお勧めします。</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7ff8" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7ff8"><!-- --></a><h2 class="topictitle2">[デバッグ出力の設定] ページ</h2><div><p>[デバッグ出力の設定] ページには、次のデバッグオプションがあります。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3827"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3830"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3827 "><p>Robust 例外情報の有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>例外ページに詳細情報を表示します。詳細情報には、テンプレートの物理パスと URI、行番号と行スニペット、使用される SQL ステートメント (ある場合のみ)、データソース名 (ある場合のみ)、Java スタックトレースなどが含まれます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>[リクエストのデバッグ出力の有効化]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>ColdFusion デバッグサービスを有効にします。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>デバッグ出力形式の選択</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>デバッグ形式を制御します。次のいずれかの形式を選択します。 </p>
+<div class="para"><ul><li><p>classic.cfm ColdFusion 5 以前のバージョンで使用可能です。この形式では基本的な表示が出力され、ブラウザの制限はほとんどありません。 </p>
+</li>
+<li><p>dockable.cfm ドッキング可能なツリーベースのデバッグパネルです。このパネルとブラウザ制限の詳細については、オンラインヘルプを参照してください。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>実行時間のレポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>指定した時間制限を超えた実行時間をレポートします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>一般的なデバッグ情報</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>ColdFusion MX のバージョン、テンプレート、タイムスタンプ、ユーザーロケール、ユーザーエージェント、ユーザー IP、およびホスト名に関する一般情報を表示します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>データベースアクティビティ </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>デバッグ出力に SQL クエリーイベントとストアドプロシージャイベント用のデータベースアクティビティを表示します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>[例外情報]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>リクエストで発生したすべての ColdFusion 例外をデバッグ出力に表示します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>[トレース情報]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>トレースイベント情報をデバッグ出力に表示します。<samp class="codeph">cftrace</samp> タグを使用してトレースすることにより、プログラムフローおよび効率を追跡することができます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>[タイマー情報]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p><samp class="codeph">cftimer</samp> タグからの出力を表示します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>[Flash フォームコンパイルエラーとメッセージ] </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>(開発用のみ) Flash フォームのコンパイル時にブラウザに ActionScript エラーが表示されます。このため、ページの表示時間に影響が出ます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>変数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>パラメータ、URL パラメータ、Cookie、セッション変数、および CGI 変数などについての情報をデバッグ出力に表示します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>パフォーマンス監視の有効化</p>
+<p>(サーバー設定の場合のみ)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>標準の NT パフォーマンスモニタアプリケーションを使用して、実行中のサーバーについての情報を表示できるようにします。</p>
+<p>ヒント : この設定を変更した場合は、ColdFusion を再起動してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3827 "><p>CFSTAT の有効化</p>
+<p>(サーバー設定の場合のみ)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3830 "><p>NT パフォーマンスモニタがサポートされないプラットフォームに関するパフォーマンス情報を表示します。詳細については、<a href="WS9F365555-357A-4a15-AC72-449EF611E342.html">cfstat ユーティリティの使用</a>を参照してください。</p>
+<p>ヒント : この設定を変更した場合は、ColdFusion を再起動してください。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div id="WS9F365555-357A-4a15-AC72-449EF611E342" class="nochunk"><a name="WS9F365555-357A-4a15-AC72-449EF611E342"><!-- --></a><h3 class="topictitle3">cfstat ユーティリティの使用</h3><div><p><samp class="codeph">cfstat</samp> コマンドラインユーティリティを使用すると、ColdFusion のリアルタイムパフォーマンス測定データを収集できます。<samp class="codeph">cfstat</samp> ユーティリティは、ソケット接続を使用して測定データを取得します。cfstat ユーティリティを使用すれば、System Monitor アプリケーションを使用せずに、ColdFusion から System Monitor に出力される情報を表示できます。次の表に <samp class="codeph">cfstat</samp> ユーティリティが返す測定データを示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e3973"><p>略称</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3976"><p>測定データ名</p>
+</th>
+<th valign="top" width="NaN%" id="d16e3979"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Pg/Sec</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>1 秒あたりのページヒット数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>1 秒間に処理される ColdFusion ページの数。HTML ページにスタティックコンテンツを移動することによってこの値を下げることができます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>DB/Sec</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>1 秒あたりのデータベースアクセス数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>ColdFusion が 1 秒あたりにデータベースにアクセスする回数。呼び出し間での複雑さおよびリソースロードの違いはすべて無視されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Req Q'ed</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>実行待ちのリクエスト数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>現在 ColdFusion による処理を待っているリクエストの数。この値は、CFML を効率化することで小さくできます。値が小さいほど望ましい状態です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Req Run'g</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>実行中のリクエスト数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>ColdFusion が現在アクティブに処理しているリクエストの数。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Req TO'ed</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>タイムアウトとなったリクエスト数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>タイムアウトになった ColdFusion リクエストの総数。不要なダイナミックオペレーションおよびサードパーティイベントを削除する積極的なキャッシングにより、この値がより小さくなるようにします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>AvgQ Time</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>平均キュー時間</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>ColdFusion によるリクエストの処理待ちに要する平均時間 (単位はミリ秒)。この値は、CFML を効率化し、キャッシュを拡張することで小さくできます。値が小さいほど望ましい状態です。最後に完了した 2 つのリクエストの平均が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>AvgReq Time</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>平均リクエスト時間</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>ColdFusion がリクエストの処理に要する平均時間 (単位はミリ秒で、待ち時間を含む)。この値は、CFML を効率化することで小さくできます。値が小さいほど望ましい状態です。最後に完了した 2 つのリクエストの平均が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>AvgDB Time</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>平均データベーストランザクション時間</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>ColdFusion が、データベース関連の ColdFusion のリクエストの処理に要する平均時間。最後に完了した 2 つのリクエストの平均が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Bytes In/Sec</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>1 秒あたりの着信バイト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>直前の 1 秒間に ColdFusion が読み込んだバイト数 (平均ではありません)。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e3973 "><p>Bytes Out/Sec</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3976 "><p>1 秒あたりの送信バイト</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e3979 "><p>直前の 1 秒間に ColdFusion が書き込んだバイト数 (平均ではありません)。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><samp class="codeph">cfstat</samp> ユーティリティを使用する前に、ColdFusion Administrator の [パフォーマンス監視の有効化] オプションがオンになっていることを確認してください ([デバッグとロギング]-[デバッグ出力の設定] ページを選択)。このオプションをオンにした後は、変更を有効にするために ColdFusion を再起動してください。</p>
+</div></div><div id="WS461F2C7B-9331-43eb-BB55-92BE901135C1" class="nochunk"><a name="WS461F2C7B-9331-43eb-BB55-92BE901135C1"><!-- --></a><h3 class="topictitle3">cfstat のオプション</h3><div><p><samp class="codeph">cfstat</samp> ユーティリティは "&lt;ColdFusion のルートディレクトリ&gt;/bin" ディレクトリにあります。このディレクトリで、「<strong>cfstat</strong>」と入力して次のスイッチを使用します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4107"><p>スイッチ</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4110"><p>説明</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4113"><p>コメント</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4107 "><p>-n</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4110 "><p>列ヘッダを表示しません。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4113 "><p>ファイルへの出力を減らすのに役立ちます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4107 "><p>-s</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4110 "><p>出力を 1 行ずつ表示します。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4113 "><p>出力を 1 行ずつ表示し、<samp class="codeph">cfstat</samp> ユーティリティが1秒あたりのカウンタで有意な値を表示できるように最初の行の表示を遅らせます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4107 "><p>#</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4110 "><p># は整数です。出力を # 秒おきに表示します。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4113 "><p>整数値を指定しないと、<samp class="codeph">cfstat</samp> ユーティリティは 1 行だけ返します。このスイッチは –s スイッチの有無にかかわらず指定できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4107 "><p>-x</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4110 "><p>様々なリクエストスレッドが区切られた拡張出力で表示されます。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4113 "><p>ColdFusion エンタープライズ版で使用できます。 ColdFusion スタンダード版では無視されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4107 "><p>-port</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4110 "><p>ColdFusion が <samp class="codeph">cfstat</samp> 通信をリスンするポートを指定できます。</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4113 "><p>2 つの異なる ColdFusion サーバーインスタンスから <samp class="codeph">cfstat</samp> を使用するときは、サーバーインスタンスのポート番号を明示的に指定する必用があります。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>この例では、<samp class="codeph">cfstat</samp> ユーティリティを実行して 20 秒ごとに新しい行を表示します。</p>
+<pre>cfstat 20</pre>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fdc" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fdc"><!-- --></a><h2 class="topictitle2">[デバッグする IP アドレス] ページ</h2><div><p>[デバッグする IP アドレス] ページでは、デバッグを出力する IP アドレスを制限できます。IP アドレスを追加および削除できます。 </p>
+<p>デバッグする IP アドレスを指定するには： </p>
+<div class="para"><ol><li><p>デバッグ出力を受信する IP アドレスを、デバッグする IP アドレスページに入力します。 デフォルト IP アドレスは 127.0.0.1 です。</p>
+</li>
+<li><p>「追加」をクリックします。</p>
+</li>
+<li><p>（オプション）使用しているコンピューターの IP アドレスを追加するには、「現在のものを追加」をクリックします。 追加した IP アドレスが「IP アドレス」フィールドの下のリストに表示されます。 </p>
+</li>
+</ol>
+デバッグする IP アドレスを削除するには：<ol><li><p>リストから IP アドレスを選択します。</p>
+</li>
+<li><p>「選択の削除」をクリックします。 アドレスがリストに表示されなくなります。</p>
+</li>
+</ol>
+</div>
+<div class="note"><span class="notetitle">注意：  </span>デバッグオプションが有効な状態で IP アドレスを指定しない場合、ColdFusion はデバッグ出力をすべてのユーザーに対して表示します。 </div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fdb" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fdb"><!-- --></a><h2 class="topictitle2">[デバッガの設定] ページ</h2><div><p>Eclipse で動作する ColdFusion デバッガを使用するには、[ラインデバッグの許可] オプションをオンにします。</p>
+<p>ポートと同時デバッグセッションの最大数を指定します。デバッガのポートはアプリケーションサーバーの JVM の設定で指定します。次に例を示します。</p>
+<pre>-Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=#portNum#</pre>
+<p>現在実行中のデバッグセッションを停止するには、[デバッガサーバーの停止] をクリックします。</p>
+<p>このページで指定した変更を有効にするには、ColdFusion サーバーを再起動します。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fda" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fda"><!-- --></a><h2 class="topictitle2">[ロギングの設定] ページ</h2><div><p>ColdFusion のロギングオプションを変更するには、Administrator の [ロギングの設定] ページを使用します。次の表は、設定項目を示します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4247"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4250"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[ログディレクトリ]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>エラーログファイルを書き込むディレクトリを指定します。</p>
+<p>ヒント : この設定を変更した場合は、ColdFusion を再起動してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[最大ファイルサイズ (kb)] </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>ログファイルの最大ファイルサイズを設定します。この制限に達したファイルは自動的にアーカイブされます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[アーカイブの最大数]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>作成するログのアーカイブの最大数を設定します。この最大数に達すると、ファイルは古い順に削除されます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[処理時間の遅いページのロギング] </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>処理に一定以上の時間を要するページの名前をログに記録します。処理が遅いページをログに記録することによって、ColdFusion アプリケーションに関する潜在的な問題やボトルネックを診断できます。エントリは "server.log" ファイルに書き込まれます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[すべての CORBA 呼び出しをロギング]</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>すべての CORBA 呼び出しをロギングします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4247 "><p>[スケジュールされたタスクのロギングを有効化] </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4250 "><p>ColdFusion Executive タスクのスケジューリングをロギングします。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd9" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd9"><!-- --></a><h2 class="topictitle2">[ログファイル] ページ</h2><div><p>[ログファイル] ページでは、ログファイルの表示、ダウンロード、検索、アーカイブ、削除などの操作を実行できます。 </p>
+<p>[使用可能なログファイル] テーブルの [アクション] 列の [ログファイル] アイコンをクリックすると、ログファイルの検索、表示、ダウンロード、アーカイブ、または削除が可能です。</p>
+<p>次の表に説明するように、ロギングの設定ページを使用して管理ロギングオプションを有効または無効にします。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4317"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4320"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4317 "><p>ログディレクトリ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>ColdFusion のログファイルが書き込まれる場所を変更するには、このオプションを選択します。</p>
+<p>このフィールドに指定する場所には、十分なディスク容量および ColdFusion システムサービスに対するセキュリティ権限が必要です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>最大ファイルサイズ（KB）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>ログファイルの最大ファイルサイズを設定します。 ファイルがこのサイズに到達すると、自動的にアーカイブされます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>アーカイブの最大数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>作成するログアーカイブの最大数を設定します。 この制限に到達すると、最も古いファイルから順に削除されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>（UNIX のみ）オペレーティングシステムのロギング機能の使用</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>UNIX の Syslog ロギング機能を使用してメッセージをロギングするには、このオプションを選択します。 標準の ColdFusion ログファイルにもログメッセージが書き込まれます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>処理時間の遅いページのロギング [n] 秒</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>指定した処理間隔よりも長くかかっているページの名前のロギングを開始する前に ColdFusion が待機する秒数を指定します。 処理が遅いページをログに記録することによって、ColdFusion アプリケーションに関する潜在的な問題を診断できます。 エントリは server.log に書き込まれます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>すべての CORBA 呼び出しをロギング</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>すべての CORBA 呼び出しをロギングするには、このオプションを選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4317 "><p>スケジュールされたタスクのロギングを有効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4320 "><p>ColdFusion Executive タスクのスケジューリングをロギングするには、このオプションを選択します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>次の表は、ColdFusion ログファイルの説明です。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4383"><p>ログファイル</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4386"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4383 "><p>rdservice.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>ColdFusion リモート開発サービス (RDS) において発生するエラーが記録されます。RDS は、ファイルとデータベースに HTTP ベースでリモートアクセスする手段を提供します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>application.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>ユーザーに報告された ColdFusion のエラーがすべて記録されます。このログファイルには、ColdFusion シンタックスエラー、ODBC エラー、および SQL エラーを含むすべてのアプリケーションページエラーが書き込まれます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>exception.log </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>ColdFusion で発生した例外に対するスタックトレースが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>scheduler.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>スケジュールされたイベントで、実行のために既に送信されたものが記録されます。タスクの送信が開始されたか、またそれが成功したかどうかが示されます。スケジュールされたページの URL、実行された日時、およびタスク ID が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>eventgateway.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>イベントゲートウェイに関連するイベントとエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>migration.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>以前のバージョンの ColdFusion からのアップグレードに関連するエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>migrationException.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>以前のバージョンの ColdFusion からアップグレードした後の、ColdFusion アプリケーションの実行に関連するエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>server.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>ColdFusion のエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>customtag.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>カスタムタグの処理中に発生したエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>car.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>サイトのアーカイブおよび復元に関するエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>mail.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>SMTP メールサーバーによって発生したエラーが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>mailsent.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>ColdFusion によって送信されたメッセージが記録されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4383 "><p>flash.log</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4386 "><p>Flash® Remoting のエントリが記録されます。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div><div id="WSd160b5fdf5100e8f1a9fa44312a37dfaba0-8000" class="nochunk"><a name="WSd160b5fdf5100e8f1a9fa44312a37dfaba0-8000"><!-- --></a><h3 class="topictitle3">ロギングの有効化と無効化</h3><div><p>ログファイルページの処理列の開始 / 停止のアイコンを使用して、特定のログタイプのロギングを開始 / 停止します。</p>
+</div></div><div id="WSe61e35da8d3185186bb90c52134e6e21f96-8000" class="nochunk"><a name="WSe61e35da8d3185186bb90c52134e6e21f96-8000"><!-- --></a><h3 class="topictitle3">ログ内容のフィルタリング</h3><div><div class="para"><ol><li><p>ログフィルターを開くには、ログビューアページの「フィルタの開始」をクリックします。</p>
+</li>
+<li><p>Log Filter ダイアログボックスで、次のオプションを 1 つ以上指定します。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4514"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4517"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4514 "><p>厳格度の表示</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>フィルターを適用する厳格度レベルを 1 つ以上選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>キーワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>「キーワード」テキストボックスに単語を 1 つ以上入力します。 「検索」ドロップダウンリストボックスをクリックして、「語句に完全に一致」、「いずれかの語句に一致」または「すべての語句に一致」のいずれかのオプションを選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>アプリケーション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>必要に応じて、フィルターを適用するアプリケーション名を入力します。 必要に応じて、ログファイルの 5 番目の（エントリ）列として、アプリケーション名が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>スレッド ID </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>スレッド ID 番号は、Adobe テクニカルサポートの担当者が、問題を追跡してトラブルシューティングするために使用します。 スレッド ID 文字列は、ログファイルの 4 番目のエントリ（列）に表示されます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>最近のログ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>含まれるファイルの相対年齢を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>日にちの範囲</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>特定の日にちの範囲のログ内容を表示するには、開始日と終了日を入力します。 年月日（YYYY-MM-DD）の書式で日付を入力します。 例えば、2002 年 4 月 21 日を指定するには、2002-04-21 と入力します。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4514 "><p>時間の範囲</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4517 "><p>特定の時間の範囲のログ内容を表示するには、開始時刻と終了時刻を入力します。 時分秒の書式（HH:MM:SS）で時間の範囲を入力します。 例えば、午後 2 時を指定するには、14:00:00 と入力します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li><p>フィルター処理を開始するには、次のいずれかのオプションをクリックします。</p>
+<div class="para"><ul><li><p>「一致を表示」では、タブに指定されているフィルター基準に一致する結果が表示されます。</p>
+</li>
+<li><p>「一致を隠す」では、タブに指定されているフィルター基準に一致する情報を除外した結果が表示されます。</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div></div><div id="WSd160b5fdf5100e8f1a9fa44312a37dfaba0-7fff" class="nochunk"><a name="WSd160b5fdf5100e8f1a9fa44312a37dfaba0-7fff"><!-- --></a><h3 class="topictitle3">ColdFusion 9.0.1 に導入されたログファイル</h3><div><p>ColdFusion 9.0.1 の次のサービスに対してログファイルを生成できます。</p>
+<div class="para"><ul><li><p>http</p>
+</li>
+<li><p>ftp</p>
+</li>
+<li><p>Web サービス</p>
+</li>
+<li><p>ポートレット</p>
+</li>
+<li><p>Derby</p>
+</li>
+<li><p>フィード</p>
+</li>
+</ul>
+</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd7" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd7"><!-- --></a><h2 class="topictitle2">システムプローブ</h2><div><div class="para"><div class="note"><span class="notetitle">注意：  </span>システムプローブは、ColdFusion エンタープライズ版でのみ使用できます。</div>
+</div>
+<p>システムプローブは、ご使用の ColdFusion アプリケーションのステータスの評価を支援します。スケジュールされたタスク同様、指定された間隔で URL にアクセスし、URL 内にある文字列の存在と欠落もチェックできます。URL コンテンツが予想外の場合、また、URL にアクセス中にエラーが発生した場合は、プローブにより、[システムプローブ] ページで指定されたアドレスに警告の電子メールを送信できます。プローブは、サーバーの再起動などの修復アクションのためのスクリプトを実行することもできます。すべてのプローブアクションは "logs/probes.log" ファイルに記録されます。また、[システムプローブ] ページにも各プローブのステータスが表示されます。</p>
+<p>[システムプローブ] テーブルにある [アクション] 列内のボタンを使用して、次のアクションを実行します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4628"><p>アクション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4631"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4628 "><p>編集</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4631 "><p>プローブを編集できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4628 "><p>実行</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4631 "><p>プローブを (以前に無効化されたものであっても) 即座に実行します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4628 "><p>有効 / 無効</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4631 "><p>指定された間隔でのプローブの自動実行を開始または停止します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4628 "><p>削除</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4631 "><p>プローブを削除します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>プローブはスケジュールされた ColdFusion タスクとして実行されるため、プローブをホスティングしているサーバーがクラッシュした場合、ホスト Web サーバーがクラッシュした場合、または何らかの原因で応答しない場合は、プローブは実行されません。</p>
+</div><div id="WSe61e35da8d318518325dd97e134cd5912d9-8000" class="nochunk"><a name="WSe61e35da8d318518325dd97e134cd5912d9-8000"><!-- --></a><h3 class="topictitle3">[システムプローブ] ページ</h3><div><p>システムプローブページを使用して、Web サイトのリソースの可用性を監視するために作成された ColdFusion システムプローブを管理します。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4680"><p>アイテム</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4683"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4680 "><p>新規のプローブの定義 </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>プローブ設定を作成するには、このボタンをクリックします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>アクション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>既存のプローブ設定を実行、編集、削除また無効化するには、これらのボタンをクリックします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>プローブ名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>作成された ColdFusion プローブの名前が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>ステータス</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>1 つ以上の設定済みプローブの現在の動作状態が URL ごとに次のように表示されます。</p>
+<div class="para"><ul><li><p>OK（プローブがアクティブな場合）</p>
+</li>
+<li><p>失敗（指定した URL にプローブがアクセスできない場合）</p>
+</li>
+<li><p>無効（プローブが無効な場合）</p>
+</li>
+<li><p>不明</p>
+</li>
+</ul>
+（プローブが非アクティブで、最後のサーバー再起動から実行されていない場合）</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>間隔</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>プローブとプローブの間の期間が表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>URL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>各プローブが監視している URL パスが表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>通知</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>指定した URL にプローブがアクセスできない場合の電子メールの受信者アドレスを「通知電子メールの受信者」に指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>電子メール</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p> 送信者の電子メールアドレスを指定します。 デフォルトでは、メールサーバーページに指定したアドレスがこのアドレスになります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>probe.cfm URL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>CFIDE ディレクトリにある probe.cfm ページを指定します。 ColdFusion では、このページでプローブ設定が正常に実行される必要があります。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>probe.cfm ユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>CFIDE ディレクトリがセキュリティ保護されている場合は、そのディレクトリのユーザー名が必要です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4680 "><p>probe.cfm パスワード </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4683 "><p>CFIDE ディレクトリがセキュリティ保護されている場合は、そのディレクトリのパスワードが必要です。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section"><h4 class="sectiontitle">プローブ操作の一時停止</h4><p>「システムプローブ」テーブルで、一時停止するプローブの名前を選択して、プローブの無効化アイコンをクリックします。</p>
+</div>
+</div></div><div id="WSe61e35da8d318518325dd97e134cd5912d9-7fff" class="nochunk"><a name="WSe61e35da8d318518325dd97e134cd5912d9-7fff"><!-- --></a><h3 class="topictitle3">システムプローブの追加 / 編集ページ</h3><div><div class="para"><ol><li><p> ColdFusion Administrator のナビゲーションペインで、「システムプローブ」をクリックします。 システムプローブページが表示されます。</p>
+</li>
+<li><p>システムプローブページで、次のいずれかを行います。</p>
+<ul><li><p>新規プローブを定義します。 「新規のプローブの定義」をクリックします。 システムプローブの追加 / 編集ページが表示されます。</p>
+</li>
+<li><p> 既存のプローブ設定を編集します。 プローブ名を探してクリックします。 システムプローブの追加 / 編集ページが表示されます。</p>
+</li>
+</ul>
+</li>
+<li><p> システムプローブの追加 / 編集ページで、次の設定を指定するか編集します。</p>
+<div class="para">
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e4815"><p>オプション</p>
+</th>
+<th valign="top" width="NaN%" id="d16e4818"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e4815 "><p>プローブ名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>プローブ設定の名前を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>頻度</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><div class="para">このプローブを実行するスケジュールを選択します。<ul><li><p>URL リソースの可用性をプローブが確認する頻度（時間、分、秒）</p>
+</li>
+<li><p>URL リソースを確認するためにプローブが実行される期間（開始時刻と終了時刻）</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>URL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>各プローブが監視している URL パスが表示されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>ユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>URL がセキュリティ保護されたパスの場合は、ユーザー名を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>パスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>URL がセキュリティ保護されたパスの場合は、パスワードを指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>タイムアウト（秒）</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p> 失敗を登録する前にプローブが待機する時間を秒単位で指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>プロキシサーバー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>このリクエストをプロキシサーバー経由でルーティングする必要がある場合は、そのプロキシサーバーの URL およびポート番号を入力します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>ポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>プロキシサーバーのポート番号です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>プローブの失敗</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>URL リソースをテストするために使用する引数を指定する場合は、このオプションを選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>失敗時のアクション</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>失敗が検出されたときに実行される次のアクションのどちらかまたは両方を指定します。</p>
+<div class="para"><ul><li><p>「電子メールによる通知の送信」。失敗が検出されたときに電子メールメッセージを送信するように ColdFusion に指示する場合に選択します。 ColdFusion は、システムプローブページに指定された電子メールアドレスを使用します。</p>
+</li>
+<li><p>「プログラムの実行」。プローブが失敗したときにプログラムを実行するには、プログラムのパスと名前を指定します。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>パブリッシュ</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>出力結果をファイルに書き込む場合に選択します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>ファイル</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>「パブリッシュ」オプションを選択した場合は、出力ファイル名を指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e4815 "><p>URL の変換</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e4818 "><p>内部 URL へのリンクを変更しないようにする場合に選択します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</li>
+<li><p>システムプローブページにリストされているプローブ設定を保存および更新するには、「送信」をクリックします。</p>
+</li>
+</ol>
+</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd6" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd6"><!-- --></a><h2 class="topictitle2">[コードアナライザ] ページ</h2><div><p>[コードアナライザ] ページは、ColdFusion ページを評価して、ColdFusion 10 と以前のバージョンの ColdFusion の間で互換性の問題が発生する可能性があるかどうか判断します。これにより、指定した CFML ページが確認され、互換性の問題が発生する可能性がある箇所がすべて報告されます。それに加え、サポートされていない CFML 機能や非推奨の CFML 機能もコード互換性アナライザで検出され、スムーズに移行するために必要な実装変更の概要が表示されます。</p>
+<div class="para">アナライザは次のように使用します。<ol><li><p>左ナビゲーションペインで、デバッグとロギング／コードアナライザを選択します。</p>
+</li>
+<li><p>分析する ColdFusion があるディレクトリを入力するか参照します。</p>
+</li>
+<li><p>（オプション）「拡張オプション」をクリックして、次の項目を指定します。</p>
+<div class="para"><ul><li><p>サブディレクトリを分析するかどうか。</p>
+</li>
+<li><p>分析するファイルタイプ（複数のファイルはセミコロンで区切ります）。</p>
+</li>
+<li><p>厳格度別にフィルターを適用するかどうか。 「すべて」では、エラーと情報のデータがレポートされます。「エラー」では、正しく実行されないコードがレポートされます。「情報」では、非推奨のタグなど、正しく実行されるが、編集を考慮する必要があるものがレポートされます。 </p>
+</li>
+<li><p>CFML を検証するかどうか。 例えば、ColdFusion の開きコメントタグに HTML の閉じタグがあるコメントなど、CFML の無効なシンタックスがレポートされます。</p>
+</li>
+<li><p>分析する製品機能。</p>
+</li>
+</ul>
+</div>
+</li>
+<li><p>結果のレポートを表示するには、「アナライザの実行」をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="para"><div class="note"><span class="notetitle">注意：  </span>基本オプションを使用してコードアナライザを実行すると、サブディレクトリの分析、*.cfm ファイルタイプの分析、厳格度によるフィルタ：エラー、CFML の検証がデフォルト設定になります。</div>
+</div>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd5" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fd5"><!-- --></a><h2 class="topictitle2">[ライセンススキャナー] ページ</h2><div><p>[ライセンススキャナー] ページでは、ローカルサブネットを検索し、現在動作している別の ColdFusion インスタンスを探し出します。この情報を使用して、サブネット内の ColdFusion インスタンスが正しくライセンスされているかを判定できます。</p>
+<p>ColdFusion Administrator では、UDP (Universal Datagram Protocol) マルチキャストを使用して、そのサブネット内で動作中の ColdFusion インスタンスすべてについてのライセンスとバージョンの情報を収集します。</p>
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"><a href="#top"><img src="images/BTT.jpg" /></a>&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

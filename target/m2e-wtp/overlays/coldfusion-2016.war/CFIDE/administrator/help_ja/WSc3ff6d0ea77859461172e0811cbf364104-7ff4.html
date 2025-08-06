@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="en-us" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe ColdFusion 10 * 「セキュリティ」セクション</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="Configuring and Administering ColdFusion 10" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content=""  /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="Configuring and Administering ColdFusion 10"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7ff4.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7ff4.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/en_US/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>「セキュリティ」セクション</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div id="minitoc"><div class="t"><div class="b"><div><ul id="minitoc-links"><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7ff6"><span class="topictitle1">Administrator ページ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d3185186e9280a5134cb5bc24a-8000"><span class="topictitle2">パスワード暗号化に使用するシードの設定変更</span>
+</a></p></li></ul></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf364104-7ff5"><span class="topictitle1">RDS ページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc7"><span class="topictitle1">サンドボックスセキュリティページ</span>
+</a></p></li><li><p><a href="#WSc3ff6d0ea77859461172e0811cbf3638e6-7fc6"><span class="topictitle1">ユーザーマネージャーページ</span>
+</a></p><ul><li><p><a href="#WSe61e35da8d3185184b889985134e677493b-8000"><span class="topictitle2">ユーザーの追加</span>
+</a></p></li><li><p><a href="#WSe61e35da8d318518-55d94fbc134e6edc849-8000"><span class="topictitle2">ユーザー設定の編集</span>
+</a></p></li></ul></li><li><p><a href="#WS6FD0EA9F-C6C1-4bd9-B773-32DBE5A95287"><span class="topictitle1">使用できる IP アドレス</span>
+</a></p></li></ul></div></div></div></div><div><p>ColdFusion Administrator の「セキュリティ」セクションでは、ColdFusion のセキュリティの枠組みを設定できます。</p>
+<p>セキュリティについて詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7ff2.html">セキュリティの管理</a>を参照してください。</p>
+<ul class="navlinklist"></ul>
+</div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7ff6" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7ff6"><!-- --></a><h2 class="topictitle2">Administrator ページ</h2><div><p>パスワードによる Administrator へのアクセス制限を有効または無効にするには、Administrator の Administrator ページを使用します。このページでパスワードの変更もできます。ColdFusion Administrator にアクセスできるユーザーは、信頼できるユーザーのみに限定してください。また、すべてのユーザーが同じ ColdFusion Administrator パスワードを使用するように設定したり、ユーザーマネージャーで定義されたユーザーとルートの管理ユーザーのみに ColdFusion Administrator へのアクセスを許可するように設定したりすることもできます。</p>
+</div><div id="WSe61e35da8d3185186e9280a5134cb5bc24a-8000" class="nochunk"><a name="WSe61e35da8d3185186e9280a5134cb5bc24a-8000"><!-- --></a><h3 class="topictitle3">パスワード暗号化に使用するシードの設定変更</h3><div><div class="para">Administrator では、データソースパスワードを暗号化するための新しいシード値を指定できます。ColdFusion によって割り当てられたデフォルトのシード値、またはユーザーが指定したシード値を変更するには：<ol><li><p>「パスワードシード」セクションで、8 ～ 500 文字の新しいシード値を指定します。</p>
+</li>
+<li><p>「変更の送信」をクリックします。</p>
+</li>
+</ol>
+<div class="note"><span class="notetitle">注意：</span>シード値を変更すると、すべてのデータソース接続はリセットされます。そのため、この作業はサーバーを使用していないとき、または（インストール後の）初期段階に行うことをお勧めします。</div>
+</div>
+</div></div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf364104-7ff5" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf364104-7ff5"><!-- --></a><h2 class="topictitle2">RDS ページ</h2><div><p>Adobe Macromedia Dreamweaver MX、Adobe Macromedia HomeSite+、Eclipse 用 ColdFusion 拡張機能、または ColdFusion Report Builder からサーバーリソースにアクセスする場合について、パスワードによる制限を有効または無効にするには、RDS ページを使用します。このページで RDS パスワードを変更することもできます。 </p>
+<p>また、すべてのユーザーが同じ RDS パスワードを使用するように設定したり、ユーザーマネージャーで定義されたユーザーのみに RDS 経由でのアクセスを許可するように設定したりすることもできます。最小文字制限は 5、最大文字制限は 50 です。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc7" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc7"><!-- --></a><h2 class="topictitle2">サンドボックスセキュリティページ</h2><div><p>データソース、タグ、関数、ファイル、ディレクトリ、IP アドレス、ポートおよび実行時権限などのセキュリティ権限を指定するには、サンドボックスセキュリティページ（スタンダード版では「リソースセキュリティ」）を使用します。</p>
+<p>サンドボックスセキュリティは、ColdFusion ページの場所を使用して機能を調べます。「サンドボックス」<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>とは、セキュリティ制限の適用対象となる、サイト内の所定の領域（CFM ファイル、または CFM ファイルを含むディレクトリ）です。デフォルトでは、サブディレクトリ（「子」<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>ディレクトリ）は、1 つ上のレベルのディレクトリ（「親」<i xmlns:fn="http://www.w3.org/2005/xpath-functions" xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xs="http://www.w3.org/2001/XMLSchema"></i>ディレクトリ）のサンドボックス設定を継承します。サブディレクトリのサンドボックス設定を定義すると、親ディレクトリから継承したサンドボックス設定は上書きされます。</p>
+<p>サンドボックスセキュリティは、次の要素へのアクセスの管理に使用します。</p>
+<ul><li><p>データソース</p>
+</li>
+<li><p>タグ</p>
+</li>
+<li><p>関数</p>
+</li>
+<li><p>ファイルとディレクトリ</p>
+</li>
+<li><p>IP アドレスと IP ポート</p>
+</li>
+</ul>
+<p>ColdFusion ページの実行時権限も編集できます。</p>
+<div class="note"><span class="notetitle">注意：</span>サンドボックスセキュリティを有効にした場合、Administrator API を使用するには、CFIDE/adminapi ディレクトリへのアクセスを有効にします。</div>
+<p>詳しくは、<a href="WSc3ff6d0ea77859461172e0811cbf364104-7fc8.html">サンドボックスセキュリティの使用</a>を参照してください。</p>
+</div></div>
+<div id="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc6" class="nochunk"><a name="WSc3ff6d0ea77859461172e0811cbf3638e6-7fc6"><!-- --></a><h2 class="topictitle2">ユーザーマネージャーページ</h2><div><p>ユーザーマネージャーページを使用すると、個々のユーザーのユーザー名、パスワード、説明、アクセス権、公開サービス、サンドボックスおよび許可されたロールを指定できます。このページは、Web ホスティングによって 1 つのサーバー上に複数の ColdFusion アプリケーションを配置し、それぞれを異なるユーザーまたは組織が管理する場合に特に便利です。</p>
+<p>ここでは、ColdFusion Administrator や Administrator API へのアクセスを許可できます。 </p>
+<p>ログイン中のユーザーのロールを管理者が取り消した場合、その効果は、ユーザーが次にログインしたときに適用されます。</p>
+<p>デフォルトの管理者ユーザー ID は admin です。管理者ユーザー ID を変更するには、neo-security.xml ファイルに次のエントリを追加し、admin を、使用するユーザー ID に置き換えます。</p>
+<pre>&lt;var name='admin.userid.root'&gt; 
+    &lt;string&gt;admin&lt;/string&gt; 
+&lt;/var&gt;</pre>
+</div><div id="WSe61e35da8d3185184b889985134e677493b-8000" class="nochunk"><a name="WSe61e35da8d3185184b889985134e677493b-8000"><!-- --></a><h3 class="topictitle3">ユーザーの追加</h3><div><p>ユーザーマネージャーでは、ColdFusion Administrator、Administrator API または RDS アクセスの特定の部分に対するアクセスを個別にカスタマイズしてユーザーを作成できます。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>ColdFusion Administrator の権限を複数のユーザーに付与するには、ユーザーマネージャーページでユーザーを作成することに加えて、セキュリティ／Administrator ページで「別のユーザー名とパスワードで認証する」オプションを選択する必要があります。同様に、複数のユーザーに RDS アクセス権を付与する場合も、RDS ページで「別のユーザー名とパスワードで認証する」オプションを選択を選択する必要があります。</div>
+</div>
+<div class="para"><ol><li><p>セキュリティ／ユーザーマネージャで、「ユーザーの追加」をクリックします。</p>
+</li>
+<li><p>ユーザー名とパスワードを指定して、パスワードを確認します。</p>
+</li>
+<li><p>オプションで、説明を入力します。</p>
+</li>
+<li><p>次のオプションを選択します。</p>
+<div class="para"><ul><li><p>RDS アクセスを許可</p>
+</li>
+<li><p>管理アクセスを許可：「Administrator コンソールと API アクセス」か「API アクセスのみ」のどちらかを選択します。</p>
+</li>
+</ul>
+</div>
+</li>
+<li><p>ユーザーにアクセスを許可する ColdFusion Administrator のページを選択します。</p>
+</li>
+<li><p>ユーザーにアクセスを許可するサンドボックスを選択します。</p>
+</li>
+<li><p>ユーザーにアクセスを許可するサービスを選択します。</p>
+</li>
+<li><p>「ユーザーを追加」をクリックします。</p>
+</li>
+</ol>
+</div>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>連続した複数のサンドボックスまたはロールを選択するには、Shift キーを押しながら選択します。連続していない複数のサンドボックスまたはロールを選択するには、CTRL キーを押しながら選択します。 </div>
+ユーザーを作成した後は、ユーザー名とパスワードの両方を使用して ColdFusion Administrator にログインする必要があります。ルート管理者のデフォルトユーザー名は admin です。これを変更するには、neo-security.xml ファイルを編集して、admin.userid.root の「admin」という文字列を次のように変更する必要があります。<pre>&lt;var name=&quot;admin.userid.root&quot;&gt; 
+&lt;string&gt;admin&lt;/string&gt; 
+&lt;/var&gt;</pre>
+Administrator の特定のページへのアクセス権を付与すると、ユーザーが Administrator にログインした後に、それらのページのみが表示されます。Administrator API へのアクセス権を付与してロールを選択すると、指定したページの API のみにユーザーがアクセスできるようになります。 </div>
+<p>既存のユーザー設定の編集について詳しくは、「ユーザー設定の編集」を参照してください。</p>
+<div class="section"><h4 class="sectiontitle">ユーザーサンドボックス</h4><p>ユーザーが Administrator にログインしている間に、ユーザーがアクセスできるページやサンドボックスを変更した場合は、ユーザーがログアウトして、再びログインした後に変更が有効になります。サンドボックス作成について詳しくは、「Configure ColdFusion security」を参照してください。</p>
+</div>
+<div class="section"><h4 class="sectiontitle">公開サービス</h4><p>ColdFusion では、既存のエンタープライズサービスが Web サービスとして公開されます。これらのサービスには、SOAP および AMF/Flash Remoting を使用してアクセスできます。ユーザーが使用できるサービスは、「公開サービス」セクションから選択できます。デフォルトでは、すべてのサービスが許可されているサービスリストボックスに表示されます。CTRL キーを押しながら、ユーザーが使用できないようにするサービスを選択して、「&gt;&gt;」ボタンをクリックします。</p>
+<p>「ユーザーの編集」をクリックして、ユーザー設定の変更を有効にします。公開されるサービスには次のものがあります。</p>
+<ul><li><p>許可されているサービス：メールサービス、ドキュメントサービス、PDF サービス、イメージサービス、Chard サービス、POP サービス </p>
+</li>
+<li><p>禁止されているサービス：Exchange サービス</p>
+</li>
+</ul>
+<p>公開されているサービスをセキュリティで保護すると、不明なアプリケーションやユーザーによるアクセスを防止できます。これを行うには、サービスへのアクセスを許可するクライアントの IP アドレスの範囲を設定します。また、サービスに対するユーザーアクセス制御を設定することもできます。セキュリティ／ユーザーマネージャーページの「公開サービス」セクションから、ユーザーが使用できるサービスを選択できます。デフォルトでは、すべてのサービスが「禁止されているサービス」リストボックスにリストされます。CTRL キーを押しながら、ユーザーによるアクセスを許可するサービスを選択して、「&lt;&lt;」ボタンをクリックします。「ユーザーの編集」をクリックして、ユーザー設定の変更を有効にします。</p>
+</div>
+</div></div><div id="WSe61e35da8d318518-55d94fbc134e6edc849-8000" class="nochunk"><a name="WSe61e35da8d318518-55d94fbc134e6edc849-8000"><!-- --></a><h3 class="topictitle3">ユーザー設定の編集</h3><div><p>ユーザーマネージャーページで、ユーザー列などにあるユーザー名をクリックするか、アクション列の編集アイコンをクリックします。ユーザーマネージャーページが編集モードで開きます。ここでは、ユーザーのパスワード、RDS Administrator へのアクセス、サンドボックスの追加、公開サービスのリセットを行えます。</p>
+<div class="para"><div class="note"><span class="notetitle">注意：</span>編集モードでは、ユーザーの認証タイプはリセットできません。</div>
+</div>
+</div></div></div>
+<div id="WS6FD0EA9F-C6C1-4bd9-B773-32DBE5A95287" class="nochunk"><a name="WS6FD0EA9F-C6C1-4bd9-B773-32DBE5A95287"><!-- --></a><h2 class="topictitle2">使用できる IP アドレス</h2><div><p>公開されているサービスにアクセスする権限があるクライアント IP アドレスを指定します。</p>
+    <h2>セキュアプロファイルの変更</h2>
+    <p>ColdFusion 10 以上では、セキュアプロファイルを使用して、選択した設定をカスタマイズできます。セキュアプロファイルはインストール中に有効化できます。Administrator コンソールへのアクセスを許可する IP アドレスのリストを指定することもできます。ColdFusion Splendor では、セキュアプロファイル設定機能が Administrator コンソールに拡張され、インストール後の設定がサポートされています。 </p>
+    <p>その操作を行うには、ColdFusion Administration コンソールからセキュリティ／セキュリティプロファイルを選択し、「セキュアプロファイルを有効にする」チェックボックスをオンにして、ColdFusion の推奨されるデフォルトのセキュアプロファイル設定を使用します。<em></em><em></em></p>
+    <h2>セキュアプロファイルの有効化によって影響を受ける Administrator の設定</h2>
+    <p>次の表に、現在の設定、セキュアプロファイルのデフォルト設定、セキュアプロファイルを有効化した時点の値を示します。</p>
+    <p>このチェックボックスを使用して有効化または無効化を行い、セキュアモードと通常モードを切り替えてください。 </p>
+    <p>ColdFusion サーバーのインストール時に、セキュアプロファイル画面で入力を要求されたときにオプションを選択して、セキュアプロファイルを有効化できます。さらに、ColdFusion Administrator へのアクセスを許可する IP アドレスのカンマ区切りリストを指定することもできます。この機能は ColdFusion 10 から使用できます。ColdFusion Splendor では、セキュアプロファイルが強化され、他の内部コンポーネントへのアクセスも処理できるようになりました。例えば、次の URL に対して制限を設けることができます。</p>
+    <ul>
+      <li><em>CFIDE/main/*</em></li>
+      <li><em>CFIDE/adminapi/*</em></li>
+      <li><em>CFIDE/administrator/*</em></li>
+      <li><em>CFIDE/componentutils/*</em></li>
+      <li><em>CFIDE/wizards/*</em></li>
+      <li><em>CFIDE/servermanager/*</em></li>
+    </ul>
+    <p>特定の IP アドレスから内部 ColdFusion コンポーネントにアクセスできるようにするには、次のタスクを実行します。</p>
+    <ol>
+      <li>ColdFusion Administrator にログインします。</li>
+      <li>セキュリティ／使用できる IP アドレスをクリックします。</li>
+      <li>「<strong>ColdFusion 内部コンポーネントを使用できる IP アドレス</strong>」セクションに移動し、個々の IP アドレスにアクセス許可を付与して、内部コンポーネントにアクセスできるようにします。</li>
+      </ol>
+    <h2>同じユーザーによる同時ログインセッションのサポート</h2>
+    <p>特定のユーザーの複数の同時ログインセッションを通じてアプリケーションにログインおよびアクセスできます。このオプションはデフォルトで有効です。セキュリティ上の懸念がある場合は、ColdFusion Administrator でこのオプションを無効化してください。</p>
+    <p>複数の同時ログインをサポートするために、次の変更が行われています。</p>
+    <ul>
+      <li>
+        <p>同時ログインを許可できるように、allowconcurrent という新しい属性が &lt;cflogin&gt; タグに追加されました。</p>
+        <table data-macro-name="code" data-macro-parameters="language=coldfusion" data-macro-body-type="PLAIN_TEXT" data-mce-style="background-image: url('https://learn.adobe.com/wiki/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6bGFuZ3VhZ2U9Y29sZGZ1c2lvbn0&amp;locale=en_GB&amp;version=2'); background-repeat: no-repeat;">
+          <tbody>
+            <tr>
+              <td><pre>&lt;cflogin allowconcurrent=&quot;true|false&quot;&gt;</pre></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><span data-mce-style="color: #000000; line-height: 13.0pt;">デフォルト値は true です。</span><strong data-mce-style="line-height: 13.0pt;">allowconcurrent</strong><span data-mce-style="color: #000000; line-height: 13.0pt;"> が true に設定されている場合は、ユーザーの同時ログインが許可されます。</span><span data-mce-style="color: #000000; line-height: 13.0pt;"></span></p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <p>ログアウトする適切なユーザーを選択できるように、session という新しい属性が &lt;cflogout&gt; タグに追加されました。</p>
+        <table data-macro-name="code" data-macro-parameters="language=coldfusion" data-macro-body-type="PLAIN_TEXT" data-mce-style="background-image: url('https://learn.adobe.com/wiki/plugins/servlet/confluence/placeholder/macro-heading?definition=e2NvZGU6bGFuZ3VhZ2U9Y29sZGZ1c2lvbn0&amp;locale=en_GB&amp;version=2'); background-repeat: no-repeat;">
+          <tbody>
+            <tr>
+              <td><pre>&lt;cflogout session=&quot;all|current|others&quot;&gt; </pre></td>
+            </tr>
+          </tbody>
+        </table>
+        <p><br />
+          デフォルト値は current です。<strong>session</strong> が all に設定されている場合は、現在のユーザーのすべての認証済みセッションが切断されます。current に設定されている場合は、現在のセッションのみが切断されます。others に設定されている場合は、現在のセッションを除くその他すべてのセッションが切断されます。</p>
+      </li>
+    </ul>
+    <p>管理者が同時ログインセッションを有効または無効にするには、次のタスクを実行します。</p>
+    <ol>
+      <li>ColdFusion Administrator にログインします。</li>
+      <li>セキュリティ／管理者ページに移動します。</li>
+      <li>「<strong>Administrator コンソールの同時ログインセッションを許可</strong>」を選択します。</li>
+    </ol>
+    
+    <p>デフォルトでは、同時ログインセッションは有効になっています。また、セキュアプロファイルが有効になっている場合は、同時ログインは無効になります。<span data-mce-style="color: #000000; line-height: 13.0pt;"></span></p>
+    
+    
+</div></div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator"></div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/en_US/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/en_US/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>

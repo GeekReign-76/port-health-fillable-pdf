@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--#config errmsg="" --><!-- saved from url=(0022)http://help.adobe.com/ -->
+<html lang="ja-jp">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="lang" content="ja-jp" />
+    <meta name="area" content="livedocs" />
+    <title>Adobe&#160;ColdFusion&#160; * Sybase への接続</title>
+    <link rel="shortcut icon" href="images/ColdFusionLinkIndicator.png" />
+    <meta name="book" content="ColdFusion 10 設定と管理" />
+    <meta name="product" content="ColdFusion" />
+    <meta name="keywords" content="" /><!--<PageMap><DataObject type="document"><Attribute name="product" value="ColdFusion"></Attribute><Attribute name="book" value="ColdFusion 10 設定と管理"></Attribute><Attribute name="keywords" value=""></Attribute></DataObject></PageMap>-->
+    
+    <script type="text/javascript" language="Javascript" charset="UTF-8"><!--[CDATA[
+        var currentTreeNode = "WSc3ff6d0ea77859461172e0811cbf364104-7fe0.html";
+    document.cookie = "topicId=" + "WSc3ff6d0ea77859461172e0811cbf364104-7fe0.html";
+// ]]--></script>
+<script src="terms.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="help.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script>  <script src="utilities.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="event.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="treeview.js" type="text/javascript" language="Javascript" charset="UTF-8">...</script> <script src="toc.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script> <script src="swfobject.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>  <script src="booklist.js" language="Javascript" type="text/javascript" charset="UTF-8">..</script>
+<script type="text/javascript">
+<!--[CDATA[
+var topictype = "topic";
+var headId = document.getElementsByTagName("head")[0];         
+if (use_ie_6_behavior) {
+  var linkId = document.createElement("link");
+  linkId.href = "content-ie6.css";
+  linkId.rel = "stylesheet";
+  linkId.type = "text/css";
+  headId.appendChild(linkId);
+}
+function initRoboHelpDOM() {
+  if (use_chm_behavior) {
+    hideElement("search");
+  }
+  if (use_robohelp_behavior) {
+    hideElement("search");
+    hideElement("productmenu");
+    //hideElement("notyourversion");
+  }
+  if(!use_chc_behavior) {
+    //document.getElementById("notyourversion").style.display = "inline";;
+  }
+}
+var dirname = location.pathname.match( /.*\// );    
+function setSearchUserPref(){
+  if ( document.cookie.indexOf( "ah_searchpref" ) > -1 ) {
+    if ( document.cookie.indexOf( dirname ) > 0 ) {
+      document.search.gsa.checked = true ;
+    }else{
+      document.search.gsa.checked = false ;            
+    }
+  }
+}
+YAHOO.util.Event.onDOMReady(initRoboHelpDOM);
+YAHOO.util.Event.onDOMReady(setSearchUserPref);
+// ]]-->
+</script>
+<!--#include virtual="/ssi/globalheader.ssi" -->
+<!--#include virtual="/ja_JP/ssi/localheader.ssi" -->
+<!--#include virtual="header.ssi" -->
+    <link rel="stylesheet" type="text/css" href="tree.css" />
+    <link rel="stylesheet" type="text/css" href="content.css" />
+    <link rel="stylesheet" type="text/css" href="localeSpecific.css" />
+  </head>
+  <body id="content_body" onload="window.focus();">
+    <a name="top" shape="rect"><!--LeaveCommentHere--></a>
+    
+    
+    
+    
+
+    
+
+
+
+<!-- BEGIN PAGE CONTENT WRAPPER -->
+    <div id="page_content_wrapper">
+<!-- BEGIN PAGE WRAPPER -->
+<table id="page_content_table">
+<tr>
+<!--#include virtual="recommendations_topic.ssi" -->
+<td id="col2">
+<!-- BEGIN CONTENT WRAPPER -->
+
+      <div id="content_wrapper">
+<!-- BEGIN PAGE TITLE -->
+        <h1>Sybase への接続</h1>
+<!-- END PAGE TITLE -->
+
+<table id="inner_content_table" width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td>
+          <div style="border-top:#ccc solid 1px;"><p> </p>
+          </div>
+<!--#include virtual="contentheader.ssi" -->
+
+          <div><p>ColdFusion でサポートされる Sybase のバージョンについては、<a href="http://www.adobe.com/go/learn_cfu_cfsysreqs_jp" target="_self">www.adobe.com/go/learn_cfu_cfsysreqs_jp</a> を参照してください。ColdFusion を Sybase データソースに接続する際には、次の表の設定値を使用します。</p>
+
+<div class="tablenoborder"><table border="1" cellpadding="4" cellspacing="0"><thead align="left"><tr><th valign="top" width="NaN%" id="d16e11218"><p>設定</p>
+</th>
+<th valign="top" width="NaN%" id="d16e11221"><p>説明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr><td valign="top" width="NaN%" headers="d16e11218 "><p>CF データソース名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ColdFusion がデータソースに接続するために使用するデータソース名 (DSN) です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>データベース</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>このデータソースの接続先のデータベースです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>サーバー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>使用するデータベースをホストするサーバーの名前です。データベースがローカルの場合は、local という単語を丸括弧で囲んで指定します。この名前は、完全に修飾されたドメイン名 (DNS により解決可能) または IP アドレスのいずれかである必要があります。ネットバイオス名 (NBT を実行中であっても)、およびクライアント接続ウィザードを使用してセットアップしたエイリアスは指定できません (これらの方法はいずれも、以前の ColdFusion バージョンでは有効でした)。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>ポート</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>サーバーが接続を監視する TCP/IP ポートの番号です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>ユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ColdFusion アプリケーションが (<samp class="codeph">cfquery</samp> タグなどで) ユーザー名を渡さない場合に、データソースに接続するために ColdFusion が JDBC ドライバに渡すユーザー名です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>パスワード</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ColdFusion アプリケーションが (<samp class="codeph">cfquery</samp> タグなどで) パスワードを渡さない場合に、データソースに接続するために ColdFusion が JDBC ドライバに渡すパスワードです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>説明</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>(オプション) この接続の説明です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接続文字列</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ログイン証明情報などのデータベース固有のパラメータをデータソースに渡すフィールドです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>メソッドの選択</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>サーバーカーソルを SQL クエリーに使用するかどうかを決定します。</p>
+<div class="para"><ul><li><p>直接メソッドでは、順方向のみからレコードセットを取得する場合、および Sybase 接続を、一度に 1 つのオープンな SQL ステートメントに制限する場合は、効率的にデータを取得できます。これは、ColdFusion アプリケーションでは一般的なメソッドです。</p>
+</li>
+<li><p>カーソルメソッドでは、1 つの接続で複数のオープンな SQL ステートメントを使用できます。これは、プールされたステートメントを使用しない限り、ColdFusion アプリケーションでは一般的なメソッドではありません。</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接続数の制限</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ColdFusion でデータソースのデータベース接続数を制限するかどうかを指定します。このオプションを有効にすると、[制限数] フィールドを使用して最大数を指定できます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>制限数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>データソースへのデータベース接続の最大数を指定します。この制限を使用するには、[接続数の制限] オプションを有効にします。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接続の維持</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>データソースへの接続は、接続を要求するオペレーションが実行されるたびに確立されます。このオプションを有効にすると、データソースへの接続をキャッシュすることによってパフォーマンスを向上させることができます。 </p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>プールされるステートメントの最大数</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>プリペアードステートメント (<samp class="codeph">cfqueryparam</samp> タグを使用するストアドプロシージャとクエリー) の再使用を有効にします。この設定はアプリケーションに基づいて調整しますが、当初は次の値の合計値を設定してください。</p>
+<div class="para"><ul><li><p><samp class="codeph">cfqueryparam</samp> を使用する固有の <samp class="codeph">cfquery</samp> タグ</p>
+</li>
+<li><p>固有の <samp class="codeph">cfstoredproc</samp> タグ</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>タイムアウト (分)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>使用していない接続が ColdFusion MX によって廃棄されるまでの時間を分単位で指定します。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>間隔 (分)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>期限切れのため閉じるデータソース接続がないかどうか確認するサイクルを、サーバーが実行する間隔 (分) です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接続の無効化</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>これを選択すると、すべてのクライアント接続が一時停止されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>ログインタイムアウト (秒)</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ColdFusion がデータソース接続へのログインを試みる際の、タイムアウトになるまでの秒数です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>CLOB</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>これを選択すると、このデータソースのデータベース内にあるすべての CLOB/Text 列の内容全体が返されます。選択していない場合、ColdFusion により [長いテキストのバッファー] の設定で指定された文字数のデータが取得されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>BLOB </p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>これを選択すると、このデータソースのデータベース内にあるすべての BLOB/Image 列の内容全体が返されます。選択していない場合、ColdFusion により [BLOB バッファー] の設定で指定された文字数のデータが取得されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>長いテキストのバッファー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>デフォルトのバッファーサイズで、[CLOB] (長いテキストの取得) がオフの場合に使用されます。デフォルト値は <samp class="codeph">64000</samp> バイトです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>BLOB バッファー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>デフォルトのバッファーサイズで、[BLOB] オプションがオフの場合に使用されます。デフォルト値は <samp class="codeph">64000</samp> バイトです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>使用可能な SQL</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>現在のデータソースを操作可能な SQL オペレーションです。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>検証クエリー</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>プールからの接続が再利用される際に呼び出されます。この場合、追加のクエリーが生成されるため、クエリーの応答時間が長くなることがあります。すべての接続を検証するには、データベースを再起動する直前に検証クエリーを指定する必要がありますが、パフォーマンスの低下を避けるため、データベースの再起動後には検証クエリーを削除してください。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>クライアントホスト名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>クエリが実行されるホスト名です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>クライアントユーザー名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>ユーザーが &lt;cflogin&gt; タグを使用してログインしている場合のユーザー名です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>アプリケーション名</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>application.cfc で指定されているアプリケーション名です。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接頭辞</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>指定した場合、値は application.cfc で指定されているアプリケーション名の前に付加されます。</p>
+</td>
+</tr>
+<tr><td valign="top" width="NaN%" headers="d16e11218 "><p>接続の検証を有効にする</p>
+</td>
+<td valign="top" width="NaN%" headers="d16e11221 "><p>接続を検証する場合は選択します。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul class="navlinklist"></ul>
+</div>
+
+
+<!-- BEGIN USER PREFERENCES -->
+          <div id="userprefs">
+          </div>
+<!-- END USER PREFERENCES -->
+
+          <div id="related">
+            
+            
+            <div class="separator">&#160;</div>
+          </div>
+          
+</td>
+<td width="10px"></td>
+<td id="inner_rightcolumn">
+<!--#include virtual="rightcolumn.ssi" -->
+</td></tr></table>
+      </div>
+
+<!-- END CONTENT WRAPPER -->
+<!--#include virtual="contentfooter.ssi" -->
+</td>
+<td id="col3">
+    <div>
+        <img src="images/adobe-lq.png" />
+    </div>
+</td>
+</tr>
+</table>
+    </div>
+<!-- END PAGE CONTENT WRAPPER -->
+<script type="text/javascript">
+<!--[CDATA[
+scrollToNameAnchor();
+// ]]-->
+</script> 
+<!--#include virtual="/ja_JP/ssi/productmenu.ssi" -->
+<style>
+#legal-notices{ 
+    margin:10px 40px; 
+    font-size:11px;
+}
+</style>
+
+
+
+<!--#include virtual="/ja_JP/ssi/localfooter.ssi" -->
+<!--#include virtual="footer.ssi" -->
+<!--#include virtual="/ubi/analytics/analytics_ssi.html" -->
+  </body>
+</html>
